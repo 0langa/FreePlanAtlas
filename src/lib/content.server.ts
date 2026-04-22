@@ -6,12 +6,17 @@ import matter from "gray-matter";
 import { cache } from "react";
 
 import type {
+  Audience,
   AtlasEntry,
   AtlasEntryWithBody,
   ComparisonEntry,
   ContentKind,
+  Domain,
+  FreeTierType,
   GuideEntry,
+  OverageRisk,
   PlaybookEntry,
+  ProductionReadiness,
   RegistryItem,
 } from "@/types/content";
 import { CONTENT_KINDS } from "@/types/content";
@@ -93,6 +98,103 @@ function optionalStringArray(value: unknown): string[] | undefined {
   return value.map((item) => String(item));
 }
 
+function optionalNumber(value: unknown): number | undefined {
+  if (value == null || value === "") {
+    return undefined;
+  }
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return value;
+  }
+  if (typeof value === "string" && value.trim() && Number.isFinite(Number(value))) {
+    return Number(value);
+  }
+  throw new Error("Invalid optional number.");
+}
+
+function optionalLiteral<T extends string>(value: unknown, allowed: readonly T[]): T | undefined {
+  if (value == null || value === "") {
+    return undefined;
+  }
+  const normalized = String(value) as T;
+  if (!allowed.includes(normalized)) {
+    throw new Error(`Invalid optional literal: expected one of ${allowed.join(", ")}.`);
+  }
+  return normalized;
+}
+
+function optionalLiteralArray<T extends string>(value: unknown, allowed: readonly T[]): T[] | undefined {
+  if (value == null) {
+    return undefined;
+  }
+  if (!Array.isArray(value)) {
+    throw new Error("Invalid optional literal list.");
+  }
+  return value.map((item) => {
+    const normalized = String(item) as T;
+    if (!allowed.includes(normalized)) {
+      throw new Error(`Invalid optional literal list item '${normalized}'.`);
+    }
+    return normalized;
+  });
+}
+
+const DOMAIN_VALUES = [
+  "hosting",
+  "compute",
+  "database",
+  "storage",
+  "auth",
+  "messaging",
+  "observability",
+  "ai",
+  "devops",
+  "security",
+  "networking",
+  "productivity",
+  "learning",
+  "design",
+  "analytics",
+  "integration",
+  "operations",
+  "other",
+] as const satisfies readonly Domain[];
+
+const FREE_TIER_TYPE_VALUES = ["always-free", "time-limited", "credit", "trial"] as const satisfies readonly FreeTierType[];
+const OVERAGE_RISK_VALUES = ["none", "low", "medium", "high"] as const satisfies readonly OverageRisk[];
+const PRODUCTION_READINESS_VALUES = ["prototype", "side-project", "production-light", "production-ready"] as const satisfies readonly ProductionReadiness[];
+const AUDIENCE_VALUES = ["student", "indie", "startup", "team", "enterprise", "oss", "agency"] as const satisfies readonly Audience[];
+
+function inferDomain(category: string, tags: string[]): Domain {
+  const haystack = `${category} ${tags.join(" ")}`.toLowerCase();
+  if (/host|deploy|static/.test(haystack)) return "hosting";
+  if (/serverless|function|compute|container|kubernetes/.test(haystack)) return "compute";
+  if (/database|postgres|mysql|sql|mongo|redis|vector/.test(haystack)) return "database";
+  if (/storage|blob|object|file|bucket/.test(haystack)) return "storage";
+  if (/auth|identity|oauth|login|access/.test(haystack)) return "auth";
+  if (/queue|message|pubsub|realtime|event|websocket/.test(haystack)) return "messaging";
+  if (/monitor|observability|logging|telemetry|apm|uptime|error/.test(haystack)) return "observability";
+  if (/ai|ml|llm|speech|vision|search|embedding/.test(haystack)) return "ai";
+  if (/ci|cd|devops|pipeline|automation|build/.test(haystack)) return "devops";
+  if (/security|vault|scan|compliance/.test(haystack)) return "security";
+  if (/network|dns|cdn|vpn|gateway|load balancer/.test(haystack)) return "networking";
+  if (/course|academy|learn|education|tutorial/.test(haystack)) return "learning";
+  return "other";
+}
+
+function inferFreeTierType(pricingModel: AtlasEntry["pricingModel"]): FreeTierType {
+  if (pricingModel === "trial") {
+    return "trial";
+  }
+  return "always-free";
+}
+
+function inferProductionReadiness(kind: ContentKind, difficulty: AtlasEntry["difficulty"]): ProductionReadiness {
+  if (kind === "resources") return "prototype";
+  if (difficulty === "advanced") return "production-light";
+  if (difficulty === "intermediate") return "side-project";
+  return "prototype";
+}
+
 async function* walkFiles(rootDir: string): AsyncGenerator<string> {
   const entries = await fs.readdir(rootDir, { withFileTypes: true });
   for (const entry of entries) {
@@ -140,6 +242,9 @@ function parseEntry(
     description: asString(data.description, "description"),
     provider: asString(data.provider, "provider"),
     category: asString(data.category, "category"),
+    domain: optionalLiteral(data.domain, DOMAIN_VALUES) ?? inferDomain(asString(data.category, "category"), asStringArray(data.tags, "tags")),
+    subtypes: optionalStringArray(data.subtypes) ?? [asString(data.category, "category")],
+    audiences: optionalLiteralArray(data.audiences, AUDIENCE_VALUES) ?? ["indie", "startup"],
     tags: asStringArray(data.tags, "tags"),
     pricingModel: asString(data.pricingModel, "pricingModel") as AtlasEntry["pricingModel"],
     freeTierDetails: {
@@ -148,9 +253,20 @@ function parseEntry(
       caveats: optionalStringArray(freeTierDetailsRaw.caveats)?.map(normalizeBulletPrefix),
       resetPeriod: optionalString(freeTierDetailsRaw.resetPeriod),
       requiresCard: asBoolean(freeTierDetailsRaw.requiresCard, "freeTierDetails.requiresCard", false),
+      freeTierType: optionalLiteral(freeTierDetailsRaw.freeTierType, FREE_TIER_TYPE_VALUES),
+      hasHardCap: asBoolean(freeTierDetailsRaw.hasHardCap, "freeTierDetails.hasHardCap", false),
+      overageRisk: optionalLiteral(freeTierDetailsRaw.overageRisk, OVERAGE_RISK_VALUES),
+      billingRiskNotes: optionalStringArray(freeTierDetailsRaw.billingRiskNotes)?.map(normalizeBulletPrefix),
+      trialDays: optionalNumber(freeTierDetailsRaw.trialDays),
+      monthlyCreditAmount: optionalString(freeTierDetailsRaw.monthlyCreditAmount),
     },
     useCases: asStringArray(data.useCases, "useCases"),
+    bestFor: optionalStringArray(data.bestFor) ?? asStringArray(data.useCases, "useCases"),
+    avoidIf: optionalStringArray(data.avoidIf) ?? [],
     difficulty: asString(data.difficulty, "difficulty") as AtlasEntry["difficulty"],
+    productionReadiness:
+      optionalLiteral(data.productionReadiness, PRODUCTION_READINESS_VALUES) ??
+      inferProductionReadiness(kind, asString(data.difficulty, "difficulty") as AtlasEntry["difficulty"]),
     lastUpdated: asString(data.lastUpdated, "lastUpdated"),
     popularityScore: asNumber(data.popularityScore, "popularityScore"),
     usefulnessScore: asNumber(data.usefulnessScore, "usefulnessScore"),
@@ -168,6 +284,9 @@ function parseEntry(
     docsUrl: optionalString(data.docsUrl),
     featured: asBoolean(data.featured, "featured", false),
   };
+
+  base.freeTierDetails.freeTierType ??= inferFreeTierType(base.pricingModel);
+  base.freeTierDetails.overageRisk ??= base.freeTierDetails.hasHardCap ? "none" : "low";
 
   if (kind === "guides") {
     const guide: GuideEntry = {
@@ -245,6 +364,12 @@ export const getContentData = cache(async () => {
   const featuredEntries = entries.filter((entry) => entry.featured).slice(0, 6);
   const providerRegistry = buildRegistry(entries.map((entry) => entry.provider));
   const categoryRegistry = buildRegistry(entries.map((entry) => entry.category));
+  const domainRegistry = buildRegistry(entries.map((entry) => entry.domain));
+  const freeTierTypeRegistry = buildRegistry(entries.map((entry) => entry.freeTierDetails.freeTierType ?? "always-free"));
+  const overageRiskRegistry = buildRegistry(entries.map((entry) => entry.freeTierDetails.overageRisk ?? "low"));
+  const productionReadinessRegistry = buildRegistry(entries.map((entry) => entry.productionReadiness));
+  const audienceRegistry = buildRegistry(entries.flatMap((entry) => entry.audiences));
+  const subtypeRegistry = buildRegistry(entries.flatMap((entry) => entry.subtypes));
   const tagRegistry = buildRegistry(entries.flatMap((entry) => entry.tags));
 
   const navTypeItems = CONTENT_KINDS.map((value) => ({
@@ -263,6 +388,12 @@ export const getContentData = cache(async () => {
     featuredEntries,
     providerRegistry,
     categoryRegistry,
+    domainRegistry,
+    freeTierTypeRegistry,
+    overageRiskRegistry,
+    productionReadinessRegistry,
+    audienceRegistry,
+    subtypeRegistry,
     tagRegistry,
     navTypeItems,
     entryByPath,

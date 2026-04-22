@@ -3,6 +3,13 @@ title: Cloudflare Workers vs Azure Functions (Free Tier)
 description: Comparison focused on global latency, quota behavior, and operational friction for small API workloads.
 provider: Multi-Provider
 category: Comparative Analysis
+domain: compute
+subtypes:
+  - serverless
+  - edge
+audiences:
+  - startup
+  - team
 tags:
   - comparison
   - serverless
@@ -17,10 +24,18 @@ freeTierDetails:
     - Total cost depends on surrounding services, not compute alone.
   resetPeriod: monthly
   requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
 useCases:
   - Choosing an API platform
   - Free-tier architecture planning
+bestFor:
+  - Teams deciding between Azure and edge-first stacks
+avoidIf:
+  - You need a single-provider comparison only
 difficulty: intermediate
+productionReadiness: production-light
 lastUpdated: 2026-04-22
 popularityScore: 82
 usefulnessScore: 90

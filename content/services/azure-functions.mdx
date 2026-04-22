@@ -3,6 +3,13 @@ title: Azure Functions
 description: Serverless compute with a generous event-driven free grant for HTTP APIs, timers, and queue workloads.
 provider: Azure
 category: Serverless Compute
+domain: compute
+subtypes:
+  - serverless
+  - functions
+audiences:
+  - startup
+  - team
 tags:
   - serverless
   - api
@@ -20,11 +27,22 @@ freeTierDetails:
     - Long-running jobs may require Durable Functions or plan upgrade.
   resetPeriod: monthly
   requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Outbound data transfer is billed separately.
 useCases:
   - Webhook ingestion
   - Lightweight REST API
   - Scheduled automation
+bestFor:
+  - Event-driven workloads with predictable traffic
+  - Teams already using Azure services
+avoidIf:
+  - You need zero cold-start latency guarantees
 difficulty: intermediate
+productionReadiness: production-light
 lastUpdated: 2026-04-22
 popularityScore: 89
 usefulnessScore: 92

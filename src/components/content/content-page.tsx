@@ -51,6 +51,29 @@ export function ContentPage({ entry, kind }: { entry: AtlasEntryWithBody; kind: 
 
       <ContentMeta entry={entry} />
 
+      <section className="grid gap-4 md:grid-cols-2">
+        <div className="rounded-lg border bg-card p-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Best For</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-foreground/70">
+            {entry.bestFor.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-lg border bg-card p-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Avoid If</h2>
+          {entry.avoidIf.length > 0 ? (
+            <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-foreground/70">
+              {entry.avoidIf.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-2 text-sm text-muted-foreground">No major blockers reported yet.</p>
+          )}
+        </div>
+      </section>
+
       <section className="rounded-lg border bg-card p-4">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Free Tier Details</h2>
         <p className="mt-2 text-sm">{entry.freeTierDetails.summary}</p>
@@ -59,6 +82,16 @@ export function ContentPage({ entry, kind }: { entry: AtlasEntryWithBody; kind: 
             <li key={limit}>{limit}</li>
           ))}
         </ul>
+        {entry.freeTierDetails.billingRiskNotes?.length ? (
+          <div className="mt-4">
+            <p className="text-xs uppercase tracking-wide text-muted-foreground">Billing Risk Notes</p>
+            <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-foreground/70">
+              {entry.freeTierDetails.billingRiskNotes.map((note) => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </section>
 
       <Separator />

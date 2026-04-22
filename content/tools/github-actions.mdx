@@ -3,6 +3,14 @@ title: GitHub Actions
 description: Workflow automation platform for CI/CD, content builds, and release pipelines with reusable workflow support.
 provider: GitHub
 category: DevOps Tooling
+domain: devops
+subtypes:
+  - ci-cd
+  - automation
+audiences:
+  - indie
+  - startup
+  - team
 tags:
   - ci-cd
   - automation
@@ -19,11 +27,22 @@ freeTierDetails:
     - External action dependencies can become a reliability risk.
   resetPeriod: monthly
   requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Larger runners and extra minutes are billed.
 useCases:
   - Automated builds
   - Static export and deployment
   - Release validation
+bestFor:
+  - Teams already shipping via GitHub
+  - Static sites and lightweight CI pipelines
+avoidIf:
+  - You need guaranteed long-running build capacity on free tier
 difficulty: intermediate
+productionReadiness: production-light
 lastUpdated: 2026-04-22
 popularityScore: 94
 usefulnessScore: 91

@@ -1,6 +1,6 @@
-# FreeTierAtlas
+# FreeTierAtlas v2
 
-FreeTierAtlas is a fully static, content-first platform for evaluating and using free-tier products with engineering-grade decision support.
+FreeTierAtlas is a fully static, decision-first atlas for evaluating free-tier services, tools, and implementation choices. The v2 model focuses on free-tier risk, quota shape, and production readiness so teams can pick the lowest-risk options first.
 
 ## Stack
 
@@ -30,7 +30,8 @@ npm run dev
 - `content/` source MDX entries grouped by type
 - `src/app` static routes and page templates
 - `src/components` layout, explorer, and content rendering modules
-- `src/lib/content.ts` typed registry and navigation datasets
+- `src/lib/content.ts` labels and helpers
+- `src/lib/content.server.ts` build-time loader and registries
 - `scripts/build-search-index.mjs` build-time search record generator
 - `docs/` contributor and operations docs
 
@@ -57,7 +58,7 @@ Optional environment variables:
 
 More details in `docs/cloudflare-pages.md`.
 
-## Content Categories
+## Content Types
 
 - services
 - tools
@@ -66,6 +67,11 @@ More details in `docs/cloudflare-pages.md`.
 - playbooks
 - comparisons
 
-Each entry is an MDX file with strict frontmatter and shared schema fields.
+Each entry is an MDX file with strict frontmatter and shared v2 schema fields.
 
-See [docs/content-schema.md](./docs/content-schema.md) and [docs/adding-content.md](./docs/adding-content.md).
+See:
+
+- [docs/content-schema.md](./docs/content-schema.md)
+- [docs/adding-content.md](./docs/adding-content.md)
+- [docs/architecture.md](./docs/architecture.md)
+- [docs/project_progress.md](./docs/project_progress.md)

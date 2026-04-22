@@ -7,7 +7,7 @@ type AppShellProps = {
 };
 
 export async function AppShell({ children }: AppShellProps) {
-  const { navTypeItems, providerRegistry, tagRegistry } = await getContentData();
+  const { navTypeItems, providerRegistry, domainRegistry, tagRegistry } = await getContentData();
   const year = new Date().getFullYear();
 
   return (
@@ -15,6 +15,7 @@ export async function AppShell({ children }: AppShellProps) {
       <HeaderBar
         navTypeItems={navTypeItems}
         providerRegistry={providerRegistry}
+        domainRegistry={domainRegistry}
         tagRegistry={tagRegistry}
       />
       <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 lg:grid-cols-[280px_1fr]">
@@ -23,6 +24,7 @@ export async function AppShell({ children }: AppShellProps) {
             className="pr-2"
             navTypeItems={navTypeItems}
             providerRegistry={providerRegistry}
+            domainRegistry={domainRegistry}
             tagRegistry={tagRegistry}
           />
         </aside>
@@ -30,7 +32,7 @@ export async function AppShell({ children }: AppShellProps) {
       </div>
       <footer className="border-t">
         <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-2 px-4 py-5 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <p>{`© ${year} FreeTierWiki · V1`}</p>
+          <p>{`© ${year} FreeTierWiki · V2`}</p>
           <a
             href="https://github.com/0langa/FreeTierWiki"
             target="_blank"

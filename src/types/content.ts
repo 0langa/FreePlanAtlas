@@ -11,6 +11,29 @@ export type ContentKind = (typeof CONTENT_KINDS)[number];
 
 export type PricingModel = "free" | "freemium" | "trial";
 export type FilterDifficulty = "beginner" | "intermediate" | "advanced";
+export type Domain =
+  | "hosting"
+  | "compute"
+  | "database"
+  | "storage"
+  | "auth"
+  | "messaging"
+  | "observability"
+  | "ai"
+  | "devops"
+  | "security"
+  | "networking"
+  | "productivity"
+  | "learning"
+  | "design"
+  | "analytics"
+  | "integration"
+  | "operations"
+  | "other";
+export type FreeTierType = "always-free" | "time-limited" | "credit" | "trial";
+export type OverageRisk = "none" | "low" | "medium" | "high";
+export type ProductionReadiness = "prototype" | "side-project" | "production-light" | "production-ready";
+export type Audience = "student" | "indie" | "startup" | "team" | "enterprise" | "oss" | "agency";
 
 export type FreeTierDetails = {
   summary: string;
@@ -18,6 +41,12 @@ export type FreeTierDetails = {
   caveats?: string[];
   resetPeriod?: string;
   requiresCard?: boolean;
+  freeTierType?: FreeTierType;
+  hasHardCap?: boolean;
+  overageRisk?: OverageRisk;
+  billingRiskNotes?: string[];
+  trialDays?: number;
+  monthlyCreditAmount?: string;
 };
 
 export type RatingBreakdown = {
@@ -37,11 +66,17 @@ export type AtlasEntryBase = {
   description: string;
   provider: string;
   category: string;
+  domain: Domain;
+  subtypes: string[];
+  audiences: Audience[];
   tags: string[];
   pricingModel: PricingModel;
   freeTierDetails: FreeTierDetails;
   useCases: string[];
+  bestFor: string[];
+  avoidIf: string[];
   difficulty: FilterDifficulty;
+  productionReadiness: ProductionReadiness;
   lastUpdated: string;
   popularityScore: number;
   usefulnessScore: number;
@@ -93,6 +128,11 @@ export type SearchRecord = {
   title: string;
   description: string;
   provider: string;
+  domain: Domain;
+  freeTierType: FreeTierType;
+  overageRisk: OverageRisk;
+  productionReadiness: ProductionReadiness;
   tags: string[];
+  bestFor: string[];
   content: string;
 };

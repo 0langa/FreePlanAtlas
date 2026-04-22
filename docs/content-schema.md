@@ -1,6 +1,6 @@
-# Content Schema
+# Content Schema (v2)
 
-FreeTierAtlas uses a unified frontmatter schema for MDX content, validated at build time.
+FreeTierAtlas v2 uses a decision-first frontmatter schema that captures free-tier risk, production suitability, and use-case fit.
 
 ## Shared Schema
 
@@ -9,7 +9,10 @@ FreeTierAtlas uses a unified frontmatter schema for MDX content, validated at bu
   title: string;
   description: string;
   provider: string;
-  category: string;
+  category: string; // legacy display label
+  domain: "hosting" | "compute" | "database" | "storage" | "auth" | "messaging" | "observability" | "ai" | "devops" | "security" | "networking" | "productivity" | "learning" | "design" | "analytics" | "integration" | "operations" | "other";
+  subtypes: string[]; // normalized product/service subtypes
+  audiences: ("student" | "indie" | "startup" | "team" | "enterprise" | "oss" | "agency")[];
   tags: string[];
   pricingModel: "free" | "freemium" | "trial";
   freeTierDetails: {
@@ -18,9 +21,18 @@ FreeTierAtlas uses a unified frontmatter schema for MDX content, validated at bu
     caveats?: string[];
     resetPeriod?: string;
     requiresCard?: boolean;
+    freeTierType?: "always-free" | "time-limited" | "credit" | "trial";
+    hasHardCap?: boolean;
+    overageRisk?: "none" | "low" | "medium" | "high";
+    billingRiskNotes?: string[];
+    trialDays?: number;
+    monthlyCreditAmount?: string;
   };
   useCases: string[];
+  bestFor: string[];
+  avoidIf: string[];
   difficulty: "beginner" | "intermediate" | "advanced";
+  productionReadiness: "prototype" | "side-project" | "production-light" | "production-ready";
   lastUpdated: string; // ISO date, e.g. "2026-04-22"
   popularityScore: number;
   usefulnessScore: number;
@@ -55,3 +67,8 @@ Per-type schemas extend the shared fields:
 - comparisons add compared provider sets
 
 This keeps a single search/explorer pipeline while allowing type-specific depth.
+
+## Notes for Migration
+
+- `domain`, `subtypes`, `audiences`, `bestFor`, `avoidIf`, and free-tier risk fields are inferred during migration if missing.
+- Legacy `category` remains for display, but `domain` is the canonical filter field in v2.

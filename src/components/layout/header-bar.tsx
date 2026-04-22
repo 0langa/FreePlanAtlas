@@ -13,10 +13,12 @@ import type { ContentKind, RegistryItem } from "@/types/content";
 export function HeaderBar({
   navTypeItems,
   providerRegistry,
+  domainRegistry,
   tagRegistry,
 }: {
   navTypeItems: { value: ContentKind; label: string; count: number }[];
   providerRegistry: RegistryItem[];
+  domainRegistry: RegistryItem[];
   tagRegistry: RegistryItem[];
 }) {
   return (
@@ -45,6 +47,7 @@ export function HeaderBar({
               <SidebarNav
                 navTypeItems={navTypeItems}
                 providerRegistry={providerRegistry}
+                domainRegistry={domainRegistry}
                 tagRegistry={tagRegistry}
               />
             </div>

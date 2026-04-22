@@ -7,13 +7,21 @@
     "title": "Azure Functions",
     "description": "Serverless compute with a generous event-driven free grant for HTTP APIs, timers, and queue workloads.",
     "provider": "Azure",
+    "domain": "compute",
+    "freeTierType": "always-free",
+    "overageRisk": "medium",
+    "productionReadiness": "production-light",
     "tags": [
       "serverless",
       "api",
       "event-driven",
       "azure"
     ],
-    "content": "Why it is worth using on free tier Azure Functions is one of the strongest free-tier options for teams that need API endpoints and event processing without paying for always-on infrastructure. The model works well when traffic is bursty and predictable. Operational notes - Keep function app startup weight low to reduce cold starts. - Put strict retry and dead-letter behavior around queue-triggered functions. - Pair it with Azure Storage and static frontends for low-cost full-stack projects."
+    "bestFor": [
+      "Event-driven workloads with predictable traffic",
+      "Teams already using Azure services"
+    ],
+    "content": "Why it is worth using on free tier Azure Functions is one of the strongest free-tier options for teams that need API endpoints and event processing without paying for always-on infrastructure. The model works well when traffic is bursty and predictable. Operational notes - Keep function app startup weight low to reduce cold starts. - Put strict retry and dead-letter behavior around queue-triggered functions. - Pair it with Azure Storage and static frontends for low-cost full-stack projects. Serverless Compute Webhook ingestion Lightweight REST API Scheduled automation"
   },
   {
     "id": "guides:build-free-tier-api-docs-stack",
@@ -23,13 +31,22 @@
     "title": "Build a Free-Tier API + Docs Stack",
     "description": "Practical build path for shipping a fully static docs front-end with an event-driven API backend on free plans.",
     "provider": "Multi-Provider",
+    "domain": "hosting",
+    "freeTierType": "always-free",
+    "overageRisk": "low",
+    "productionReadiness": "prototype",
     "tags": [
       "architecture",
       "serverless",
       "static-site",
       "cost-optimization"
     ],
-    "content": "Outcome You will ship a static Next.js site on GitHub Pages and wire a minimal serverless API endpoint using free-tier limits as first-class constraints. Steps 1. Define the API boundary and expected request volume. 2. Choose a free-tier compute platform with predictable quotas. 3. Implement caching and retries early to reduce failed-request waste. 4. Export your docs frontend statically and deploy through CI. 5. Add budget and quota alerts before public launch. Validation checklist - Documentation builds are reproducible. - API failure modes are explicitly handled. - No single step depends on a paid-only feature."
+    "bestFor": [
+      "MVP launch",
+      "Developer portal",
+      "Cost-aware side projects"
+    ],
+    "content": "Outcome You will ship a static Next.js site on GitHub Pages and wire a minimal serverless API endpoint using free-tier limits as first-class constraints. Steps 1. Define the API boundary and expected request volume. 2. Choose a free-tier compute platform with predictable quotas. 3. Implement caching and retries early to reduce failed-request waste. 4. Export your docs frontend statically and deploy through CI. 5. Add budget and quota alerts before public launch. Validation checklist - Documentation builds are reproducible. - API failure modes are explicitly handled. - No single step depends on a paid-only feature. Implementation Guide MVP launch Developer portal Cost-aware side projects"
   },
   {
     "id": "services:cloudflare-workers",
@@ -39,13 +56,22 @@
     "title": "Cloudflare Workers",
     "description": "Edge runtime with high global coverage and developer-friendly free request limits for APIs and lightweight middleware.",
     "provider": "Cloudflare",
+    "domain": "compute",
+    "freeTierType": "always-free",
+    "overageRisk": "low",
+    "productionReadiness": "prototype",
     "tags": [
       "edge",
       "serverless",
       "cdn",
       "api"
     ],
-    "content": "Why it is worth using on free tier Cloudflare Workers excels for globally distributed APIs and request shaping because the free tier is large enough for most hobby and early-stage production systems. Operational notes - Keep bundles small for faster deploy and startup. - Use KV and Durable Objects selectively; they can change performance profile. - Track per-route usage to avoid unexpected daily cap exhaustion."
+    "bestFor": [
+      "API gateway logic",
+      "Edge authentication",
+      "Latency-sensitive personalization"
+    ],
+    "content": "Why it is worth using on free tier Cloudflare Workers excels for globally distributed APIs and request shaping because the free tier is large enough for most hobby and early-stage production systems. Operational notes - Keep bundles small for faster deploy and startup. - Use KV and Durable Objects selectively; they can change performance profile. - Track per-route usage to avoid unexpected daily cap exhaustion. Edge Compute API gateway logic Edge authentication Latency-sensitive personalization"
   },
   {
     "id": "comparisons:cloudflare-workers-vs-azure-functions",
@@ -55,13 +81,20 @@
     "title": "Cloudflare Workers vs Azure Functions (Free Tier)",
     "description": "Comparison focused on global latency, quota behavior, and operational friction for small API workloads.",
     "provider": "Multi-Provider",
+    "domain": "compute",
+    "freeTierType": "always-free",
+    "overageRisk": "medium",
+    "productionReadiness": "production-light",
     "tags": [
       "comparison",
       "serverless",
       "api",
       "cloud"
     ],
-    "content": "Decision framing Choose Cloudflare Workers when global low latency and edge routing are primary concerns. Choose Azure Functions when deeper Microsoft ecosystem integration and enterprise alignment matter more."
+    "bestFor": [
+      "Teams deciding between Azure and edge-first stacks"
+    ],
+    "content": "Decision framing Choose Cloudflare Workers when global low latency and edge routing are primary concerns. Choose Azure Functions when deeper Microsoft ecosystem integration and enterprise alignment matter more. Comparative Analysis Choosing an API platform Free-tier architecture planning"
   },
   {
     "id": "resources:quota-monitoring-starter",
@@ -71,12 +104,19 @@
     "title": "Free-Tier Quota Monitoring Starter",
     "description": "Quick reference for setting up quota watchpoints and failure alerts for free-tier stacks.",
     "provider": "Multi-Provider",
+    "domain": "operations",
+    "freeTierType": "always-free",
+    "overageRisk": "none",
+    "productionReadiness": "prototype",
     "tags": [
       "observability",
       "quotas",
       "reliability"
     ],
-    "content": "Use this resource as your baseline runbook section when launching on free tiers: - define hard limits and soft thresholds - document reset periods - set escalation policy before you need it"
+    "bestFor": [
+      "Teams building their first free-tier stack"
+    ],
+    "content": "Use this resource as your baseline runbook section when launching on free tiers: - define hard limits and soft thresholds - document reset periods - set escalation policy before you need it Operations Resource Quota alerting setup Free-tier stability reviews Incident prevention"
   },
   {
     "id": "tools:github-actions",
@@ -86,13 +126,21 @@
     "title": "GitHub Actions",
     "description": "Workflow automation platform for CI/CD, content builds, and release pipelines with reusable workflow support.",
     "provider": "GitHub",
+    "domain": "devops",
+    "freeTierType": "always-free",
+    "overageRisk": "medium",
+    "productionReadiness": "production-light",
     "tags": [
       "ci-cd",
       "automation",
       "devops",
       "github"
     ],
-    "content": "Practical recommendation Use reusable workflows and pinned action versions from day one. That keeps the deployment pipeline auditable and easier to maintain as project scope grows."
+    "bestFor": [
+      "Teams already shipping via GitHub",
+      "Static sites and lightweight CI pipelines"
+    ],
+    "content": "Practical recommendation Use reusable workflows and pinned action versions from day one. That keeps the deployment pipeline auditable and easier to maintain as project scope grows. DevOps Tooling Automated builds Static export and deployment Release validation"
   },
   {
     "id": "services:github-pages",
@@ -102,13 +150,22 @@
     "title": "GitHub Pages",
     "description": "Static hosting with custom domains and CI-based publishing that fits documentation and developer portals.",
     "provider": "GitHub",
+    "domain": "hosting",
+    "freeTierType": "always-free",
+    "overageRisk": "low",
+    "productionReadiness": "prototype",
     "tags": [
       "static-site",
       "docs",
       "hosting",
       "ci-cd"
     ],
-    "content": "Why it is worth using on free tier GitHub Pages is a practical default when your project can be fully static. It removes backend complexity and pairs naturally with repository workflows. Operational notes - Keep output paths predictable for static hosting constraints. - Use repository-level environment variables to handle base path values. - Validate exported links after each deployment."
+    "bestFor": [
+      "Developer documentation sites",
+      "Knowledge bases",
+      "Public platform catalogs"
+    ],
+    "content": "Why it is worth using on free tier GitHub Pages is a practical default when your project can be fully static. It removes backend complexity and pairs naturally with repository workflows. Operational notes - Keep output paths predictable for static hosting constraints. - Use repository-level environment variables to handle base path values. - Validate exported links after each deployment. Static Hosting Developer documentation sites Knowledge bases Public platform catalogs"
   },
   {
     "id": "playbooks:cost-neutral-dev-portal",
@@ -118,12 +175,20 @@
     "title": "Launch a Cost-Neutral Developer Portal",
     "description": "Step-by-step execution plan for launching a searchable docs portal with free-tier hosting and CI.",
     "provider": "Multi-Provider",
+    "domain": "devops",
+    "freeTierType": "always-free",
+    "overageRisk": "low",
+    "productionReadiness": "prototype",
     "tags": [
       "portal",
       "docs",
       "ci-cd",
       "free-tier"
     ],
-    "content": "Playbook phases 1. Model content schema and ingestion. 2. Build typed rendering and explorer UX. 3. Implement CI/CD for static deployment. 4. Add quota and release monitoring."
+    "bestFor": [
+      "Documentation platform launch",
+      "Internal dev enablement"
+    ],
+    "content": "Playbook phases 1. Model content schema and ingestion. 2. Build typed rendering and explorer UX. 3. Implement CI/CD for static deployment. 4. Add quota and release monitoring. Platform Playbook Documentation platform launch Internal dev enablement"
   }
 ]

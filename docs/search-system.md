@@ -19,6 +19,8 @@ The script:
 - `tags`
 - `description`
 - `content`
+- `domain`
+- `bestFor`
 
 ## Runtime
 

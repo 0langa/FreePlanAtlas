@@ -19,6 +19,27 @@ function stripMarkdown(source) {
     .trim();
 }
 
+function inferDomain(category = "", tags = []) {
+  const haystack = `${category} ${tags.join(" ")}`.toLowerCase();
+  if (/host|deploy|static/.test(haystack)) return "hosting";
+  if (/serverless|function|compute|container|kubernetes/.test(haystack)) return "compute";
+  if (/database|postgres|mysql|sql|mongo|redis|vector/.test(haystack)) return "database";
+  if (/storage|blob|object|file|bucket/.test(haystack)) return "storage";
+  if (/auth|identity|oauth|login|access/.test(haystack)) return "auth";
+  if (/queue|message|pubsub|realtime|event|websocket/.test(haystack)) return "messaging";
+  if (/monitor|observability|logging|telemetry|apm|uptime|error/.test(haystack)) return "observability";
+  if (/ai|ml|llm|speech|vision|search|embedding/.test(haystack)) return "ai";
+  if (/ci|cd|devops|pipeline|automation|build/.test(haystack)) return "devops";
+  if (/security|vault|scan|compliance/.test(haystack)) return "security";
+  if (/network|dns|cdn|vpn|gateway|load balancer/.test(haystack)) return "networking";
+  if (/course|academy|learn|education|tutorial/.test(haystack)) return "learning";
+  return "other";
+}
+
+function inferFreeTierType(pricingModel = "free") {
+  return pricingModel === "trial" ? "trial" : "always-free";
+}
+
 async function* walkFiles(rootDir) {
   const entries = await fs.readdir(rootDir, { withFileTypes: true });
 
@@ -44,6 +65,9 @@ async function buildSearchRecords() {
     const slug = slugParts.join("/").replace(/\.(md|mdx)$/i, "");
     const file = await fs.readFile(filePath, "utf8");
     const { data, content } = matter(file);
+    const tags = Array.isArray(data.tags) ? data.tags.map((tag) => String(tag)) : [];
+    const category = String(data.category ?? "");
+    const freeTierDetails = data.freeTierDetails && typeof data.freeTierDetails === "object" ? data.freeTierDetails : {};
 
     records.push({
       id: `${kind}:${slug}`,
@@ -53,8 +77,17 @@ async function buildSearchRecords() {
       title: String(data.title ?? ""),
       description: String(data.description ?? ""),
       provider: String(data.provider ?? "Unknown"),
-      tags: Array.isArray(data.tags) ? data.tags.map((tag) => String(tag)) : [],
-      content: stripMarkdown(content),
+      domain: String(data.domain ?? inferDomain(category, tags)),
+      freeTierType: String(freeTierDetails.freeTierType ?? inferFreeTierType(data.pricingModel)),
+      overageRisk: String(freeTierDetails.overageRisk ?? (freeTierDetails.hasHardCap ? "none" : "low")),
+      productionReadiness: String(data.productionReadiness ?? "prototype"),
+      tags,
+      bestFor: Array.isArray(data.bestFor)
+        ? data.bestFor.map((item) => String(item))
+        : Array.isArray(data.useCases)
+          ? data.useCases.map((item) => String(item))
+          : [],
+      content: stripMarkdown(`${content} ${category} ${(Array.isArray(data.useCases) ? data.useCases.join(" ") : "")}`),
     });
   }
 

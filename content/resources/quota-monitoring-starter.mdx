@@ -3,6 +3,14 @@ title: Free-Tier Quota Monitoring Starter
 description: Quick reference for setting up quota watchpoints and failure alerts for free-tier stacks.
 provider: Multi-Provider
 category: Operations Resource
+domain: operations
+subtypes:
+  - quotas
+  - monitoring
+audiences:
+  - indie
+  - startup
+  - team
 tags:
   - observability
   - quotas
@@ -15,11 +23,19 @@ freeTierDetails:
   caveats:
     - Alert quality is only as good as selected metrics.
   requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
 useCases:
   - Quota alerting setup
   - Free-tier stability reviews
   - Incident prevention
+bestFor:
+  - Teams building their first free-tier stack
+avoidIf:
+  - You need a managed, paid monitoring service
 difficulty: beginner
+productionReadiness: prototype
 lastUpdated: 2026-04-22
 popularityScore: 75
 usefulnessScore: 85

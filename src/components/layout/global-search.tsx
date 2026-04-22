@@ -7,18 +7,19 @@ import { useRouter } from "next/navigation";
 import FlexSearch from "flexsearch";
 
 import { Input } from "@/components/ui/input";
+import { DOMAIN_LABELS } from "@/lib/content";
 import type { SearchRecord } from "@/types/content";
 import searchRecords from "@/generated/search-index.json";
 
-type SearchResult = Pick<SearchRecord, "id" | "title" | "url" | "provider" | "kind">;
+type SearchResult = Pick<SearchRecord, "id" | "title" | "url" | "provider" | "kind" | "domain">;
 
 const searchIndex = new FlexSearch.Document<SearchRecord>({
   tokenize: "forward",
   context: true,
   document: {
     id: "id",
-    index: ["title", "tags", "description", "content"],
-    store: ["id", "title", "url", "provider", "kind"],
+    index: ["title", "tags", "description", "content", "domain", "bestFor"],
+    store: ["id", "title", "url", "provider", "kind", "domain"],
   },
 });
 
@@ -94,7 +95,7 @@ export function GlobalSearch() {
                 >
                   <span className="text-sm font-medium">{result.title}</span>
                   <span className="text-xs text-muted-foreground">
-                    {result.provider} · {result.kind}
+                    {result.provider} · {DOMAIN_LABELS[result.domain ?? "other"]} · {result.kind}
                   </span>
                 </Link>
               ))

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { DOMAIN_LABELS } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import type { ContentKind, RegistryItem } from "@/types/content";
 
@@ -10,6 +11,7 @@ type SidebarNavProps = {
   className?: string;
   navTypeItems: { value: ContentKind; label: string; count: number }[];
   providerRegistry: RegistryItem[];
+  domainRegistry: RegistryItem[];
   tagRegistry: RegistryItem[];
 };
 
@@ -32,6 +34,7 @@ export function SidebarNav({
   className,
   navTypeItems,
   providerRegistry,
+  domainRegistry,
   tagRegistry,
 }: SidebarNavProps) {
   const pathname = usePathname();
@@ -58,6 +61,18 @@ export function SidebarNav({
             className="rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-accent"
           >
             {item.label} ({item.count})
+          </Link>
+        ))}
+      </NavSection>
+
+      <NavSection title="Domains">
+        {domainRegistry.slice(0, 12).map((item) => (
+          <Link
+            key={item.value}
+            href={`/explorer?domain=${encodeURIComponent(item.value)}`}
+            className="rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+          >
+            {DOMAIN_LABELS[item.value as keyof typeof DOMAIN_LABELS]}
           </Link>
         ))}
       </NavSection>
