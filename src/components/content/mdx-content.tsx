@@ -1,17 +1,13 @@
-"use client";
-
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { cn } from "@/lib/utils";
 
 type MdxContentProps = {
-  code: string;
+  source: string;
   className?: string;
 };
 
-export function MdxContent({ code, className }: MdxContentProps) {
-  const Component = useMDXComponent(code);
-
+export function MdxContent({ source, className }: MdxContentProps) {
   return (
     <article
       className={cn(
@@ -19,7 +15,7 @@ export function MdxContent({ code, className }: MdxContentProps) {
         className,
       )}
     >
-      <Component />
+      <MDXRemote source={source} />
     </article>
   );
 }

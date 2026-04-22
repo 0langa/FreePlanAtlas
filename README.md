@@ -7,7 +7,7 @@ FreeTierAtlas is a fully static, content-first platform for evaluating and using
 - Next.js (App Router) with static export
 - TypeScript strict mode
 - Tailwind CSS + shadcn/ui
-- Contentlayer + MDX content pipeline
+- Frontmatter + MDX content pipeline (`gray-matter` + `next-mdx-remote`)
 - TanStack Table explorer
 - FlexSearch client search using build-generated index
 - Zustand UI/filter state
@@ -16,8 +16,7 @@ FreeTierAtlas is a fully static, content-first platform for evaluating and using
 
 ```bash
 npm install
-npm run search:index
-npm run build:static
+npm run build
 ```
 
 For local development:
@@ -37,14 +36,26 @@ npm run dev
 
 ## Build + Export
 
-`npm run build:static` performs:
+`npm run build` performs:
 
 1. search index generation
-2. Contentlayer build
-3. Next.js build
-4. static export
+2. Next.js build + static export (via `output: "export"`)
 
-Artifacts are written to `out/` and are ready for GitHub Pages deployment.
+Artifacts are written to `out/` and are ready for any static host (GitHub Pages, Cloudflare Pages, etc.).
+
+## Deploy to Cloudflare Pages
+
+This site is a fully static Next.js export. Deploy it to Cloudflare Pages using:
+
+- Build command: `npm run build`
+- Build output directory: `out`
+- Node version: `20` (set `NODE_VERSION=20` in Pages, or rely on `.nvmrc`/`.node-version`)
+
+Optional environment variables:
+
+- `NEXT_PUBLIC_BASE_PATH` (only if you serve the site from a sub-path)
+
+More details in `docs/cloudflare-pages.md`.
 
 ## Content Categories
 

@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { KIND_LABELS } from "@/lib/content";
-import type { AtlasEntry, ContentKind } from "@/types/content";
+import type { AtlasEntryWithBody, ContentKind } from "@/types/content";
 
-export function ContentPage({ entry, kind }: { entry: AtlasEntry; kind: ContentKind }) {
+export function ContentPage({ entry, kind }: { entry: AtlasEntryWithBody; kind: ContentKind }) {
   return (
     <div className="flex flex-col gap-8">
       <Breadcrumb>
@@ -55,7 +55,7 @@ export function ContentPage({ entry, kind }: { entry: AtlasEntry; kind: ContentK
 
       <Separator />
 
-      <MdxContent code={entry.body.code} />
+      <MdxContent source={entry.body.raw} />
     </div>
   );
 }

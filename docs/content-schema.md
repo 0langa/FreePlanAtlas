@@ -1,6 +1,6 @@
 # Content Schema
 
-FreeTierAtlas uses a unified schema via Contentlayer with typed extension points.
+FreeTierAtlas uses a unified frontmatter schema for MDX content, validated at build time.
 
 ## Shared Schema
 
@@ -21,7 +21,7 @@ FreeTierAtlas uses a unified schema via Contentlayer with typed extension points
   };
   useCases: string[];
   difficulty: "beginner" | "intermediate" | "advanced";
-  lastUpdated: date;
+  lastUpdated: string; // ISO date, e.g. "2026-04-22"
   popularityScore: number;
   usefulnessScore: number;
   ratingBreakdown?: {
@@ -38,7 +38,7 @@ FreeTierAtlas uses a unified schema via Contentlayer with typed extension points
 
 ## Computed Fields
 
-Contentlayer computes:
+The build-time loader computes:
 
 - `slug`
 - `kind`

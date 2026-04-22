@@ -1,9 +1,12 @@
 import Link from "next/link";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { KIND_LABELS, featuredEntries, navTypeItems, providerRegistry, tagRegistry } from "@/lib/content";
+import { KIND_LABELS } from "@/lib/content";
+import { getContentData } from "@/lib/content.server";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const { featuredEntries, navTypeItems, providerRegistry, tagRegistry } = await getContentData();
+
   return (
     <div className="space-y-12">
       <section className="rounded-2xl border bg-gradient-to-br from-card via-card to-muted p-8 sm:p-10">
@@ -37,7 +40,7 @@ export default function HomePage() {
         <h2 className="text-2xl font-semibold tracking-tight">Featured Entries</h2>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {featuredEntries.map((entry) => (
-            <Card key={entry._id} className="h-full">
+            <Card key={entry.id} className="h-full">
               <CardHeader>
                 <CardTitle className="text-lg">
                   <Link href={entry.url} className="hover:underline">

@@ -8,8 +8,17 @@ import { SidebarNav } from "@/components/layout/sidebar-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import type { ContentKind, RegistryItem } from "@/types/content";
 
-export function HeaderBar() {
+export function HeaderBar({
+  navTypeItems,
+  providerRegistry,
+  tagRegistry,
+}: {
+  navTypeItems: { value: ContentKind; label: string; count: number }[];
+  providerRegistry: RegistryItem[];
+  tagRegistry: RegistryItem[];
+}) {
   return (
     <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center gap-3 px-4 lg:px-6">
@@ -28,7 +37,11 @@ export function HeaderBar() {
               </Link>
             </div>
             <div className="h-[calc(100%-61px)] p-4">
-              <SidebarNav />
+              <SidebarNav
+                navTypeItems={navTypeItems}
+                providerRegistry={providerRegistry}
+                tagRegistry={tagRegistry}
+              />
             </div>
           </SheetContent>
         </Sheet>

@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { navTypeItems, providerRegistry, tagRegistry } from "@/lib/content";
 import { cn } from "@/lib/utils";
+import type { ContentKind, RegistryItem } from "@/types/content";
 
 type SidebarNavProps = {
   className?: string;
+  navTypeItems: { value: ContentKind; label: string; count: number }[];
+  providerRegistry: RegistryItem[];
+  tagRegistry: RegistryItem[];
 };
 
 function NavSection({
@@ -25,7 +28,12 @@ function NavSection({
   );
 }
 
-export function SidebarNav({ className }: SidebarNavProps) {
+export function SidebarNav({
+  className,
+  navTypeItems,
+  providerRegistry,
+  tagRegistry,
+}: SidebarNavProps) {
   const pathname = usePathname();
 
   return (

@@ -3,10 +3,19 @@
 import { useSearchParams } from "next/navigation";
 
 import { ExplorerTable } from "@/components/explorer/explorer-table";
-import { categoryRegistry, providerRegistry, tagRegistry } from "@/lib/content";
-import type { AtlasEntry } from "@/types/content";
+import type { AtlasEntry, RegistryItem } from "@/types/content";
 
-export function ExplorerPageClient({ data }: { data: AtlasEntry[] }) {
+export function ExplorerPageClient({
+  data,
+  providerRegistry,
+  categoryRegistry,
+  tagRegistry,
+}: {
+  data: AtlasEntry[];
+  providerRegistry: RegistryItem[];
+  categoryRegistry: RegistryItem[];
+  tagRegistry: RegistryItem[];
+}) {
   const searchParams = useSearchParams();
   const query = searchParams.get("q") ?? "";
   const provider = searchParams.get("provider") ?? "all";
