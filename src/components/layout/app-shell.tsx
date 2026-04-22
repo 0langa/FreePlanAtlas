@@ -8,6 +8,7 @@ type AppShellProps = {
 
 export async function AppShell({ children }: AppShellProps) {
   const { navTypeItems, providerRegistry, tagRegistry } = await getContentData();
+  const year = new Date().getFullYear();
 
   return (
     <div className="min-h-screen bg-background">
@@ -27,6 +28,19 @@ export async function AppShell({ children }: AppShellProps) {
         </aside>
         <main className="min-w-0 px-4 py-6 lg:px-8">{children}</main>
       </div>
+      <footer className="border-t">
+        <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-2 px-4 py-5 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <p>{`© ${year} FreeTierWiki · V1`}</p>
+          <a
+            href="https://github.com/0langa/FreeTierWiki"
+            target="_blank"
+            rel="noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            GitHub Repository
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

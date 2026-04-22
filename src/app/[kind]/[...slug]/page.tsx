@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: DynamicContentPageProps) {
   }
 
   return {
-    title: `${entry.title} | FreeTierAtlas`,
+    title: entry.title,
     description: entry.description,
   };
 }

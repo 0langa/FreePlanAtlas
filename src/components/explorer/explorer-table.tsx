@@ -88,7 +88,11 @@ const columns: ColumnDef<AtlasEntry>[] = [
   {
     accessorKey: "difficulty",
     header: "Difficulty",
-    cell: ({ row }) => row.original.difficulty,
+    cell: ({ row }) => (
+      <span className="inline-block min-w-[7.5rem] overflow-hidden text-ellipsis whitespace-nowrap capitalize">
+        {row.original.difficulty}
+      </span>
+    ),
   },
   {
     accessorKey: "usefulnessScore",

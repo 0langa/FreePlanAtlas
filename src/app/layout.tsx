@@ -18,7 +18,10 @@ const fontMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FreeTierAtlas",
+  title: {
+    default: "FreeTierWiki — Free Tier Docs & Service Explorer",
+    template: "%s | FreeTierWiki",
+  },
   description: "Decision-first atlas for free-tier services, tools, and implementation guides.",
 };
 

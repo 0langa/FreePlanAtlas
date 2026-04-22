@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { ContentMeta } from "@/components/content/content-meta";
 import { MdxContent } from "@/components/content/mdx-content";
 import {
@@ -18,15 +20,21 @@ export function ContentPage({ entry, kind }: { entry: AtlasEntryWithBody; kind: 
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            <BreadcrumbLink render={<Link href="/" />}>
+              Home
+            </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href="/explorer">Explorer</BreadcrumbLink>
+            <BreadcrumbLink render={<Link href="/explorer" />}>
+              Explorer
+            </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href={`/explorer?kind=${kind}`}>{KIND_LABELS[kind]}</BreadcrumbLink>
+            <BreadcrumbLink render={<Link href={`/explorer?kind=${kind}`} />}>
+              {KIND_LABELS[kind]}
+            </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
@@ -46,7 +54,7 @@ export function ContentPage({ entry, kind }: { entry: AtlasEntryWithBody; kind: 
       <section className="rounded-lg border bg-card p-4">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Free Tier Details</h2>
         <p className="mt-2 text-sm">{entry.freeTierDetails.summary}</p>
-        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-foreground/70">
           {entry.freeTierDetails.limits.map((limit: string) => (
             <li key={limit}>{limit}</li>
           ))}

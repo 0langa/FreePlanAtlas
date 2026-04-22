@@ -25,7 +25,12 @@ export function HeaderBar({
         <Sheet>
           <SheetTrigger
             render={
-              <Button variant="ghost" size="sm" className="lg:hidden" aria-label="Open menu" />
+              <Button
+                variant="ghost"
+                size="sm"
+                className="lg:hidden focus-visible:border-transparent focus-visible:ring-0"
+                aria-label="Open menu"
+              />
             }
           >
             <Menu />

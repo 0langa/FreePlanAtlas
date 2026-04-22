@@ -28,7 +28,7 @@ export default async function HomePage() {
             </Link>
             <Link
               href="/explorer?kind=guides"
-              className="rounded-md border px-4 py-2 text-sm font-medium transition-colors hover:bg-accent"
+              className="rounded-md border-2 border-foreground/40 bg-background/70 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent dark:border-foreground/60 dark:bg-foreground/5"
             >
               Start from Guides
             </Link>
@@ -98,7 +98,7 @@ export default async function HomePage() {
                 href={`/explorer?tag=${encodeURIComponent(item.value)}`}
                 className="rounded-full border px-2 py-1 transition-colors hover:bg-accent"
               >
-                #{item.value}
+                {`#${item.value}`}
               </Link>
             ))}
           </CardContent>

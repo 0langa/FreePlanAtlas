@@ -20,6 +20,10 @@ import { KIND_LABELS } from "@/lib/content";
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const ALLOWED_EXTENSIONS = new Set([".md", ".mdx"]);
 
+function normalizeBulletPrefix(value: string): string {
+  return value.replace(/^\s*[•●▪◦\-–—]\s*/, "").trim();
+}
+
 function asString(value: unknown, field: string): string {
   if (typeof value === "string") {
     return value;
@@ -140,8 +144,8 @@ function parseEntry(
     pricingModel: asString(data.pricingModel, "pricingModel") as AtlasEntry["pricingModel"],
     freeTierDetails: {
       summary: asString(freeTierDetailsRaw.summary, "freeTierDetails.summary"),
-      limits: asStringArray(freeTierDetailsRaw.limits, "freeTierDetails.limits"),
-      caveats: optionalStringArray(freeTierDetailsRaw.caveats),
+      limits: asStringArray(freeTierDetailsRaw.limits, "freeTierDetails.limits").map(normalizeBulletPrefix),
+      caveats: optionalStringArray(freeTierDetailsRaw.caveats)?.map(normalizeBulletPrefix),
       resetPeriod: optionalString(freeTierDetailsRaw.resetPeriod),
       requiresCard: asBoolean(freeTierDetailsRaw.requiresCard, "freeTierDetails.requiresCard", false),
     },
