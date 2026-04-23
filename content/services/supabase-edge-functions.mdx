@@ -1,0 +1,68 @@
+---
+title: "Supabase Edge Functions"
+description: "Supabase Edge Functions lets you deploy TypeScript/JavaScript serverless functions close to your users for low-latency APIs."
+provider: "Supabase"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - serverless
+  - edge
+  - functions
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - typescript
+  - functions
+  - edge
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 500,000 function invocations per month."
+  limits:
+    - 500,000 invocations/month
+    - Up to 5 MB request/response size
+    - Up to 10 MB function size
+  caveats:
+    - Cold starts may affect latency
+    - Limited to supported runtimes
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - API endpoints for web/mobile apps
+  - Webhook handlers
+  - Custom authentication logic
+quickstartSteps:
+  - Sign up for a Supabase account.
+  - Create a new project in the Supabase dashboard.
+  - Install the Supabase CLI and initialize your project.
+  - Write your function in the 'functions' directory.
+  - Deploy your function using the Supabase CLI.
+whenToUse: "Use when you need to deploy lightweight serverless APIs or webhooks close to your users with minimal setup."
+whenNotToUse: "Avoid if you require custom runtimes, long-running processes, or advanced networking features not supported by edge functions."
+bestFor:
+  - API endpoints
+  - webhooks
+  - custom logic
+avoidIf:
+  - need custom runtimes
+  - require long execution time
+  - require advanced networking
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://supabase.com/docs/guides/functions
+docsUrl: https://supabase.com/docs/guides/functions
+featured: false
+---
+
+Supabase Edge Functions provides a simple way to deploy serverless TypeScript/JavaScript functions at the edge, ideal for APIs and webhooks with generous free usage.

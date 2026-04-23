@@ -1,0 +1,69 @@
+---
+title: "EMQX Serverless"
+description: "EMQX Serverless provides a fully managed MQTT broker for real-time messaging without infrastructure management."
+provider: "EMQX"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - MQTT
+  - Pub/Sub
+  - IoT
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - mqtt
+  - serverless
+  - broker
+  - iot
+  - pubsub
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 million messages per month and 100 concurrent connections."
+  limits:
+    - 1 million messages/month
+    - 100 concurrent connections
+    - 1 deployment
+  caveats:
+    - Overages incur charges
+    - Limited to shared infrastructure
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Usage beyond free limits is billed automatically
+useCases:
+  - IoT device messaging
+  - Real-time data streaming
+  - Prototyping MQTT applications
+quickstartSteps:
+  - Sign up for an EMQX Cloud account.
+  - Navigate to the Serverless MQTT section.
+  - Create a new serverless deployment.
+  - Configure MQTT authentication and topics.
+  - Connect your client devices using the provided endpoint.
+whenToUse: "Use when you need a managed MQTT broker for prototyping, small-scale IoT, or real-time messaging without server management."
+whenNotToUse: "Avoid if you require dedicated infrastructure, advanced customizations, or expect high message throughput beyond free limits."
+bestFor:
+  - IoT prototypes
+  - small teams
+  - real-time messaging
+avoidIf:
+  - enterprise-scale
+  - custom broker plugins
+  - strict isolation
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.emqx.com/en/cloud/serverless-mqtt
+docsUrl: https://docs.emqx.com/en/cloud/latest/serverless/
+featured: false
+---
+
+EMQX Serverless offers a managed MQTT broker with a generous free tier, ideal for IoT and real-time messaging projects without infrastructure overhead.

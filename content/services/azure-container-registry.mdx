@@ -1,0 +1,70 @@
+---
+title: "Azure Container Registry"
+description: "Azure Container Registry is a managed Docker container registry for storing and managing private container images in Azure."
+provider: "Azure"
+category: "Container Registry"
+domain: devops
+subtypes:
+  - docker
+  - OCI
+  - private-registry
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - container
+  - docker
+  - registry
+  - azure
+  - devops
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier (Basic SKU) allows limited storage and image operations per month."
+  limits:
+    - 1 GiB storage
+    - 10 webhooks
+    - Unlimited image pulls and pushes (subject to bandwidth limits)
+  caveats:
+    - No geo-replication
+    - Limited performance compared to higher SKUs
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Storage overages and premium features incur charges
+useCases:
+  - Store private Docker images
+  - Integrate with Azure Kubernetes Service
+  - Automate container image builds
+  - Enable CI/CD pipelines
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new Container Registry using the Basic SKU.
+  - Configure access credentials or enable Azure Active Directory authentication.
+  - Push a Docker image to your registry using the Azure CLI.
+  - Pull the image from your registry to your deployment environment.
+whenToUse: "Use when you need a managed private container registry tightly integrated with Azure services and workflows."
+whenNotToUse: "Avoid if you require geo-replication, high throughput, or plan to exceed the free storage and webhook limits."
+bestFor:
+  - Azure-centric teams
+  - CI/CD pipelines
+  - Private image storage
+avoidIf:
+  - Need multi-region replication
+  - Require high storage
+  - Prefer open-source registries
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/container-registry/
+docsUrl: https://learn.microsoft.com/en-us/azure/container-registry/
+featured: false
+---
+
+Azure Container Registry provides a secure, managed Docker registry service for storing and managing container images, with seamless Azure integration and a limited free tier.

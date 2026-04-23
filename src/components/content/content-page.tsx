@@ -49,6 +49,17 @@ export function ContentPage({ entry, kind }: { entry: AtlasEntryWithBody; kind: 
         <p className="max-w-3xl text-base text-muted-foreground">{entry.description}</p>
       </header>
 
+      <section className="grid gap-4 md:grid-cols-2">
+        <div className="rounded-lg border bg-card p-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">When to Use</h2>
+          <p className="mt-2 text-sm text-muted-foreground">{entry.whenToUse}</p>
+        </div>
+        <div className="rounded-lg border bg-card p-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">When Not to Use</h2>
+          <p className="mt-2 text-sm text-muted-foreground">{entry.whenNotToUse}</p>
+        </div>
+      </section>
+
       <ContentMeta entry={entry} />
 
       <section className="grid gap-4 md:grid-cols-2">
@@ -92,6 +103,19 @@ export function ContentPage({ entry, kind }: { entry: AtlasEntryWithBody; kind: 
             </ul>
           </div>
         ) : null}
+      </section>
+
+      <section className="rounded-lg border bg-card p-4">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Quickstart</h2>
+        {entry.quickstartSteps.length > 0 ? (
+          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm text-muted-foreground marker:text-foreground/70">
+            {entry.quickstartSteps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        ) : (
+          <p className="mt-2 text-sm text-muted-foreground">Quickstart steps coming soon.</p>
+        )}
       </section>
 
       <Separator />

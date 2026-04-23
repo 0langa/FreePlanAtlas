@@ -1,0 +1,74 @@
+---
+title: "Cloud Functions"
+description: "Google Cloud Functions is a serverless compute service for running event-driven code without managing servers."
+provider: "Google Cloud"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - functions-as-a-service
+  - event-driven
+  - serverless
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - event-driven
+  - functions
+  - cloud
+  - compute
+pricingModel: freemium
+freeTierDetails:
+  summary: "Generous always-free tier for lightweight workloads."
+  limits:
+    - 2 million invocations/month
+    - 400,000 GB-seconds/month
+    - 200,000 CPU-seconds/month
+    - 5GB outbound data/month
+  caveats:
+    - Limits apply per billing account, not per project.
+    - Outbound networking beyond 5GB is billed.
+    - Some regions may have different quotas.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free tier incurs charges automatically.
+    - Monitor usage to avoid unexpected costs.
+useCases:
+  - API backends
+  - Webhook handlers
+  - Scheduled tasks
+  - IoT event processing
+quickstartSteps:
+  - Create a Google Cloud account and enable billing.
+  - Enable the Cloud Functions API in your project.
+  - Install and initialize the Google Cloud SDK.
+  - Write your function code and define a trigger.
+  - Deploy the function using the gcloud CLI.
+whenToUse: "Use when you need to run code in response to events without managing servers or infrastructure."
+whenNotToUse: "Avoid for long-running tasks, high-throughput compute, or when you need fine-grained control over runtime environments."
+bestFor:
+  - event-driven workloads
+  - API endpoints
+  - automation scripts
+avoidIf:
+  - require persistent connections
+  - need custom OS-level dependencies
+  - have heavy compute needs
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://cloud.google.com/functions
+docsUrl: https://cloud.google.com/functions/docs
+featured: false
+---
+
+Google Cloud Functions lets you deploy and run code in response to HTTP requests or cloud events, with a generous free tier for small workloads.

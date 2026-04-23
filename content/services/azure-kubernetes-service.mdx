@@ -1,0 +1,68 @@
+---
+title: "Azure Kubernetes Service"
+description: "Azure Kubernetes Service (AKS) provides managed Kubernetes clusters for deploying, scaling, and managing containerized applications on Azure."
+provider: "Azure"
+category: "Container Orchestration"
+domain: compute
+subtypes:
+  - managed-kubernetes
+  - container-cluster
+  - orchestration
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - kubernetes
+  - containers
+  - orchestration
+  - azure
+  - devops
+pricingModel: freemium
+freeTierDetails:
+  summary: "AKS offers free managed Kubernetes control plane with paid node VMs."
+  limits:
+    - No charge for control plane
+    - Pay only for VM nodes and storage
+    - Standard networking and load balancer charges apply
+  caveats:
+    - Node VMs, storage, and outbound data transfer are billed separately
+    - Free tier does not include node costs
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: high
+  billingRiskNotes:
+    - Costs can accrue quickly from node VMs and network usage
+useCases:
+  - Deploying scalable containerized applications
+  - Automating application updates and rollbacks
+  - Running CI/CD pipelines
+  - Multi-container microservices hosting
+quickstartSteps:
+  - Sign in to the Azure Portal and create a new resource group.
+  - Navigate to Azure Kubernetes Service and start a new cluster deployment.
+  - Configure cluster basics (region, node size, node count).
+  - Review and create the AKS cluster.
+  - Install and configure kubectl to connect to your AKS cluster.
+whenToUse: "Use AKS when you need a managed Kubernetes environment for deploying and scaling containerized workloads on Azure."
+whenNotToUse: "Avoid AKS if you want a fully free solution or have minimal container orchestration needs; node and network costs can add up."
+bestFor:
+  - scalable apps
+  - microservices
+  - production workloads
+avoidIf:
+  - seeking zero-cost hosting
+  - simple single-container apps
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-08
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/kubernetes-service/
+docsUrl: https://learn.microsoft.com/en-us/azure/aks/
+featured: false
+---
+
+Azure Kubernetes Service (AKS) is a managed Kubernetes platform that simplifies deploying, managing, and scaling containerized applications in the Azure cloud.

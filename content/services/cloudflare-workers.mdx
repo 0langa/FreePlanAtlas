@@ -1,48 +1,70 @@
 ---
-title: Cloudflare Workers
-description: Edge runtime with high global coverage and developer-friendly free request limits for APIs and lightweight middleware.
-provider: Cloudflare
-category: Edge Compute
-tags:
+title: "Cloudflare Workers"
+description: "Cloudflare Workers lets you deploy serverless code globally at the edge for fast, scalable web applications and APIs."
+provider: "Cloudflare"
+category: "Serverless Compute"
+domain: compute
+subtypes:
   - edge
   - serverless
-  - cdn
+  - functions
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+  - student
+tags:
+  - edge
+  - javascript
+  - typescript
   - api
+  - serverless
 pricingModel: freemium
 freeTierDetails:
-  summary: Strong free requests/month and low-latency global deployment for edge execution.
+  summary: "Free tier includes 100,000 requests per day with no credit card required."
   limits:
-    - 100,000 requests per day on the free plan.
-    - CPU time constraints per invocation.
-    - Certain advanced platform features require paid plans.
+    - 100,000 requests/day
+    - 10ms CPU time/request
+    - 1,000 KV reads/day
+    - 30 scripts
   caveats:
-    - Some integrations (queues, AI gateway usage) can consume paid quotas quickly.
+    - KV storage and other add-ons have separate limits.
+    - CPU time is capped per request.
   resetPeriod: daily
   requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
 useCases:
-  - API gateway logic
-  - Edge authentication
-  - Latency-sensitive personalization
-difficulty: intermediate
-lastUpdated: 2026-04-22
-popularityScore: 93
-usefulnessScore: 95
-ratingBreakdown:
-  onboarding: 9
-  reliability: 9
-  ecosystem: 8
-  valueDensity: 10
-officialUrl: https://workers.cloudflare.com/
+  - API endpoints
+  - Edge caching
+  - Webhook handlers
+  - Static site backends
+quickstartSteps:
+  - Sign up for a Cloudflare account.
+  - Install the Wrangler CLI tool.
+  - Run 'wrangler init' to create a new project.
+  - Develop your Worker using JavaScript or TypeScript.
+  - Deploy with 'wrangler publish'.
+whenToUse: "Use Cloudflare Workers to deploy lightweight APIs or logic close to users for low-latency, globally distributed applications."
+whenNotToUse: "Avoid if you need long-running processes, large memory, or advanced language/runtime support beyond JavaScript/TypeScript."
+bestFor:
+  - low-latency APIs
+  - edge logic
+  - static site backends
+avoidIf:
+  - heavy compute
+  - long-running tasks
+  - non-JS runtimes
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-11
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://developers.cloudflare.com/workers/
 docsUrl: https://developers.cloudflare.com/workers/
-featured: true
+featured: false
 ---
 
-## Why it is worth using on free tier
-
-Cloudflare Workers excels for globally distributed APIs and request shaping because the free tier is large enough for most hobby and early-stage production systems.
-
-## Operational notes
-
-- Keep bundles small for faster deploy and startup.
-- Use KV and Durable Objects selectively; they can change performance profile.
-- Track per-route usage to avoid unexpected daily cap exhaustion.
+Cloudflare Workers enables developers to run serverless code at the edge, providing fast response times and global scalability for APIs and web applications. The free tier is generous for small projects, but resource limits and language/runtime constraints apply.

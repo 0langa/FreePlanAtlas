@@ -1,67 +1,69 @@
 ---
-title: Azure Functions
-description: Serverless compute with a generous event-driven free grant for HTTP APIs, timers, and queue workloads.
-provider: Azure
-category: Serverless Compute
+title: "Azure Functions"
+description: "Azure Functions is a serverless compute service for running event-driven code without managing infrastructure."
+provider: "Azure"
+category: "Serverless Compute"
 domain: compute
 subtypes:
+  - event-driven
+  - FaaS
   - serverless
-  - functions
 audiences:
+  - student
+  - indie
   - startup
   - team
 tags:
   - serverless
-  - api
+  - functions
   - event-driven
   - azure
-pricingModel: free
+  - cloud
+pricingModel: freemium
 freeTierDetails:
-  summary: Includes monthly execution and resource grants that support low-traffic APIs and scheduled jobs.
+  summary: "1 million free requests and 400,000 GB-s compute per month."
   limits:
-    - 1 million requests per month on Consumption.
-    - 400,000 GB-seconds compute grant monthly.
-    - Cold start behavior can affect latency-sensitive endpoints.
+    - 1 million requests/month
+    - 400,000 GB-s compute/month
   caveats:
-    - Network egress and dependent services are billed separately.
-    - Long-running jobs may require Durable Functions or plan upgrade.
+    - Consumption plan only
+    - Premium and Dedicated plans not included
   resetPeriod: monthly
-  requiresCard: true
+  requiresCard: false
   freeTierType: always-free
-  hasHardCap: false
-  overageRisk: medium
+  hasHardCap: true
+  overageRisk: low
   billingRiskNotes:
-    - Outbound data transfer is billed separately.
+    - Charges apply if usage exceeds free tier limits
 useCases:
-  - Webhook ingestion
-  - Lightweight REST API
-  - Scheduled automation
+  - API backends
+  - Event processing
+  - Scheduled tasks
+  - IoT data ingestion
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new Function App resource.
+  - Choose the Consumption plan for always-free tier.
+  - Select your preferred runtime (e.g., Node.js, Python, C#).
+  - Deploy your first function using the portal or CLI.
+whenToUse: "Use Azure Functions for lightweight, event-driven workloads where you want to avoid server management and pay only for actual usage."
+whenNotToUse: "Avoid if you need long-running processes, require dedicated compute, or have strict latency requirements not suited to cold starts."
 bestFor:
-  - Event-driven workloads with predictable traffic
-  - Teams already using Azure services
+  - event-driven automation
+  - API endpoints
+  - background jobs
 avoidIf:
-  - You need zero cold-start latency guarantees
-difficulty: intermediate
+  - long-running tasks
+  - high-performance compute
+  - stateful applications
+difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2026-04-22
-popularityScore: 89
-usefulnessScore: 92
-ratingBreakdown:
-  onboarding: 8
-  reliability: 8
-  ecosystem: 9
-  valueDensity: 9
-officialUrl: https://azure.microsoft.com/products/functions/
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/services/functions/
 docsUrl: https://learn.microsoft.com/azure/azure-functions/
-featured: true
+featured: false
 ---
 
-## Why it is worth using on free tier
-
-Azure Functions is one of the strongest free-tier options for teams that need API endpoints and event processing without paying for always-on infrastructure. The model works well when traffic is bursty and predictable.
-
-## Operational notes
-
-- Keep function app startup weight low to reduce cold starts.
-- Put strict retry and dead-letter behavior around queue-triggered functions.
-- Pair it with Azure Storage and static frontends for low-cost full-stack projects.
+Azure Functions enables you to build scalable, event-driven applications with minimal setup, ideal for APIs, automation, and background processing on a pay-per-use model.

@@ -261,6 +261,9 @@ function parseEntry(
       monthlyCreditAmount: optionalString(freeTierDetailsRaw.monthlyCreditAmount),
     },
     useCases: asStringArray(data.useCases, "useCases"),
+    whenToUse: asString((data as any).whenToUse, "whenToUse"),
+    whenNotToUse: asString((data as any).whenNotToUse, "whenNotToUse"),
+    quickstartSteps: optionalStringArray((data as any).quickstartSteps) ?? [],
     bestFor: optionalStringArray(data.bestFor) ?? asStringArray(data.useCases, "useCases"),
     avoidIf: optionalStringArray(data.avoidIf) ?? [],
     difficulty: asString(data.difficulty, "difficulty") as AtlasEntry["difficulty"],
@@ -282,6 +285,7 @@ function parseEntry(
         : undefined,
     officialUrl: optionalString(data.officialUrl),
     docsUrl: optionalString(data.docsUrl),
+    sourceUrls: optionalStringArray((data as any).sourceUrls),
     featured: asBoolean(data.featured, "featured", false),
   };
 

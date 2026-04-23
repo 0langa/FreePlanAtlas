@@ -1,0 +1,72 @@
+---
+title: "Oracle Always Free Compute"
+description: "Oracle Always Free Compute offers virtual machines and ARM-based instances with persistent storage at no cost for small workloads."
+provider: "Oracle Cloud"
+category: "Virtual Machines"
+domain: compute
+subtypes:
+  - VM
+  - ARM
+  - x86
+  - cloud server
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - cloud
+  - compute
+  - vm
+  - oracle
+  - free-tier
+pricingModel: free
+freeTierDetails:
+  summary: "Always Free tier provides up to 4 ARM CPUs, 24 GB RAM, 2 VMs, and 200 GB block storage."
+  limits:
+    - 2 AMD or ARM VMs
+    - 4 ARM OCPUs or 1 AMD OCPU
+    - 24 GB RAM (ARM)
+    - 200 GB block storage
+  caveats:
+    - Limited to specific shapes and regions
+    - Inactive resources may be reclaimed
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Hosting small web apps
+  - Learning cloud infrastructure
+  - Running open source projects
+  - Prototyping workloads
+quickstartSteps:
+  - Sign up for an Oracle Cloud Free Tier account.
+  - Verify your identity and add a payment method.
+  - Navigate to Compute > Instances in the Oracle Cloud Console.
+  - Create a new instance using an Always Free eligible shape.
+  - Configure networking and storage as needed.
+  - Launch and connect to your VM.
+whenToUse: "Use when you need persistent, low-cost VMs for learning, prototyping, or small production workloads with predictable resource needs."
+whenNotToUse: "Avoid if you require high availability, advanced networking, or need to scale beyond the free tier's strict limits."
+bestFor:
+  - learning
+  - prototyping
+  - personal projects
+  - open source hosting
+avoidIf:
+  - enterprise production
+  - high-availability
+  - large-scale workloads
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 8
+officialUrl: https://www.oracle.com/cloud/free/
+docsUrl: https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier.htm
+featured: false
+---
+
+Oracle Always Free Compute provides a reliable way to run small, persistent VMs at no cost, ideal for learning, prototyping, and open source projects. The free tier includes both ARM and AMD shapes, with generous RAM and storage for entry-level needs. While suitable for light production use, it is not intended for high-availability or large-scale deployments. Resources are capped and may be reclaimed if inactive, so monitor usage to avoid disruption.

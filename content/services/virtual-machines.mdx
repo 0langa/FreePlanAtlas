@@ -1,0 +1,74 @@
+---
+title: "Virtual Machines"
+description: "Azure Virtual Machines provide scalable, on-demand compute resources for running applications and workloads in the cloud."
+provider: "Azure"
+category: "Virtual Machines"
+domain: compute
+subtypes:
+  - Linux VM
+  - Windows VM
+  - Burstable VM
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+tags:
+  - vm
+  - compute
+  - cloud
+  - azure
+  - iaas
+pricingModel: freemium
+freeTierDetails:
+  summary: "750 hours per month of B1S Windows or Linux VM for 12 months."
+  limits:
+    - 750 hours/month B1S VM
+    - Windows or Linux OS
+    - Standard SSD storage
+    - 12 months duration
+  caveats:
+    - After 12 months, standard pay-as-you-go rates apply.
+    - Storage and bandwidth beyond free limits incur charges.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: time-limited
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free hours or storage incurs charges.
+    - VMs left running beyond free quota will be billed.
+  trialDays: 365
+useCases:
+  - Testing cloud-based applications
+  - Learning Linux or Windows server administration
+  - Hosting small web servers
+  - Prototyping workloads
+quickstartSteps:
+  - Sign up for an Azure account and activate the free tier.
+  - Navigate to the Azure Portal and select 'Create a resource'.
+  - Choose 'Virtual Machine', select B1S size, and configure OS and settings.
+  - Review and create the VM, then connect using SSH or RDP.
+  - Monitor usage to stay within free tier limits.
+whenToUse: "Use when you need flexible, on-demand compute for development, testing, or learning with minimal upfront cost."
+whenNotToUse: "Avoid if you require always-free compute, need high-performance VMs, or want to avoid potential overage charges after 12 months."
+bestFor:
+  - learning
+  - prototyping
+  - testing
+  - small workloads
+avoidIf:
+  - always-free required
+  - high compute needs
+  - long-term production
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/services/virtual-machines/
+docsUrl: https://learn.microsoft.com/azure/virtual-machines/
+featured: false
+---
+
+Azure Virtual Machines offer a flexible way to run Linux or Windows workloads in the cloud, ideal for learning, prototyping, and testing with a generous 12-month free tier.

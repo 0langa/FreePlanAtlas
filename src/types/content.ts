@@ -73,6 +73,9 @@ export type AtlasEntryBase = {
   pricingModel: PricingModel;
   freeTierDetails: FreeTierDetails;
   useCases: string[];
+  whenToUse: string;
+  whenNotToUse: string;
+  quickstartSteps: string[];
   bestFor: string[];
   avoidIf: string[];
   difficulty: FilterDifficulty;
@@ -84,6 +87,7 @@ export type AtlasEntryBase = {
   ratingBreakdown?: RatingBreakdown;
   officialUrl?: string;
   docsUrl?: string;
+  sourceUrls?: string[];
   featured?: boolean;
 };
 

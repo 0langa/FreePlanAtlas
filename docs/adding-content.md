@@ -17,17 +17,15 @@ Every entry requires these fields:
 - `description`
 - `provider`
 - `category`
-- `domain`
-- `subtypes` (array)
-- `audiences` (array)
 - `tags` (array)
 - `pricingModel` (`free`, `freemium`, `trial`)
-- `freeTierDetails` object
+- `freeTierDetails.summary`
+- `freeTierDetails.limits`
 - `useCases` (array)
-- `bestFor` (array)
-- `avoidIf` (array)
+- `whenToUse`
+- `whenNotToUse`
+- `quickstartSteps` (array)
 - `difficulty` (`beginner`, `intermediate`, `advanced`)
-- `productionReadiness` (`prototype`, `side-project`, `production-light`, `production-ready`)
 - `lastUpdated` (ISO date)
 - `popularityScore` (number)
 - `usefulnessScore` (number)
@@ -39,6 +37,7 @@ See `content/services/azure-functions.mdx` as a reference.
 - `ratingBreakdown`
 - `officialUrl`
 - `docsUrl`
+- `sourceUrls`
 - `featured`
 
 Additional per-type fields:
@@ -49,17 +48,17 @@ Additional per-type fields:
 
 ## Domain and Audience Rules
 
-- `domain` is a controlled vocabulary. Pick the primary decision domain (e.g., `hosting`, `compute`, `database`).
-- `subtypes` should be short, consistent labels used for filtering (e.g., `serverless`, `edge-functions`, `object-storage`).
-- `audiences` should reflect who benefits most (e.g., `indie`, `startup`, `team`).
+- `domain` is a controlled vocabulary. Pick the primary decision domain (e.g., `hosting`, `compute`, `database`). If omitted, it is inferred from `category` + `tags`.
+- `subtypes` should be short, consistent labels used for filtering (e.g., `serverless`, `edge-functions`, `object-storage`). If omitted, it falls back to `category`.
+- `audiences` should reflect who benefits most (e.g., `indie`, `startup`, `team`). If omitted, defaults to `indie` + `startup`.
 
 ## Free Tier Risk Rules
 
-`freeTierDetails` should include:
+`freeTierDetails` can include:
 
-- `freeTierType` (`always-free`, `time-limited`, `credit`, `trial`)
+- `freeTierType` (`always-free`, `time-limited`, `credit`, `trial`) - inferred from `pricingModel` when omitted
 - `hasHardCap` (true when usage is blocked rather than billed)
-- `overageRisk` (none, low, medium, high)
+- `overageRisk` (none, low, medium, high) - defaults to `none` when `hasHardCap` is true, otherwise `low`
 - `billingRiskNotes` for hidden costs or overages
 
 ## Workflow
@@ -68,6 +67,12 @@ Additional per-type fields:
 2. Run `npm run search:index` to refresh search records.
 3. Run `npm run build:static` to validate type-safe build + export.
 4. Open `/explorer` locally and confirm entry appears in filters/search.
+
+## AI Batch Ingestion
+
+For automated batch entry generation (with required `whenToUse` / `whenNotToUse` guidance), use:
+
+- [docs/ai-ingestion.md](docs/ai-ingestion.md)
 
 ## Classification Guidance
 

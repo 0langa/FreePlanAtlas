@@ -29,6 +29,9 @@ FreeTierAtlas v2 uses a decision-first frontmatter schema that captures free-tie
     monthlyCreditAmount?: string;
   };
   useCases: string[];
+  whenToUse: string;
+  whenNotToUse: string;
+  quickstartSteps: string[];
   bestFor: string[];
   avoidIf: string[];
   difficulty: "beginner" | "intermediate" | "advanced";
@@ -44,6 +47,7 @@ FreeTierAtlas v2 uses a decision-first frontmatter schema that captures free-tie
   };
   officialUrl?: string;
   docsUrl?: string;
+  sourceUrls?: string[];
   featured?: boolean;
 }
 ```
@@ -70,5 +74,5 @@ This keeps a single search/explorer pipeline while allowing type-specific depth.
 
 ## Notes for Migration
 
-- `domain`, `subtypes`, `audiences`, `bestFor`, `avoidIf`, and free-tier risk fields are inferred during migration if missing.
+- `domain`, `subtypes`, `audiences`, `bestFor`, `avoidIf`, `productionReadiness`, and free-tier risk fields are inferred if missing.
 - Legacy `category` remains for display, but `domain` is the canonical filter field in v2.

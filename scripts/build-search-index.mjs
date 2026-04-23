@@ -40,6 +40,13 @@ function inferFreeTierType(pricingModel = "free") {
   return pricingModel === "trial" ? "trial" : "always-free";
 }
 
+function inferProductionReadiness(kind = "services", difficulty = "beginner") {
+  if (kind === "resources") return "prototype";
+  if (difficulty === "advanced") return "production-light";
+  if (difficulty === "intermediate") return "side-project";
+  return "prototype";
+}
+
 async function* walkFiles(rootDir) {
   const entries = await fs.readdir(rootDir, { withFileTypes: true });
 
@@ -68,6 +75,7 @@ async function buildSearchRecords() {
     const tags = Array.isArray(data.tags) ? data.tags.map((tag) => String(tag)) : [];
     const category = String(data.category ?? "");
     const freeTierDetails = data.freeTierDetails && typeof data.freeTierDetails === "object" ? data.freeTierDetails : {};
+    const difficulty = String(data.difficulty ?? "beginner");
 
     records.push({
       id: `${kind}:${slug}`,
@@ -80,7 +88,9 @@ async function buildSearchRecords() {
       domain: String(data.domain ?? inferDomain(category, tags)),
       freeTierType: String(freeTierDetails.freeTierType ?? inferFreeTierType(data.pricingModel)),
       overageRisk: String(freeTierDetails.overageRisk ?? (freeTierDetails.hasHardCap ? "none" : "low")),
-      productionReadiness: String(data.productionReadiness ?? "prototype"),
+      productionReadiness: String(
+        data.productionReadiness ?? inferProductionReadiness(kind, difficulty),
+      ),
       tags,
       bestFor: Array.isArray(data.bestFor)
         ? data.bestFor.map((item) => String(item))

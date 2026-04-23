@@ -1,0 +1,70 @@
+---
+title: "Lambda"
+description: "AWS Lambda lets you run code in response to events without provisioning or managing servers."
+provider: "AWS"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - event-driven
+  - functions-as-a-service
+  - serverless
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - functions
+  - event-driven
+  - AWS
+  - compute
+pricingModel: freemium
+freeTierDetails:
+  summary: "1M free requests and 400,000 GB-seconds compute time per month."
+  limits:
+    - 1 million requests/month
+    - 400,000 GB-seconds compute/month
+  caveats:
+    - Limits apply across all Lambda functions in your account.
+    - Additional usage is billed at standard rates.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free tier incurs charges automatically.
+useCases:
+  - API backends
+  - Event-driven automation
+  - Data processing
+  - Scheduled tasks
+quickstartSteps:
+  - Sign up for an AWS account and log in to the AWS Console.
+  - Navigate to AWS Lambda and click 'Create function'.
+  - Choose 'Author from scratch', enter a function name, and select a runtime.
+  - Write or upload your code, then configure a trigger (e.g., API Gateway or S3 event).
+  - Deploy the function and test it using the AWS Console or CLI.
+whenToUse: "Use Lambda for running short-lived functions in response to events without managing servers or infrastructure."
+whenNotToUse: "Avoid Lambda for long-running tasks, heavy compute workloads, or when you need predictable, sustained compute resources."
+bestFor:
+  - event-driven workloads
+  - microservices
+  - automation scripts
+avoidIf:
+  - long-running processes
+  - high-memory workloads
+  - low-latency requirements
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://aws.amazon.com/lambda/
+docsUrl: https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+featured: false
+---
+
+AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources.

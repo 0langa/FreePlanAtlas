@@ -1,0 +1,72 @@
+---
+title: "Cloud Run"
+description: "Cloud Run is a fully managed serverless platform by Google Cloud for running containerized applications and APIs."
+provider: "Google Cloud"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - container
+  - serverless
+  - microservices
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+tags:
+  - serverless
+  - containers
+  - api
+  - microservices
+  - scalable
+pricingModel: freemium
+freeTierDetails:
+  summary: "Cloud Run offers a generous always-free tier for containerized workloads."
+  limits:
+    - 2 million requests per month
+    - 360,000 vCPU-seconds per month
+    - 180,000 GiB-seconds memory per month
+    - 1 GiB egress per month
+  caveats:
+    - Free tier applies per billing account, not per project.
+    - Outbound traffic beyond 1 GiB/month is billed.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free tier limits incurs charges.
+    - No hard cap; monitor usage to avoid unexpected costs.
+useCases:
+  - Deploying stateless APIs
+  - Running background jobs
+  - Hosting webhooks
+  - Prototyping microservices
+quickstartSteps:
+  - Sign up for a Google Cloud account and enable billing.
+  - Enable the Cloud Run API in your project.
+  - Build and push your container image to Google Container Registry or Artifact Registry.
+  - Deploy your container to Cloud Run using the Google Cloud Console or gcloud CLI.
+  - Configure authentication and set environment variables as needed.
+whenToUse: "Use Cloud Run when you want to deploy containerized applications without managing servers or infrastructure, and need automatic scaling."
+whenNotToUse: "Avoid Cloud Run for stateful workloads, applications requiring persistent local storage, or when you need fine-grained control over infrastructure."
+bestFor:
+  - stateless APIs
+  - event-driven workloads
+  - microservices
+avoidIf:
+  - stateful apps
+  - low-latency persistent storage needs
+  - custom networking requirements
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://cloud.google.com/run
+docsUrl: https://cloud.google.com/run/docs
+featured: false
+---
+
+Cloud Run lets you deploy and scale containerized applications easily, charging only for actual usage, with a generous always-free tier for small workloads.

@@ -1,0 +1,69 @@
+---
+title: "Google Kubernetes Engine"
+description: "Google Kubernetes Engine (GKE) provides managed Kubernetes clusters for deploying, managing, and scaling containerized applications on Google Cloud."
+provider: "Google Cloud"
+category: "Managed Kubernetes"
+domain: compute
+subtypes:
+  - kubernetes
+  - container orchestration
+  - managed service
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - kubernetes
+  - containers
+  - orchestration
+  - cloud-native
+  - managed
+pricingModel: freemium
+freeTierDetails:
+  summary: "One zonal GKE cluster per month with no cluster management fee."
+  limits:
+    - 1 zonal cluster per billing account
+    - No cluster management fee
+    - Compute, storage, and network resources billed separately
+  caveats:
+    - Node VM, storage, and network usage incur standard charges
+    - Free tier applies only to cluster management fee
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - You pay for VM instances and resources even if cluster management is free
+useCases:
+  - Deploying containerized web applications
+  - Running microservices architectures
+  - CI/CD pipeline workloads
+  - Development and testing environments
+quickstartSteps:
+  - Sign up for a Google Cloud account and enable billing.
+  - Enable the Kubernetes Engine API in your project.
+  - Install and configure the Google Cloud CLI (gcloud).
+  - Create a zonal GKE cluster using the gcloud CLI or Cloud Console.
+  - Deploy your containerized application to the cluster.
+whenToUse: "Use GKE when you need a managed Kubernetes environment for scalable container workloads with minimal cluster management overhead."
+whenNotToUse: "Avoid if you want to avoid compute costs entirely or need a fully free, local Kubernetes solution for learning."
+bestFor:
+  - container orchestration
+  - scalable workloads
+  - cloud-native deployments
+avoidIf:
+  - seeking zero-cost compute
+  - requiring on-premise-only solutions
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://cloud.google.com/kubernetes-engine
+docsUrl: https://cloud.google.com/kubernetes-engine/docs
+featured: false
+---
+
+Google Kubernetes Engine (GKE) offers a fully managed Kubernetes service, simplifying cluster operations and scaling for containerized applications on Google Cloud.

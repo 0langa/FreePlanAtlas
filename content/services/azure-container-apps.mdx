@@ -1,0 +1,70 @@
+---
+title: "Azure Container Apps"
+description: "Azure Container Apps enables you to run microservices and containerized applications without managing infrastructure."
+provider: "Azure"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - container
+  - microservices
+  - serverless
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - container
+  - serverless
+  - microservices
+  - kubernetes
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Includes 180,000 vCPU-seconds, 360,000 GiB-seconds, and 2 million requests per month free."
+  limits:
+    - 180,000 vCPU-seconds/month
+    - 360,000 GiB-seconds/month
+    - 2 million requests/month
+  caveats:
+    - Only applies to consumption plan usage
+    - Networking and storage billed separately
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages billed automatically if limits exceeded
+useCases:
+  - Deploying stateless APIs
+  - Running background jobs
+  - Hosting microservices
+  - Event-driven processing
+quickstartSteps:
+  - Sign in to the Azure Portal and create a new Container Apps environment.
+  - Deploy your container image from a registry (e.g., Docker Hub or Azure Container Registry).
+  - Configure scaling rules and environment variables as needed.
+  - Set up ingress to expose your app to the internet.
+  - Monitor usage and logs via Azure Portal.
+whenToUse: "Use when you need to deploy containerized apps or microservices without managing Kubernetes or infrastructure."
+whenNotToUse: "Avoid if you require fine-grained control over orchestration, custom networking, or persistent storage beyond basic options."
+bestFor:
+  - microservices
+  - stateless APIs
+  - event-driven apps
+avoidIf:
+  - need custom orchestration
+  - require advanced networking
+  - persistent storage needs
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-11
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/container-apps/
+docsUrl: https://learn.microsoft.com/en-us/azure/container-apps/
+featured: false
+---
+
+Azure Container Apps provides a serverless platform for running containers and microservices, offering automatic scaling and integrated monitoring without managing Kubernetes.

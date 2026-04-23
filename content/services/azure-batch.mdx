@@ -1,0 +1,71 @@
+---
+title: "Azure Batch"
+description: "Azure Batch enables large-scale parallel and high-performance computing (HPC) workloads in the cloud with job scheduling and resource management."
+provider: "Azure"
+category: "Batch Processing"
+domain: compute
+subtypes:
+  - HPC
+  - Job Scheduling
+  - Parallel Processing
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+tags:
+  - batch
+  - HPC
+  - parallel
+  - compute
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "Limited free usage of Batch compute and management; only compute resources used are billed."
+  limits:
+    - No charge for Batch management and job scheduling
+    - Compute resources (VMs) billed separately
+    - Free tier applies to management, not compute
+  caveats:
+    - You pay for underlying compute, storage, and networking
+    - No dedicated always-free compute hours
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: high
+  billingRiskNotes:
+    - Compute usage can incur significant costs if not monitored
+useCases:
+  - Rendering large media files
+  - Scientific simulations
+  - Financial risk modeling
+  - Batch data processing
+quickstartSteps:
+  - Sign in to the Azure Portal and create a Batch account.
+  - Create a pool of compute nodes (VMs) in your Batch account.
+  - Define and upload your job and tasks to the Batch service.
+  - Monitor job progress and retrieve output from storage.
+  - Shut down or resize pools to control costs.
+whenToUse: "Use Azure Batch for automating large-scale parallel or compute-intensive workloads that can be split into independent tasks."
+whenNotToUse: "Avoid if you need always-free compute or have small, infrequent jobs better suited for serverless or managed workflow services."
+bestFor:
+  - HPC workloads
+  - Media rendering
+  - Scientific research
+  - Batch data processing
+avoidIf:
+  - You require always-free compute resources
+  - Your workloads are small or event-driven
+  - You need simple scheduled tasks
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/batch/
+docsUrl: https://learn.microsoft.com/en-us/azure/batch/
+featured: false
+---
+
+Azure Batch provides job scheduling and resource management for large-scale parallel and high-performance computing workloads, charging only for the compute resources used.
