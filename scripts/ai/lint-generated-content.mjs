@@ -1,42 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
+import { collectKnownProviders, validateProviderNameAgainstSet } from "./provider-registry.mjs";
 
 const DEFAULT_DIR = path.join(process.cwd(), "content", "services");
-
-const ALLOWED_PROVIDERS = new Set([
-  "Azure",
-  "AWS",
-  "Google Cloud",
-  "Cloudflare",
-  "Oracle Cloud",
-  "Supabase",
-  "GitHub",
-  "Microsoft",
-  "IBM",
-  "DigitalOcean",
-  "Auth0",
-  "Authgear",
-  "Authress",
-  "Twilio",
-  "EMQX",
-  "Khan Academy",
-  "LoginLlama",
-  "PropelAuth",
-  "SimpleLogin",
-  "Stack Auth",
-  "MongoDB",
-  "Atlassian",
-  "CockroachDB",
-  "EverSQL",
-  "Neon",
-  "Pinecone",
-  "PlanetScale",
-  "Qdrant",
-  "Redis",
-  "Sqlable",
-  "Upstash",
-]);
 
 async function* walkFiles(rootDir) {
   const entries = await fs.readdir(rootDir, { withFileTypes: true });
@@ -65,6 +32,13 @@ async function main() {
     throw new Error("Missing --dir value.");
   }
 
+  const knownProviders = await collectKnownProviders({
+    walkFiles,
+    readFile: fs.readFile,
+    parseMatter: matter,
+    rootDir: dir,
+  });
+
   const warnings = [];
 
   for await (const filePath of walkFiles(dir)) {
@@ -76,8 +50,13 @@ async function main() {
     const docsUrl = String(data.docsUrl ?? "").trim();
     const quickstartSteps = Array.isArray(data.quickstartSteps) ? data.quickstartSteps : [];
 
-    if (provider && !ALLOWED_PROVIDERS.has(provider)) {
-      warnings.push({ filePath, issue: `provider '${provider}' not in allowed list` });
+    if (provider) {
+      const providerCheck = validateProviderNameAgainstSet(provider, knownProviders);
+      if (!providerCheck.isKnown) {
+        warnings.push({ filePath, issue: `provider '${provider}' is unknown` });
+      } else if (providerCheck.normalized && provider !== providerCheck.normalized) {
+        warnings.push({ filePath, issue: `provider '${provider}' should be normalized to '${providerCheck.normalized}'` });
+      }
     }
 
     if (category) {

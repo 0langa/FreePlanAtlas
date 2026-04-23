@@ -1,40 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-
-const ALLOWED_PROVIDERS = new Set([
-  "Azure",
-  "AWS",
-  "Google Cloud",
-  "Cloudflare",
-  "Oracle Cloud",
-  "Supabase",
-  "GitHub",
-  "Microsoft",
-  "IBM",
-  "DigitalOcean",
-  "Auth0",
-  "Authgear",
-  "Authress",
-  "Twilio",
-  "EMQX",
-  "Khan Academy",
-  "LoginLlama",
-  "PropelAuth",
-  "SimpleLogin",
-  "Stack Auth",
-  "MongoDB",
-  "Atlassian",
-  "CockroachDB",
-  "EverSQL",
-  "Neon",
-  "Pinecone",
-  "PlanetScale",
-  "Qdrant",
-  "Redis",
-  "Sqlable",
-  "Upstash",
-]);
+import { collectKnownProviders, validateProviderNameAgainstSet } from "./provider-registry.mjs";
 
 function parseArgs(argv) {
   const args = new Map();
@@ -82,6 +49,13 @@ function isLowercase(value) {
 
 async function collectLintWarnings(dir) {
   const warnings = [];
+  const knownProviders = await collectKnownProviders({
+    walkFiles,
+    readFile: fs.readFile,
+    parseMatter: matter,
+    rootDir: dir,
+  });
+
   for await (const filePath of walkFiles(dir)) {
     const raw = await fs.readFile(filePath, "utf8");
     const { data } = matter(raw);
@@ -91,8 +65,13 @@ async function collectLintWarnings(dir) {
     const docsUrl = String(data.docsUrl ?? "").trim();
     const quickstartSteps = Array.isArray(data.quickstartSteps) ? data.quickstartSteps : [];
 
-    if (provider && !ALLOWED_PROVIDERS.has(provider)) {
-      warnings.push({ filePath, issue: `provider '${provider}' not in allowed list` });
+    if (provider) {
+      const providerCheck = validateProviderNameAgainstSet(provider, knownProviders);
+      if (!providerCheck.isKnown) {
+        warnings.push({ filePath, issue: `provider '${provider}' is unknown` });
+      } else if (providerCheck.normalized && provider !== providerCheck.normalized) {
+        warnings.push({ filePath, issue: `provider '${provider}' should be normalized to '${providerCheck.normalized}'` });
+      }
     }
 
     if (category) {

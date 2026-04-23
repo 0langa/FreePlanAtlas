@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { normalizeProviderName } from "./provider-registry.mjs";
 
 function parseArgs(argv) {
   const args = new Map();
@@ -58,48 +59,8 @@ function ensureIsoDate(value) {
   return new Date().toISOString().slice(0, 10);
 }
 
-const PROVIDER_NORMALIZATION = [
-  { match: /^microsoft azure$/i, value: "Azure" },
-  { match: /^azure$/i, value: "Azure" },
-  { match: /^amazon web services$/i, value: "AWS" },
-  { match: /^aws$/i, value: "AWS" },
-  { match: /^google cloud$/i, value: "Google Cloud" },
-  { match: /^google$/i, value: "Google Cloud" },
-  { match: /^gcp$/i, value: "Google Cloud" },
-  { match: /^cloudflare$/i, value: "Cloudflare" },
-  { match: /^oracle cloud$/i, value: "Oracle Cloud" },
-  { match: /^oracle$/i, value: "Oracle Cloud" },
-  { match: /^auth0$/i, value: "Auth0" },
-  { match: /^authgear$/i, value: "Authgear" },
-  { match: /^authress$/i, value: "Authress" },
-  { match: /^twilio$/i, value: "Twilio" },
-  { match: /^emqx$/i, value: "EMQX" },
-  { match: /^khan academy$/i, value: "Khan Academy" },
-  { match: /^loginllama$/i, value: "LoginLlama" },
-  { match: /^propelauth$/i, value: "PropelAuth" },
-  { match: /^simplelogin$/i, value: "SimpleLogin" },
-  { match: /^stack auth$/i, value: "Stack Auth" },
-  { match: /^mongodb$/i, value: "MongoDB" },
-  { match: /^atlassian$/i, value: "Atlassian" },
-  { match: /^cockroachdb$/i, value: "CockroachDB" },
-  { match: /^eversql$/i, value: "EverSQL" },
-  { match: /^neon$/i, value: "Neon" },
-  { match: /^pinecone$/i, value: "Pinecone" },
-  { match: /^planetscale$/i, value: "PlanetScale" },
-  { match: /^qdrant$/i, value: "Qdrant" },
-  { match: /^redis$/i, value: "Redis" },
-  { match: /^sqlable$/i, value: "Sqlable" },
-  { match: /^upstash$/i, value: "Upstash" },
-];
-
 function normalizeProvider(value) {
-  const trimmed = value.trim();
-  for (const rule of PROVIDER_NORMALIZATION) {
-    if (rule.match.test(trimmed)) {
-      return rule.value;
-    }
-  }
-  return trimmed;
+  return normalizeProviderName(value);
 }
 
 function normalizeCategory(value) {
