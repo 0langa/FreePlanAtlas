@@ -1,0 +1,69 @@
+---
+title: "Azure Active Directory B2C"
+description: "Azure Active Directory B2C provides cloud-based identity and access management for consumer-facing applications."
+provider: "Azure"
+category: "Authentication"
+domain: auth
+subtypes:
+  - identity management
+  - user authentication
+  - federation
+audiences:
+  - startup
+  - team
+  - enterprise
+  - agency
+tags:
+  - oauth
+  - oidc
+  - sso
+  - user-management
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 50,000 monthly active users with basic authentication features."
+  limits:
+    - 50,000 monthly active users
+    - Basic authentication features
+    - Standard policies only
+  caveats:
+    - Premium features require paid tier
+    - Custom policies may incur charges
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Charges apply if monthly active users exceed 50,000
+useCases:
+  - Enable social and enterprise logins for web or mobile apps
+  - Implement user self-service sign-up and password reset
+  - Integrate with external identity providers
+quickstartSteps:
+  - Sign in to the Azure portal and create an Azure AD B2C tenant.
+  - Link your B2C tenant to your Azure subscription.
+  - Register your application in the B2C tenant.
+  - Configure user flows (e.g., sign-up, sign-in, password reset).
+  - Integrate the B2C authentication endpoints into your application.
+whenToUse: "Use when you need scalable, managed authentication for consumer-facing apps with support for social and enterprise identity providers."
+whenNotToUse: "Avoid if you require advanced custom policies or need on-premises-only identity solutions."
+bestFor:
+  - consumer apps
+  - multi-tenant SaaS
+  - apps needing social login
+avoidIf:
+  - strict on-premises requirements
+  - complex custom policy needs
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/services/active-directory/external-identities/b2c/
+docsUrl: https://learn.microsoft.com/azure/active-directory-b2c/
+sourceUrls:
+  - https://azure.microsoft.com/pricing/details/active-directory/external-identities/
+featured: false
+---
+Azure Active Directory B2C offers a scalable, managed authentication platform for consumer applications, supporting social, enterprise, and local account sign-ins with a generous free tier.

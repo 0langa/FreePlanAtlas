@@ -1,0 +1,73 @@
+---
+title: "Redis"
+description: "Redis is an in-memory data store used for caching, real-time analytics, and fast key-value storage."
+provider: "Redis"
+category: "In Memory Database"
+domain: database
+subtypes:
+  - cache
+  - key-value store
+  - pub/sub
+  - session store
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - cache
+  - in-memory
+  - key-value
+  - nosql
+  - pubsub
+pricingModel: freemium
+freeTierDetails:
+  summary: "Redis Cloud offers a free tier with limited memory and throughput."
+  limits:
+    - 30 MB RAM
+    - Single database
+    - Community support
+  caveats:
+    - No high availability
+    - Limited to basic features
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Session management
+  - Application caching
+  - Real-time analytics
+  - Message brokering
+quickstartSteps:
+  - Sign up for a Redis Cloud account at redis.com.
+  - Create a new free database instance.
+  - Copy the connection string from the dashboard.
+  - Install a Redis client library in your application.
+  - Connect to your Redis instance using the provided credentials.
+whenToUse: "Use Redis when you need fast, in-memory data storage for caching, session management, or real-time analytics."
+whenNotToUse: "Avoid Redis for persistent, relational data or if you require strong durability guarantees."
+bestFor:
+  - caching
+  - session storage
+  - real-time data
+  - pub/sub
+avoidIf:
+  - need relational data
+  - require disk persistence
+  - need advanced analytics
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://redis.io/
+docsUrl: https://docs.redis.com/latest/rc/
+sourceUrls:
+  - https://redis.com/redis-enterprise-cloud/overview/
+  - https://redis.com/try-free/
+featured: false
+---
+Redis is a popular in-memory data store ideal for caching, session storage, and real-time analytics, with a free cloud tier suitable for development and small projects.

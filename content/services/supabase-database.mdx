@@ -1,0 +1,74 @@
+---
+title: "Supabase Database"
+description: "A hosted PostgreSQL database with instant APIs, authentication, and real-time features for modern app development."
+provider: "Supabase"
+category: "Database"
+domain: database
+subtypes:
+  - PostgreSQL
+  - Managed Database
+  - Realtime
+  - API
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - postgresql
+  - managed
+  - realtime
+  - open-source
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes a managed PostgreSQL database with limited storage and compute."
+  limits:
+    - 500 MB database storage
+    - 2 GB file storage
+    - 1 GB monthly bandwidth
+    - 50,000 monthly active users
+  caveats:
+    - No custom roles or extensions
+    - Limited performance for production workloads
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototyping web and mobile apps
+  - Building MVPs with authentication
+  - Realtime collaborative features
+  - Open-source project backends
+quickstartSteps:
+  - Sign up for a free Supabase account.
+  - Create a new project and choose a database password.
+  - Access the database credentials and connection string from the dashboard.
+  - Use the SQL editor or connect via your preferred PostgreSQL client.
+  - Integrate Supabase client libraries into your app for authentication and realtime features.
+whenToUse: "Use when you need a quick, managed PostgreSQL backend with built-in auth and realtime for prototypes or small projects."
+whenNotToUse: "Avoid for high-traffic production workloads or when you need advanced PostgreSQL extensions or custom configurations."
+bestFor:
+  - prototyping
+  - MVPs
+  - student projects
+  - open-source apps
+avoidIf:
+  - enterprise-scale
+  - custom PostgreSQL extensions
+  - heavy workloads
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-10
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://supabase.com/docs/reference/sql
+docsUrl: https://supabase.com/docs/guides/database
+sourceUrls:
+  - https://supabase.com/pricing
+  - https://supabase.com/docs/guides/database
+featured: false
+---
+Supabase Database offers a managed PostgreSQL instance with instant APIs, authentication, and realtime features, ideal for rapid prototyping and small-scale apps.

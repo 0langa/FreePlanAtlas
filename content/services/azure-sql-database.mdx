@@ -1,0 +1,75 @@
+---
+title: "Azure SQL Database"
+description: "Managed relational database service for SQL Server workloads with built-in high availability and scalability."
+provider: "Azure"
+category: "Managed Database"
+domain: database
+subtypes:
+  - relational
+  - managed
+  - SQL Server compatible
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - sql
+  - database
+  - managed
+  - azure
+  - relational
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers 250GB storage with limited performance on the Basic service tier."
+  limits:
+    - 250GB max storage
+    - Basic service tier only
+    - Limited performance (5 DTUs)
+    - 1 database per subscription
+  caveats:
+    - Performance is limited compared to paid tiers
+    - Some advanced features unavailable
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Developing and testing SQL Server apps
+  - Hosting small production databases
+  - Learning SQL Server in the cloud
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Navigate to 'Create a resource' and select 'SQL Database'.
+  - Choose the free tier (Basic, 250GB) and configure database settings.
+  - Create a new SQL server or select an existing one.
+  - Review and create the database.
+  - Connect using Azure Data Studio or SQL Server Management Studio.
+whenToUse: "Use when you need a managed SQL Server database for development, learning, or small production workloads with minimal setup."
+whenNotToUse: "Avoid if you require advanced performance, features, or need to scale beyond the free tier's storage and compute limits."
+bestFor:
+  - learning
+  - prototyping
+  - small apps
+  - testing
+avoidIf:
+  - high performance needed
+  - large-scale production
+  - advanced SQL Server features required
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-sql/database/
+docsUrl: https://learn.microsoft.com/en-us/azure/azure-sql/database/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/azure-sql/database/
+  - https://learn.microsoft.com/en-us/azure/azure-sql/database/
+featured: false
+---
+Azure SQL Database provides a fully managed, scalable SQL Server database with a free tier suitable for development, learning, and small workloads. The free tier is limited to 250GB storage and basic performance, making it ideal for prototyping and educational use but not for high-performance or large-scale production applications.

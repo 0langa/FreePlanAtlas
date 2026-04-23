@@ -69,6 +69,16 @@ const PROVIDER_NORMALIZATION = [
   { match: /^cloudflare$/i, value: "Cloudflare" },
   { match: /^oracle cloud$/i, value: "Oracle Cloud" },
   { match: /^oracle$/i, value: "Oracle Cloud" },
+  { match: /^auth0$/i, value: "Auth0" },
+  { match: /^authgear$/i, value: "Authgear" },
+  { match: /^authress$/i, value: "Authress" },
+  { match: /^twilio$/i, value: "Twilio" },
+  { match: /^emqx$/i, value: "EMQX" },
+  { match: /^khan academy$/i, value: "Khan Academy" },
+  { match: /^loginllama$/i, value: "LoginLlama" },
+  { match: /^propelauth$/i, value: "PropelAuth" },
+  { match: /^simplelogin$/i, value: "SimpleLogin" },
+  { match: /^stack auth$/i, value: "Stack Auth" },
 ];
 
 function normalizeProvider(value) {

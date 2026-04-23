@@ -1,0 +1,71 @@
+---
+title: "Authress"
+description: "Authress provides user authentication, authorization, and identity management as a service for modern applications."
+provider: "Authress"
+category: "Authentication"
+domain: auth
+subtypes:
+  - OAuth
+  - SAML
+  - User Management
+audiences:
+  - startup
+  - team
+  - indie
+  - oss
+tags:
+  - authentication
+  - authorization
+  - identity
+  - oauth
+  - sso
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 1,000 monthly active users with core authentication and authorization features."
+  limits:
+    - 1,000 monthly active users
+    - Unlimited applications
+    - Basic SSO integrations
+    - Standard support
+  caveats:
+    - Advanced features like enterprise SSO and audit logs require paid plans
+    - API rate limits may apply
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add secure login to web or mobile apps
+  - Implement role-based access control
+  - Integrate SSO for SaaS products
+quickstartSteps:
+  - Sign up for an Authress account at https://authress.io/.
+  - Create a new application in the Authress dashboard.
+  - Configure authentication providers (e.g., Google, GitHub) as needed.
+  - Integrate the Authress SDK into your app using provided documentation.
+  - Test user login and access control flows.
+whenToUse: "Use Authress when you need a managed authentication and authorization solution for apps without building your own identity infrastructure."
+whenNotToUse: "Avoid if you require on-premise deployment, advanced enterprise integrations, or need full control over authentication infrastructure."
+bestFor:
+  - startups
+  - indie developers
+  - SaaS teams
+  - open source projects
+avoidIf:
+  - require on-premise
+  - need custom enterprise SSO
+  - must self-host identity
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 7
+officialUrl: https://authress.io/
+docsUrl: https://authress.io/knowledge-base/docs
+sourceUrls:
+  - https://authress.io/pricing
+  - https://authress.io/knowledge-base/docs
+featured: false
+---
+Authress delivers managed authentication and authorization services, enabling secure user login, SSO, and access control for modern applications with minimal setup.

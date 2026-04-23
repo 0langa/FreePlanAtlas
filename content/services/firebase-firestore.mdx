@@ -1,0 +1,75 @@
+---
+title: "Firebase Firestore"
+description: "A scalable, serverless NoSQL cloud database for building web and mobile apps with real-time data synchronization."
+provider: "Google Cloud"
+category: "Nosql Database"
+domain: database
+subtypes:
+  - NoSQL
+  - Document Store
+  - Serverless
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - realtime
+  - mobile
+  - web
+  - cloud
+  - nosql
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free Spark plan includes limited reads, writes, and storage per month."
+  limits:
+    - 50,000 reads/day
+    - 20,000 writes/day
+    - 20,000 deletes/day
+    - 1 GiB storage
+    - 10 GiB/month network egress
+  caveats:
+    - Free tier is for non-commercial use only.
+    - Limited to 1 project per account.
+    - No SLA or support.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Real-time chat apps
+  - Mobile app backends
+  - Collaborative tools
+  - Prototyping data-driven apps
+quickstartSteps:
+  - Sign up for a Firebase account and create a new project.
+  - Navigate to Firestore in the Firebase console and enable it.
+  - Choose test mode for development (locked mode for production).
+  - Install Firebase SDK in your app and initialize Firestore.
+  - Start reading and writing data using the Firestore client libraries.
+whenToUse: "Use Firestore for real-time, serverless NoSQL databases in web or mobile apps with moderate scale and simple security needs."
+whenNotToUse: "Avoid if you need complex queries, strict relational data, or require on-premises hosting and advanced enterprise controls."
+bestFor:
+  - prototyping
+  - mobile apps
+  - real-time collaboration
+  - student projects
+avoidIf:
+  - strict relational data
+  - complex analytics
+  - enterprise compliance
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://firebase.google.com/products/firestore
+docsUrl: https://firebase.google.com/docs/firestore
+sourceUrls:
+  - https://firebase.google.com/pricing
+  - https://firebase.google.com/docs/firestore/quotas
+featured: false
+---
+Firebase Firestore is a fully managed, serverless NoSQL document database with real-time sync, ideal for rapid development of web and mobile applications.

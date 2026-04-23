@@ -1,0 +1,70 @@
+---
+title: "Authgear"
+description: "Authgear provides user authentication, social login, and multi-factor authentication as a managed service."
+provider: "Authgear"
+category: "Authentication"
+domain: auth
+subtypes:
+  - user-auth
+  - social-login
+  - mfa
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - authentication
+  - oauth
+  - mfa
+  - user-management
+  - social-login
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 1,000 monthly active users with core authentication features."
+  limits:
+    - 1,000 monthly active users
+    - Basic authentication features
+    - Email/password, social login, MFA
+  caveats:
+    - No custom domain on free tier
+    - Limited to community support
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add authentication to web or mobile apps
+  - Enable social login for users
+  - Implement multi-factor authentication
+quickstartSteps:
+  - Sign up for a free Authgear account.
+  - Create a new application in the Authgear dashboard.
+  - Configure authentication methods (email, social logins, MFA).
+  - Integrate Authgear SDK into your app.
+  - Test user signup and login flows.
+whenToUse: "Use Authgear when you need managed authentication with social login and MFA for apps with up to 1,000 users."
+whenNotToUse: "Avoid if you require custom domains, advanced enterprise features, or expect to exceed 1,000 monthly active users on the free tier."
+bestFor:
+  - web-apps
+  - mobile-apps
+  - MVPs
+  - open-source-projects
+avoidIf:
+  - large-enterprise
+  - custom-domain-required
+  - high-volume-user-base
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-13
+popularityScore: 5
+usefulnessScore: 7
+officialUrl: https://www.authgear.com
+docsUrl: https://docs.authgear.com/
+sourceUrls:
+  - https://www.authgear.com/pricing
+  - https://docs.authgear.com/
+featured: false
+---
+Authgear offers a managed authentication platform with a generous free tier for small projects, supporting social login, MFA, and easy SDK integration.

@@ -1,0 +1,74 @@
+---
+title: "Pinecone"
+description: "Pinecone is a managed vector database for building fast, scalable similarity search and AI applications."
+provider: "Pinecone"
+category: "Vector Database"
+domain: database
+subtypes:
+  - vector search
+  - managed database
+  - AI infrastructure
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+  - student
+  - oss
+tags:
+  - vector
+  - database
+  - ai
+  - search
+  - similarity
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes one pod with up to 1GB storage and limited queries."
+  limits:
+    - 1 pod
+    - 1GB vector storage
+    - Up to 5,000 queries/day
+    - Limited to Starter environment
+  caveats:
+    - No SLA or production support
+    - Limited performance and features compared to paid plans
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - AI-powered semantic search
+  - Recommendation engines
+  - Similarity search for images or text
+  - Retrieval-augmented generation (RAG)
+quickstartSteps:
+  - Sign up for a free Pinecone account at pinecone.io.
+  - Create a new project and select the Starter environment.
+  - Set up your first index with desired dimensions and metric.
+  - Install the Pinecone client SDK in your application.
+  - Insert vectors and perform similarity queries using the SDK.
+whenToUse: "Use Pinecone when you need fast, scalable vector search for AI or similarity-based applications without managing infrastructure."
+whenNotToUse: "Avoid if you require advanced features, high throughput, or production SLAs on the free tier, or need on-premise deployment."
+bestFor:
+  - AI search
+  - prototyping
+  - RAG
+  - semantic search
+avoidIf:
+  - need on-premise
+  - require high throughput
+  - need advanced features
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-11
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://www.pinecone.io/
+docsUrl: https://docs.pinecone.io/
+sourceUrls:
+  - https://www.pinecone.io/pricing/
+  - https://docs.pinecone.io/docs/limits
+featured: false
+---
+Pinecone provides a fully managed vector database service, enabling developers to build and scale AI-powered search and recommendation systems with minimal setup and maintenance.

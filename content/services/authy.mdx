@@ -1,0 +1,73 @@
+---
+title: "Authy"
+description: "Authy provides two-factor authentication (2FA) services for securing user logins and transactions."
+provider: "Twilio"
+category: "Authentication"
+domain: auth
+subtypes:
+  - 2FA
+  - MFA
+  - SMS
+  - TOTP
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - 2fa
+  - mfa
+  - security
+  - otp
+  - authentication
+pricingModel: freemium
+freeTierDetails:
+  summary: "Authy offers a limited free tier for 2FA via SMS, voice, and push authentication."
+  limits:
+    - Up to 100 authentications/month free
+    - Includes SMS, voice, and push notifications
+  caveats:
+    - Overages billed per authentication
+    - Phone verification may incur charges
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Charges apply if monthly free limit is exceeded
+useCases:
+  - Add 2FA to web or mobile apps
+  - Secure user logins
+  - Protect sensitive transactions
+quickstartSteps:
+  - Sign up for a Twilio account.
+  - Create an Authy application in the Twilio Console.
+  - Integrate Authy SDK or API into your app.
+  - Configure authentication methods (SMS, voice, push).
+  - Test 2FA flows with test users.
+whenToUse: "Use Authy when you need to add multi-factor authentication to your app with minimal setup and broad device support."
+whenNotToUse: "Avoid Authy if you require a fully free, unlimited 2FA solution or need on-premises deployment."
+bestFor:
+  - startups
+  - teams
+  - apps needing quick 2FA integration
+avoidIf:
+  - need unlimited free 2FA
+  - require on-premises hosting
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-11
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://authy.com
+docsUrl: https://www.twilio.com/docs/authy
+sourceUrls:
+  - https://authy.com/pricing/
+  - https://www.twilio.com/docs/authy
+featured: false
+---
+Authy by Twilio enables developers to add secure two-factor authentication to applications using SMS, voice, or push notifications, with a generous free tier for low-volume use.

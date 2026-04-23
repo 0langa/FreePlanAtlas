@@ -1,0 +1,75 @@
+---
+title: "Redis Cloud"
+description: "Fully managed Redis service offering scalable, high-performance in-memory data storage and caching."
+provider: "Redis"
+category: "Database"
+domain: database
+subtypes:
+  - in-memory
+  - NoSQL
+  - cache
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - redis
+  - cache
+  - in-memory
+  - database
+  - key-value
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes a single database with up to 30MB storage."
+  limits:
+    - 1 database
+    - 30MB storage
+    - No replicas
+    - No persistence
+  caveats:
+    - No high availability or backups
+    - Limited support
+    - No custom VPC
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Session caching
+  - Leaderboard storage
+  - Real-time analytics
+  - Pub/Sub messaging
+  - Rate limiting
+quickstartSteps:
+  - Sign up for a Redis Cloud account.
+  - Create a new free database instance.
+  - Select your preferred cloud provider and region.
+  - Copy the database endpoint and credentials.
+  - Connect from your application using a Redis client.
+whenToUse: "Use when you need a managed, low-latency cache or in-memory database for small-scale apps or prototyping."
+whenNotToUse: "Avoid if you require high availability, persistence, or large datasets beyond 30MB in production."
+bestFor:
+  - caching
+  - prototyping
+  - learning
+  - small apps
+avoidIf:
+  - large-scale production
+  - high availability required
+  - data persistence needed
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-12
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://www.redis.com/cloud/
+docsUrl: https://docs.redis.com/latest/rc/
+sourceUrls:
+  - https://redis.com/redis-enterprise-cloud/overview/
+  - https://redis.com/pricing/
+featured: false
+---
+Redis Cloud offers a free, fully managed Redis database suitable for caching, prototyping, and learning, with a 30MB storage limit and no persistence.

@@ -1,0 +1,73 @@
+---
+title: "CockroachDB Cloud"
+description: "Managed distributed SQL database service with PostgreSQL compatibility and global scalability."
+provider: "CockroachDB"
+category: "Managed Database"
+domain: database
+subtypes:
+  - distributed SQL
+  - PostgreSQL-compatible
+  - cloud database
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - sql
+  - distributed
+  - postgresql
+  - cloud
+  - managed
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes a single cluster with up to 5GB storage and 1 vCPU."
+  limits:
+    - 1 cluster
+    - 5GB storage
+    - 1 vCPU
+    - No SLA
+  caveats:
+    - No production SLA on free tier
+    - Limited support options
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototype distributed SQL apps
+  - Learning PostgreSQL-compatible databases
+  - Testing global data distribution
+  - Building side projects
+quickstartSteps:
+  - Sign up for a CockroachDB Cloud account.
+  - Create a new free cluster in your preferred cloud region.
+  - Download connection credentials and certificates.
+  - Connect using a PostgreSQL-compatible client.
+  - Create tables and start loading data.
+whenToUse: "Use when you need a managed, scalable SQL database with PostgreSQL compatibility for prototyping or small workloads."
+whenNotToUse: "Avoid for high-throughput production workloads or if you require advanced support and SLAs."
+bestFor:
+  - prototyping
+  - learning
+  - side projects
+  - testing distributed SQL
+avoidIf:
+  - need production SLA
+  - require large storage
+  - need advanced support
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.cockroachlabs.com/product/cockroachdb/
+docsUrl: https://www.cockroachlabs.com/docs/cockroachcloud
+sourceUrls:
+  - https://www.cockroachlabs.com/pricing/
+  - https://www.cockroachlabs.com/docs/cockroachcloud
+featured: false
+---
+CockroachDB Cloud offers a free managed distributed SQL database cluster with PostgreSQL compatibility, ideal for learning, prototyping, and testing global data distribution.

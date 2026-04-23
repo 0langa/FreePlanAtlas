@@ -1,0 +1,73 @@
+---
+title: "Firebase Realtime Database"
+description: "A cloud-hosted NoSQL database for building real-time, collaborative applications with automatic data synchronization."
+provider: "Google Cloud"
+category: "Database"
+domain: database
+subtypes:
+  - NoSQL
+  - Realtime
+  - Cloud Database
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - realtime
+  - nosql
+  - mobile
+  - sync
+  - firebase
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free Spark plan with limited simultaneous connections and storage."
+  limits:
+    - 1 GB storage
+    - 100,000 simultaneous connections
+    - 1 GB/month download
+    - REST API: 50,000 requests/day
+  caveats:
+    - No custom domain support on free tier
+    - Limited to 1 database per project
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Real-time chat apps
+  - Collaborative editing
+  - Live dashboards
+  - Mobile app data sync
+quickstartSteps:
+  - Create a Firebase project at the Firebase Console.
+  - Add Firebase Realtime Database to your project.
+  - Configure database rules for access control.
+  - Integrate Firebase SDK into your app.
+  - Read and write data using provided SDK methods.
+whenToUse: "Use when you need real-time data sync across clients with minimal backend setup, especially for mobile or collaborative apps."
+whenNotToUse: "Avoid if you need complex queries, multi-region replication, or strong relational data consistency."
+bestFor:
+  - real-time apps
+  - mobile developers
+  - prototyping
+  - collaborative tools
+avoidIf:
+  - require SQL
+  - need advanced querying
+  - require multi-region writes
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://firebase.google.com/products/realtime-database
+docsUrl: https://firebase.google.com/docs/database
+sourceUrls:
+  - https://firebase.google.com/pricing
+  - https://firebase.google.com/docs/database/usage/limits
+featured: false
+---
+Firebase Realtime Database offers a free tier suitable for small-scale real-time apps, with easy integration and automatic data synchronization across devices.

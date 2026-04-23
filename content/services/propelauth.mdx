@@ -1,0 +1,71 @@
+---
+title: "PropelAuth"
+description: "PropelAuth provides user authentication, authorization, and multi-tenant management for web and mobile applications."
+provider: "PropelAuth"
+category: "Authentication"
+domain: auth
+subtypes:
+  - user-auth
+  - multi-tenant
+  - SSO
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - auth
+  - user-management
+  - multi-tenant
+  - sso
+  - login
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes authentication for up to 1,000 monthly active users."
+  limits:
+    - 1,000 monthly active users
+    - Unlimited tenants
+    - Basic SSO
+    - Email/password, social, and magic link login
+  caveats:
+    - Custom domains and advanced SSO require paid plans
+    - Support limited to email
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add authentication to web or mobile apps
+  - Support multi-tenant SaaS platforms
+  - Enable social login and SSO
+quickstartSteps:
+  - Sign up at propelauth.com and create a new project.
+  - Configure authentication methods (email/password, social, magic link) in the dashboard.
+  - Integrate PropelAuth SDK into your app using provided guides.
+  - Set up tenant management if building a multi-tenant app.
+  - Test user signup and login flows locally.
+whenToUse: "Use PropelAuth when you need quick, secure authentication and multi-tenant support without building auth from scratch."
+whenNotToUse: "Avoid if you require advanced SSO, custom domains, or deep customization on the free tier."
+bestFor:
+  - SaaS startups
+  - indie developers
+  - MVPs
+  - multi-tenant apps
+avoidIf:
+  - need advanced SSO
+  - require custom domains
+  - need on-premise deployment
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://propelauth.com
+docsUrl: https://docs.propelauth.com
+sourceUrls:
+  - https://propelauth.com/pricing
+  - https://docs.propelauth.com/docs/overview
+featured: false
+---
+PropelAuth offers a generous free tier for authentication and multi-tenant management, making it ideal for startups and indie projects needing secure user auth without complex setup.

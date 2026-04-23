@@ -15,6 +15,16 @@ const ALLOWED_PROVIDERS = new Set([
   "Microsoft",
   "IBM",
   "DigitalOcean",
+  "Auth0",
+  "Authgear",
+  "Authress",
+  "Twilio",
+  "EMQX",
+  "Khan Academy",
+  "LoginLlama",
+  "PropelAuth",
+  "SimpleLogin",
+  "Stack Auth",
 ]);
 
 async function* walkFiles(rootDir) {

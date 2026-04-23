@@ -1,0 +1,73 @@
+---
+title: "Neon"
+description: "Neon is a serverless Postgres platform with autoscaling, branching, and a generous free tier."
+provider: "Neon"
+category: "Database"
+domain: database
+subtypes:
+  - PostgreSQL
+  - Serverless
+  - Cloud Database
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - postgres
+  - serverless
+  - branching
+  - cloud
+  - managed
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 10 GB storage, 3 branches, and 1 project with 500,000 Postgres compute seconds per month."
+  limits:
+    - 10 GB storage
+    - 500,000 Postgres compute seconds/month
+    - 3 branches
+    - 1 project
+  caveats:
+    - Compute pauses after 5 minutes of inactivity
+    - No point-in-time recovery on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototyping serverless apps
+  - Branching databases for development
+  - Student projects
+  - Open source demos
+quickstartSteps:
+  - Sign up at neon.tech using your email or GitHub account.
+  - Create a new project and select your region.
+  - Configure your database and create a branch if needed.
+  - Copy the connection string and use it in your application.
+  - Monitor usage and manage branches from the dashboard.
+whenToUse: "Use Neon when you need a managed Postgres database with easy branching and a generous free tier for development or small projects."
+whenNotToUse: "Avoid Neon if you require advanced Postgres extensions, high sustained throughput, or strict uptime SLAs for production workloads."
+bestFor:
+  - prototyping
+  - development
+  - student projects
+  - open source demos
+avoidIf:
+  - need advanced extensions
+  - require high throughput
+  - need strict SLAs
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://neon.tech/
+docsUrl: https://neon.tech/docs/introduction
+sourceUrls:
+  - https://neon.tech/pricing
+  - https://neon.tech/docs/introduction
+featured: false
+---
+Neon offers a serverless Postgres experience with branching and autoscaling, making it ideal for development, prototyping, and open source projects with a generous always-free tier.

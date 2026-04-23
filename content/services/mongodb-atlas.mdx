@@ -1,0 +1,76 @@
+---
+title: "MongoDB Atlas"
+description: "Fully managed MongoDB database service with free tier hosting on AWS, Azure, and Google Cloud."
+provider: "MongoDB"
+category: "Managed Database"
+domain: database
+subtypes:
+  - NoSQL
+  - Document Store
+  - Cloud Database
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - mongodb
+  - nosql
+  - cloud
+  - database
+  - managed
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free shared cluster (M0) with 512 MB storage, basic features, and limited performance."
+  limits:
+    - 512 MB storage
+    - Shared RAM and CPU
+    - 3-node replica set
+    - 1 project per organization
+    - Limited regions
+  caveats:
+    - No backups on free tier
+    - Limited to shared clusters
+    - Performance throttled under heavy load
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototyping NoSQL apps
+  - Learning MongoDB
+  - Building MVPs
+  - Hosting small web/mobile projects
+quickstartSteps:
+  - Sign up for a MongoDB Atlas account.
+  - Create a new project and build a free M0 cluster.
+  - Choose your preferred cloud provider and region.
+  - Configure database access and network rules.
+  - Connect your application using the provided connection string.
+whenToUse: "Use when you need a managed NoSQL database for prototyping, learning, or small-scale production with minimal setup."
+whenNotToUse: "Avoid if you require high performance, large storage, dedicated clusters, or advanced features like backups and custom VPC peering."
+bestFor:
+  - prototyping
+  - learning
+  - small apps
+  - MVPs
+avoidIf:
+  - high throughput
+  - large datasets
+  - strict compliance
+  - dedicated resources
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://www.mongodb.com/products/platform/atlas
+docsUrl: https://www.mongodb.com/docs/atlas/
+sourceUrls:
+  - https://www.mongodb.com/docs/atlas/free-clusters/
+  - https://www.mongodb.com/pricing
+featured: false
+---
+MongoDB Atlas offers a free, fully managed MongoDB cluster suitable for learning, prototyping, and small applications, with easy cloud deployment and basic features.

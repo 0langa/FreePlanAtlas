@@ -1,0 +1,77 @@
+---
+title: "Auth0"
+description: "Auth0 provides authentication and authorization as a service for web, mobile, and legacy applications."
+provider: "Auth0"
+category: "Authentication"
+domain: auth
+subtypes:
+  - OAuth
+  - OIDC
+  - SAML
+  - MFA
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - authentication
+  - authorization
+  - oauth
+  - user-management
+  - mfa
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 7,000 active users and unlimited logins per month."
+  limits:
+    - 7,000 active users/month
+    - Unlimited logins
+    - Social and passwordless connections
+    - Single tenant
+    - Community support
+  caveats:
+    - No SLA or phone support
+    - Some advanced features require paid plans
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add secure login to web or mobile apps
+  - Implement social login (Google, Facebook, etc.)
+  - Enable multi-factor authentication
+  - Centralize user management
+quickstartSteps:
+  - Sign up for a free Auth0 account.
+  - Create a new Application in the Auth0 dashboard.
+  - Configure allowed callback URLs and application type.
+  - Integrate Auth0 SDK into your app using provided credentials.
+  - Test login and user flows in your application.
+whenToUse: "Use Auth0 when you need a quick, secure authentication solution with minimal setup for web or mobile apps."
+whenNotToUse: "Avoid Auth0 if you require full on-premise control, advanced customization, or need to support more than 7,000 users for free."
+bestFor:
+  - secure authentication
+  - rapid prototyping
+  - MFA
+  - social login
+avoidIf:
+  - need on-premise
+  - require unlimited free users
+  - need advanced enterprise features
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://auth0.com/
+docsUrl: https://auth0.com/docs
+sourceUrls:
+  - https://auth0.com/pricing
+  - https://auth0.com/docs/get-started
+featured: false
+---
+Auth0 offers a robust authentication platform with a generous free tier, supporting social logins, MFA, and easy integration for most app types.

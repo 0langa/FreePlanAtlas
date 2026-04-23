@@ -1,0 +1,74 @@
+---
+title: "Supabase Auth"
+description: "Supabase Auth provides authentication and user management with social logins, email, and magic links for web and mobile apps."
+provider: "Supabase"
+category: "Authentication"
+domain: auth
+subtypes:
+  - user management
+  - social login
+  - JWT
+  - OAuth
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - auth
+  - authentication
+  - user-management
+  - social-login
+  - jwt
+  - oauth
+  - magic-link
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 50,000 monthly active users and unlimited social logins."
+  limits:
+    - 50,000 monthly active users
+    - Unlimited social logins
+    - Unlimited email/password sign-ins
+  caveats:
+    - Email sending uses shared IP pools
+    - No custom SMTP on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add authentication to web or mobile apps
+  - Enable social login (Google, GitHub, etc.)
+  - Manage user sessions securely
+quickstartSteps:
+  - Sign up for a Supabase account.
+  - Create a new project in the Supabase dashboard.
+  - Navigate to the Auth section and configure providers (email, Google, etc.).
+  - Integrate Supabase Auth SDK into your app.
+  - Test user sign-up and login flows.
+whenToUse: "Use when you need simple, scalable authentication with social logins and email/password for web or mobile apps."
+whenNotToUse: "Avoid if you need advanced enterprise features, custom SMTP, or on-premise deployment."
+bestFor:
+  - MVPs
+  - side projects
+  - startups
+  - student projects
+avoidIf:
+  - enterprise compliance
+  - custom SMTP
+  - on-premise requirements
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-12
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://supabase.com/docs/reference/auth
+docsUrl: https://supabase.com/docs/reference/auth
+sourceUrls:
+  - https://supabase.com/pricing
+  - https://supabase.com/docs/guides/auth
+featured: false
+---
+Supabase Auth offers a developer-friendly authentication solution with generous free limits, supporting social logins, email, and passwordless flows for modern applications.

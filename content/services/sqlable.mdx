@@ -1,0 +1,71 @@
+---
+title: "Sqlable"
+description: "Sqlable provides a serverless SQL API for querying CSV, Excel, and JSON files directly from cloud storage."
+provider: "Sqlable"
+category: "Serverless Database"
+domain: database
+subtypes:
+  - serverless
+  - api
+  - sql
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - sql
+  - api
+  - csv
+  - excel
+  - json
+  - serverless
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows limited SQL queries on files from cloud storage."
+  limits:
+    - 100 queries per month
+    - Up to 10MB per file
+    - Supports CSV, Excel, JSON
+  caveats:
+    - No persistent database storage
+    - Limited to public cloud storage files
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Querying CSV/Excel/JSON files via SQL
+  - Ad-hoc data analysis
+  - Integrating data APIs into apps
+quickstartSteps:
+  - Sign up for a free Sqlable account.
+  - Connect your cloud storage provider (e.g., AWS S3, Google Drive).
+  - Upload or select a CSV, Excel, or JSON file.
+  - Write and execute SQL queries using the web UI or API.
+  - Review query results and export if needed.
+whenToUse: "Use Sqlable when you need to run SQL queries on flat files stored in cloud storage without setting up a database."
+whenNotToUse: "Avoid if you require persistent relational databases, high query volumes, or advanced SQL features beyond basic file querying."
+bestFor:
+  - data analysis
+  - prototyping
+  - ETL tasks
+  - students
+avoidIf:
+  - need persistent storage
+  - require high query throughput
+  - need advanced SQL features
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 4
+usefulnessScore: 6
+officialUrl: https://sqlable.com/
+docsUrl: https://docs.sqlable.com
+sourceUrls:
+  - https://sqlable.com/
+featured: false
+---
+Sqlable is a serverless SQL API that enables users to query CSV, Excel, and JSON files directly from cloud storage, ideal for quick data analysis and prototyping without database setup.

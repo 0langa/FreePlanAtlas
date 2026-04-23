@@ -1,0 +1,74 @@
+---
+title: "Firebase Auth"
+description: "Firebase Auth provides authentication services for web and mobile apps with support for multiple identity providers."
+provider: "Google Cloud"
+category: "Authentication"
+domain: auth
+subtypes:
+  - email-password
+  - social-login
+  - multi-factor
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - authentication
+  - oauth
+  - identity
+  - firebase
+  - user-management
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes generous monthly quotas for authentication operations."
+  limits:
+    - 10k verifications/month for email/password, anonymous, and social providers
+    - 100 phone authentication verifications/month
+    - Unlimited sign-ins for existing users
+  caveats:
+    - Phone authentication quota is low; overages are billed.
+    - Some advanced features (multi-factor, SAML, OIDC) may have additional costs.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Phone authentication overages can incur charges.
+    - Monitor usage to avoid unexpected costs.
+useCases:
+  - Add user authentication to web or mobile apps
+  - Support social login (Google, Facebook, etc.)
+  - Enable passwordless or multi-factor authentication
+quickstartSteps:
+  - Create a Firebase project in the Firebase Console.
+  - Enable the desired authentication providers (email/password, Google, etc.).
+  - Add Firebase SDK to your app.
+  - Configure authentication methods in your app code.
+  - Test sign-up and sign-in flows.
+whenToUse: "Use when you need quick, secure authentication for web or mobile apps with minimal backend setup."
+whenNotToUse: "Avoid if you require on-premise hosting, custom auth flows, or strict data residency requirements."
+bestFor:
+  - rapid prototyping
+  - MVPs
+  - mobile apps
+  - student projects
+avoidIf:
+  - strict compliance needs
+  - custom auth logic
+  - on-premise deployment
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://firebase.google.com/products/auth
+docsUrl: https://firebase.google.com/docs/auth
+sourceUrls:
+  - https://firebase.google.com/pricing
+  - https://firebase.google.com/docs/auth
+featured: false
+---
+Firebase Auth offers a simple way to add authentication to your apps, supporting multiple providers and scalable user management with a generous free tier.

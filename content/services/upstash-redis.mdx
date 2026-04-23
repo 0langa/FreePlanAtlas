@@ -1,0 +1,73 @@
+---
+title: "Upstash Redis"
+description: "Serverless Redis database with per-request pricing and a generous free tier for low-latency caching and data storage."
+provider: "Upstash"
+category: "Database"
+domain: database
+subtypes:
+  - serverless
+  - key-value
+  - NoSQL
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - redis
+  - serverless
+  - key-value
+  - caching
+  - nosql
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 10,000 requests/day, 256 MB storage, and 1 database."
+  limits:
+    - 10,000 requests per day
+    - 256 MB storage
+    - 1 database
+  caveats:
+    - Limited to single region
+    - No custom VPC support on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Session storage
+  - Caching for web apps
+  - Leaderboard data
+  - Rate limiting
+  - Queue management
+quickstartSteps:
+  - Sign up for a free Upstash account.
+  - Create a new Redis database from the dashboard.
+  - Copy the provided endpoint and credentials.
+  - Integrate the Redis endpoint into your application using a Redis client.
+  - Monitor usage and metrics in the Upstash dashboard.
+whenToUse: "Use when you need a simple, serverless Redis database for caching, session storage, or lightweight data needs with minimal setup."
+whenNotToUse: "Avoid if you require advanced Redis features, high throughput, custom VPC, or multi-region replication."
+bestFor:
+  - caching
+  - session storage
+  - prototyping
+  - small apps
+avoidIf:
+  - enterprise workloads
+  - custom networking
+  - large datasets
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-13
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://upstash.com/docs/redis
+docsUrl: https://upstash.com/docs/redis
+sourceUrls:
+  - https://upstash.com/pricing
+  - https://upstash.com/docs/redis
+featured: false
+---
+Upstash Redis offers a serverless, low-maintenance Redis database with a generous free tier, ideal for developers needing fast, scalable caching or key-value storage without managing infrastructure.
