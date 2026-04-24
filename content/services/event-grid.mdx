@@ -1,8 +1,10 @@
 ---
-title: "Event Grid"
-description: "Azure Event Grid is a fully managed event routing service for building event-based architectures."
-provider: "Azure"
-category: "messaging"
+title: Event Grid
+description: >-
+  Azure Event Grid is a fully managed event routing service for building
+  event-based architectures.
+provider: Azure
+category: messaging
 domain: messaging
 subtypes:
   - event bus
@@ -14,18 +16,17 @@ audiences:
   - enterprise
   - oss
 tags:
-  - event-driven
+  - queue
   - serverless
-  - pubsub
   - integration
   - cloud
 pricingModel: free
 freeTierDetails:
-  summary: "First 100,000 operations per month are free."
+  summary: 'First 100,000 operations per month are free.'
   limits:
-    - 100,000 operations/month
+    - '100,000 operations/month'
   caveats:
-    - Operations include event ingress, advanced matches, and delivery attempts.
+    - 'Operations include event ingress, advanced matches, and delivery attempts.'
     - Standard tier only.
   resetPeriod: monthly
   requiresCard: false
@@ -43,10 +44,14 @@ quickstartSteps:
   - Sign in to the Azure portal.
   - Create an Event Grid Topic or Domain.
   - Register an event publisher or connect an Azure resource.
-  - Add one or more event subscribers (e.g., Azure Functions, Webhooks).
+  - 'Add one or more event subscribers (e.g., Azure Functions, Webhooks).'
   - Publish test events and verify delivery.
-whenToUse: "Use Event Grid to connect services with event-driven workflows or to decouple components using publish/subscribe patterns."
-whenNotToUse: "Avoid if you need high-throughput streaming, strict ordering, or on-premises event routing; consider Azure Service Bus or Event Hubs instead."
+whenToUse: >-
+  Use Event Grid to connect services with event-driven workflows or to decouple
+  components using publish/subscribe patterns.
+whenNotToUse: >-
+  Avoid if you need high-throughput streaming, strict ordering, or on-premises
+  event routing; consider Azure Service Bus or Event Hubs instead.
 bestFor:
   - event-driven architectures
   - cloud automation
@@ -57,14 +62,14 @@ avoidIf:
   - on-premises only deployments
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 7
-officialUrl: https://azure.microsoft.com/services/event-grid/
-docsUrl: https://learn.microsoft.com/azure/event-grid/
+officialUrl: 'https://azure.microsoft.com/services/event-grid/'
+docsUrl: 'https://learn.microsoft.com/azure/event-grid/'
 sourceUrls:
-  - https://azure.microsoft.com/pricing/details/event-grid/
-  - https://learn.microsoft.com/azure/event-grid/
+  - 'https://azure.microsoft.com/pricing/details/event-grid/'
+  - 'https://learn.microsoft.com/azure/event-grid/'
 featured: false
 ---
 Azure Event Grid offers scalable, serverless event routing for integrating cloud services and building event-driven applications with minimal management overhead.

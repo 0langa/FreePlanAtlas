@@ -1,8 +1,10 @@
 ---
-title: "GitHub Actions"
-description: "GitHub Actions automates workflows for CI/CD, testing, and deployment directly within GitHub repositories."
-provider: "GitHub"
-category: "devops"
+title: GitHub Actions
+description: >-
+  GitHub Actions automates workflows for CI/CD, testing, and deployment directly
+  within GitHub repositories.
+provider: GitHub
+category: devops
 domain: devops
 subtypes:
   - automation
@@ -16,16 +18,16 @@ audiences:
   - team
   - oss
 tags:
-  - ci
-  - cd
+  - ci-cd
   - automation
-  - github
-  - workflow
+  - devops
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes limited minutes and storage for public and private repositories."
+  summary: >-
+    Free tier includes limited minutes and storage for public and private
+    repositories.
   limits:
-    - 2,000 minutes/month for private repos (Free plan)
+    - '2,000 minutes/month for private repos (Free plan)'
     - Unlimited minutes for public repos
     - 500MB storage for artifacts/logs
   caveats:
@@ -38,7 +40,9 @@ freeTierDetails:
   hasHardCap: false
   overageRisk: medium
   billingRiskNotes:
-    - Exceeding free minutes or storage on private repos leads to overage charges
+    - >-
+      Exceeding free minutes or storage on private repos leads to overage
+      charges
 useCases:
   - Automated testing on code push
   - Continuous deployment to cloud platforms
@@ -46,12 +50,18 @@ useCases:
   - Scheduled maintenance tasks
 quickstartSteps:
   - Sign in to GitHub and navigate to your repository.
-  - Click the 'Actions' tab and choose a workflow template or set up a new workflow.
+  - >-
+    Click the 'Actions' tab and choose a workflow template or set up a new
+    workflow.
   - Edit the YAML file to define your workflow steps.
   - Commit the workflow file to the repository.
   - Push code or trigger the workflow to see it run.
-whenToUse: "Use when you need to automate CI/CD, testing, or deployment workflows directly within your GitHub repository."
-whenNotToUse: "Avoid if your code is not hosted on GitHub or you require unlimited build minutes for private repositories."
+whenToUse: >-
+  Use when you need to automate CI/CD, testing, or deployment workflows directly
+  within your GitHub repository.
+whenNotToUse: >-
+  Avoid if your code is not hosted on GitHub or you require unlimited build
+  minutes for private repositories.
 bestFor:
   - GitHub-hosted projects
   - open source
@@ -63,14 +73,15 @@ avoidIf:
   - heavy private repo usage
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 8
-officialUrl: https://github.com/features/actions
-docsUrl: https://docs.github.com/en/actions
+officialUrl: 'https://github.com/features/actions'
+docsUrl: 'https://docs.github.com/en/actions'
 sourceUrls:
-  - https://github.com/features/actions
-  - https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+  - 'https://github.com/features/actions'
+  - >-
+    https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 featured: false
 ---
 GitHub Actions enables developers to automate software workflows, including testing, building, and deploying code, directly from their GitHub repositories.

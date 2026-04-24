@@ -543,11 +543,13 @@ export function ExplorerTable({
           <p className="text-sm text-muted-foreground">{filteredData.length} entries matched.</p>
 
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Button variant="outline" size="sm">
-                Columns
-              </Button>
-            </DropdownMenuTrigger>
+            <DropdownMenuTrigger
+              render={
+                <Button variant="outline" size="sm">
+                  Columns
+                </Button>
+              }
+            />
             <DropdownMenuContent align="end" className="w-44">
               <DropdownMenuGroup>
                 <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
@@ -556,14 +558,20 @@ export function ExplorerTable({
                   .getAllColumns()
                   .filter((column) => column.getCanHide())
                   .map((column) => (
+                    (() => {
+                      const headerValue = column.columnDef.header;
+                      const label = typeof headerValue === "string" ? headerValue : column.id;
+                      return (
                     <DropdownMenuCheckboxItem
                       key={column.id}
                       className="capitalize"
                       checked={column.getIsVisible()}
                       onCheckedChange={(value) => column.toggleVisibility(!!value)}
                     >
-                      {column.id}
+                      {label}
                     </DropdownMenuCheckboxItem>
+                      );
+                    })()
                   ))}
               </DropdownMenuGroup>
             </DropdownMenuContent>

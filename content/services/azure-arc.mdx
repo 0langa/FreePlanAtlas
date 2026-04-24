@@ -1,8 +1,10 @@
 ---
-title: "Azure Arc"
-description: "Azure Arc enables management and governance of servers, Kubernetes clusters, and databases across on-premises, multi-cloud, and edge environments."
-provider: "Azure"
-category: "operations"
+title: Azure Arc
+description: >-
+  Azure Arc enables management and governance of servers, Kubernetes clusters,
+  and databases across on-premises, multi-cloud, and edge environments.
+provider: Azure
+category: operations
 domain: operations
 subtypes:
   - hybrid
@@ -13,18 +15,19 @@ audiences:
   - team
   - startup
 tags:
-  - hybrid
-  - multi-cloud
-  - management
-  - governance
+  - misc
+  - cloud
+  - compliance
   - kubernetes
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes resource organization, inventory, and some governance features for servers and Kubernetes clusters."
+  summary: >-
+    Free tier includes resource organization, inventory, and some governance
+    features for servers and Kubernetes clusters.
   limits:
     - No charge for resource organization and inventory
     - Basic governance features included
-    - Advanced features (e.g., policy enforcement, security) may incur charges
+    - 'Advanced features (e.g., policy enforcement, security) may incur charges'
   caveats:
     - Advanced management and security features are billed separately
     - Data transfer and connected Azure services may incur costs
@@ -34,7 +37,9 @@ freeTierDetails:
   hasHardCap: false
   overageRisk: medium
   billingRiskNotes:
-    - Enabling premium features or integrating with paid Azure services can generate charges
+    - >-
+      Enabling premium features or integrating with paid Azure services can
+      generate charges
 useCases:
   - Centralized management of hybrid and multi-cloud resources
   - Applying governance and compliance policies
@@ -42,11 +47,19 @@ useCases:
 quickstartSteps:
   - Sign in to the Azure Portal and ensure you have an active subscription.
   - Register the Azure Arc resource provider in your subscription.
-  - Download and install the Azure Connected Machine agent on your server or cluster.
-  - Connect your on-premises or multi-cloud resources to Azure Arc following the guided setup.
+  - >-
+    Download and install the Azure Connected Machine agent on your server or
+    cluster.
+  - >-
+    Connect your on-premises or multi-cloud resources to Azure Arc following the
+    guided setup.
   - Verify resource appearance and status in the Azure Portal.
-whenToUse: "Use Azure Arc to manage, monitor, and govern resources across on-premises, multi-cloud, and edge environments from a single Azure control plane."
-whenNotToUse: "Avoid if you only use native Azure resources or require advanced features without incurring additional costs."
+whenToUse: >-
+  Use Azure Arc to manage, monitor, and govern resources across on-premises,
+  multi-cloud, and edge environments from a single Azure control plane.
+whenNotToUse: >-
+  Avoid if you only use native Azure resources or require advanced features
+  without incurring additional costs.
 bestFor:
   - hybrid environments
   - multi-cloud management
@@ -56,14 +69,14 @@ avoidIf:
   - cost-sensitive projects needing advanced features
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-10
+lastUpdated: 2024-06-10T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-arc/
-docsUrl: https://learn.microsoft.com/en-us/azure/azure-arc/
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/azure-arc/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/azure-arc/'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/azure-arc/
-  - https://learn.microsoft.com/en-us/azure/azure-arc/
+  - 'https://azure.microsoft.com/en-us/pricing/details/azure-arc/'
+  - 'https://learn.microsoft.com/en-us/azure/azure-arc/'
 featured: false
 ---
 Azure Arc extends Azure management and governance to on-premises, multi-cloud, and edge resources, enabling unified operations and policy enforcement across diverse environments.

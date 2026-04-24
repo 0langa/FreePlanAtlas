@@ -1,8 +1,10 @@
 ---
-title: "Azure Logic Apps"
-description: "Azure Logic Apps enables automated workflows to integrate apps, data, and services across cloud and on-premises environments."
-provider: "Azure"
-category: "integration"
+title: Azure Logic Apps
+description: >-
+  Azure Logic Apps enables automated workflows to integrate apps, data, and
+  services across cloud and on-premises environments.
+provider: Azure
+category: integration
 domain: integration
 subtypes:
   - workflow
@@ -14,20 +16,21 @@ audiences:
   - enterprise
   - agency
 tags:
-  - workflow
   - automation
   - integration
   - serverless
-  - event-driven
+  - queue
 pricingModel: freemium
 freeTierDetails:
-  summary: "750 free actions per month for consumption-based workflows."
+  summary: 750 free actions per month for consumption-based workflows.
   limits:
     - 750 actions per month (consumption plan)
     - Standard plan not included
     - Additional actions billed per use
   caveats:
-    - Standard and Integration Service Environment plans are not covered by the free tier
+    - >-
+      Standard and Integration Service Environment plans are not covered by the
+      free tier
     - Premium connectors incur extra charges
   resetPeriod: monthly
   requiresCard: false
@@ -47,8 +50,12 @@ quickstartSteps:
   - Choose a workflow template or start from blank.
   - Add triggers and actions to define your workflow.
   - Save and run the Logic App to test automation.
-whenToUse: "Use when you need to automate workflows or integrate multiple services without writing custom code."
-whenNotToUse: "Avoid if you require complex, low-latency, or highly customized integrations beyond what connectors provide."
+whenToUse: >-
+  Use when you need to automate workflows or integrate multiple services without
+  writing custom code.
+whenNotToUse: >-
+  Avoid if you require complex, low-latency, or highly customized integrations
+  beyond what connectors provide.
 bestFor:
   - workflow automation
   - integration
@@ -59,14 +66,14 @@ avoidIf:
   - unsupported connectors
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/logic-apps/
-docsUrl: https://learn.microsoft.com/en-us/azure/logic-apps/
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/logic-apps/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/logic-apps/'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/logic-apps/
-  - https://learn.microsoft.com/en-us/azure/logic-apps/
+  - 'https://azure.microsoft.com/en-us/pricing/details/logic-apps/'
+  - 'https://learn.microsoft.com/en-us/azure/logic-apps/'
 featured: false
 ---
 Azure Logic Apps provides a serverless way to automate workflows and integrate cloud or on-premises systems using a visual designer and prebuilt connectors.

@@ -1,8 +1,10 @@
 ---
-title: "Synadia / NATS"
-description: "Managed NATS messaging service for real-time, scalable, and secure pub/sub, request/reply, and streaming workloads."
-provider: "Synadia"
-category: "messaging"
+title: Synadia / NATS
+description: >-
+  Managed NATS messaging service for real-time, scalable, and secure pub/sub,
+  request/reply, and streaming workloads.
+provider: Synadia
+category: messaging
 domain: messaging
 subtypes:
   - pub/sub
@@ -16,13 +18,14 @@ audiences:
   - oss
 tags:
   - messaging
-  - pubsub
-  - event-driven
-  - real-time
+  - queue
+  - realtime
   - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier offers limited message and connection quotas for development and small workloads."
+  summary: >-
+    Free tier offers limited message and connection quotas for development and
+    small workloads.
   limits:
     - 50 connections
     - 5GB data transfer/month
@@ -43,13 +46,17 @@ useCases:
   - Lightweight streaming
   - Prototyping distributed systems
 quickstartSteps:
-  - Sign up for a Synadia account at https://synadia.com/ngs.
+  - 'Sign up for a Synadia account at https://synadia.com/ngs.'
   - Create a new NGS (NATS Global Service) account and obtain credentials.
   - Install the NATS CLI or SDK for your preferred language.
   - Connect to the NGS endpoint using your credentials.
   - Publish and subscribe to a test subject to verify connectivity.
-whenToUse: "Use when you need a managed, scalable, and low-latency messaging backbone for cloud-native or distributed applications."
-whenNotToUse: "Avoid if you require strict message ordering, persistent queues with high durability, or advanced enterprise integrations."
+whenToUse: >-
+  Use when you need a managed, scalable, and low-latency messaging backbone for
+  cloud-native or distributed applications.
+whenNotToUse: >-
+  Avoid if you require strict message ordering, persistent queues with high
+  durability, or advanced enterprise integrations.
 bestFor:
   - real-time messaging
   - microservices
@@ -61,14 +68,14 @@ avoidIf:
   - require enterprise integrations
 difficulty: intermediate
 productionReadiness: production-light
-lastUpdated: 2024-06-13
+lastUpdated: 2024-06-13T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://synadia.com/ngs
-docsUrl: https://docs.nats.io/nats-on-synadia
+officialUrl: 'https://synadia.com/ngs'
+docsUrl: 'https://docs.nats.io/nats-on-synadia'
 sourceUrls:
-  - https://synadia.com/ngs
-  - https://docs.nats.io/nats-on-synadia
+  - 'https://synadia.com/ngs'
+  - 'https://docs.nats.io/nats-on-synadia'
 featured: false
 ---
 Synadia NGS provides a managed NATS messaging platform with a generous free tier, suitable for prototyping, development, and small-scale production workloads. It excels at low-latency, real-time communication for distributed systems, but may not fit use cases requiring advanced message durability or enterprise-grade integrations.

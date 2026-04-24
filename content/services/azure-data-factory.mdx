@@ -1,8 +1,10 @@
 ---
-title: "Azure Data Factory"
-description: "Azure Data Factory is a cloud-based data integration service for creating, scheduling, and orchestrating data pipelines at scale."
-provider: "Azure"
-category: "integration"
+title: Azure Data Factory
+description: >-
+  Azure Data Factory is a cloud-based data integration service for creating,
+  scheduling, and orchestrating data pipelines at scale.
+provider: Azure
+category: integration
 domain: integration
 subtypes:
   - ETL
@@ -13,17 +15,19 @@ audiences:
   - team
   - enterprise
 tags:
-  - data-pipeline
-  - etl
+  - ci-cd
+  - misc
   - integration
   - cloud
   - automation
 pricingModel: freemium
 freeTierDetails:
-  summary: "5 low-frequency activity runs and 1,000 Data Movement/Data Pipeline activity runs per month free."
+  summary: >-
+    5 low-frequency activity runs and 1,000 Data Movement/Data Pipeline activity
+    runs per month free.
   limits:
     - 5 low-frequency activity runs/month
-    - 1,000 Data Movement/Data Pipeline activity runs/month
+    - '1,000 Data Movement/Data Pipeline activity runs/month'
   caveats:
     - Premium features and higher frequency runs are billed.
     - Data flow debug and SSIS integration not included.
@@ -45,8 +49,12 @@ quickstartSteps:
   - Create a pipeline and add activities for data movement or transformation.
   - Configure triggers to schedule pipeline runs.
   - Monitor pipeline execution and review run history.
-whenToUse: "Use when you need to automate, schedule, or orchestrate data movement and transformation across diverse sources in Azure or hybrid environments."
-whenNotToUse: "Avoid if you require unlimited free runs, advanced data flows, or need a fully managed ETL with no risk of overages."
+whenToUse: >-
+  Use when you need to automate, schedule, or orchestrate data movement and
+  transformation across diverse sources in Azure or hybrid environments.
+whenNotToUse: >-
+  Avoid if you require unlimited free runs, advanced data flows, or need a fully
+  managed ETL with no risk of overages.
 bestFor:
   - data engineers
   - integration teams
@@ -57,14 +65,14 @@ avoidIf:
   - need open-source tools
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 7
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/data-factory/
-docsUrl: https://learn.microsoft.com/en-us/azure/data-factory/introduction
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/data-factory/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/data-factory/introduction'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/data-factory/
-  - https://learn.microsoft.com/en-us/azure/data-factory/introduction
+  - 'https://azure.microsoft.com/en-us/pricing/details/data-factory/'
+  - 'https://learn.microsoft.com/en-us/azure/data-factory/introduction'
 featured: false
 ---
 Azure Data Factory provides scalable, cloud-based data integration and ETL capabilities with a limited always-free tier suitable for light workloads and evaluation.

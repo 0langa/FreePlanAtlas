@@ -1,8 +1,10 @@
 ---
-title: "Atlas App Services"
-description: "Atlas App Services provides backend services like authentication, sync, and serverless functions for MongoDB Atlas applications."
-provider: "MongoDB"
-category: "hosting"
+title: Atlas App Services
+description: >-
+  Atlas App Services provides backend services like authentication, sync, and
+  serverless functions for MongoDB Atlas applications.
+provider: MongoDB
+category: hosting
 domain: hosting
 subtypes:
   - serverless
@@ -17,16 +19,18 @@ audiences:
 tags:
   - serverless
   - backend
-  - authentication
-  - sync
-  - mongodb
+  - auth
+  - integration
+  - database
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 1,000,000 monthly function invocations and 10GB data transfer."
+  summary: >-
+    Free tier includes 1,000,000 monthly function invocations and 10GB data
+    transfer.
   limits:
-    - 1,000,000 function invocations/month
+    - '1,000,000 function invocations/month'
     - 10GB data transfer/month
-    - 100,000 sync requests/month
+    - '100,000 sync requests/month'
   caveats:
     - Requires MongoDB Atlas cluster (free tier available)
     - Some advanced features require paid plans
@@ -48,8 +52,12 @@ quickstartSteps:
   - Create a new App Service and configure authentication.
   - Define functions or sync rules as needed.
   - Integrate the SDK into your application.
-whenToUse: "Use when you need managed backend services like authentication, sync, or serverless functions tightly integrated with MongoDB Atlas."
-whenNotToUse: "Avoid if you require backend services for non-MongoDB databases or need advanced customization beyond provided features."
+whenToUse: >-
+  Use when you need managed backend services like authentication, sync, or
+  serverless functions tightly integrated with MongoDB Atlas.
+whenNotToUse: >-
+  Avoid if you require backend services for non-MongoDB databases or need
+  advanced customization beyond provided features.
 bestFor:
   - mobile apps
   - web apps
@@ -60,14 +68,14 @@ avoidIf:
   - requiring custom backend infrastructure
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://www.mongodb.com/products/platform/atlas/app-services
-docsUrl: https://www.mongodb.com/docs/atlas/app-services/
+officialUrl: 'https://www.mongodb.com/products/platform/atlas/app-services'
+docsUrl: 'https://www.mongodb.com/docs/atlas/app-services/'
 sourceUrls:
-  - https://www.mongodb.com/docs/atlas/app-services/
-  - https://www.mongodb.com/pricing
+  - 'https://www.mongodb.com/docs/atlas/app-services/'
+  - 'https://www.mongodb.com/pricing'
 featured: false
 ---
 Atlas App Services offers managed backend features like authentication, sync, and serverless functions, making it easy to build applications on MongoDB Atlas.

@@ -1,8 +1,10 @@
 ---
-title: "Azure App Configuration"
-description: "Centralized service for managing application settings and feature flags across Azure environments."
-provider: "Azure"
-category: "devops"
+title: Azure App Configuration
+description: >-
+  Centralized service for managing application settings and feature flags across
+  Azure environments.
+provider: Azure
+category: devops
 domain: devops
 subtypes:
   - feature flags
@@ -13,16 +15,14 @@ audiences:
   - team
   - enterprise
 tags:
-  - configuration
-  - feature-flags
-  - azure
-  - settings
+  - misc
+  - cloud
   - devops
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 1,000 requests per day and 10 MB storage."
+  summary: 'Free tier includes 1,000 requests per day and 10 MB storage.'
   limits:
-    - 1,000 requests/day
+    - '1,000 requests/day'
     - 10 MB storage
     - 1 free store
   caveats:
@@ -45,8 +45,12 @@ quickstartSteps:
   - Add key-value pairs for your application settings.
   - Integrate the App Configuration SDK or REST API into your app.
   - Test retrieving configuration values from your application.
-whenToUse: "Use when you need centralized, scalable management of application settings or feature flags across multiple Azure services."
-whenNotToUse: "Avoid if your app has minimal configuration needs or you require on-premises configuration management."
+whenToUse: >-
+  Use when you need centralized, scalable management of application settings or
+  feature flags across multiple Azure services.
+whenNotToUse: >-
+  Avoid if your app has minimal configuration needs or you require on-premises
+  configuration management.
 bestFor:
   - teams managing multiple environments
   - feature flag management
@@ -56,14 +60,14 @@ avoidIf:
   - strict on-premises requirements
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/app-configuration/
-docsUrl: https://learn.microsoft.com/en-us/azure/azure-app-configuration/
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/app-configuration/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/azure-app-configuration/'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/app-configuration/
-  - https://learn.microsoft.com/en-us/azure/azure-app-configuration/
+  - 'https://azure.microsoft.com/en-us/pricing/details/app-configuration/'
+  - 'https://learn.microsoft.com/en-us/azure/azure-app-configuration/'
 featured: false
 ---
 Azure App Configuration provides a centralized way to manage application settings and feature flags, supporting dynamic updates and integration with Azure services.

@@ -1,8 +1,10 @@
 ---
-title: "Azure Disk Storage"
-description: "Azure Disk Storage provides scalable, high-performance block storage for Azure virtual machines and workloads."
-provider: "Azure"
-category: "storage"
+title: Azure Disk Storage
+description: >-
+  Azure Disk Storage provides scalable, high-performance block storage for Azure
+  virtual machines and workloads.
+provider: Azure
+category: storage
 domain: storage
 subtypes:
   - managed disks
@@ -13,14 +15,14 @@ audiences:
   - team
   - enterprise
 tags:
-  - azure
-  - block-storage
-  - managed-disks
-  - persistent
-  - cloud-storage
+  - cloud
+  - storage
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "Azure offers 32 GB of Standard SSD Managed Disk storage free per month for 12 months."
+  summary: >-
+    Azure offers 32 GB of Standard SSD Managed Disk storage free per month for
+    12 months.
   limits:
     - 32 GB Standard SSD Managed Disk per month
     - 12 months duration
@@ -47,8 +49,12 @@ quickstartSteps:
   - Search for and select 'Managed Disks'.
   - Configure disk size (up to 32 GB Standard SSD for free tier) and settings.
   - Attach the disk to a virtual machine or use as standalone storage.
-whenToUse: "Use when you need reliable, persistent block storage for Azure virtual machines or workloads with moderate performance needs."
-whenNotToUse: "Avoid if you need object storage, require more than 32 GB free, or plan to run outside Azure's ecosystem."
+whenToUse: >-
+  Use when you need reliable, persistent block storage for Azure virtual
+  machines or workloads with moderate performance needs.
+whenNotToUse: >-
+  Avoid if you need object storage, require more than 32 GB free, or plan to run
+  outside Azure's ecosystem.
 bestFor:
   - Azure VM storage
   - database hosting
@@ -59,14 +65,14 @@ avoidIf:
   - non-Azure environments
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 6
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/managed-disks/
-docsUrl: https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/managed-disks/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/managed-disks/
-  - https://azure.microsoft.com/en-us/free/
+  - 'https://azure.microsoft.com/en-us/pricing/details/managed-disks/'
+  - 'https://azure.microsoft.com/en-us/free/'
 featured: false
 ---
 Azure Disk Storage offers managed, persistent block storage for Azure VMs, with a 32 GB Standard SSD free tier for 12 months for new users.

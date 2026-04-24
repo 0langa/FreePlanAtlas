@@ -1,8 +1,10 @@
 ---
-title: "Azure Active Directory B2C"
-description: "Azure AD B2C provides cloud-based identity and access management for customer-facing applications."
-provider: "Azure"
-category: "auth"
+title: Azure Active Directory B2C
+description: >-
+  Azure AD B2C provides cloud-based identity and access management for
+  customer-facing applications.
+provider: Azure
+category: auth
 domain: auth
 subtypes:
   - customer identity
@@ -15,16 +17,14 @@ audiences:
   - agency
   - oss
 tags:
-  - authentication
-  - oauth
-  - openid
-  - sso
-  - user-management
+  - auth
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free for up to 50,000 monthly active users (MAU) with basic authentication features."
+  summary: >-
+    Free for up to 50,000 monthly active users (MAU) with basic authentication
+    features.
   limits:
-    - 50,000 MAU per month
+    - '50,000 MAU per month'
     - Standard authentication flows
     - Limited to built-in policies
   caveats:
@@ -36,19 +36,23 @@ freeTierDetails:
   hasHardCap: true
   overageRisk: low
   billingRiskNotes:
-    - Charges apply if MAU exceeds 50,000 or premium features are enabled
+    - 'Charges apply if MAU exceeds 50,000 or premium features are enabled'
 useCases:
   - Add user sign-up and sign-in to web or mobile apps
-  - Enable social login (Google, Facebook, etc.)
+  - 'Enable social login (Google, Facebook, etc.)'
   - Support multi-tenant SaaS authentication
 quickstartSteps:
   - Sign in to the Azure portal and create an Azure AD B2C tenant.
   - Link your Azure subscription to the B2C tenant.
   - Register your application in the B2C tenant.
-  - Configure user flows (sign-up, sign-in, password reset).
+  - 'Configure user flows (sign-up, sign-in, password reset).'
   - Integrate the application using the provided endpoints and libraries.
-whenToUse: "Use when you need scalable, managed authentication for consumer-facing apps with social or enterprise identity providers."
-whenNotToUse: "Avoid if you require on-premises-only identity, advanced custom policy support without extra cost, or need to support more than 50,000 free MAU."
+whenToUse: >-
+  Use when you need scalable, managed authentication for consumer-facing apps
+  with social or enterprise identity providers.
+whenNotToUse: >-
+  Avoid if you require on-premises-only identity, advanced custom policy support
+  without extra cost, or need to support more than 50,000 free MAU.
 bestFor:
   - scalable consumer apps
   - multi-tenant SaaS
@@ -59,13 +63,14 @@ avoidIf:
   - advanced custom policies
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/services/active-directory/external-identities/b2c/
-docsUrl: https://learn.microsoft.com/azure/active-directory-b2c/
+officialUrl: 'https://azure.microsoft.com/services/active-directory/external-identities/b2c/'
+docsUrl: 'https://learn.microsoft.com/azure/active-directory-b2c/'
 sourceUrls:
-  - https://azure.microsoft.com/pricing/details/active-directory/external-identities/
+  - >-
+    https://azure.microsoft.com/pricing/details/active-directory/external-identities/
 featured: false
 ---
 Azure Active Directory B2C enables secure, scalable authentication for customer-facing applications, supporting social and enterprise identity providers with a generous free tier.

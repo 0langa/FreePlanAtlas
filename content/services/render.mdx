@@ -1,8 +1,10 @@
 ---
-title: "Render"
-description: "Render provides managed cloud hosting for web apps, static sites, databases, and background workers with simple deployment workflows."
-provider: "Render"
-category: "hosting"
+title: Render
+description: >-
+  Render provides managed cloud hosting for web apps, static sites, databases,
+  and background workers with simple deployment workflows.
+provider: Render
+category: hosting
 domain: hosting
 subtypes:
   - web hosting
@@ -16,14 +18,15 @@ audiences:
   - team
   - oss
 tags:
-  - hosting
+  - misc
   - serverless
-  - static-sites
-  - managed
-  - deployment
+  - web
+  - ci-cd
 pricingModel: freemium
 freeTierDetails:
-  summary: "Always-free tier for static sites, web services, and PostgreSQL with usage limits."
+  summary: >-
+    Always-free tier for static sites, web services, and PostgreSQL with usage
+    limits.
   limits:
     - Static sites: 100 GB bandwidth/month
     - Web services: 750 hours/month
@@ -45,11 +48,17 @@ useCases:
 quickstartSteps:
   - Sign up at render.com using your GitHub or GitLab account.
   - Create a new service and connect your repository.
-  - Select the type of service (web, static site, database, or background worker).
+  - >-
+    Select the type of service (web, static site, database, or background
+    worker).
   - Configure build and start commands as needed.
   - Deploy and monitor your service from the Render dashboard.
-whenToUse: "Use Render for quick deployment of web apps, static sites, or databases without managing infrastructure."
-whenNotToUse: "Avoid if you need advanced networking, custom VM configurations, or require strict uptime guarantees for production-critical workloads."
+whenToUse: >-
+  Use Render for quick deployment of web apps, static sites, or databases
+  without managing infrastructure.
+whenNotToUse: >-
+  Avoid if you need advanced networking, custom VM configurations, or require
+  strict uptime guarantees for production-critical workloads.
 bestFor:
   - prototyping
   - side projects
@@ -61,14 +70,14 @@ avoidIf:
   - high-availability production
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://render.com/
-docsUrl: https://render.com/docs
+officialUrl: 'https://render.com/'
+docsUrl: 'https://render.com/docs'
 sourceUrls:
-  - https://render.com/pricing
-  - https://render.com/docs/free
+  - 'https://render.com/pricing'
+  - 'https://render.com/docs/free'
 featured: false
 ---
 Render offers a generous free tier for hosting static sites, web services, databases, and background workers, making it ideal for rapid prototyping and small projects. The platform automates deployments from Git, provides managed SSL, and includes basic monitoring. Free services may sleep when idle, and there are hard usage caps, but no risk of surprise overages. It's best suited for students, indie developers, and startups needing simple, reliable hosting without infrastructure management.

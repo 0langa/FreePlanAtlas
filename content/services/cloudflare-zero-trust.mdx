@@ -1,8 +1,11 @@
 ---
-title: "Cloudflare Zero Trust"
-description: "Cloudflare Zero Trust provides secure access to internal and external applications without a VPN, using identity-based policies and network filtering."
-provider: "Cloudflare"
-category: "security"
+title: Cloudflare Zero Trust
+description: >-
+  Cloudflare Zero Trust provides secure access to internal and external
+  applications without a VPN, using identity-based policies and network
+  filtering.
+provider: Cloudflare
+category: security
 domain: security
 subtypes:
   - Zero Trust Network Access
@@ -15,14 +18,14 @@ audiences:
   - oss
   - agency
 tags:
-  - zero-trust
-  - access-control
-  - vpn-alternative
+  - misc
+  - auth
+  - networking
   - identity
-  - network-security
+  - security
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free plan for up to 50 users with core Zero Trust features."
+  summary: Free plan for up to 50 users with core Zero Trust features.
   limits:
     - Up to 50 users
     - Gateway DNS filtering
@@ -44,11 +47,17 @@ useCases:
 quickstartSteps:
   - Sign up for a Cloudflare account and select Zero Trust.
   - Add your domain or application to Cloudflare.
-  - Configure identity provider integration (e.g., Google Workspace, Azure AD).
+  - 'Configure identity provider integration (e.g., Google Workspace, Azure AD).'
   - Define access policies for your applications.
-  - Deploy the Cloudflare WARP client to user devices if device posture checks are needed.
-whenToUse: "Use when you need to secure application access for distributed teams without traditional VPNs, or want granular, identity-driven access controls."
-whenNotToUse: "Avoid if you require advanced features like CASB, or need support for more than 50 users on the free tier."
+  - >-
+    Deploy the Cloudflare WARP client to user devices if device posture checks
+    are needed.
+whenToUse: >-
+  Use when you need to secure application access for distributed teams without
+  traditional VPNs, or want granular, identity-driven access controls.
+whenNotToUse: >-
+  Avoid if you require advanced features like CASB, or need support for more
+  than 50 users on the free tier.
 bestFor:
   - teams replacing VPN
   - startups securing internal tools
@@ -59,15 +68,15 @@ avoidIf:
   - must self-host
 difficulty: intermediate
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://www.cloudflare.com/products/zero-trust/
-docsUrl: https://developers.cloudflare.com/cloudflare-one/
+officialUrl: 'https://www.cloudflare.com/products/zero-trust/'
+docsUrl: 'https://developers.cloudflare.com/cloudflare-one/'
 sourceUrls:
-  - https://www.cloudflare.com/products/zero-trust/
-  - https://developers.cloudflare.com/cloudflare-one/
-  - https://www.cloudflare.com/plans/zero-trust/
+  - 'https://www.cloudflare.com/products/zero-trust/'
+  - 'https://developers.cloudflare.com/cloudflare-one/'
+  - 'https://www.cloudflare.com/plans/zero-trust/'
 featured: false
 ---
 Cloudflare Zero Trust offers a free plan for up to 50 users, enabling secure, identity-based access to applications without a VPN. It is ideal for startups and teams seeking to modernize access controls, but advanced enterprise features and higher user limits require paid plans.

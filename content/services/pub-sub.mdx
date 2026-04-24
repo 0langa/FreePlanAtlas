@@ -1,8 +1,10 @@
 ---
-title: "Pub/Sub"
-description: "Google Cloud Pub/Sub is a fully managed messaging service for real-time event ingestion and delivery."
-provider: "Google Cloud"
-category: "messaging"
+title: Pub/Sub
+description: >-
+  Google Cloud Pub/Sub is a fully managed messaging service for real-time event
+  ingestion and delivery.
+provider: Google Cloud
+category: messaging
 domain: messaging
 subtypes:
   - event-driven
@@ -15,16 +17,14 @@ audiences:
   - oss
 tags:
   - messaging
-  - event-driven
-  - pubsub
-  - cloud
   - queue
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "10 GB of messages and 10,000 push operations per month free."
+  summary: '10 GB of messages and 10,000 push operations per month free.'
   limits:
     - 10 GB data per month
-    - 10,000 push operations per month
+    - '10,000 push operations per month'
   caveats:
     - Overages are billed per usage.
     - Free tier applies to both Standard and Lite topics.
@@ -48,8 +48,12 @@ quickstartSteps:
   - Add a subscription to your topic (pull or push).
   - Publish a test message to the topic.
   - Consume messages from your subscription.
-whenToUse: "Use when you need scalable, reliable, real-time messaging between services or components, especially for event-driven architectures."
-whenNotToUse: "Avoid if you require strict FIFO ordering, extremely low latency, or want to avoid potential overage charges from high message volumes."
+whenToUse: >-
+  Use when you need scalable, reliable, real-time messaging between services or
+  components, especially for event-driven architectures.
+whenNotToUse: >-
+  Avoid if you require strict FIFO ordering, extremely low latency, or want to
+  avoid potential overage charges from high message volumes.
 bestFor:
   - event-driven systems
   - microservices
@@ -60,14 +64,14 @@ avoidIf:
   - have unpredictable high-volume spikes
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://cloud.google.com/pubsub
-docsUrl: https://cloud.google.com/pubsub/docs
+officialUrl: 'https://cloud.google.com/pubsub'
+docsUrl: 'https://cloud.google.com/pubsub/docs'
 sourceUrls:
-  - https://cloud.google.com/pubsub/pricing
-  - https://cloud.google.com/pubsub/docs/overview
+  - 'https://cloud.google.com/pubsub/pricing'
+  - 'https://cloud.google.com/pubsub/docs/overview'
 featured: false
 ---
 Google Cloud Pub/Sub offers scalable, managed publish/subscribe messaging for building event-driven systems, with a generous free tier for moderate workloads.

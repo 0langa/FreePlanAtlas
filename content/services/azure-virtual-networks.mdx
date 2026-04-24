@@ -1,8 +1,10 @@
 ---
-title: "Azure Virtual Networks"
-description: "Azure Virtual Networks provide secure, isolated, and scalable networking for Azure resources and services."
-provider: "Azure"
-category: "networking"
+title: Azure Virtual Networks
+description: >-
+  Azure Virtual Networks provide secure, isolated, and scalable networking for
+  Azure resources and services.
+provider: Azure
+category: networking
 domain: networking
 subtypes:
   - VPC
@@ -14,27 +16,29 @@ audiences:
   - enterprise
   - indie
 tags:
-  - vnet
-  - isolation
-  - subnet
+  - networking
+  - misc
   - security
-  - cloud-networking
 pricingModel: free
 freeTierDetails:
-  summary: "Virtual Networks are free; charges apply for resources like VPN gateways, peering, or outbound data."
+  summary: >-
+    Virtual Networks are free; charges apply for resources like VPN gateways,
+    peering, or outbound data.
   limits:
     - Unlimited virtual networks per region
     - No charge for VNet creation
-    - Standard charges for VPN gateways, peering, NAT, and outbound data
+    - 'Standard charges for VPN gateways, peering, NAT, and outbound data'
   caveats:
-    - Outbound data transfer, VPN gateways, and peering incur additional costs
+    - 'Outbound data transfer, VPN gateways, and peering incur additional costs'
   resetPeriod: monthly
   requiresCard: true
   freeTierType: always-free
   hasHardCap: true
   overageRisk: medium
   billingRiskNotes:
-    - Charges accrue if using VPN gateways, peering, or significant outbound data
+    - >-
+      Charges accrue if using VPN gateways, peering, or significant outbound
+      data
 useCases:
   - Isolating cloud resources
   - Setting up secure private networks
@@ -43,11 +47,15 @@ useCases:
 quickstartSteps:
   - Sign in to the Azure Portal.
   - Navigate to 'Virtual Networks' and click 'Create'.
-  - Enter a name, select a region, and define the address space.
+  - 'Enter a name, select a region, and define the address space.'
   - Add one or more subnets as needed.
   - Review and create the virtual network.
-whenToUse: "Use when you need secure, private networking for Azure resources or to connect on-premises infrastructure to Azure."
-whenNotToUse: "Avoid if you only need public-facing resources or are not using Azure-hosted services."
+whenToUse: >-
+  Use when you need secure, private networking for Azure resources or to connect
+  on-premises infrastructure to Azure.
+whenNotToUse: >-
+  Avoid if you only need public-facing resources or are not using Azure-hosted
+  services.
 bestFor:
   - secure networking
   - hybrid cloud
@@ -57,14 +65,16 @@ avoidIf:
   - non-Azure environments
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/virtual-network/
-docsUrl: https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/virtual-network/'
+docsUrl: >-
+  https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/virtual-network/
-  - https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview
+  - 'https://azure.microsoft.com/en-us/pricing/details/virtual-network/'
+  - >-
+    https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview
 featured: false
 ---
 Azure Virtual Networks (VNets) enable secure, isolated, and scalable networking for Azure resources, supporting hybrid connectivity and granular network segmentation.

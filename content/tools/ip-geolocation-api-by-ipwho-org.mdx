@@ -1,8 +1,10 @@
 ---
-title: "IP Geolocation API by ipwho.org"
-description: "A free API for retrieving IP-based geolocation data including country, city, timezone, and more."
-provider: "ipwho.org"
-category: "integration"
+title: IP Geolocation API by ipwho.org
+description: >-
+  A free API for retrieving IP-based geolocation data including country, city,
+  timezone, and more.
+provider: ipwho.org
+category: integration
 domain: integration
 subtypes:
   - geolocation
@@ -14,16 +16,16 @@ audiences:
   - startup
   - oss
 tags:
-  - ip
-  - geolocation
+  - networking
+  - misc
   - api
-  - location
-  - geo
 pricingModel: free
 freeTierDetails:
-  summary: "Free tier allows up to 10,000 requests per month with basic geolocation data."
+  summary: >-
+    Free tier allows up to 10,000 requests per month with basic geolocation
+    data.
   limits:
-    - 10,000 requests/month
+    - '10,000 requests/month'
     - Basic geolocation fields
     - No SLA
   caveats:
@@ -40,12 +42,16 @@ useCases:
   - Blocking or allowing traffic by country
   - Displaying timezone-aware information
 quickstartSteps:
-  - Go to https://ipwho.org/ and review API documentation.
+  - 'Go to https://ipwho.org/ and review API documentation.'
   - Copy the sample API endpoint URL for free usage.
   - Make a GET request to the endpoint with an IP address parameter.
   - Parse the JSON response for geolocation data in your application.
-whenToUse: "Use when you need basic, free IP geolocation for small projects or prototypes without requiring HTTPS or advanced data."
-whenNotToUse: "Avoid if you need secure HTTPS endpoints, advanced geolocation fields, or high request volumes for production workloads."
+whenToUse: >-
+  Use when you need basic, free IP geolocation for small projects or prototypes
+  without requiring HTTPS or advanced data.
+whenNotToUse: >-
+  Avoid if you need secure HTTPS endpoints, advanced geolocation fields, or high
+  request volumes for production workloads.
 bestFor:
   - prototyping
   - student projects
@@ -56,13 +62,13 @@ avoidIf:
   - high-volume applications
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-14
+lastUpdated: 2024-06-14T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://ipwho.org/
-docsUrl: https://ipwho.org/
+officialUrl: 'https://ipwho.org/'
+docsUrl: 'https://ipwho.org/'
 sourceUrls:
-  - https://ipwho.org/
+  - 'https://ipwho.org/'
 featured: false
 ---
 IP Geolocation API by ipwho.org offers a simple, free way to retrieve geolocation data for IP addresses, suitable for low-volume or prototype use cases.

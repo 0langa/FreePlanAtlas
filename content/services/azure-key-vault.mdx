@@ -1,8 +1,10 @@
 ---
-title: "Azure Key Vault"
-description: "Azure Key Vault securely stores and manages secrets, keys, and certificates for your applications and services."
-provider: "Azure"
-category: "security"
+title: Azure Key Vault
+description: >-
+  Azure Key Vault securely stores and manages secrets, keys, and certificates
+  for your applications and services.
+provider: Azure
+category: security
 domain: security
 subtypes:
   - secrets
@@ -14,16 +16,14 @@ audiences:
   - enterprise
   - oss
 tags:
-  - secrets
-  - encryption
-  - key-management
-  - azure
+  - misc
+  - cloud
   - security
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes up to 10,000 operations per month for standard vaults."
+  summary: 'Free tier includes up to 10,000 operations per month for standard vaults.'
   limits:
-    - 10,000 operations/month (standard vault)
+    - '10,000 operations/month (standard vault)'
     - No charge for up to 10 enabled keys
     - No charge for up to 10 enabled secrets
   caveats:
@@ -44,11 +44,15 @@ useCases:
 quickstartSteps:
   - Sign in to the Azure Portal and create a new Key Vault resource.
   - Set access policies to define who can manage or retrieve secrets.
-  - Add secrets, keys, or certificates to your vault.
+  - 'Add secrets, keys, or certificates to your vault.'
   - Integrate Key Vault with your application using Azure SDK or REST API.
   - Monitor usage and configure alerts for access or usage anomalies.
-whenToUse: "Use Azure Key Vault to securely store and manage secrets, keys, or certificates for Azure-hosted or hybrid applications."
-whenNotToUse: "Avoid if you need on-premises-only key management or require a free tier without any billing risk."
+whenToUse: >-
+  Use Azure Key Vault to securely store and manage secrets, keys, or
+  certificates for Azure-hosted or hybrid applications.
+whenNotToUse: >-
+  Avoid if you need on-premises-only key management or require a free tier
+  without any billing risk.
 bestFor:
   - secure secret storage
   - key management
@@ -59,14 +63,14 @@ avoidIf:
   - on-premises only
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/key-vault/
-docsUrl: https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/key-vault/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/key-vault/
-  - https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts
+  - 'https://azure.microsoft.com/en-us/pricing/details/key-vault/'
+  - 'https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts'
 featured: false
 ---
 Azure Key Vault provides secure, centralized storage for secrets, keys, and certificates, supporting access control, auditing, and integration with Azure services.

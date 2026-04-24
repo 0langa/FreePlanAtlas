@@ -1,8 +1,10 @@
 ---
-title: "WorkOS"
-description: "WorkOS provides APIs and tools for adding enterprise authentication and directory sync to your SaaS app."
-provider: "WorkOS"
-category: "auth"
+title: WorkOS
+description: >-
+  WorkOS provides APIs and tools for adding enterprise authentication and
+  directory sync to your SaaS app.
+provider: WorkOS
+category: auth
 domain: auth
 subtypes:
   - SSO
@@ -14,19 +16,18 @@ audiences:
   - enterprise
   - indie
 tags:
-  - sso
-  - authentication
-  - oauth
-  - saml
-  - directory-sync
+  - auth
+  - identity
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free for up to 1,000 monthly active users with core SSO and Directory Sync features."
+  summary: >-
+    Free for up to 1,000 monthly active users with core SSO and Directory Sync
+    features.
   limits:
-    - 1,000 monthly active users
-    - Core SSO (SAML, OIDC, OAuth)
-    - Directory Sync (SCIM, LDAP, Google Workspace)
-    - MFA (TOTP, SMS)
+    - '1,000 monthly active users'
+    - 'Core SSO (SAML, OIDC, OAuth)'
+    - 'Directory Sync (SCIM, LDAP, Google Workspace)'
+    - 'MFA (TOTP, SMS)'
   caveats:
     - Some advanced features require paid plans
     - Enterprise connections may be limited
@@ -45,8 +46,12 @@ quickstartSteps:
   - Configure your application's redirect URIs.
   - Integrate the WorkOS SDK or API into your app.
   - Test SSO or Directory Sync with a sample connection.
-whenToUse: "Use WorkOS when you need to quickly add SSO or directory sync for enterprise customers in your SaaS application."
-whenNotToUse: "Avoid if you require a fully self-hosted auth solution or need advanced features beyond the free tier limits."
+whenToUse: >-
+  Use WorkOS when you need to quickly add SSO or directory sync for enterprise
+  customers in your SaaS application.
+whenNotToUse: >-
+  Avoid if you require a fully self-hosted auth solution or need advanced
+  features beyond the free tier limits.
 bestFor:
   - SaaS startups
   - B2B apps
@@ -57,14 +62,14 @@ avoidIf:
   - No enterprise customers
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://workos.com/
-docsUrl: https://workos.com/docs
+officialUrl: 'https://workos.com/'
+docsUrl: 'https://workos.com/docs'
 sourceUrls:
-  - https://workos.com/pricing
-  - https://workos.com/docs
+  - 'https://workos.com/pricing'
+  - 'https://workos.com/docs'
 featured: false
 ---
 WorkOS offers developer-friendly APIs to add SSO, directory sync, and MFA to SaaS applications, with a generous free tier for early-stage teams.

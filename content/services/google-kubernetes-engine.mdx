@@ -1,8 +1,10 @@
 ---
-title: "Google Kubernetes Engine"
-description: "Google Kubernetes Engine provides managed Kubernetes clusters for deploying, managing, and scaling containerized applications on Google Cloud."
-provider: "Google Cloud"
-category: "compute"
+title: Google Kubernetes Engine
+description: >-
+  Google Kubernetes Engine provides managed Kubernetes clusters for deploying,
+  managing, and scaling containerized applications on Google Cloud.
+provider: Google Cloud
+category: compute
 domain: compute
 subtypes:
   - Kubernetes
@@ -16,16 +18,15 @@ audiences:
 tags:
   - kubernetes
   - containers
-  - orchestration
-  - cloud-native
-  - gke
+  - misc
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "One zonal GKE cluster per month with no cluster management fee."
+  summary: One zonal GKE cluster per month with no cluster management fee.
   limits:
     - 1 zonal cluster per billing account
     - No cluster management fee
-    - Compute, storage, and network resources billed separately
+    - 'Compute, storage, and network resources billed separately'
   caveats:
     - Node VM and storage usage incur standard charges
     - Free tier covers only cluster management fee
@@ -47,8 +48,12 @@ quickstartSteps:
   - Install and configure the Google Cloud CLI.
   - Create a zonal GKE cluster using the Cloud Console or CLI.
   - Deploy your containerized application to the cluster.
-whenToUse: "Use GKE when you need a managed Kubernetes environment for deploying and scaling containerized workloads on Google Cloud."
-whenNotToUse: "Avoid GKE if you require a fully free solution or want to avoid any compute or storage charges."
+whenToUse: >-
+  Use GKE when you need a managed Kubernetes environment for deploying and
+  scaling containerized workloads on Google Cloud.
+whenNotToUse: >-
+  Avoid GKE if you require a fully free solution or want to avoid any compute or
+  storage charges.
 bestFor:
   - cloud-native teams
   - microservices
@@ -58,14 +63,14 @@ avoidIf:
   - avoiding cloud vendor lock-in
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 8
-officialUrl: https://cloud.google.com/kubernetes-engine
-docsUrl: https://cloud.google.com/kubernetes-engine/docs
+officialUrl: 'https://cloud.google.com/kubernetes-engine'
+docsUrl: 'https://cloud.google.com/kubernetes-engine/docs'
 sourceUrls:
-  - https://cloud.google.com/kubernetes-engine/pricing
-  - https://cloud.google.com/free/docs/gcp-free-tier
+  - 'https://cloud.google.com/kubernetes-engine/pricing'
+  - 'https://cloud.google.com/free/docs/gcp-free-tier'
 featured: false
 ---
 Google Kubernetes Engine (GKE) offers a managed Kubernetes service with an always-free tier covering cluster management fees for one zonal cluster per month. While the management fee is waived, you are still billed for the underlying compute, storage, and network resources used by your workloads. GKE is ideal for teams deploying containerized applications at scale, but not suitable if you require a completely free hosting solution.

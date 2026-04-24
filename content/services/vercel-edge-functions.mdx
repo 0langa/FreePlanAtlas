@@ -1,8 +1,10 @@
 ---
-title: "Vercel Edge Functions"
-description: "Vercel Edge Functions let you run serverless code at the edge for fast, dynamic web experiences."
-provider: "Vercel"
-category: "compute"
+title: Vercel Edge Functions
+description: >-
+  Vercel Edge Functions let you run serverless code at the edge for fast,
+  dynamic web experiences.
+provider: Vercel
+category: compute
 domain: compute
 subtypes:
   - edge
@@ -15,14 +17,12 @@ audiences:
   - team
   - oss
 tags:
-  - edge
+  - cdn
   - serverless
-  - functions
-  - javascript
-  - typescript
+  - frontend
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 1 million Edge Function invocations per month."
+  summary: Free tier includes 1 million Edge Function invocations per month.
   limits:
     - 1 million invocations/month
     - 100ms max execution time
@@ -43,12 +43,16 @@ useCases:
   - API proxying
 quickstartSteps:
   - Sign up for a free Vercel account.
-  - Create or import a project (e.g., Next.js).
+  - 'Create or import a project (e.g., Next.js).'
   - Add an Edge Function in the /api or /middleware directory.
   - Deploy your project to Vercel.
   - Test your Edge Function via the deployed URL.
-whenToUse: "Use when you need low-latency, serverless code execution close to users for dynamic web features or middleware."
-whenNotToUse: "Avoid if you need long-running processes, high memory, or heavy compute workloads; not suitable for backend-only APIs."
+whenToUse: >-
+  Use when you need low-latency, serverless code execution close to users for
+  dynamic web features or middleware.
+whenNotToUse: >-
+  Avoid if you need long-running processes, high memory, or heavy compute
+  workloads; not suitable for backend-only APIs.
 bestFor:
   - dynamic web apps
   - middleware
@@ -59,14 +63,14 @@ avoidIf:
   - high memory needs
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://vercel.com/docs/edge-functions
-docsUrl: https://vercel.com/docs/edge-functions
+officialUrl: 'https://vercel.com/docs/edge-functions'
+docsUrl: 'https://vercel.com/docs/edge-functions'
 sourceUrls:
-  - https://vercel.com/pricing
-  - https://vercel.com/docs/edge-functions
+  - 'https://vercel.com/pricing'
+  - 'https://vercel.com/docs/edge-functions'
 featured: false
 ---
 Vercel Edge Functions enable developers to run serverless JavaScript or TypeScript code at the edge, providing fast, dynamic responses for web applications with a generous free tier suitable for most small to medium projects.

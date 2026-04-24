@@ -1,8 +1,8 @@
 ---
-title: "IP address.sh"
-description: "A simple API to retrieve your public IP address via HTTP requests."
-provider: "IP address.sh"
-category: "networking"
+title: IP address.sh
+description: A simple API to retrieve your public IP address via HTTP requests.
+provider: IP address.sh
+category: networking
 domain: networking
 subtypes:
   - IP Lookup
@@ -15,14 +15,12 @@ audiences:
   - team
   - oss
 tags:
-  - ip
-  - network
+  - networking
   - api
-  - diagnostics
-  - utility
+  - misc
 pricingModel: free
 freeTierDetails:
-  summary: "Unlimited free usage for basic IP address lookup via HTTP."
+  summary: Unlimited free usage for basic IP address lookup via HTTP.
   limits:
     - No authentication required
     - No documented rate limits
@@ -41,10 +39,14 @@ useCases:
   - Integrate IP lookup in CI/CD pipelines
 quickstartSteps:
   - Open a terminal or browser.
-  - Send a GET request to https://ipaddress.sh.
+  - 'Send a GET request to https://ipaddress.sh.'
   - Read the returned IP address in the response body.
-whenToUse: "Use when you need a fast, no-auth way to get your public IP address for scripts or diagnostics."
-whenNotToUse: "Avoid if you need geolocation, advanced data, or guaranteed uptime for production-critical systems."
+whenToUse: >-
+  Use when you need a fast, no-auth way to get your public IP address for
+  scripts or diagnostics.
+whenNotToUse: >-
+  Avoid if you need geolocation, advanced data, or guaranteed uptime for
+  production-critical systems.
 bestFor:
   - network diagnostics
   - automation scripts
@@ -55,13 +57,13 @@ avoidIf:
   - need advanced IP data
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://ipaddress.sh
-docsUrl: https://docs.ipaddress.sh
+officialUrl: 'https://ipaddress.sh'
+docsUrl: 'https://docs.ipaddress.sh'
 sourceUrls:
-  - https://ipaddress.sh
+  - 'https://ipaddress.sh'
 featured: false
 ---
 IP address.sh offers a simple, always-free HTTP API to instantly retrieve your public IP address, ideal for quick diagnostics and automation.

@@ -1,8 +1,10 @@
 ---
-title: "Fly.io"
-description: "Fly.io lets you deploy full-stack apps and databases close to users globally with minimal DevOps overhead."
-provider: "Fly.io"
-category: "hosting"
+title: Fly.io
+description: >-
+  Fly.io lets you deploy full-stack apps and databases close to users globally
+  with minimal DevOps overhead.
+provider: Fly.io
+category: hosting
 domain: hosting
 subtypes:
   - edge
@@ -14,14 +16,16 @@ audiences:
   - team
   - oss
 tags:
-  - edge
-  - global
-  - app-hosting
+  - cdn
+  - misc
+  - web
   - containers
-  - postgres
+  - database
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 3 shared-cpu-1x VMs, 3GB persistent volume, and 160GB outbound data per month."
+  summary: >-
+    Free tier includes 3 shared-cpu-1x VMs, 3GB persistent volume, and 160GB
+    outbound data per month.
   limits:
     - 3 shared-cpu-1x VMs
     - 3GB persistent volume
@@ -44,13 +48,17 @@ useCases:
   - Hosting personal projects
   - Open source app demos
 quickstartSteps:
-  - Sign up at https://fly.io/ and install the Fly CLI.
+  - 'Sign up at https://fly.io/ and install the Fly CLI.'
   - Run 'fly launch' in your project directory to initialize.
   - Authenticate with 'fly auth login'.
   - Deploy your app using 'fly deploy'.
   - Monitor and manage via the Fly dashboard.
-whenToUse: "Use Fly.io to deploy containerized apps or APIs that need low-latency global access with simple scaling and minimal infrastructure management."
-whenNotToUse: "Avoid if you need managed databases in the free tier, require high CPU/RAM, or need compliance certifications for regulated workloads."
+whenToUse: >-
+  Use Fly.io to deploy containerized apps or APIs that need low-latency global
+  access with simple scaling and minimal infrastructure management.
+whenNotToUse: >-
+  Avoid if you need managed databases in the free tier, require high CPU/RAM, or
+  need compliance certifications for regulated workloads.
 bestFor:
   - global app hosting
   - indie projects
@@ -61,14 +69,14 @@ avoidIf:
   - strict compliance needs
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://fly.io/
-docsUrl: https://fly.io/docs/
+officialUrl: 'https://fly.io/'
+docsUrl: 'https://fly.io/docs/'
 sourceUrls:
-  - https://fly.io/docs/about/pricing/
-  - https://fly.io/docs/about/faq/
+  - 'https://fly.io/docs/about/pricing/'
+  - 'https://fly.io/docs/about/faq/'
 featured: false
 ---
 Fly.io offers a generous always-free tier for deploying containerized applications globally, with simple CLI tools and a developer-friendly experience. The free tier is suitable for small projects, demos, and indie apps, but does not include free managed databases or large persistent storage. Overages are capped unless a payment method is added, reducing billing risk. Fly.io is ideal for developers seeking fast, global deployments with minimal setup.

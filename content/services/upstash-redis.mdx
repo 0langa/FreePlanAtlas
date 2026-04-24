@@ -1,8 +1,10 @@
 ---
-title: "Upstash Redis"
-description: "Serverless Redis database with per-request pricing and a generous free tier for low-latency caching or session storage."
-provider: "Upstash"
-category: "database"
+title: Upstash Redis
+description: >-
+  Serverless Redis database with per-request pricing and a generous free tier
+  for low-latency caching or session storage.
+provider: Upstash
+category: database
 domain: database
 subtypes:
   - serverless
@@ -15,16 +17,15 @@ audiences:
   - team
   - oss
 tags:
-  - redis
+  - database
   - serverless
-  - key-value
-  - cache
+  - misc
   - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 10,000 requests/day, 256 MB storage, and 1 database."
+  summary: 'Free tier includes 10,000 requests/day, 256 MB storage, and 1 database.'
   limits:
-    - 10,000 requests/day
+    - '10,000 requests/day'
     - 256 MB storage
     - 1 database
   caveats:
@@ -47,8 +48,12 @@ quickstartSteps:
   - Copy the database endpoint and credentials.
   - Connect using your preferred Redis client or SDK.
   - Start reading and writing key-value data.
-whenToUse: "Use when you need a simple, serverless Redis instance for caching, session storage, or lightweight data needs with minimal setup."
-whenNotToUse: "Avoid if you require advanced Redis modules, high-throughput workloads, or private networking features not available in the free tier."
+whenToUse: >-
+  Use when you need a simple, serverless Redis instance for caching, session
+  storage, or lightweight data needs with minimal setup.
+whenNotToUse: >-
+  Avoid if you require advanced Redis modules, high-throughput workloads, or
+  private networking features not available in the free tier.
 bestFor:
   - prototyping
   - side-projects
@@ -60,14 +65,14 @@ avoidIf:
   - high request volume
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://upstash.com/docs/redis
-docsUrl: https://upstash.com/docs/redis
+officialUrl: 'https://upstash.com/docs/redis'
+docsUrl: 'https://upstash.com/docs/redis'
 sourceUrls:
-  - https://upstash.com/pricing
-  - https://upstash.com/docs/redis
+  - 'https://upstash.com/pricing'
+  - 'https://upstash.com/docs/redis'
 featured: false
 ---
 Upstash Redis offers a serverless, pay-per-request Redis database with a generous free tier, ideal for lightweight caching, session storage, and prototyping without infrastructure management.

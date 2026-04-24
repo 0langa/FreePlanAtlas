@@ -1,8 +1,10 @@
 ---
-title: "SNS"
-description: "AWS SNS is a fully managed pub/sub messaging service for decoupling microservices, distributed systems, and serverless applications."
-provider: "AWS"
-category: "messaging"
+title: SNS
+description: >-
+  AWS SNS is a fully managed pub/sub messaging service for decoupling
+  microservices, distributed systems, and serverless applications.
+provider: AWS
+category: messaging
 domain: messaging
 subtypes:
   - pub/sub
@@ -14,14 +16,15 @@ audiences:
   - enterprise
   - oss
 tags:
-  - pubsub
-  - notifications
-  - event-driven
-  - aws
+  - queue
+  - misc
+  - cloud
   - messaging
 pricingModel: freemium
 freeTierDetails:
-  summary: "1 million publish, delivery, and subscription HTTP/HTTPS requests per month free."
+  summary: >-
+    1 million publish, delivery, and subscription HTTP/HTTPS requests per month
+    free.
   limits:
     - 1M publish requests/month
     - 1M delivery requests/month
@@ -36,7 +39,9 @@ freeTierDetails:
   hasHardCap: false
   overageRisk: medium
   billingRiskNotes:
-    - Overages can occur if usage exceeds free tier limits, especially with SMS or mobile push.
+    - >-
+      Overages can occur if usage exceeds free tier limits, especially with SMS
+      or mobile push.
 useCases:
   - Sending alerts and notifications
   - Decoupling microservices
@@ -45,11 +50,15 @@ useCases:
 quickstartSteps:
   - Sign in to AWS Management Console and navigate to SNS.
   - Create a new topic and choose a topic type.
-  - Add one or more subscriptions (e.g., email, HTTP endpoint).
+  - 'Add one or more subscriptions (e.g., email, HTTP endpoint).'
   - Publish a test message to the topic.
   - Verify message delivery to your subscribed endpoints.
-whenToUse: "Use SNS to quickly set up scalable pub/sub messaging or notifications between AWS services and external endpoints."
-whenNotToUse: "Avoid SNS if you need guaranteed message ordering, long message retention, or advanced filtering beyond basic attributes."
+whenToUse: >-
+  Use SNS to quickly set up scalable pub/sub messaging or notifications between
+  AWS services and external endpoints.
+whenNotToUse: >-
+  Avoid SNS if you need guaranteed message ordering, long message retention, or
+  advanced filtering beyond basic attributes.
 bestFor:
   - event notifications
   - microservice decoupling
@@ -60,14 +69,14 @@ avoidIf:
   - complex filtering
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://aws.amazon.com/sns/
-docsUrl: https://docs.aws.amazon.com/sns/latest/dg/welcome.html
+officialUrl: 'https://aws.amazon.com/sns/'
+docsUrl: 'https://docs.aws.amazon.com/sns/latest/dg/welcome.html'
 sourceUrls:
-  - https://aws.amazon.com/sns/pricing/
-  - https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html
+  - 'https://aws.amazon.com/sns/pricing/'
+  - 'https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html'
 featured: false
 ---
 AWS SNS provides scalable, managed pub/sub messaging for event-driven architectures, supporting multiple protocols and easy integration with AWS services.

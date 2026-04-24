@@ -1,8 +1,10 @@
 ---
-title: "PrefectCloud"
-description: "PrefectCloud is a managed workflow orchestration service for scheduling, monitoring, and managing data pipelines."
-provider: "Prefect"
-category: "devops"
+title: PrefectCloud
+description: >-
+  PrefectCloud is a managed workflow orchestration service for scheduling,
+  monitoring, and managing data pipelines.
+provider: Prefect
+category: devops
 domain: devops
 subtypes:
   - workflow
@@ -14,16 +16,15 @@ audiences:
   - enterprise
   - oss
 tags:
-  - workflow
-  - orchestration
-  - data
   - automation
-  - pipelines
+  - misc
+  - data
+  - ci-cd
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes unlimited flows, 20,000 task runs per month, and 3 users."
+  summary: 'Free tier includes unlimited flows, 20,000 task runs per month, and 3 users.'
   limits:
-    - 20,000 task runs/month
+    - '20,000 task runs/month'
     - 3 users
     - Unlimited flows
   caveats:
@@ -44,8 +45,12 @@ quickstartSteps:
   - Connect your local Prefect agent to PrefectCloud.
   - Define and register a flow using Prefect's Python API.
   - Run and monitor your flow from the PrefectCloud dashboard.
-whenToUse: "Use PrefectCloud when you need to orchestrate, schedule, and monitor Python-based data workflows without managing your own infrastructure."
-whenNotToUse: "Avoid if you require on-premises orchestration, need advanced enterprise features, or must run non-Python workflows."
+whenToUse: >-
+  Use PrefectCloud when you need to orchestrate, schedule, and monitor
+  Python-based data workflows without managing your own infrastructure.
+whenNotToUse: >-
+  Avoid if you require on-premises orchestration, need advanced enterprise
+  features, or must run non-Python workflows.
 bestFor:
   - data teams
   - ML engineers
@@ -56,14 +61,14 @@ avoidIf:
   - require advanced RBAC
 difficulty: intermediate
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://www.prefect.io/cloud/
-docsUrl: https://docs.prefect.io/latest/
+officialUrl: 'https://www.prefect.io/cloud/'
+docsUrl: 'https://docs.prefect.io/latest/'
 sourceUrls:
-  - https://www.prefect.io/pricing/
-  - https://docs.prefect.io/latest/
+  - 'https://www.prefect.io/pricing/'
+  - 'https://docs.prefect.io/latest/'
 featured: false
 ---
 PrefectCloud provides a managed platform for orchestrating, scheduling, and monitoring data workflows, with a generous free tier suitable for small teams and projects.

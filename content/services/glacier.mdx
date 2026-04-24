@@ -1,8 +1,10 @@
 ---
-title: "Glacier"
-description: "AWS Glacier provides low-cost, long-term archival storage for infrequently accessed data with flexible retrieval options."
-provider: "AWS"
-category: "storage"
+title: Glacier
+description: >-
+  AWS Glacier provides low-cost, long-term archival storage for infrequently
+  accessed data with flexible retrieval options.
+provider: AWS
+category: storage
 domain: storage
 subtypes:
   - cold storage
@@ -15,19 +17,16 @@ audiences:
   - oss
   - agency
 tags:
-  - archival
-  - cold-storage
-  - backup
-  - aws
-  - s3
+  - storage
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "10 GB of free retrievals per month for the first 12 months."
+  summary: 10 GB of free retrievals per month for the first 12 months.
   limits:
     - 10 GB retrievals/month (first 12 months)
     - Standard S3 Glacier storage fees apply after free tier
   caveats:
-    - Storage is not free, only retrievals are covered in free tier.
+    - 'Storage is not free, only retrievals are covered in free tier.'
     - Retrieval times can range from minutes to hours.
   resetPeriod: monthly
   requiresCard: true
@@ -46,10 +45,14 @@ quickstartSteps:
   - Sign up for an AWS account and verify billing.
   - Navigate to the S3 console and create a new bucket.
   - Enable Glacier storage class for your bucket or objects.
-  - Upload files to the bucket, selecting Glacier as the storage class.
+  - 'Upload files to the bucket, selecting Glacier as the storage class.'
   - Set up lifecycle policies for automatic archival if needed.
-whenToUse: "Use Glacier for storing data you rarely access but must retain for years, such as backups or compliance archives."
-whenNotToUse: "Avoid Glacier if you need frequent or instant access to your data, or if you require low-latency retrieval."
+whenToUse: >-
+  Use Glacier for storing data you rarely access but must retain for years, such
+  as backups or compliance archives.
+whenNotToUse: >-
+  Avoid Glacier if you need frequent or instant access to your data, or if you
+  require low-latency retrieval.
 bestFor:
   - archival
   - compliance
@@ -59,14 +62,14 @@ avoidIf:
   - low-latency workloads
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 7
-officialUrl: https://aws.amazon.com/glacier/
-docsUrl: https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html
+officialUrl: 'https://aws.amazon.com/glacier/'
+docsUrl: 'https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html'
 sourceUrls:
-  - https://aws.amazon.com/glacier/pricing/
-  - https://aws.amazon.com/free/
+  - 'https://aws.amazon.com/glacier/pricing/'
+  - 'https://aws.amazon.com/free/'
 featured: false
 ---
 AWS Glacier is a cost-effective solution for long-term data archiving, offering secure, durable storage with flexible retrieval options and integration with S3.

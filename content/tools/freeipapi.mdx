@@ -1,8 +1,10 @@
 ---
-title: "FreeIPAPI"
-description: "FreeIPAPI provides a simple API for IP geolocation and related network information."
-provider: "FreeIPAPI"
-category: "networking"
+title: FreeIPAPI
+description: >-
+  FreeIPAPI provides a simple API for IP geolocation and related network
+  information.
+provider: FreeIPAPI
+category: networking
 domain: networking
 subtypes:
   - ip-geolocation
@@ -14,16 +16,16 @@ audiences:
   - startup
   - oss
 tags:
-  - ip
-  - geolocation
+  - networking
+  - misc
   - api
-  - geoip
-  - network
 pricingModel: free
 freeTierDetails:
-  summary: "Free tier allows up to 10,000 requests per month with basic geolocation data."
+  summary: >-
+    Free tier allows up to 10,000 requests per month with basic geolocation
+    data.
   limits:
-    - 10,000 requests/month
+    - '10,000 requests/month'
     - Basic geolocation fields
     - No authentication required
   caveats:
@@ -39,13 +41,19 @@ useCases:
   - Block or allow traffic by country
   - Display user IP info in dashboards
 quickstartSteps:
-  - Go to https://freeipapi.com.
+  - 'Go to https://freeipapi.com.'
   - Review API documentation for endpoint details.
-  - Make a GET request to https://freeipapi.com/api/json/ using your preferred HTTP client.
+  - >-
+    Make a GET request to https://freeipapi.com/api/json/ using your preferred
+    HTTP client.
   - Parse the JSON response for geolocation data.
   - Integrate the API call into your application logic.
-whenToUse: "Use FreeIPAPI when you need basic, free IP geolocation for low to moderate traffic apps or prototypes."
-whenNotToUse: "Avoid if you need high request volumes, advanced geolocation data, or guaranteed uptime for production-critical services."
+whenToUse: >-
+  Use FreeIPAPI when you need basic, free IP geolocation for low to moderate
+  traffic apps or prototypes.
+whenNotToUse: >-
+  Avoid if you need high request volumes, advanced geolocation data, or
+  guaranteed uptime for production-critical services.
 bestFor:
   - prototyping
   - personal projects
@@ -56,13 +64,13 @@ avoidIf:
   - advanced analytics
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-13
+lastUpdated: 2024-06-13T00:00:00.000Z
 popularityScore: 5
 usefulnessScore: 6
-officialUrl: https://freeipapi.com
-docsUrl: https://docs.freeipapi.com
+officialUrl: 'https://freeipapi.com'
+docsUrl: 'https://docs.freeipapi.com'
 sourceUrls:
-  - https://freeipapi.com
+  - 'https://freeipapi.com'
 featured: false
 ---
 FreeIPAPI offers a simple, no-auth API for basic IP geolocation, ideal for small projects or prototypes needing quick location data.

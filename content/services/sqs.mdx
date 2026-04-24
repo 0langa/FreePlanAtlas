@@ -1,8 +1,10 @@
 ---
-title: "SQS"
-description: "AWS SQS is a fully managed message queuing service for decoupling and scaling distributed systems."
-provider: "AWS"
-category: "messaging"
+title: SQS
+description: >-
+  AWS SQS is a fully managed message queuing service for decoupling and scaling
+  distributed systems.
+provider: AWS
+category: messaging
 domain: messaging
 subtypes:
   - queue
@@ -18,11 +20,11 @@ tags:
   - queue
   - messaging
   - serverless
-  - aws
-  - asynchronous
+  - cloud
+  - integration
 pricingModel: freemium
 freeTierDetails:
-  summary: "1 million requests per month free for both Standard and FIFO queues."
+  summary: 1 million requests per month free for both Standard and FIFO queues.
   limits:
     - 1 million requests/month (Standard and FIFO queues)
     - Additional usage billed per request
@@ -48,8 +50,12 @@ quickstartSteps:
   - Configure queue settings and permissions.
   - Send a test message to the queue.
   - Set up a consumer to poll and process messages.
-whenToUse: "Use SQS when you need reliable, scalable message queuing to decouple components or handle asynchronous workloads."
-whenNotToUse: "Avoid SQS if you require ultra-low latency, on-premises deployment, or need advanced streaming features beyond simple queuing."
+whenToUse: >-
+  Use SQS when you need reliable, scalable message queuing to decouple
+  components or handle asynchronous workloads.
+whenNotToUse: >-
+  Avoid SQS if you require ultra-low latency, on-premises deployment, or need
+  advanced streaming features beyond simple queuing.
 bestFor:
   - scalable messaging
   - microservices
@@ -60,14 +66,15 @@ avoidIf:
   - no AWS account
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 9
-officialUrl: https://aws.amazon.com/sqs/
-docsUrl: https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html
+officialUrl: 'https://aws.amazon.com/sqs/'
+docsUrl: >-
+  https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html
 sourceUrls:
-  - https://aws.amazon.com/sqs/pricing/
-  - https://aws.amazon.com/sqs/
+  - 'https://aws.amazon.com/sqs/pricing/'
+  - 'https://aws.amazon.com/sqs/'
 featured: false
 ---
 Amazon SQS is a managed message queuing service that enables reliable, scalable communication between distributed application components.

@@ -1,8 +1,10 @@
 ---
-title: "Azure Cosmos DB"
-description: "Globally distributed, multi-model NoSQL database service with low latency and elastic scalability from Microsoft Azure."
-provider: "Azure"
-category: "database"
+title: Azure Cosmos DB
+description: >-
+  Globally distributed, multi-model NoSQL database service with low latency and
+  elastic scalability from Microsoft Azure.
+provider: Azure
+category: database
 domain: database
 subtypes:
   - NoSQL
@@ -17,14 +19,16 @@ audiences:
   - student
   - indie
 tags:
-  - nosql
-  - multi-model
-  - global-distribution
+  - database
+  - misc
+  - cdn
   - serverless
   - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "Always-free tier with 400 RU/s provisioned throughput and 25 GB storage per month."
+  summary: >-
+    Always-free tier with 400 RU/s provisioned throughput and 25 GB storage per
+    month.
   limits:
     - 400 RU/s provisioned throughput
     - 25 GB storage per month
@@ -46,13 +50,19 @@ useCases:
   - Mobile app backends
   - Global web applications
 quickstartSteps:
-  - Sign in to the Azure Portal and create a new Cosmos DB account, selecting the free tier option.
-  - Choose your preferred API (Core SQL, MongoDB, Cassandra, Gremlin, or Table).
+  - >-
+    Sign in to the Azure Portal and create a new Cosmos DB account, selecting
+    the free tier option.
+  - 'Choose your preferred API (Core SQL, MongoDB, Cassandra, Gremlin, or Table).'
   - Configure region(s) for global distribution if needed.
   - Create a database and container within your account.
   - Connect to Cosmos DB using the SDK or REST API from your application.
-whenToUse: "Use when you need a globally distributed, low-latency NoSQL database with flexible data models and automatic scaling."
-whenNotToUse: "Avoid if you require a traditional relational database, or if your workload consistently exceeds the free tier limits."
+whenToUse: >-
+  Use when you need a globally distributed, low-latency NoSQL database with
+  flexible data models and automatic scaling.
+whenNotToUse: >-
+  Avoid if you require a traditional relational database, or if your workload
+  consistently exceeds the free tier limits.
 bestFor:
   - multi-region apps
   - real-time workloads
@@ -63,14 +73,14 @@ avoidIf:
   - on-premises only deployments
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/services/cosmos-db/
-docsUrl: https://learn.microsoft.com/azure/cosmos-db/introduction
+officialUrl: 'https://azure.microsoft.com/services/cosmos-db/'
+docsUrl: 'https://learn.microsoft.com/azure/cosmos-db/introduction'
 sourceUrls:
-  - https://azure.microsoft.com/pricing/details/cosmos-db/
-  - https://learn.microsoft.com/azure/cosmos-db/introduction
+  - 'https://azure.microsoft.com/pricing/details/cosmos-db/'
+  - 'https://learn.microsoft.com/azure/cosmos-db/introduction'
 featured: false
 ---
 Azure Cosmos DB offers a globally distributed, multi-model NoSQL database with low latency, elastic scalability, and a generous always-free tier for small workloads.

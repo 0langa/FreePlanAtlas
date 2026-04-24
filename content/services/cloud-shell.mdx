@@ -1,8 +1,10 @@
 ---
-title: "Cloud Shell"
-description: "Cloud Shell provides a browser-based command-line environment with pre-installed tools for managing Google Cloud resources."
-provider: "Google Cloud"
-category: "devops"
+title: Cloud Shell
+description: >-
+  Cloud Shell provides a browser-based command-line environment with
+  pre-installed tools for managing Google Cloud resources.
+provider: Google Cloud
+category: devops
 domain: devops
 subtypes:
   - terminal
@@ -16,17 +18,17 @@ audiences:
   - oss
 tags:
   - cli
-  - terminal
-  - gcp
-  - cloud-tools
+  - cloud
   - automation
 pricingModel: free
 freeTierDetails:
-  summary: "Free browser-based shell with 5 GB persistent storage and pre-installed Google Cloud tools."
+  summary: >-
+    Free browser-based shell with 5 GB persistent storage and pre-installed
+    Google Cloud tools.
   limits:
     - 50 hours per week usage
     - 5 GB persistent disk storage
-    - 1 vCPU, 1.7 GB RAM per session
+    - '1 vCPU, 1.7 GB RAM per session'
   caveats:
     - Inactive sessions disconnect after 20 minutes
     - Storage is deleted after 120 days of inactivity
@@ -41,11 +43,17 @@ useCases:
   - Quick prototyping and scripting
 quickstartSteps:
   - Sign in to your Google Cloud account.
-  - Navigate to https://shell.cloud.google.com or click the Cloud Shell icon in the console.
+  - >-
+    Navigate to https://shell.cloud.google.com or click the Cloud Shell icon in
+    the console.
   - Wait for the environment to initialize.
   - Use the terminal to run gcloud commands or other pre-installed tools.
-whenToUse: "Use Cloud Shell for quick access to Google Cloud CLI tools without local installation or when working from different devices."
-whenNotToUse: "Avoid for long-running workloads, heavy compute tasks, or when you need more storage or customization than the free environment allows."
+whenToUse: >-
+  Use Cloud Shell for quick access to Google Cloud CLI tools without local
+  installation or when working from different devices.
+whenNotToUse: >-
+  Avoid for long-running workloads, heavy compute tasks, or when you need more
+  storage or customization than the free environment allows.
 bestFor:
   - cloud management
   - learning
@@ -57,14 +65,14 @@ avoidIf:
   - need large storage volumes
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://cloud.google.com/shell
-docsUrl: https://cloud.google.com/shell/docs
+officialUrl: 'https://cloud.google.com/shell'
+docsUrl: 'https://cloud.google.com/shell/docs'
 sourceUrls:
-  - https://cloud.google.com/shell/pricing
-  - https://cloud.google.com/shell/docs/quotas
+  - 'https://cloud.google.com/shell/pricing'
+  - 'https://cloud.google.com/shell/docs/quotas'
 featured: false
 ---
 Cloud Shell offers a free, ready-to-use command-line environment in your browser, ideal for managing Google Cloud resources and running scripts without local setup.

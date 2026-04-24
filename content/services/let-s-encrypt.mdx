@@ -1,8 +1,10 @@
 ---
-title: "Let's Encrypt"
-description: "Let's Encrypt provides free, automated SSL/TLS certificates for securing websites and web applications."
-provider: "Let's Encrypt"
-category: "security"
+title: Let's Encrypt
+description: >-
+  Let's Encrypt provides free, automated SSL/TLS certificates for securing
+  websites and web applications.
+provider: Let's Encrypt
+category: security
 domain: security
 subtypes:
   - SSL
@@ -15,15 +17,11 @@ audiences:
   - team
   - oss
 tags:
-  - ssl
-  - tls
-  - certificate
+  - misc
   - security
-  - encryption
-  - https
 pricingModel: free
 freeTierDetails:
-  summary: "Unlimited free SSL/TLS certificates for domain validation."
+  summary: Unlimited free SSL/TLS certificates for domain validation.
   limits:
     - 50 certificates per registered domain per week
     - 5 duplicate certificates per week
@@ -47,8 +45,12 @@ quickstartSteps:
   - Complete domain validation via HTTP or DNS challenge.
   - Install the issued certificate on your web server.
   - Set up automatic renewal for ongoing security.
-whenToUse: "Use Let's Encrypt when you need free, automated SSL/TLS certificates for public domains and want to automate renewals."
-whenNotToUse: "Avoid if you require extended validation, organization validation, or need certificates for internal or non-public domains."
+whenToUse: >-
+  Use Let's Encrypt when you need free, automated SSL/TLS certificates for
+  public domains and want to automate renewals.
+whenNotToUse: >-
+  Avoid if you require extended validation, organization validation, or need
+  certificates for internal or non-public domains.
 bestFor:
   - public websites
   - web apps
@@ -60,14 +62,14 @@ avoidIf:
   - require long-term certificates
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-11
+lastUpdated: 2024-06-11T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 10
-officialUrl: https://letsencrypt.org/
-docsUrl: https://letsencrypt.org/docs/
+officialUrl: 'https://letsencrypt.org/'
+docsUrl: 'https://letsencrypt.org/docs/'
 sourceUrls:
-  - https://letsencrypt.org/docs/rate-limits/
-  - https://letsencrypt.org/getting-started/
+  - 'https://letsencrypt.org/docs/rate-limits/'
+  - 'https://letsencrypt.org/getting-started/'
 featured: true
 ---
 Let's Encrypt offers free, automated SSL/TLS certificates for securing websites, with easy integration and automated renewals for most web servers.

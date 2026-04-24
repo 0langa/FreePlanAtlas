@@ -1,8 +1,10 @@
 ---
-title: "EMQX Serverless"
-description: "A fully managed, serverless MQTT messaging service for IoT and real-time applications."
-provider: "EMQX"
-category: "messaging"
+title: EMQX Serverless
+description: >-
+  A fully managed, serverless MQTT messaging service for IoT and real-time
+  applications.
+provider: EMQX
+category: messaging
 domain: messaging
 subtypes:
   - MQTT
@@ -15,14 +17,13 @@ audiences:
   - team
   - oss
 tags:
-  - mqtt
+  - queue
   - serverless
-  - iot
-  - pubsub
+  - misc
   - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 1 million messages and 100 connected devices per month."
+  summary: Free tier includes 1 million messages and 100 connected devices per month.
   limits:
     - 1 million messages/month
     - 100 connected devices
@@ -48,8 +49,12 @@ quickstartSteps:
   - Create a new serverless deployment.
   - Configure MQTT connection settings.
   - Connect your devices or applications using the provided endpoint.
-whenToUse: "Use when you need scalable, managed MQTT messaging for IoT or real-time apps without managing infrastructure."
-whenNotToUse: "Avoid if you require protocols beyond MQTT, need on-premises deployment, or expect to exceed free tier limits frequently."
+whenToUse: >-
+  Use when you need scalable, managed MQTT messaging for IoT or real-time apps
+  without managing infrastructure.
+whenNotToUse: >-
+  Avoid if you require protocols beyond MQTT, need on-premises deployment, or
+  expect to exceed free tier limits frequently.
 bestFor:
   - IoT prototyping
   - Real-time app development
@@ -60,14 +65,14 @@ avoidIf:
   - You expect high sustained traffic
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://www.emqx.com/en/cloud/serverless-mqtt
-docsUrl: https://docs.emqx.com/en/cloud/latest/serverless/introduction.html
+officialUrl: 'https://www.emqx.com/en/cloud/serverless-mqtt'
+docsUrl: 'https://docs.emqx.com/en/cloud/latest/serverless/introduction.html'
 sourceUrls:
-  - https://www.emqx.com/en/cloud/serverless-mqtt
-  - https://docs.emqx.com/en/cloud/latest/serverless/introduction.html
+  - 'https://www.emqx.com/en/cloud/serverless-mqtt'
+  - 'https://docs.emqx.com/en/cloud/latest/serverless/introduction.html'
 featured: false
 ---
 EMQX Serverless provides a managed MQTT broker with a generous free tier, ideal for IoT and real-time messaging projects without infrastructure overhead.

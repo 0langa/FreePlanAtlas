@@ -48,5 +48,5 @@ yarn-error.log*
 # reports (often contain internal notes)
 /reports/
 
-# Static export output (commit if publishing directly from repo)
-!/out/
+# Static export output (built in CI)
+/out/*

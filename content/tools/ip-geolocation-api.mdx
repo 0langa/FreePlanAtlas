@@ -1,8 +1,10 @@
 ---
-title: "IP Geolocation API"
-description: "Provides IP-based geolocation data such as country, city, and timezone for web and mobile applications."
-provider: "AbstractAPI"
-category: "integration"
+title: IP Geolocation API
+description: >-
+  Provides IP-based geolocation data such as country, city, and timezone for web
+  and mobile applications.
+provider: AbstractAPI
+category: integration
 domain: integration
 subtypes:
   - geolocation
@@ -15,16 +17,15 @@ audiences:
   - team
   - oss
 tags:
-  - ip
-  - geolocation
+  - networking
+  - misc
   - api
-  - location
-  - lookup
+  - search
 pricingModel: freemium
 freeTierDetails:
-  summary: "Up to 20,000 requests per month are free."
+  summary: 'Up to 20,000 requests per month are free.'
   limits:
-    - 20,000 requests/month
+    - '20,000 requests/month'
     - Standard geolocation fields
   caveats:
     - No SLA on free tier
@@ -43,10 +44,16 @@ quickstartSteps:
   - Sign up for a free AbstractAPI account.
   - Navigate to the IP Geolocation API dashboard.
   - Copy your unique API key.
-  - Send a GET request to the API endpoint with your API key and target IP address.
+  - >-
+    Send a GET request to the API endpoint with your API key and target IP
+    address.
   - Parse the JSON response for location data.
-whenToUse: "Use when you need to quickly determine user location from IP for personalization, analytics, or access control."
-whenNotToUse: "Avoid if you need highly accurate, real-time location or must process more than 20,000 requests monthly without paying."
+whenToUse: >-
+  Use when you need to quickly determine user location from IP for
+  personalization, analytics, or access control.
+whenNotToUse: >-
+  Avoid if you need highly accurate, real-time location or must process more
+  than 20,000 requests monthly without paying.
 bestFor:
   - web apps
   - mobile apps
@@ -57,13 +64,13 @@ avoidIf:
   - must have advanced data fields
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-10
+lastUpdated: 2024-06-10T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://www.abstractapi.com/ip-geolocation-api
-docsUrl: https://www.abstractapi.com/api/ip-geolocation/documentation
+officialUrl: 'https://www.abstractapi.com/ip-geolocation-api'
+docsUrl: 'https://www.abstractapi.com/api/ip-geolocation/documentation'
 sourceUrls:
-  - https://www.abstractapi.com/ip-geolocation-api
+  - 'https://www.abstractapi.com/ip-geolocation-api'
 featured: false
 ---
 AbstractAPI's IP Geolocation API offers a generous free tier for basic location lookup needs, making it suitable for small projects and prototyping. It is easy to integrate and provides standard geolocation fields, but advanced data and higher request volumes require a paid plan.

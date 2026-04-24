@@ -1,8 +1,10 @@
 ---
-title: "Azure AI Language"
-description: "Azure AI Language provides natural language processing APIs for text analysis, translation, entity recognition, and conversational AI."
-provider: "Azure"
-category: "ai"
+title: Azure AI Language
+description: >-
+  Azure AI Language provides natural language processing APIs for text analysis,
+  translation, entity recognition, and conversational AI.
+provider: Azure
+category: ai
 domain: ai
 subtypes:
   - text analysis
@@ -15,18 +17,16 @@ audiences:
   - enterprise
   - student
 tags:
-  - nlp
-  - text-analysis
-  - translation
-  - entity-recognition
-  - azure
+  - misc
+  - analytics
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes limited monthly transactions for key language APIs."
+  summary: Free tier includes limited monthly transactions for key language APIs.
   limits:
-    - Text Analytics: 5,000 transactions/month
+    - Text Analytics: '5,000 transactions/month'
     - Translator: 2M characters/month
-    - Language Understanding: 10,000 transactions/month
+    - Language Understanding: '10,000 transactions/month'
   caveats:
     - Some advanced features may not be included in free tier.
     - Overages are billed at standard rates.
@@ -47,9 +47,13 @@ quickstartSteps:
   - Obtain your API key and endpoint from the resource overview.
   - Install the Azure AI Language SDK or use REST API.
   - Authenticate using your API key in your application.
-  - Call the desired language API (e.g., sentiment analysis, translation).
-whenToUse: "Use when you need scalable, managed NLP APIs for text analysis, translation, or conversational AI without building models from scratch."
-whenNotToUse: "Avoid if you require full model customization, on-premises deployment, or need unlimited free usage for high-volume workloads."
+  - 'Call the desired language API (e.g., sentiment analysis, translation).'
+whenToUse: >-
+  Use when you need scalable, managed NLP APIs for text analysis, translation,
+  or conversational AI without building models from scratch.
+whenNotToUse: >-
+  Avoid if you require full model customization, on-premises deployment, or need
+  unlimited free usage for high-volume workloads.
 bestFor:
   - text analysis
   - translation
@@ -61,14 +65,15 @@ avoidIf:
   - high-volume free usage
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-13
+lastUpdated: 2024-06-13T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-language/
-docsUrl: https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-language/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-language/
-  - https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview
+  - 'https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-language/'
+  - >-
+    https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview
 featured: false
 ---
 Azure AI Language offers managed APIs for text analytics, translation, and conversational AI, with a generous free tier suitable for prototyping and moderate production workloads.

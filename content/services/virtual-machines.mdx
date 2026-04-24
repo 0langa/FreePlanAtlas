@@ -1,8 +1,10 @@
 ---
-title: "Virtual Machines"
-description: "Azure Virtual Machines provides scalable, on-demand compute resources for running applications and workloads in the cloud."
-provider: "Azure"
-category: "compute"
+title: Virtual Machines
+description: >-
+  Azure Virtual Machines provides scalable, on-demand compute resources for
+  running applications and workloads in the cloud.
+provider: Azure
+category: compute
 domain: compute
 subtypes:
   - Linux
@@ -19,14 +21,12 @@ audiences:
   - oss
   - agency
 tags:
-  - iaas
+  - misc
   - compute
   - cloud
-  - vm
-  - azure
 pricingModel: freemium
 freeTierDetails:
-  summary: "750 hours per month of B1S Windows or Linux VM for 12 months."
+  summary: 750 hours per month of B1S Windows or Linux VM for 12 months.
   limits:
     - 750 hours/month B1S VM
     - Windows or Linux OS
@@ -35,7 +35,7 @@ freeTierDetails:
   caveats:
     - Only select VM sizes eligible
     - Standard SSD storage included up to 64GB
-    - After 12 months, standard rates apply
+    - 'After 12 months, standard rates apply'
   resetPeriod: monthly
   requiresCard: true
   freeTierType: time-limited
@@ -52,11 +52,15 @@ quickstartSteps:
   - Sign up for an Azure account with the free tier.
   - Navigate to the Azure Portal and select 'Create a resource'.
   - Choose 'Virtual Machine' and select the B1S size.
-  - Configure OS, networking, and storage as needed.
+  - 'Configure OS, networking, and storage as needed.'
   - Review and create the VM.
   - Connect to your VM using SSH or RDP.
-whenToUse: "Use when you need flexible, on-demand compute for development, testing, or learning cloud infrastructure with minimal upfront cost."
-whenNotToUse: "Avoid if you need always-free compute, require large-scale production workloads, or want to avoid entering payment details."
+whenToUse: >-
+  Use when you need flexible, on-demand compute for development, testing, or
+  learning cloud infrastructure with minimal upfront cost.
+whenNotToUse: >-
+  Avoid if you need always-free compute, require large-scale production
+  workloads, or want to avoid entering payment details.
 bestFor:
   - learning
   - prototyping
@@ -68,14 +72,14 @@ avoidIf:
   - no credit card
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 7
-officialUrl: https://azure.microsoft.com/services/virtual-machines/
-docsUrl: https://learn.microsoft.com/azure/virtual-machines/
+officialUrl: 'https://azure.microsoft.com/services/virtual-machines/'
+docsUrl: 'https://learn.microsoft.com/azure/virtual-machines/'
 sourceUrls:
-  - https://azure.microsoft.com/free/
-  - https://azure.microsoft.com/pricing/details/virtual-machines/
+  - 'https://azure.microsoft.com/free/'
+  - 'https://azure.microsoft.com/pricing/details/virtual-machines/'
 featured: false
 ---
 Azure Virtual Machines offers a 12-month free tier for B1S VMs, ideal for development, testing, and learning cloud computing basics.

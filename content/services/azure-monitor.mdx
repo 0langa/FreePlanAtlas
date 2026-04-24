@@ -1,8 +1,10 @@
 ---
-title: "Azure Monitor"
-description: "Azure Monitor provides full-stack monitoring, metrics, and diagnostics for applications and infrastructure on Azure."
-provider: "Azure"
-category: "observability"
+title: Azure Monitor
+description: >-
+  Azure Monitor provides full-stack monitoring, metrics, and diagnostics for
+  applications and infrastructure on Azure.
+provider: Azure
+category: observability
 domain: observability
 subtypes:
   - metrics
@@ -15,17 +17,16 @@ audiences:
 tags:
   - monitoring
   - logging
-  - metrics
-  - azure
-  - alerts
+  - analytics
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "Includes 5 GB of data ingestion and 31 days of log data retention per month."
+  summary: Includes 5 GB of data ingestion and 31 days of log data retention per month.
   limits:
     - 5 GB log data ingestion/month
     - 31 days log retention
     - 150 MB metrics/month
-    - Alerts: 10,000/month
+    - Alerts: '10,000/month'
   caveats:
     - Overages billed per GB
     - Some features may incur additional costs
@@ -47,8 +48,12 @@ quickstartSteps:
   - Connect your Azure resources to the workspace.
   - Configure data collection and retention settings.
   - Set up alerts and dashboards as needed.
-whenToUse: "Use Azure Monitor to track performance, logs, and health of Azure-hosted resources with integrated dashboards and alerting."
-whenNotToUse: "Avoid if you need to monitor non-Azure infrastructure or require a hard cap to prevent unexpected charges."
+whenToUse: >-
+  Use Azure Monitor to track performance, logs, and health of Azure-hosted
+  resources with integrated dashboards and alerting.
+whenNotToUse: >-
+  Avoid if you need to monitor non-Azure infrastructure or require a hard cap to
+  prevent unexpected charges.
 bestFor:
   - Azure-centric teams
   - DevOps
@@ -58,14 +63,14 @@ avoidIf:
   - Strict budget control
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/monitor/
-docsUrl: https://learn.microsoft.com/en-us/azure/azure-monitor/
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/monitor/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/azure-monitor/'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/monitor/
-  - https://learn.microsoft.com/en-us/azure/azure-monitor/
+  - 'https://azure.microsoft.com/en-us/pricing/details/monitor/'
+  - 'https://learn.microsoft.com/en-us/azure/azure-monitor/'
 featured: false
 ---
 Azure Monitor offers integrated monitoring, logging, and alerting for Azure resources, with a generous free tier and scalable paid options for larger workloads.

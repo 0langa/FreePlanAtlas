@@ -1,8 +1,10 @@
 ---
-title: "Cloudflare Workers"
-description: "Cloudflare Workers is a serverless platform for deploying JavaScript, TypeScript, and WASM code at the edge."
-provider: "Cloudflare"
-category: "compute"
+title: Cloudflare Workers
+description: >-
+  Cloudflare Workers is a serverless platform for deploying JavaScript,
+  TypeScript, and WASM code at the edge.
+provider: Cloudflare
+category: compute
 domain: compute
 subtypes:
   - edge
@@ -16,15 +18,16 @@ audiences:
   - oss
 tags:
   - serverless
-  - edge
-  - javascript
-  - typescript
-  - wasm
+  - cdn
+  - frontend
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes up to 100,000 requests per day with limited CPU time per request."
+  summary: >-
+    Free tier includes up to 100,000 requests per day with limited CPU time per
+    request.
   limits:
-    - 100,000 requests/day
+    - '100,000 requests/day'
     - 10ms CPU time/request
     - Up to 30 scripts
     - 1MB request/response size
@@ -48,8 +51,12 @@ quickstartSteps:
   - Run 'wrangler generate my-worker' to scaffold a new project.
   - Edit the generated code to implement your logic.
   - Deploy using 'wrangler publish'.
-whenToUse: "Use when you need fast, globally distributed serverless functions for lightweight APIs, edge logic, or request handling."
-whenNotToUse: "Avoid if you need long-running processes, large memory, or advanced networking features unavailable in Workers."
+whenToUse: >-
+  Use when you need fast, globally distributed serverless functions for
+  lightweight APIs, edge logic, or request handling.
+whenNotToUse: >-
+  Avoid if you need long-running processes, large memory, or advanced networking
+  features unavailable in Workers.
 bestFor:
   - edge APIs
   - microservices
@@ -61,14 +68,14 @@ avoidIf:
   - long-running jobs
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-10
+lastUpdated: 2024-06-10T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://developers.cloudflare.com/workers/
-docsUrl: https://developers.cloudflare.com/workers/
+officialUrl: 'https://developers.cloudflare.com/workers/'
+docsUrl: 'https://developers.cloudflare.com/workers/'
 sourceUrls:
-  - https://developers.cloudflare.com/workers/platform/limits/
-  - https://developers.cloudflare.com/workers/platform/pricing/
+  - 'https://developers.cloudflare.com/workers/platform/limits/'
+  - 'https://developers.cloudflare.com/workers/platform/pricing/'
 featured: false
 ---
 Cloudflare Workers enables you to deploy serverless code at the edge with minimal setup, ideal for APIs, webhooks, and lightweight backend logic.

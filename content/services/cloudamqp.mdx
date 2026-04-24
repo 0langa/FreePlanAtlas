@@ -1,8 +1,10 @@
 ---
-title: "CloudAMQP"
-description: "CloudAMQP provides managed RabbitMQ clusters for reliable message queuing and pub/sub workloads."
-provider: "CloudAMQP"
-category: "messaging"
+title: CloudAMQP
+description: >-
+  CloudAMQP provides managed RabbitMQ clusters for reliable message queuing and
+  pub/sub workloads.
+provider: CloudAMQP
+category: messaging
 domain: messaging
 subtypes:
   - RabbitMQ
@@ -15,19 +17,19 @@ audiences:
   - team
   - oss
 tags:
-  - rabbitmq
   - queue
   - messaging
-  - pubsub
-  - managed
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free Little Lemur plan offers a single-node RabbitMQ instance with basic features."
+  summary: >-
+    Free Little Lemur plan offers a single-node RabbitMQ instance with basic
+    features.
   limits:
     - Single node
     - 20 connections
     - 100 queues
-    - 100,000 messages/month
+    - '100,000 messages/month'
     - No high availability
   caveats:
     - No support for clustering or high availability
@@ -48,8 +50,12 @@ quickstartSteps:
   - Copy the provided RabbitMQ connection URL.
   - Connect your application or client library to the instance.
   - Send and receive test messages to verify setup.
-whenToUse: "Use CloudAMQP for quick RabbitMQ setup when you need managed messaging for development, prototyping, or learning."
-whenNotToUse: "Avoid if you require high availability, clustering, or need to handle production-scale workloads."
+whenToUse: >-
+  Use CloudAMQP for quick RabbitMQ setup when you need managed messaging for
+  development, prototyping, or learning.
+whenNotToUse: >-
+  Avoid if you require high availability, clustering, or need to handle
+  production-scale workloads.
 bestFor:
   - prototyping
   - learning
@@ -61,13 +67,13 @@ avoidIf:
   - large scale messaging
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://www.cloudamqp.com/
-docsUrl: https://www.cloudamqp.com/docs/index.html
+officialUrl: 'https://www.cloudamqp.com/'
+docsUrl: 'https://www.cloudamqp.com/docs/index.html'
 sourceUrls:
-  - https://www.cloudamqp.com/plans.html
+  - 'https://www.cloudamqp.com/plans.html'
 featured: false
 ---
 CloudAMQP offers a managed RabbitMQ service with a free tier suitable for development, testing, and learning, but not for production workloads.

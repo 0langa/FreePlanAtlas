@@ -1,8 +1,10 @@
 ---
-title: "Azure Managed Identities"
-description: "Azure Managed Identities provides automatic identity management for Azure resources to securely access other Azure services without credentials."
-provider: "Azure"
-category: "security"
+title: Azure Managed Identities
+description: >-
+  Azure Managed Identities provides automatic identity management for Azure
+  resources to securely access other Azure services without credentials.
+provider: Azure
+category: security
 domain: security
 subtypes:
   - service identity
@@ -14,14 +16,16 @@ audiences:
   - enterprise
   - oss
 tags:
-  - azure
+  - cloud
   - identity
   - security
-  - access-control
-  - managed-service
+  - auth
+  - misc
 pricingModel: free
 freeTierDetails:
-  summary: "Managed Identities are free with Azure resources; you only pay for the underlying resources."
+  summary: >-
+    Managed Identities are free with Azure resources; you only pay for the
+    underlying resources.
   limits:
     - No charge for managed identities
     - Standard Azure resource limits apply
@@ -33,19 +37,31 @@ freeTierDetails:
   hasHardCap: true
   overageRisk: none
   billingRiskNotes:
-    - No direct cost for managed identities, but underlying resource usage may incur charges
+    - >-
+      No direct cost for managed identities, but underlying resource usage may
+      incur charges
 useCases:
   - Securely access Azure Key Vault from VMs
   - Automate resource authentication in CI/CD
   - Replace hardcoded credentials in apps
 quickstartSteps:
-  - Create an Azure resource (e.g., VM, App Service) that supports managed identities.
+  - >-
+    Create an Azure resource (e.g., VM, App Service) that supports managed
+    identities.
   - Enable system-assigned or user-assigned managed identity for the resource.
-  - Assign the managed identity necessary Azure role permissions (e.g., Key Vault Reader).
-  - Update your application code to use Azure SDK authentication via managed identity.
+  - >-
+    Assign the managed identity necessary Azure role permissions (e.g., Key
+    Vault Reader).
+  - >-
+    Update your application code to use Azure SDK authentication via managed
+    identity.
   - Test access to the target Azure service without explicit credentials.
-whenToUse: "Use when you need secure, credential-free authentication for Azure resources accessing other Azure services."
-whenNotToUse: "Avoid if you require cross-cloud or on-premises authentication, or need identities outside Azure's managed scope."
+whenToUse: >-
+  Use when you need secure, credential-free authentication for Azure resources
+  accessing other Azure services.
+whenNotToUse: >-
+  Avoid if you require cross-cloud or on-premises authentication, or need
+  identities outside Azure's managed scope.
 bestFor:
   - secure automation
   - cloud-native apps
@@ -55,14 +71,16 @@ avoidIf:
   - on-premises integration
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 9
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/active-directory/
-docsUrl: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/active-directory/'
+docsUrl: >-
+  https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/active-directory/
-  - https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+  - 'https://azure.microsoft.com/en-us/pricing/details/active-directory/'
+  - >-
+    https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
 featured: false
 ---
 Azure Managed Identities lets Azure resources authenticate to supported services securely without managing credentials, reducing risk and simplifying access control.

@@ -1,8 +1,10 @@
 ---
-title: "Firebase Auth"
-description: "Firebase Auth provides authentication services for web and mobile apps with support for multiple identity providers."
-provider: "Google Cloud"
-category: "auth"
+title: Firebase Auth
+description: >-
+  Firebase Auth provides authentication services for web and mobile apps with
+  support for multiple identity providers.
+provider: Google Cloud
+category: auth
 domain: auth
 subtypes:
   - user authentication
@@ -16,16 +18,16 @@ audiences:
   - team
   - oss
 tags:
-  - authentication
+  - auth
   - identity
-  - oauth
-  - firebase
-  - login
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes generous monthly quota for authentication operations."
+  summary: Free tier includes generous monthly quota for authentication operations.
   limits:
-    - 10k verifications/month for email/password, anonymous, and social providers
+    - >-
+      10k verifications/month for email/password, anonymous, and social
+      providers
     - 100 SMS verifications/month
     - Unlimited sign-ins for existing users
   caveats:
@@ -40,16 +42,20 @@ freeTierDetails:
     - SMS overages can incur charges if quota is exceeded.
 useCases:
   - Add user authentication to web or mobile apps
-  - Enable social login (Google, Facebook, etc.)
+  - 'Enable social login (Google, Facebook, etc.)'
   - Implement email/password or anonymous sign-in
 quickstartSteps:
   - Create a Firebase project in the Firebase Console.
   - Enable Authentication and select desired sign-in methods.
-  - Add Firebase SDK to your app (web, iOS, or Android).
+  - 'Add Firebase SDK to your app (web, iOS, or Android).'
   - Configure authentication providers in your app code.
   - Test user sign-up and sign-in flows.
-whenToUse: "Use when you need quick, secure authentication for web or mobile apps with minimal backend setup."
-whenNotToUse: "Avoid if you require advanced enterprise SSO, custom auth flows, or need to avoid vendor lock-in."
+whenToUse: >-
+  Use when you need quick, secure authentication for web or mobile apps with
+  minimal backend setup.
+whenNotToUse: >-
+  Avoid if you require advanced enterprise SSO, custom auth flows, or need to
+  avoid vendor lock-in.
 bestFor:
   - MVPs
   - mobile apps
@@ -61,14 +67,14 @@ avoidIf:
   - on-premises requirements
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 8
-officialUrl: https://firebase.google.com/products/auth
-docsUrl: https://firebase.google.com/docs/auth
+officialUrl: 'https://firebase.google.com/products/auth'
+docsUrl: 'https://firebase.google.com/docs/auth'
 sourceUrls:
-  - https://firebase.google.com/pricing
-  - https://firebase.google.com/docs/auth
+  - 'https://firebase.google.com/pricing'
+  - 'https://firebase.google.com/docs/auth'
 featured: false
 ---
 Firebase Auth offers a simple way to add authentication to apps, supporting multiple providers and generous free tier limits for most use cases.

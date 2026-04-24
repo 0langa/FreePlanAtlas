@@ -1,8 +1,10 @@
 ---
-title: "Cloud Build"
-description: "Google Cloud Build is a fully managed CI/CD platform for building, testing, and deploying code at scale."
-provider: "Google Cloud"
-category: "devops"
+title: Cloud Build
+description: >-
+  Google Cloud Build is a fully managed CI/CD platform for building, testing,
+  and deploying code at scale.
+provider: Google Cloud
+category: devops
 domain: devops
 subtypes:
   - continuous-integration
@@ -15,14 +17,12 @@ audiences:
   - team
   - oss
 tags:
-  - ci
-  - cd
-  - build
+  - ci-cd
   - automation
-  - google-cloud
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "120 build-minutes per day free with up to 10 concurrent builds."
+  summary: 120 build-minutes per day free with up to 10 concurrent builds.
   limits:
     - 120 build-minutes/day
     - 10 concurrent builds
@@ -47,8 +47,12 @@ quickstartSteps:
   - Install and configure the Google Cloud SDK.
   - Create a cloudbuild.yaml file to define your build steps.
   - Trigger a build via the Cloud Console or gcloud CLI.
-whenToUse: "Use Cloud Build for automated CI/CD pipelines, especially if you already use Google Cloud services or need scalable build automation."
-whenNotToUse: "Avoid if you require unlimited build minutes, advanced custom runners, or need on-premises build infrastructure."
+whenToUse: >-
+  Use Cloud Build for automated CI/CD pipelines, especially if you already use
+  Google Cloud services or need scalable build automation.
+whenNotToUse: >-
+  Avoid if you require unlimited build minutes, advanced custom runners, or need
+  on-premises build infrastructure.
 bestFor:
   - Google Cloud users
   - automated deployments
@@ -59,14 +63,14 @@ avoidIf:
   - on-premises only environments
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://cloud.google.com/build
-docsUrl: https://cloud.google.com/build/docs
+officialUrl: 'https://cloud.google.com/build'
+docsUrl: 'https://cloud.google.com/build/docs'
 sourceUrls:
-  - https://cloud.google.com/build/pricing
-  - https://cloud.google.com/build/docs/quickstart-build
+  - 'https://cloud.google.com/build/pricing'
+  - 'https://cloud.google.com/build/docs/quickstart-build'
 featured: false
 ---
 Cloud Build provides managed CI/CD pipelines with a generous free tier, supporting container builds, testing, and deployments tightly integrated with Google Cloud.

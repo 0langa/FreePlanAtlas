@@ -1,8 +1,10 @@
 ---
-title: "Azure Blueprints"
-description: "Azure Blueprints enables repeatable, compliant environment setup by packaging policies, role assignments, and resources as templates."
-provider: "Azure"
-category: "devops"
+title: Azure Blueprints
+description: >-
+  Azure Blueprints enables repeatable, compliant environment setup by packaging
+  policies, role assignments, and resources as templates.
+provider: Azure
+category: devops
 domain: devops
 subtypes:
   - infrastructure-as-code
@@ -14,14 +16,12 @@ audiences:
   - enterprise
   - agency
 tags:
-  - infrastructure
+  - devops
   - compliance
-  - policy
   - automation
-  - governance
 pricingModel: free
 freeTierDetails:
-  summary: "Azure Blueprints is available at no additional cost."
+  summary: Azure Blueprints is available at no additional cost.
   limits:
     - No usage limits
     - Standard Azure resource limits apply
@@ -41,27 +41,31 @@ quickstartSteps:
   - Sign in to the Azure Portal.
   - Navigate to 'Blueprints' under 'Governance'.
   - Create a new blueprint definition or use a built-in sample.
-  - Add artifacts such as policies, role assignments, and resource groups.
+  - 'Add artifacts such as policies, role assignments, and resource groups.'
   - Publish and assign the blueprint to a subscription.
-whenToUse: "Use when you need to automate and enforce consistent Azure environment configurations across subscriptions."
-whenNotToUse: "Avoid if you require cross-cloud governance or need advanced customization beyond Azure's built-in policy and resource options."
+whenToUse: >-
+  Use when you need to automate and enforce consistent Azure environment
+  configurations across subscriptions.
+whenNotToUse: >-
+  Avoid if you require cross-cloud governance or need advanced customization
+  beyond Azure's built-in policy and resource options.
 bestFor:
   - teams managing multiple Azure subscriptions
   - organizations with compliance needs
   - DevOps engineers
 avoidIf:
-  - single, simple resource deployments
+  - 'single, simple resource deployments'
   - multi-cloud environments
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-13
+lastUpdated: 2024-06-13T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-blueprints/
-docsUrl: https://learn.microsoft.com/en-us/azure/governance/blueprints/overview
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/azure-blueprints/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/governance/blueprints/overview'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/azure-blueprints/
-  - https://learn.microsoft.com/en-us/azure/governance/blueprints/overview
+  - 'https://azure.microsoft.com/en-us/pricing/details/azure-blueprints/'
+  - 'https://learn.microsoft.com/en-us/azure/governance/blueprints/overview'
 featured: false
 ---
 Azure Blueprints lets you define and deploy repeatable sets of Azure resources, policies, and role assignments to ensure compliance and governance at scale.

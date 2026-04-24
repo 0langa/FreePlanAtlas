@@ -1,8 +1,10 @@
 ---
-title: "Cloudflare Workers KV"
-description: "Cloudflare Workers KV is a globally distributed key-value storage for serverless applications running on Cloudflare Workers."
-provider: "Cloudflare"
-category: "database"
+title: Cloudflare Workers KV
+description: >-
+  Cloudflare Workers KV is a globally distributed key-value storage for
+  serverless applications running on Cloudflare Workers.
+provider: Cloudflare
+category: database
 domain: database
 subtypes:
   - key-value
@@ -15,18 +17,19 @@ audiences:
   - team
   - oss
 tags:
-  - edge
+  - cdn
   - serverless
-  - key-value
-  - global
+  - misc
   - storage
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 1 GB storage, 100,000 read operations, and 1,000 write/delete operations per day."
+  summary: >-
+    Free tier includes 1 GB storage, 100,000 read operations, and 1,000
+    write/delete operations per day.
   limits:
     - 1 GB storage
-    - 100,000 reads/day
-    - 1,000 writes/deletes/day
+    - '100,000 reads/day'
+    - '1,000 writes/deletes/day'
   caveats:
     - Eventual consistency
     - Per-account limits apply
@@ -49,8 +52,12 @@ quickstartSteps:
   - Add a KV namespace in your Cloudflare dashboard.
   - Bind the KV namespace to your Worker in wrangler.toml.
   - Deploy your Worker and interact with KV storage.
-whenToUse: "Use when you need low-latency, globally distributed key-value storage for serverless or edge applications."
-whenNotToUse: "Avoid if you require strong consistency, complex queries, or large object storage beyond 25 MB per value."
+whenToUse: >-
+  Use when you need low-latency, globally distributed key-value storage for
+  serverless or edge applications.
+whenNotToUse: >-
+  Avoid if you require strong consistency, complex queries, or large object
+  storage beyond 25 MB per value.
 bestFor:
   - edge applications
   - stateless APIs
@@ -61,14 +68,14 @@ avoidIf:
   - relational queries needed
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-11
+lastUpdated: 2024-06-11T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 7
-officialUrl: https://developers.cloudflare.com/kv
-docsUrl: https://developers.cloudflare.com/kv
+officialUrl: 'https://developers.cloudflare.com/kv'
+docsUrl: 'https://developers.cloudflare.com/kv'
 sourceUrls:
-  - https://developers.cloudflare.com/kv
-  - https://developers.cloudflare.com/workers/platform/limits
+  - 'https://developers.cloudflare.com/kv'
+  - 'https://developers.cloudflare.com/workers/platform/limits'
 featured: false
 ---
 Cloudflare Workers KV provides globally distributed, eventually consistent key-value storage for serverless applications, ideal for edge use cases with simple data access patterns.

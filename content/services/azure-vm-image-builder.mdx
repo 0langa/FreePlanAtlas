@@ -1,8 +1,10 @@
 ---
-title: "Azure VM Image Builder"
-description: "Azure VM Image Builder automates creation, customization, and management of virtual machine images at scale in Azure."
-provider: "Azure"
-category: "compute"
+title: Azure VM Image Builder
+description: >-
+  Azure VM Image Builder automates creation, customization, and management of
+  virtual machine images at scale in Azure.
+provider: Azure
+category: compute
 domain: compute
 subtypes:
   - image-builder
@@ -13,25 +15,29 @@ audiences:
   - team
   - enterprise
 tags:
-  - vm
-  - image
+  - compute
+  - images
   - automation
-  - azure
-  - customization
+  - cloud
+  - misc
 pricingModel: free
 freeTierDetails:
-  summary: "Free tier includes 20 custom image builds per month."
+  summary: Free tier includes 20 custom image builds per month.
   limits:
     - 20 custom image builds/month
   caveats:
-    - Standard Azure VM and storage costs apply for resources used during image creation.
+    - >-
+      Standard Azure VM and storage costs apply for resources used during image
+      creation.
   resetPeriod: monthly
   requiresCard: true
   freeTierType: always-free
   hasHardCap: true
   overageRisk: low
   billingRiskNotes:
-    - Charges may occur if you exceed the free build limit or for underlying VM/storage usage.
+    - >-
+      Charges may occur if you exceed the free build limit or for underlying
+      VM/storage usage.
 useCases:
   - Automating golden image creation
   - Standardizing VM deployments
@@ -40,11 +46,17 @@ useCases:
 quickstartSteps:
   - Sign in to the Azure Portal and ensure you have a subscription.
   - Register the Image Builder resource provider in your subscription.
-  - Create an Image Template specifying source image, customizations, and output.
+  - >-
+    Create an Image Template specifying source image, customizations, and
+    output.
   - Assign required permissions to the Image Builder managed identity.
   - Start the image build process and monitor status in the portal.
-whenToUse: "Use when you need to automate and standardize VM image creation for Azure deployments."
-whenNotToUse: "Avoid if you require image building for non-Azure clouds or need advanced customization not supported by Azure."
+whenToUse: >-
+  Use when you need to automate and standardize VM image creation for Azure
+  deployments.
+whenNotToUse: >-
+  Avoid if you require image building for non-Azure clouds or need advanced
+  customization not supported by Azure.
 bestFor:
   - Standardizing VM environments
   - Automated image pipelines
@@ -54,14 +66,18 @@ avoidIf:
   - You have highly specialized build requirements
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-10
+lastUpdated: 2024-06-10T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/virtual-machines/image-builder/
-docsUrl: https://learn.microsoft.com/en-us/azure/virtual-machines/image-builder-overview
+officialUrl: >-
+  https://azure.microsoft.com/en-us/pricing/details/virtual-machines/image-builder/
+docsUrl: >-
+  https://learn.microsoft.com/en-us/azure/virtual-machines/image-builder-overview
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/virtual-machines/image-builder/
-  - https://learn.microsoft.com/en-us/azure/virtual-machines/image-builder-overview
+  - >-
+    https://azure.microsoft.com/en-us/pricing/details/virtual-machines/image-builder/
+  - >-
+    https://learn.microsoft.com/en-us/azure/virtual-machines/image-builder-overview
 featured: false
 ---
 Azure VM Image Builder enables automated, repeatable creation of customized VM images, supporting compliance and DevOps workflows for Azure environments.

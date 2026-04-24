@@ -1,8 +1,10 @@
 ---
-title: "Azure Load Testing"
-description: "Azure Load Testing enables scalable cloud-based load testing for web apps and APIs with integrated Azure monitoring."
-provider: "Azure"
-category: "devops"
+title: Azure Load Testing
+description: >-
+  Azure Load Testing enables scalable cloud-based load testing for web apps and
+  APIs with integrated Azure monitoring.
+provider: Azure
+category: devops
 domain: devops
 subtypes:
   - load-testing
@@ -14,14 +16,13 @@ audiences:
   - enterprise
   - oss
 tags:
-  - load
-  - performance
+  - misc
   - testing
-  - azure
-  - scalability
+  - cloud
+  - analytics
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 50 virtual user hours per month."
+  summary: Free tier includes 50 virtual user hours per month.
   limits:
     - 50 virtual user hours/month
   caveats:
@@ -41,12 +42,18 @@ useCases:
   - Pre-release load validation
 quickstartSteps:
   - Sign in to the Azure portal and create a Load Testing resource.
-  - Configure a test plan by uploading a JMeter script or using the built-in test designer.
+  - >-
+    Configure a test plan by uploading a JMeter script or using the built-in
+    test designer.
   - Set test parameters such as virtual users and duration.
   - Run the load test and monitor real-time metrics.
   - Review test results and Azure resource metrics for performance insights.
-whenToUse: "Use when you need to simulate user load on Azure-hosted or public endpoints to validate performance and scalability."
-whenNotToUse: "Avoid if you require unlimited free testing, need on-premises test execution, or have strict cost controls without hard caps."
+whenToUse: >-
+  Use when you need to simulate user load on Azure-hosted or public endpoints to
+  validate performance and scalability.
+whenNotToUse: >-
+  Avoid if you require unlimited free testing, need on-premises test execution,
+  or have strict cost controls without hard caps.
 bestFor:
   - teams validating Azure workloads
   - performance engineers
@@ -57,14 +64,14 @@ avoidIf:
   - you have zero budget for overages
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/load-testing/
-docsUrl: https://learn.microsoft.com/en-us/azure/load-testing/
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/load-testing/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/load-testing/'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/load-testing/
-  - https://learn.microsoft.com/en-us/azure/load-testing/
+  - 'https://azure.microsoft.com/en-us/pricing/details/load-testing/'
+  - 'https://learn.microsoft.com/en-us/azure/load-testing/'
 featured: false
 ---
 Azure Load Testing provides a managed, scalable solution for simulating load on web apps and APIs, integrating with Azure monitoring for actionable insights. The free tier is suitable for moderate, regular testing needs, but overages may incur costs. Ideal for teams needing to validate performance and scalability of Azure-hosted services or public endpoints.

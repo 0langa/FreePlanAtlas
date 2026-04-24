@@ -1,8 +1,10 @@
 ---
-title: "S3"
-description: "Amazon S3 provides scalable object storage for files, backups, and static website hosting."
-provider: "AWS"
-category: "storage"
+title: S3
+description: >-
+  Amazon S3 provides scalable object storage for files, backups, and static
+  website hosting.
+provider: AWS
+category: storage
 domain: storage
 subtypes:
   - object storage
@@ -18,17 +20,17 @@ audiences:
   - agency
 tags:
   - storage
-  - object
-  - aws
-  - bucket
-  - static-site
+  - cloud
+  - web
 pricingModel: freemium
 freeTierDetails:
-  summary: "5 GB Standard Storage, 20,000 GET and 2,000 PUT requests monthly for 12 months."
+  summary: >-
+    5 GB Standard Storage, 20,000 GET and 2,000 PUT requests monthly for 12
+    months.
   limits:
     - 5 GB Standard Storage
-    - 20,000 GET requests/month
-    - 2,000 PUT, COPY, POST, or LIST requests/month
+    - '20,000 GET requests/month'
+    - '2,000 PUT, COPY, POST, or LIST requests/month'
     - 15GB data transfer out/month
   caveats:
     - Free tier valid for 12 months after account creation
@@ -50,11 +52,15 @@ useCases:
 quickstartSteps:
   - Sign up for an AWS account and log in to the AWS Management Console.
   - Navigate to the S3 service and create a new bucket.
-  - Configure bucket settings, including region and access permissions.
+  - 'Configure bucket settings, including region and access permissions.'
   - Upload files or objects to your bucket.
   - Set up bucket policies or static website hosting as needed.
-whenToUse: "Use S3 for scalable, reliable object storage or static website hosting with pay-as-you-go pricing and global availability."
-whenNotToUse: "Avoid S3 for low-latency block storage, high-frequency transactional databases, or if you need always-free storage beyond 12 months."
+whenToUse: >-
+  Use S3 for scalable, reliable object storage or static website hosting with
+  pay-as-you-go pricing and global availability.
+whenNotToUse: >-
+  Avoid S3 for low-latency block storage, high-frequency transactional
+  databases, or if you need always-free storage beyond 12 months.
 bestFor:
   - static sites
   - backups
@@ -66,14 +72,14 @@ avoidIf:
   - need ultra-low latency
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 9
-officialUrl: https://aws.amazon.com/s3/
-docsUrl: https://docs.aws.amazon.com/s3/
+officialUrl: 'https://aws.amazon.com/s3/'
+docsUrl: 'https://docs.aws.amazon.com/s3/'
 sourceUrls:
-  - https://aws.amazon.com/free/
-  - https://aws.amazon.com/s3/pricing/
+  - 'https://aws.amazon.com/free/'
+  - 'https://aws.amazon.com/s3/pricing/'
 featured: false
 ---
 Amazon S3 is a widely used object storage service for storing and retrieving any amount of data at scale, suitable for static sites, backups, and more.

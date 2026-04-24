@@ -1,8 +1,10 @@
 ---
-title: "EC2"
-description: "AWS EC2 provides scalable virtual servers for running applications and workloads in the cloud."
-provider: "AWS"
-category: "compute"
+title: EC2
+description: >-
+  AWS EC2 provides scalable virtual servers for running applications and
+  workloads in the cloud.
+provider: AWS
+category: compute
 domain: compute
 subtypes:
   - VM
@@ -15,14 +17,13 @@ audiences:
   - enterprise
   - oss
 tags:
-  - virtual-machine
-  - cloud
-  - infrastructure
-  - elastic
   - compute
+  - cloud
+  - devops
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "750 hours per month of t2.micro or t3.micro instances for 12 months."
+  summary: 750 hours per month of t2.micro or t3.micro instances for 12 months.
   limits:
     - 750 hours/month t2.micro or t3.micro (Linux/Windows)
     - 30 GB EBS storage
@@ -36,7 +37,9 @@ freeTierDetails:
   hasHardCap: false
   overageRisk: medium
   billingRiskNotes:
-    - Exceeding free tier limits or using non-eligible instance types incurs charges
+    - >-
+      Exceeding free tier limits or using non-eligible instance types incurs
+      charges
   trialDays: 365
 useCases:
   - Hosting web applications
@@ -48,8 +51,12 @@ quickstartSteps:
   - Launch a new instance using the t2.micro or t3.micro type.
   - Configure security group and key pair for SSH access.
   - Review and launch the instance.
-whenToUse: "Use EC2 when you need flexible, scalable virtual servers for custom workloads or to host applications with specific OS or configuration needs."
-whenNotToUse: "Avoid EC2 if you prefer fully managed services, need simple static hosting, or want to avoid managing operating systems and patching."
+whenToUse: >-
+  Use EC2 when you need flexible, scalable virtual servers for custom workloads
+  or to host applications with specific OS or configuration needs.
+whenNotToUse: >-
+  Avoid EC2 if you prefer fully managed services, need simple static hosting, or
+  want to avoid managing operating systems and patching.
 bestFor:
   - custom server setups
   - scalable workloads
@@ -60,14 +67,14 @@ avoidIf:
   - minimal ops management
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 9
-officialUrl: https://aws.amazon.com/ec2/
-docsUrl: https://docs.aws.amazon.com/ec2/
+officialUrl: 'https://aws.amazon.com/ec2/'
+docsUrl: 'https://docs.aws.amazon.com/ec2/'
 sourceUrls:
-  - https://aws.amazon.com/free/
-  - https://aws.amazon.com/ec2/pricing/on-demand/
+  - 'https://aws.amazon.com/free/'
+  - 'https://aws.amazon.com/ec2/pricing/on-demand/'
 featured: false
 ---
 Amazon EC2 offers flexible, resizable compute capacity in the cloud, suitable for a wide range of applications and workloads.

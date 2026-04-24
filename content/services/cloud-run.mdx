@@ -1,8 +1,10 @@
 ---
-title: "Cloud Run"
-description: "Cloud Run is a fully managed serverless platform for running containerized applications on Google Cloud."
-provider: "Google Cloud"
-category: "compute"
+title: Cloud Run
+description: >-
+  Cloud Run is a fully managed serverless platform for running containerized
+  applications on Google Cloud.
+provider: Google Cloud
+category: compute
 domain: compute
 subtypes:
   - container
@@ -16,16 +18,14 @@ audiences:
 tags:
   - serverless
   - containers
-  - http
-  - managed
-  - stateless
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "Cloud Run offers a generous always-free tier with monthly resource limits."
+  summary: Cloud Run offers a generous always-free tier with monthly resource limits.
   limits:
     - 2 million requests per month
-    - 360,000 vCPU-seconds per month
-    - 180,000 GiB-seconds memory per month
+    - '360,000 vCPU-seconds per month'
+    - '180,000 GiB-seconds memory per month'
     - 1 GiB egress per month
   caveats:
     - Free tier applies only to one region per billing account
@@ -48,8 +48,12 @@ quickstartSteps:
   - Push your container image to Google Container Registry or Artifact Registry.
   - Deploy the container to Cloud Run via the Google Cloud Console or CLI.
   - Test your deployed service using the provided HTTPS endpoint.
-whenToUse: "Use Cloud Run when you need to deploy containerized applications without managing servers or infrastructure, especially for stateless workloads."
-whenNotToUse: "Avoid Cloud Run if your application requires persistent local storage, stateful workloads, or specialized networking beyond HTTP(S)."
+whenToUse: >-
+  Use Cloud Run when you need to deploy containerized applications without
+  managing servers or infrastructure, especially for stateless workloads.
+whenNotToUse: >-
+  Avoid Cloud Run if your application requires persistent local storage,
+  stateful workloads, or specialized networking beyond HTTP(S).
 bestFor:
   - stateless APIs
   - microservices
@@ -60,14 +64,14 @@ avoidIf:
   - custom networking
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 9
-officialUrl: https://cloud.google.com/run
-docsUrl: https://cloud.google.com/run/docs
+officialUrl: 'https://cloud.google.com/run'
+docsUrl: 'https://cloud.google.com/run/docs'
 sourceUrls:
-  - https://cloud.google.com/run/pricing
-  - https://cloud.google.com/run/docs/quickstarts/build-and-deploy
+  - 'https://cloud.google.com/run/pricing'
+  - 'https://cloud.google.com/run/docs/quickstarts/build-and-deploy'
 featured: false
 ---
 Cloud Run enables you to deploy and scale containerized applications easily, paying only for resources used, with a generous always-free tier for low-traffic workloads.

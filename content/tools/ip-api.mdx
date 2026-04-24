@@ -1,8 +1,10 @@
 ---
-title: "ip-api"
-description: "ip-api provides a simple API for IP geolocation and related network information."
-provider: "ip-api"
-category: "integration"
+title: ip-api
+description: >-
+  ip-api provides a simple API for IP geolocation and related network
+  information.
+provider: ip-api
+category: integration
 domain: integration
 subtypes:
   - ip-geolocation
@@ -15,14 +17,12 @@ audiences:
   - team
   - oss
 tags:
-  - ip
-  - geolocation
+  - networking
+  - misc
   - api
-  - network
-  - location
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier allows up to 45 HTTP requests per minute from one IP address."
+  summary: Free tier allows up to 45 HTTP requests per minute from one IP address.
   limits:
     - 45 requests per minute per IP
     - HTTP only (no HTTPS)
@@ -42,13 +42,19 @@ useCases:
   - Display network or ISP information
   - Analyze traffic sources
 quickstartSteps:
-  - Visit https://ip-api.com/docs to review API endpoints and usage.
-  - Choose the endpoint (e.g., /json/{IP}) for your use case.
-  - Make a simple HTTP GET request to the endpoint using your preferred tool or code.
+  - 'Visit https://ip-api.com/docs to review API endpoints and usage.'
+  - 'Choose the endpoint (e.g., /json/{IP}) for your use case.'
+  - >-
+    Make a simple HTTP GET request to the endpoint using your preferred tool or
+    code.
   - Parse the JSON response to extract geolocation or network data.
   - Respect the 45 requests/minute/IP limit to avoid being blocked.
-whenToUse: "Use ip-api when you need basic, fast IP geolocation or network info with minimal setup and no account required."
-whenNotToUse: "Avoid if you need HTTPS, higher request volumes, or guaranteed uptime for production workloads."
+whenToUse: >-
+  Use ip-api when you need basic, fast IP geolocation or network info with
+  minimal setup and no account required.
+whenNotToUse: >-
+  Avoid if you need HTTPS, higher request volumes, or guaranteed uptime for
+  production workloads.
 bestFor:
   - prototyping
   - side-projects
@@ -60,14 +66,14 @@ avoidIf:
   - require SLA
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://ip-api.com
-docsUrl: https://ip-api.com/docs
+officialUrl: 'https://ip-api.com'
+docsUrl: 'https://ip-api.com/docs'
 sourceUrls:
-  - https://ip-api.com/docs
-  - https://ip-api.com/pricing
+  - 'https://ip-api.com/docs'
+  - 'https://ip-api.com/pricing'
 featured: false
 ---
 ip-api offers a fast, no-signup IP geolocation API suitable for basic location detection and network info, with a generous free tier for low-volume use.

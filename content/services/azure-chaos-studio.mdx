@@ -1,8 +1,10 @@
 ---
-title: "Azure Chaos Studio"
-description: "Azure Chaos Studio enables controlled fault injection experiments to improve application resilience and reliability on Azure."
-provider: "Azure"
-category: "devops"
+title: Azure Chaos Studio
+description: >-
+  Azure Chaos Studio enables controlled fault injection experiments to improve
+  application resilience and reliability on Azure.
+provider: Azure
+category: devops
 domain: devops
 subtypes:
   - chaos engineering
@@ -13,16 +15,14 @@ audiences:
   - startup
   - enterprise
 tags:
-  - chaos-engineering
-  - resilience
+  - misc
   - testing
-  - azure
-  - fault-injection
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 5,000 minutes of experiment execution per month."
+  summary: 'Free tier includes 5,000 minutes of experiment execution per month.'
   limits:
-    - 5,000 experiment minutes/month
+    - '5,000 experiment minutes/month'
   caveats:
     - Some advanced faults may incur additional charges.
   resetPeriod: monthly
@@ -31,7 +31,9 @@ freeTierDetails:
   hasHardCap: true
   overageRisk: low
   billingRiskNotes:
-    - Experiments stop when free tier is exhausted unless explicitly enabled for paid usage.
+    - >-
+      Experiments stop when free tier is exhausted unless explicitly enabled for
+      paid usage.
 useCases:
   - Test application resilience to outages
   - Validate failover and recovery processes
@@ -39,12 +41,16 @@ useCases:
   - Improve incident response readiness
 quickstartSteps:
   - Sign in to the Azure portal and create a Chaos Studio resource.
-  - Register target resources (VMs, AKS, etc.) for chaos experiments.
+  - 'Register target resources (VMs, AKS, etc.) for chaos experiments.'
   - Create an experiment by selecting faults and target resources.
   - Review and start the experiment to inject faults.
   - Monitor experiment results and analyze system behavior.
-whenToUse: "Use when you need to validate your application's resilience to failures and improve reliability on Azure infrastructure."
-whenNotToUse: "Avoid if you lack Azure resources to test or need chaos engineering for non-Azure environments."
+whenToUse: >-
+  Use when you need to validate your application's resilience to failures and
+  improve reliability on Azure infrastructure.
+whenNotToUse: >-
+  Avoid if you lack Azure resources to test or need chaos engineering for
+  non-Azure environments.
 bestFor:
   - resilience testing
   - site reliability engineering
@@ -55,14 +61,14 @@ avoidIf:
   - need non-cloud chaos tools
 difficulty: intermediate
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/chaos-studio/
-docsUrl: https://learn.microsoft.com/en-us/azure/chaos-studio/
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/chaos-studio/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/chaos-studio/'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/chaos-studio/
-  - https://learn.microsoft.com/en-us/azure/chaos-studio/
+  - 'https://azure.microsoft.com/en-us/pricing/details/chaos-studio/'
+  - 'https://learn.microsoft.com/en-us/azure/chaos-studio/'
 featured: false
 ---
 Azure Chaos Studio provides a managed platform for running chaos engineering experiments, helping teams proactively identify and fix reliability issues in Azure-based applications.

@@ -1,8 +1,10 @@
 ---
-title: "CloudWatch"
-description: "AWS CloudWatch provides monitoring, logging, and observability for AWS resources and applications."
-provider: "AWS"
-category: "observability"
+title: CloudWatch
+description: >-
+  AWS CloudWatch provides monitoring, logging, and observability for AWS
+  resources and applications.
+provider: AWS
+category: observability
 domain: observability
 subtypes:
   - metrics
@@ -16,12 +18,12 @@ audiences:
 tags:
   - monitoring
   - logging
-  - metrics
-  - aws
-  - alarms
+  - analytics
+  - cloud
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "Includes free monthly usage for metrics, logs, and dashboards."
+  summary: 'Includes free monthly usage for metrics, logs, and dashboards.'
   limits:
     - 10 custom metrics
     - 5GB log data ingestion
@@ -39,7 +41,7 @@ freeTierDetails:
   billingRiskNotes:
     - Overages can accumulate quickly if logs or metrics exceed free tier.
 useCases:
-  - Monitor AWS EC2, Lambda, and other AWS services
+  - 'Monitor AWS EC2, Lambda, and other AWS services'
   - Set up alarms for resource usage
   - Aggregate and search application logs
   - Visualize metrics on dashboards
@@ -47,10 +49,14 @@ quickstartSteps:
   - Sign in to the AWS Management Console.
   - Navigate to CloudWatch from the AWS services menu.
   - Create a dashboard to visualize metrics.
-  - Set up alarms for key metrics (e.g., CPU utilization).
+  - 'Set up alarms for key metrics (e.g., CPU utilization).'
   - Enable log collection for your AWS resources.
-whenToUse: "Use CloudWatch to monitor AWS infrastructure, set up automated alarms, and collect logs for troubleshooting within AWS environments."
-whenNotToUse: "Avoid if you need to monitor non-AWS infrastructure or require advanced analytics not supported by CloudWatch."
+whenToUse: >-
+  Use CloudWatch to monitor AWS infrastructure, set up automated alarms, and
+  collect logs for troubleshooting within AWS environments.
+whenNotToUse: >-
+  Avoid if you need to monitor non-AWS infrastructure or require advanced
+  analytics not supported by CloudWatch.
 bestFor:
   - AWS users
   - DevOps teams
@@ -62,14 +68,14 @@ avoidIf:
   - advanced log analytics
 difficulty: intermediate
 productionReadiness: production-ready
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 8
-officialUrl: https://aws.amazon.com/cloudwatch/
-docsUrl: https://docs.aws.amazon.com/cloudwatch/
+officialUrl: 'https://aws.amazon.com/cloudwatch/'
+docsUrl: 'https://docs.aws.amazon.com/cloudwatch/'
 sourceUrls:
-  - https://aws.amazon.com/cloudwatch/pricing/
-  - https://docs.aws.amazon.com/cloudwatch/
+  - 'https://aws.amazon.com/cloudwatch/pricing/'
+  - 'https://docs.aws.amazon.com/cloudwatch/'
 featured: false
 ---
 CloudWatch is AWS's native observability platform, offering integrated monitoring, logging, and alerting for AWS resources and applications with a generous free tier.

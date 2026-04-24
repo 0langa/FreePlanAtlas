@@ -1,8 +1,10 @@
 ---
-title: "RDS"
-description: "AWS RDS is a managed relational database service supporting multiple engines like MySQL, PostgreSQL, and MariaDB."
-provider: "AWS"
-category: "database"
+title: RDS
+description: >-
+  AWS RDS is a managed relational database service supporting multiple engines
+  like MySQL, PostgreSQL, and MariaDB.
+provider: AWS
+category: database
 domain: database
 subtypes:
   - relational
@@ -16,19 +18,19 @@ audiences:
   - student
 tags:
   - database
-  - managed
-  - sql
-  - aws
+  - misc
   - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "12-month free tier with 750 hours/month of db.t2.micro or db.t3.micro instances and 20GB storage."
+  summary: >-
+    12-month free tier with 750 hours/month of db.t2.micro or db.t3.micro
+    instances and 20GB storage.
   limits:
     - 750 hours/month db.t2.micro or db.t3.micro
     - 20GB SSD storage
     - 20GB backup storage
   caveats:
-    - Only MySQL, PostgreSQL, MariaDB engines eligible
+    - 'Only MySQL, PostgreSQL, MariaDB engines eligible'
     - Free tier lasts 12 months after AWS signup
   resetPeriod: monthly
   requiresCard: true
@@ -36,7 +38,7 @@ freeTierDetails:
   hasHardCap: false
   overageRisk: medium
   billingRiskNotes:
-    - Exceeding hours, storage, or using non-eligible engines incurs charges
+    - 'Exceeding hours, storage, or using non-eligible engines incurs charges'
   trialDays: 365
 useCases:
   - Deploying managed relational databases
@@ -45,11 +47,15 @@ useCases:
 quickstartSteps:
   - Sign up for an AWS account and verify your email.
   - Navigate to the RDS console in AWS Management Console.
-  - Click 'Create database' and select MySQL, PostgreSQL, or MariaDB.
+  - 'Click ''Create database'' and select MySQL, PostgreSQL, or MariaDB.'
   - Choose the free tier eligible db.t2.micro or db.t3.micro instance type.
   - Configure database settings and launch the instance.
-whenToUse: "Use RDS when you need a managed SQL database with automated backups, scaling, and maintenance on AWS."
-whenNotToUse: "Avoid RDS if you require unsupported engines, need fine-grained OS control, or want to avoid potential overage charges."
+whenToUse: >-
+  Use RDS when you need a managed SQL database with automated backups, scaling,
+  and maintenance on AWS.
+whenNotToUse: >-
+  Avoid RDS if you require unsupported engines, need fine-grained OS control, or
+  want to avoid potential overage charges.
 bestFor:
   - managed SQL databases
   - cloud-native apps
@@ -60,13 +66,13 @@ avoidIf:
   - strict cost control
 difficulty: beginner
 productionReadiness: production-ready
-lastUpdated: 2024-06-10
+lastUpdated: 2024-06-10T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 8
-officialUrl: https://aws.amazon.com/rds/
-docsUrl: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html
+officialUrl: 'https://aws.amazon.com/rds/'
+docsUrl: 'https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html'
 sourceUrls:
-  - https://aws.amazon.com/rds/free/
+  - 'https://aws.amazon.com/rds/free/'
 featured: false
 ---
 AWS RDS provides managed relational databases with automated backups, patching, and scaling, supporting MySQL, PostgreSQL, and MariaDB under the free tier.

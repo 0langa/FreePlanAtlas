@@ -1,8 +1,10 @@
 ---
-title: "Oracle Always Free Compute"
-description: "Oracle Cloud offers always-free virtual machines and resources for lightweight compute workloads and development."
-provider: "Oracle Cloud"
-category: "compute"
+title: Oracle Always Free Compute
+description: >-
+  Oracle Cloud offers always-free virtual machines and resources for lightweight
+  compute workloads and development.
+provider: Oracle Cloud
+category: compute
 domain: compute
 subtypes:
   - VM
@@ -14,20 +16,20 @@ audiences:
   - startup
   - oss
 tags:
-  - vm
-  - cloud
-  - free-tier
-  - oracle
   - compute
+  - cloud
+  - misc
 pricingModel: free
 freeTierDetails:
-  summary: "Always-free tier includes 2 AMD or Arm-based VMs, block storage, and load balancing."
+  summary: >-
+    Always-free tier includes 2 AMD or Arm-based VMs, block storage, and load
+    balancing.
   limits:
-    - 2 VMs (1/8 OCPU, 1 GB RAM each)
+    - '2 VMs (1/8 OCPU, 1 GB RAM each)'
     - 200 GB block storage
     - 10 GB object storage
     - Load balancer (10 Mbps)
-    - 10,000,000 monthly outbound requests
+    - '10,000,000 monthly outbound requests'
   caveats:
     - Limited to specific VM shapes and regions
     - Performance is basic and not suitable for heavy workloads
@@ -47,11 +49,17 @@ useCases:
 quickstartSteps:
   - Sign up for an Oracle Cloud Free Tier account with a valid credit card.
   - Log in to the Oracle Cloud Console and navigate to Compute > Instances.
-  - Click 'Create Instance', select an Always Free eligible shape (e.g., VM.Standard.E2.1.Micro or VM.Standard.A1.Flex).
+  - >-
+    Click 'Create Instance', select an Always Free eligible shape (e.g.,
+    VM.Standard.E2.1.Micro or VM.Standard.A1.Flex).
   - Configure networking and storage as needed within free limits.
   - Launch the instance and connect via SSH using the provided public IP.
-whenToUse: "Use when you need always-free, basic VMs for development, prototyping, or learning without ongoing costs."
-whenNotToUse: "Avoid if you require high performance, advanced networking, or more resources than the free tier allows."
+whenToUse: >-
+  Use when you need always-free, basic VMs for development, prototyping, or
+  learning without ongoing costs.
+whenNotToUse: >-
+  Avoid if you require high performance, advanced networking, or more resources
+  than the free tier allows.
 bestFor:
   - learning
   - prototyping
@@ -63,14 +71,14 @@ avoidIf:
   - enterprise compliance needs
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 6
 usefulnessScore: 7
-officialUrl: https://www.oracle.com/cloud/free/
-docsUrl: https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier.htm
+officialUrl: 'https://www.oracle.com/cloud/free/'
+docsUrl: 'https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier.htm'
 sourceUrls:
-  - https://www.oracle.com/cloud/free/
-  - https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier.htm
+  - 'https://www.oracle.com/cloud/free/'
+  - 'https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier.htm'
 featured: false
 ---
 Oracle Always Free Compute provides two small virtual machines and essential storage at no cost, ideal for learning, prototyping, and lightweight workloads.

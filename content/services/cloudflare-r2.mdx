@@ -1,8 +1,10 @@
 ---
-title: "Cloudflare R2"
-description: "Cloudflare R2 is an object storage service with S3-compatible API and no egress fees."
-provider: "Cloudflare"
-category: "storage"
+title: Cloudflare R2
+description: >-
+  Cloudflare R2 is an object storage service with S3-compatible API and no
+  egress fees.
+provider: Cloudflare
+category: storage
 domain: storage
 subtypes:
   - object storage
@@ -14,18 +16,18 @@ audiences:
   - team
   - oss
 tags:
-  - object-storage
-  - cloudflare
-  - s3-compatible
-  - no-egress-fees
   - storage
+  - cloud
+  - misc
 pricingModel: freemium
 freeTierDetails:
-  summary: "Free tier includes 10 GB storage and 1,000,000 read/write operations per month."
+  summary: >-
+    Free tier includes 10 GB storage and 1,000,000 read/write operations per
+    month.
   limits:
     - 10 GB storage
-    - 1,000,000 Class A operations/month
-    - 10,000,000 Class B operations/month
+    - '1,000,000 Class A operations/month'
+    - '10,000,000 Class B operations/month'
     - 1 GB egress/month
   caveats:
     - Overages billed at standard rates
@@ -46,10 +48,16 @@ quickstartSteps:
   - Sign up for a Cloudflare account or log in.
   - Navigate to the R2 dashboard in the Cloudflare console.
   - Create a new R2 bucket and note the access keys.
-  - Configure your application or tool with the S3-compatible endpoint and credentials.
+  - >-
+    Configure your application or tool with the S3-compatible endpoint and
+    credentials.
   - Upload and manage objects via the dashboard or API.
-whenToUse: "Use Cloudflare R2 for affordable, S3-compatible object storage with no egress fees, especially for static assets or backups."
-whenNotToUse: "Avoid if you need advanced S3 features like Glacier, or require strict hard caps to prevent overages."
+whenToUse: >-
+  Use Cloudflare R2 for affordable, S3-compatible object storage with no egress
+  fees, especially for static assets or backups.
+whenNotToUse: >-
+  Avoid if you need advanced S3 features like Glacier, or require strict hard
+  caps to prevent overages.
 bestFor:
   - static assets
   - media storage
@@ -60,14 +68,14 @@ avoidIf:
   - need advanced S3 features
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 8
-officialUrl: https://developers.cloudflare.com/r2/
-docsUrl: https://developers.cloudflare.com/r2/
+officialUrl: 'https://developers.cloudflare.com/r2/'
+docsUrl: 'https://developers.cloudflare.com/r2/'
 sourceUrls:
-  - https://developers.cloudflare.com/r2/platform/limits/
-  - https://www.cloudflare.com/products/r2/
+  - 'https://developers.cloudflare.com/r2/platform/limits/'
+  - 'https://www.cloudflare.com/products/r2/'
 featured: false
 ---
 Cloudflare R2 provides S3-compatible object storage with no egress fees, making it ideal for serving static assets and backups at low cost.

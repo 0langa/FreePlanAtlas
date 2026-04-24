@@ -1,8 +1,10 @@
 ---
-title: "Azure PostgreSQL Flexible Server"
-description: "Managed PostgreSQL database service with flexible scaling, high availability, and built-in security on Azure."
-provider: "Azure"
-category: "database"
+title: Azure PostgreSQL Flexible Server
+description: >-
+  Managed PostgreSQL database service with flexible scaling, high availability,
+  and built-in security on Azure.
+provider: Azure
+category: database
 domain: database
 subtypes:
   - PostgreSQL
@@ -15,14 +17,14 @@ audiences:
   - enterprise
   - oss
 tags:
-  - postgresql
   - database
-  - managed
-  - azure
-  - sql
+  - misc
+  - cloud
 pricingModel: freemium
 freeTierDetails:
-  summary: "750 hours/month of Burstable B1ms instance, 32 GB storage, and 32 GB backup storage."
+  summary: >-
+    750 hours/month of Burstable B1ms instance, 32 GB storage, and 32 GB backup
+    storage.
   limits:
     - 750 hours/month B1ms compute
     - 32 GB storage
@@ -43,13 +45,21 @@ useCases:
   - Learning PostgreSQL on Azure
 quickstartSteps:
   - Sign in to the Azure portal.
-  - Navigate to 'Create a resource' and select 'Azure Database for PostgreSQL Flexible Server'.
-  - Choose the 'Burstable B1ms' compute tier and configure storage within free limits.
+  - >-
+    Navigate to 'Create a resource' and select 'Azure Database for PostgreSQL
+    Flexible Server'.
+  - >-
+    Choose the 'Burstable B1ms' compute tier and configure storage within free
+    limits.
   - Select a supported region and complete required settings.
   - Review and create the server.
   - Connect to your PostgreSQL server using provided connection details.
-whenToUse: "Use when you need a managed PostgreSQL database with minimal setup and predictable free-tier limits for development or small workloads."
-whenNotToUse: "Avoid if you require advanced performance, large-scale production, or multi-region deployments beyond free-tier constraints."
+whenToUse: >-
+  Use when you need a managed PostgreSQL database with minimal setup and
+  predictable free-tier limits for development or small workloads.
+whenNotToUse: >-
+  Avoid if you require advanced performance, large-scale production, or
+  multi-region deployments beyond free-tier constraints.
 bestFor:
   - development
   - testing
@@ -62,14 +72,16 @@ avoidIf:
   - no credit card
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 7
 usefulnessScore: 8
-officialUrl: https://azure.microsoft.com/en-us/pricing/details/postgresql/flexible-server/
-docsUrl: https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/
+officialUrl: 'https://azure.microsoft.com/en-us/pricing/details/postgresql/flexible-server/'
+docsUrl: 'https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/'
 sourceUrls:
-  - https://azure.microsoft.com/en-us/pricing/details/postgresql/flexible-server/
-  - https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-free-tier
+  - >-
+    https://azure.microsoft.com/en-us/pricing/details/postgresql/flexible-server/
+  - >-
+    https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-free-tier
 featured: false
 ---
 Azure PostgreSQL Flexible Server offers a managed PostgreSQL experience with a generous free tier, ideal for development, testing, and small production workloads. The always-free tier provides enough resources for most entry-level use cases, but users should be aware of regional availability and the single-server-per-subscription limit. Exceeding the free tier's compute or storage limits will result in charges, so monitor usage closely if running persistent or growing workloads.

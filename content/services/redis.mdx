@@ -1,8 +1,10 @@
 ---
-title: "Redis"
-description: "Redis is an in-memory data store used for caching, real-time analytics, and fast key-value operations."
-provider: "Redis"
-category: "database"
+title: Redis
+description: >-
+  Redis is an in-memory data store used for caching, real-time analytics, and
+  fast key-value operations.
+provider: Redis
+category: database
 domain: database
 subtypes:
   - cache
@@ -17,14 +19,13 @@ audiences:
   - oss
   - agency
 tags:
-  - cache
+  - misc
   - database
-  - key-value
-  - nosql
-  - in-memory
 pricingModel: freemium
 freeTierDetails:
-  summary: "Redis Cloud offers a free tier with limited memory and throughput for development and small workloads."
+  summary: >-
+    Redis Cloud offers a free tier with limited memory and throughput for
+    development and small workloads.
   limits:
     - 30 MB RAM
     - Single database
@@ -51,8 +52,12 @@ quickstartSteps:
   - Copy the connection endpoint and credentials.
   - Install a Redis client library in your application.
   - Connect to your Redis instance and start storing data.
-whenToUse: "Use Redis when you need fast, in-memory data storage for caching, session management, or real-time analytics."
-whenNotToUse: "Avoid Redis for large, persistent datasets or when you require strong consistency and durability guarantees."
+whenToUse: >-
+  Use Redis when you need fast, in-memory data storage for caching, session
+  management, or real-time analytics.
+whenNotToUse: >-
+  Avoid Redis for large, persistent datasets or when you require strong
+  consistency and durability guarantees.
 bestFor:
   - caching
   - real-time analytics
@@ -63,14 +68,14 @@ avoidIf:
   - strict consistency needs
 difficulty: beginner
 productionReadiness: production-light
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 9
 usefulnessScore: 8
-officialUrl: https://redis.io/
-docsUrl: https://docs.redis.com/latest/rc/
+officialUrl: 'https://redis.io/'
+docsUrl: 'https://docs.redis.com/latest/rc/'
 sourceUrls:
-  - https://redis.com/redis-enterprise-cloud/overview/
-  - https://redis.com/redis-enterprise-cloud/pricing/
+  - 'https://redis.com/redis-enterprise-cloud/overview/'
+  - 'https://redis.com/redis-enterprise-cloud/pricing/'
 featured: false
 ---
 Redis provides a fast, in-memory key-value store ideal for caching, session management, and real-time analytics, with a free cloud tier for small workloads.

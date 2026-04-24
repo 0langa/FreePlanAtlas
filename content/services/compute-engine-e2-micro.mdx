@@ -1,8 +1,10 @@
 ---
-title: "Compute Engine e2-micro"
-description: "Google Cloud's always-free virtual machine instance for lightweight compute workloads and prototyping."
-provider: "Google Cloud"
-category: "compute"
+title: Compute Engine e2-micro
+description: >-
+  Google Cloud's always-free virtual machine instance for lightweight compute
+  workloads and prototyping.
+provider: Google Cloud
+category: compute
 domain: compute
 subtypes:
   - VM
@@ -14,14 +16,14 @@ audiences:
   - startup
   - oss
 tags:
-  - vm
-  - cloud
-  - free-tier
-  - google-cloud
   - compute
+  - cloud
+  - misc
 pricingModel: free
 freeTierDetails:
-  summary: "1 e2-micro VM instance per month in select regions, always free within usage limits."
+  summary: >-
+    1 e2-micro VM instance per month in select regions, always free within usage
+    limits.
   limits:
     - 1 e2-micro VM instance per month
     - 30 GB HDD or 10 GB SSD storage
@@ -45,11 +47,17 @@ useCases:
 quickstartSteps:
   - Sign up for a Google Cloud account and verify billing.
   - Navigate to Compute Engine in the Google Cloud Console.
-  - Create a new VM instance, selecting e2-micro machine type and eligible region.
+  - >-
+    Create a new VM instance, selecting e2-micro machine type and eligible
+    region.
   - Choose a supported Linux OS image.
-  - Configure firewall and storage settings as needed, then launch the instance.
-whenToUse: "Use when you need a free, low-resource VM for development, testing, or learning cloud basics in eligible US regions."
-whenNotToUse: "Avoid for production workloads, high-availability needs, or if you require more resources, Windows OS, or global regions."
+  - 'Configure firewall and storage settings as needed, then launch the instance.'
+whenToUse: >-
+  Use when you need a free, low-resource VM for development, testing, or
+  learning cloud basics in eligible US regions.
+whenNotToUse: >-
+  Avoid for production workloads, high-availability needs, or if you require
+  more resources, Windows OS, or global regions.
 bestFor:
   - learning
   - prototyping
@@ -60,13 +68,13 @@ avoidIf:
   - need global region support
 difficulty: beginner
 productionReadiness: prototype
-lastUpdated: 2024-06-09
+lastUpdated: 2024-06-09T00:00:00.000Z
 popularityScore: 8
 usefulnessScore: 7
-officialUrl: https://cloud.google.com/compute
-docsUrl: https://cloud.google.com/compute/docs/instances/tiers
+officialUrl: 'https://cloud.google.com/compute'
+docsUrl: 'https://cloud.google.com/compute/docs/instances/tiers'
 sourceUrls:
-  - https://cloud.google.com/free/docs/free-cloud-features#compute
+  - 'https://cloud.google.com/free/docs/free-cloud-features#compute'
 featured: false
 ---
 Compute Engine e2-micro provides a free, always-available VM instance suitable for learning, prototyping, and lightweight workloads in select US regions.
