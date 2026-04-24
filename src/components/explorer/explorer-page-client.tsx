@@ -45,7 +45,7 @@ export function ExplorerPageClient({
           Filter and compare free-tier options across providers, categories, and implementation patterns.
         </p>
         <p className="text-sm text-muted-foreground">
-          {providerRegistry.length} providers · {domainRegistry.length} domains · {categoryRegistry.length} categories
+          {providerRegistry.length} providers · {domainRegistry.length} categories
         </p>
       </header>
 

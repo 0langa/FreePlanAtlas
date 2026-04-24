@@ -19,11 +19,9 @@ export function ContentMeta({ entry }: { entry: AtlasEntry }) {
       </div>
       <div>
         <p className="text-xs uppercase tracking-wide text-muted-foreground">Category</p>
-        <p className="mt-1 text-sm font-medium">{entry.category}</p>
-      </div>
-      <div>
-        <p className="text-xs uppercase tracking-wide text-muted-foreground">Domain</p>
-        <p className="mt-1 text-sm font-medium">{DOMAIN_LABELS[entry.domain]}</p>
+        <p className="mt-1 text-sm font-medium">
+          {DOMAIN_LABELS[entry.domain]}
+        </p>
       </div>
       <div>
         <p className="text-xs uppercase tracking-wide text-muted-foreground">Pricing</p>

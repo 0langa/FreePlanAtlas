@@ -65,7 +65,7 @@ export function SidebarNav({
         ))}
       </NavSection>
 
-      <NavSection title="Domains">
+      <NavSection title="Categories">
         {domainRegistry.slice(0, 12).map((item) => (
           <Link
             key={item.value}

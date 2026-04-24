@@ -31,7 +31,7 @@ export default async function HomePage() {
             Choose free tiers with real constraints, not wishful thinking.
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg">
-            Compare services and tools by domain, quota shape, billing risk, and production readiness. Start with the lowest-risk
+            Compare services and tools by category, quota shape, billing risk, and production readiness. Start with the lowest-risk
             options and build upward.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -45,7 +45,7 @@ export default async function HomePage() {
               href="/explorer?domain=hosting"
               className="rounded-md border-2 border-foreground/40 bg-background/70 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent dark:border-foreground/60 dark:bg-foreground/5"
             >
-              Browse by Domain
+              Browse by Category
             </Link>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default async function HomePage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Top Domains</CardTitle>
+            <CardTitle>Top Categories</CardTitle>
             <CardDescription>Most common free-tier areas in the catalog.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-2 text-sm text-muted-foreground">

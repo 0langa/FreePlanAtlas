@@ -41,9 +41,9 @@ Additional per-type fields:
 
 - None (services/tools/resources only)
 
-## Domain and Audience Rules
+## Category (Domain) and Audience Rules
 
-- `domain` is a controlled vocabulary. Pick the primary decision domain (e.g., `hosting`, `compute`, `database`). If omitted, it is inferred from `category` + `tags`.
+- `domain` is the internal category key and also drives `category`. Pick the primary decision domain (e.g., `hosting`, `compute`, `database`). If omitted, it is inferred from `category` + `tags`.
 - `subtypes` should be short, consistent labels used for filtering (e.g., `serverless`, `edge-functions`, `object-storage`). If omitted, it falls back to `category`.
 - `audiences` should reflect who benefits most (e.g., `indie`, `startup`, `team`). If omitted, defaults to `indie` + `startup`.
 

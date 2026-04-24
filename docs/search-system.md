@@ -19,7 +19,7 @@ The script:
 - `tags`
 - `description`
 - `content`
-- `domain`
+- `category` (stored as `domain` in the search index)
 - `bestFor`
 
 ## Runtime

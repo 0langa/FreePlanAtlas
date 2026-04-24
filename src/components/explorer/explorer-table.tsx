@@ -104,7 +104,7 @@ const columns: ColumnDef<AtlasEntry>[] = [
   },
   {
     accessorKey: "domain",
-    header: "Domain",
+    header: "Category",
     cell: ({ row }) => DOMAIN_LABELS[row.original.domain],
   },
   {
@@ -407,10 +407,10 @@ export function ExplorerTable({
           </Select>
           <Select value={domain} onValueChange={(value) => setDomain(value ?? "all")}> 
             <SelectTrigger>
-              <SelectValue placeholder="All domains" />
+              <SelectValue placeholder="All categories" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All domains</SelectItem>
+              <SelectItem value="all">All categories</SelectItem>
               {domainOptions.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
                   {DOMAIN_LABELS[item.value as keyof typeof DOMAIN_LABELS]}

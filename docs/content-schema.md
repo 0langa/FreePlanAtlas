@@ -9,8 +9,8 @@ FreeTierAtlas v2 uses a decision-first frontmatter schema that captures free-tie
   title: string;
   description: string;
   provider: string;
-  category: string; // legacy display label
-  domain: "hosting" | "compute" | "database" | "storage" | "auth" | "messaging" | "observability" | "ai" | "devops" | "security" | "networking" | "productivity" | "learning" | "design" | "analytics" | "integration" | "operations" | "other";
+  category: string; // category is aligned to domain values
+  domain: "hosting" | "compute" | "database" | "storage" | "auth" | "messaging" | "observability" | "ai" | "devops" | "security" | "networking" | "productivity" | "learning" | "design" | "analytics" | "integration" | "operations" | "other"; // internal category key
   subtypes: string[]; // normalized product/service subtypes
   audiences: ("student" | "indie" | "startup" | "team" | "enterprise" | "oss" | "agency")[];
   tags: string[];
@@ -68,5 +68,5 @@ Per-type schemas extend the shared fields as needed. Currently only services/too
 
 ## Notes for Migration
 
-- `domain`, `subtypes`, `audiences`, `bestFor`, `avoidIf`, `productionReadiness`, and free-tier risk fields are inferred if missing.
-- Legacy `category` remains for display, but `domain` is the canonical filter field in v2.
+- `domain` (category key), `subtypes`, `audiences`, `bestFor`, `avoidIf`, `productionReadiness`, and free-tier risk fields are inferred if missing.
+- `category` is now aligned to `domain` values and used for display.
