@@ -1,0 +1,73 @@
+---
+title: "Cloudflare Pages"
+description: "Cloudflare Pages offers fast, secure, and scalable static site hosting with built-in CI/CD and global CDN."
+provider: "Cloudflare"
+category: "Static Hosting"
+domain: hosting
+subtypes:
+  - static sites
+  - JAMstack
+  - CI/CD
+  - CDN
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - static
+  - jamstack
+  - cdn
+  - git
+  - serverless
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes unlimited sites, automatic deployments, and global CDN for static assets."
+  limits:
+    - 500 builds/month
+    - Unlimited sites
+    - 100 custom domains
+    - 1 concurrent build
+  caveats:
+    - Build minutes and concurrent builds are limited on free tier.
+    - No server-side rendering or dynamic backends on free plan.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Personal portfolios
+  - Documentation sites
+  - Marketing pages
+  - Open source project sites
+quickstartSteps:
+  - Sign up or log in to Cloudflare.
+  - Connect your GitHub or GitLab repository.
+  - Configure build settings and output directory.
+  - Deploy your site and assign a custom domain if needed.
+whenToUse: "Use when you need to deploy static sites or JAMstack apps with fast global delivery and simple Git-based workflows."
+whenNotToUse: "Avoid if you require server-side rendering, backend APIs, or dynamic server logic as part of your site."
+bestFor:
+  - static sites
+  - documentation
+  - landing pages
+  - open source projects
+avoidIf:
+  - dynamic web apps
+  - server-side rendering
+  - backend APIs
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://developers.cloudflare.com/pages/
+docsUrl: https://developers.cloudflare.com/pages/
+sourceUrls:
+  - https://developers.cloudflare.com/pages/platform/limits/
+  - https://www.cloudflare.com/products/pages/
+featured: false
+---
+Cloudflare Pages is a static site hosting platform with built-in CI/CD, global CDN, and seamless integration with Git providers for fast, secure deployments.

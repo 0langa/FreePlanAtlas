@@ -1,0 +1,72 @@
+---
+title: "Cloudflare D1"
+description: "Cloudflare D1 is a serverless, distributed SQLite database for building fast, globally available applications."
+provider: "Cloudflare"
+category: "Serverless Database"
+domain: database
+subtypes:
+  - serverless
+  - relational
+  - sqlite-compatible
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - sqlite
+  - serverless
+  - edge
+  - cloudflare
+  - database
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 GB storage, 100,000 reads, and 1,000 writes per day."
+  limits:
+    - 1 GB storage
+    - 100,000 reads/day
+    - 1,000 writes/day
+    - 3 databases per account
+  caveats:
+    - Writes are rate-limited and may be queued during high usage.
+    - No support for large-scale production workloads on free tier.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototyping serverless apps
+  - Building edge-deployed APIs
+  - Lightweight data storage for web projects
+quickstartSteps:
+  - Sign up or log in to your Cloudflare account.
+  - Navigate to the D1 dashboard and create a new database.
+  - Install the Wrangler CLI for local development.
+  - Connect your application to D1 using the provided connection string.
+  - Deploy your Worker with D1 integration.
+whenToUse: "Use Cloudflare D1 for lightweight, globally distributed databases in serverless or edge applications with moderate data needs."
+whenNotToUse: "Avoid D1 for heavy transactional workloads, large-scale production databases, or when advanced SQL features are required."
+bestFor:
+  - prototyping
+  - edge apps
+  - personal projects
+  - MVPs
+avoidIf:
+  - high write throughput
+  - complex SQL requirements
+  - large datasets
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-13
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://developers.cloudflare.com/d1/
+docsUrl: https://developers.cloudflare.com/d1/
+sourceUrls:
+  - https://developers.cloudflare.com/d1/platform/limits/
+  - https://developers.cloudflare.com/d1/get-started/
+featured: false
+---
+Cloudflare D1 offers a simple, serverless SQLite-compatible database with generous free limits, ideal for edge-first and small-scale web applications.

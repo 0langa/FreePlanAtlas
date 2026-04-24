@@ -1,0 +1,70 @@
+---
+title: "Cerbos Hub"
+description: "Cerbos Hub is a managed authorization platform for centralizing and managing access policies at scale."
+provider: "Cerbos"
+category: "Authorization"
+domain: security
+subtypes:
+  - policy management
+  - authorization-as-a-service
+  - RBAC
+  - ABAC
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - authorization
+  - policy
+  - rbac
+  - abac
+  - access-control
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 5,000 policy checks per month and 2 environments."
+  limits:
+    - 5,000 policy checks/month
+    - 2 environments
+    - Community support
+  caveats:
+    - No SLA on free tier
+    - Limited to non-production use
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Centralized authorization for microservices
+  - Implementing RBAC/ABAC in SaaS apps
+  - Managing policy changes across environments
+quickstartSteps:
+  - Sign up for a Cerbos Hub account.
+  - Create a new project and define your environments.
+  - Write or import your authorization policies.
+  - Integrate the Cerbos SDK or API with your application.
+  - Test policy checks and monitor usage in the dashboard.
+whenToUse: "Use Cerbos Hub when you need centralized, scalable authorization management for multiple services or environments."
+whenNotToUse: "Avoid if you require on-premise deployment or need unlimited policy checks without upgrading."
+bestFor:
+  - teams managing multiple services
+  - SaaS platforms
+  - startups needing scalable auth
+avoidIf:
+  - require on-premise
+  - need unlimited free usage
+  - have strict data residency needs
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.cerbos.dev/product-cerbos-hub
+docsUrl: https://docs.cerbos.dev/cerbos-hub/
+sourceUrls:
+  - https://www.cerbos.dev/product-cerbos-hub
+  - https://cerbos.dev/docs/cerbos-hub/
+featured: false
+---
+Cerbos Hub provides managed, centralized authorization policy management with a generous free tier for small-scale or evaluation use.

@@ -1,0 +1,77 @@
+---
+title: "DynamoDB"
+description: "AWS DynamoDB is a fully managed NoSQL database service for fast and flexible performance at scale."
+provider: "AWS"
+category: "Nosql Database"
+domain: database
+subtypes:
+  - NoSQL
+  - Key-Value
+  - Document
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+  - student
+  - oss
+tags:
+  - nosql
+  - serverless
+  - database
+  - aws
+  - key-value
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 25 GB storage and up to 200 million requests per month."
+  limits:
+    - 25 GB storage
+    - 25 provisioned Write Capacity Units
+    - 25 provisioned Read Capacity Units
+    - 200 million requests/month
+  caveats:
+    - Free tier valid for 12 months after AWS account creation
+    - On-demand capacity mode not included in free tier
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: time-limited
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages are billed at standard rates if limits are exceeded
+  trialDays: 365
+useCases:
+  - Real-time analytics
+  - Session management
+  - IoT data storage
+  - Mobile app backends
+  - Gaming leaderboards
+quickstartSteps:
+  - Sign up for an AWS account and log in to the AWS Management Console.
+  - Navigate to DynamoDB and click 'Create table'.
+  - Enter a table name and primary key, then choose default settings.
+  - Review and create the table.
+  - Use the AWS SDK or Console to add and query items.
+whenToUse: "Use DynamoDB for scalable, low-latency NoSQL workloads with unpredictable traffic or when you need serverless database management."
+whenNotToUse: "Avoid if you need complex relational queries, multi-table joins, or strong ACID transactions across tables."
+bestFor:
+  - Scalable NoSQL workloads
+  - Event-driven architectures
+  - Serverless applications
+avoidIf:
+  - You require SQL joins
+  - You need multi-table transactions
+  - You have strict relational data needs
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://aws.amazon.com/dynamodb/
+docsUrl: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html
+sourceUrls:
+  - https://aws.amazon.com/dynamodb/pricing/
+  - https://aws.amazon.com/free/
+featured: false
+---
+DynamoDB is AWS's fully managed NoSQL database service, offering seamless scalability, high performance, and serverless operation for modern application workloads.

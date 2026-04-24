@@ -1,0 +1,68 @@
+---
+title: "Phase Two"
+description: "Phase Two provides hosted, extensible identity and authentication services for modern SaaS applications."
+provider: "Phase Two"
+category: "Authentication"
+domain: auth
+subtypes:
+  - OAuth
+  - OIDC
+  - SAML
+  - SSO
+audiences:
+  - startup
+  - team
+  - indie
+  - oss
+tags:
+  - auth
+  - identity
+  - sso
+  - oauth
+  - saml
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes core authentication features for up to 100 monthly active users."
+  limits:
+    - 100 monthly active users
+    - Core authentication features
+    - Basic SSO integrations
+  caveats:
+    - Advanced features require paid plans
+    - Support is community-based on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add authentication to SaaS apps
+  - Enable SSO for teams
+  - Integrate OAuth or SAML providers
+quickstartSteps:
+  - Sign up for a Phase Two account.
+  - Create a new application in the dashboard.
+  - Configure redirect URIs and authentication settings.
+  - Integrate the SDK or use provided endpoints in your app.
+  - Test authentication flow with a test user.
+whenToUse: "Use Phase Two to quickly add authentication and SSO to your SaaS app without building identity infrastructure from scratch."
+whenNotToUse: "Avoid if you need unlimited users on the free tier or require advanced enterprise features without upgrading."
+bestFor:
+  - SaaS startups
+  - small teams
+  - indie developers
+avoidIf:
+  - need unlimited free users
+  - require on-premise deployment
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://phasetwo.io
+docsUrl: https://docs.phasetwo.io
+sourceUrls:
+  - https://phasetwo.io/pricing
+featured: false
+---
+Phase Two offers a managed identity platform with free authentication and SSO for up to 100 users, ideal for SaaS projects starting out.

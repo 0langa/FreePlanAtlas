@@ -1,0 +1,70 @@
+---
+title: "Ory"
+description: "Ory provides open-source identity and access management services for authentication, authorization, and user management."
+provider: "Ory"
+category: "Authentication"
+domain: auth
+subtypes:
+  - OAuth
+  - SSO
+  - User Management
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - identity
+  - authentication
+  - authorization
+  - iam
+  - open-source
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes basic authentication, user management, and up to 1,000 monthly active users."
+  limits:
+    - 1,000 monthly active users
+    - Basic authentication and authorization
+    - Single project
+    - Community support
+  caveats:
+    - No SLA or enterprise support on free tier
+    - Advanced features require paid plan
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add user authentication to web or mobile apps
+  - Implement OAuth2 or SSO
+  - Manage user sessions and permissions
+quickstartSteps:
+  - Sign up for an Ory Cloud account.
+  - Create a new project in the Ory dashboard.
+  - Configure authentication flows and user settings.
+  - Integrate Ory SDK or APIs into your application.
+  - Test user registration and login.
+whenToUse: "Use Ory when you need secure, scalable authentication and user management for web or mobile applications with minimal setup."
+whenNotToUse: "Avoid Ory if you require on-premise enterprise features, advanced custom workflows, or need to support more than 1,000 users for free."
+bestFor:
+  - developers
+  - startups
+  - open-source projects
+avoidIf:
+  - need on-premise only
+  - require advanced enterprise features
+  - exceed free tier limits
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://ory.sh/
+docsUrl: https://www.ory.sh/docs/
+sourceUrls:
+  - https://www.ory.sh/pricing/
+  - https://www.ory.sh/docs/
+featured: false
+---
+Ory offers a robust, open-source authentication and authorization platform with a generous free tier, ideal for projects needing secure user management and modern identity protocols.

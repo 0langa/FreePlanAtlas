@@ -1,0 +1,68 @@
+---
+title: "GitGuardian"
+description: "GitGuardian scans public and private repositories for secrets and sensitive data leaks to help prevent security breaches."
+provider: "GitGuardian"
+category: "Security Scanning"
+domain: security
+subtypes:
+  - secret scanning
+  - code security
+  - compliance
+audiences:
+  - team
+  - enterprise
+  - oss
+  - startup
+tags:
+  - secrets
+  - git
+  - security
+  - compliance
+  - monitoring
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free for public repositories and limited private repo scanning."
+  limits:
+    - Unlimited public repo scanning
+    - 25 private repo scans/month for individuals
+    - Limited alerts for private repos
+  caveats:
+    - Private repo scanning is limited on free tier
+    - Team features require paid plan
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Detecting leaked secrets in codebases
+  - Monitoring public repositories for sensitive data
+  - Automating compliance checks
+quickstartSteps:
+  - Sign up for a GitGuardian account.
+  - Connect your GitHub, GitLab, or Bitbucket repositories.
+  - Configure scanning settings and select repositories to monitor.
+  - Review detected incidents and alerts in the dashboard.
+  - Set up notifications or integrations if needed.
+whenToUse: "Use when you need to monitor repositories for accidental secret leaks or enforce security compliance in your codebase."
+whenNotToUse: "Avoid if you require unlimited private repo scanning for teams or need on-premises deployment."
+bestFor:
+  - security teams
+  - devops
+  - open source maintainers
+avoidIf:
+  - need unlimited private repo scans
+  - require self-hosting
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://www.gitguardian.com
+docsUrl: https://docs.gitguardian.com/
+sourceUrls:
+  - https://www.gitguardian.com/pricing
+  - https://docs.gitguardian.com/
+featured: false
+---
+GitGuardian helps developers and security teams detect and remediate secret leaks in code repositories, supporting both public and private projects with automated scanning.

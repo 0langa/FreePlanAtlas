@@ -1,0 +1,70 @@
+---
+title: "OpenRouter"
+description: "OpenRouter provides unified API access to multiple AI models, including free and pay-as-you-go options for popular LLMs."
+provider: "OpenRouter"
+category: "AI Gateway"
+domain: ai
+subtypes:
+  - API Gateway
+  - Model Aggregator
+  - LLM Proxy
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+  - team
+tags:
+  - llm
+  - api
+  - ai
+  - gateway
+  - openai-compatible
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free access to select AI models with usage limits; paid options for premium models."
+  limits:
+    - Free tier covers select models only
+    - Daily and monthly request limits per model
+    - Some models require payment
+  caveats:
+    - Model availability and limits may change
+    - Premium models not included in free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Experimenting with different LLMs via a single API
+  - Building prototypes using free AI models
+  - Comparing model outputs for research
+quickstartSteps:
+  - Sign up for a free OpenRouter account.
+  - Obtain your API key from the dashboard.
+  - Review the list of free models and their limits.
+  - Integrate the OpenRouter API into your application using the provided endpoint.
+  - Monitor your usage in the dashboard to stay within free tier limits.
+whenToUse: "Use OpenRouter when you want to access multiple AI models through a single API with a free tier for experimentation or prototyping."
+whenNotToUse: "Avoid if you need guaranteed access to premium models or require strict SLAs for production workloads."
+bestFor:
+  - prototyping
+  - model evaluation
+  - student projects
+avoidIf:
+  - need enterprise SLAs
+  - require specific premium models
+  - need high-volume production use
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-13
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://openrouter.ai/models?q=free
+docsUrl: https://openrouter.ai/docs
+sourceUrls:
+  - https://openrouter.ai/models?q=free
+  - https://openrouter.ai/docs
+featured: false
+---
+OpenRouter offers a unified API for accessing multiple AI models, making it easy to experiment and prototype with free-tier LLMs.

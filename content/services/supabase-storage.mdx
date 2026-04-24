@@ -1,0 +1,75 @@
+---
+title: "Supabase Storage"
+description: "Supabase Storage provides scalable object storage with access controls and integration with Supabase projects."
+provider: "Supabase"
+category: "Object Storage"
+domain: storage
+subtypes:
+  - object storage
+  - file storage
+  - media storage
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - object-storage
+  - file-upload
+  - media
+  - supabase
+  - cloud-storage
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 GB storage and 2 GB bandwidth per project per month."
+  limits:
+    - 1 GB storage
+    - 2 GB bandwidth/month
+    - Unlimited files
+    - Up to 2 projects
+  caveats:
+    - Overages billed automatically
+    - No custom domain support on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Usage above free limits incurs charges automatically
+useCases:
+  - User-generated content storage
+  - Media hosting for web/mobile apps
+  - Document management
+  - Static asset storage
+quickstartSteps:
+  - Sign up for a Supabase account and create a new project.
+  - Navigate to the 'Storage' section in your project dashboard.
+  - Create a new storage bucket and configure access policies.
+  - Use the Supabase client libraries to upload and retrieve files.
+  - Monitor usage and adjust permissions as needed.
+whenToUse: "Use when you need simple, integrated object storage for files in Supabase-backed apps with managed access controls."
+whenNotToUse: "Avoid if you require large-scale storage, advanced CDN features, or strict hard caps to prevent overages."
+bestFor:
+  - Supabase projects
+  - rapid prototyping
+  - student apps
+  - MVPs
+avoidIf:
+  - enterprise-scale storage
+  - strict cost controls
+  - advanced CDN needs
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-13
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://supabase.com/docs/reference/storage
+docsUrl: https://supabase.com/docs/reference/storage
+sourceUrls:
+  - https://supabase.com/pricing
+  - https://supabase.com/docs/guides/storage
+featured: false
+---
+Supabase Storage offers integrated, developer-friendly object storage for files and media, with free tier limits suitable for small projects and prototyping.

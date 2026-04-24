@@ -1,0 +1,76 @@
+---
+title: "Azure App Service"
+description: "Azure App Service enables fast deployment and scalable hosting for web apps and APIs with integrated DevOps and security features."
+provider: "Azure"
+category: "Web Hosting"
+domain: hosting
+subtypes:
+  - web-app
+  - api
+  - container
+  - static-site
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - web
+  - hosting
+  - paas
+  - scalable
+  - deployment
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 GB storage and 60 minutes compute per day for web, mobile, or API apps."
+  limits:
+    - 1 GB storage
+    - 60 minutes compute/day
+    - Shared infrastructure
+    - No custom domain SSL
+  caveats:
+    - Limited performance and features
+    - No SLA on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Deploying personal or demo web apps
+  - Hosting APIs for prototypes
+  - Learning Azure PaaS
+  - Testing CI/CD pipelines
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new App Service resource.
+  - Select the Free (F1) tier during setup.
+  - Deploy your web app using GitHub, local Git, or ZIP upload.
+  - Browse to the provided URL to verify deployment.
+whenToUse: "Use when you need to quickly deploy and test web apps or APIs with minimal configuration and no upfront cost."
+whenNotToUse: "Avoid for production workloads needing high availability, custom domains with SSL, or advanced scaling and networking features."
+bestFor:
+  - prototyping
+  - learning
+  - personal projects
+  - demos
+avoidIf:
+  - production apps
+  - high-traffic sites
+  - custom SSL needs
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-13
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/services/app-service/
+docsUrl: https://learn.microsoft.com/azure/app-service/
+sourceUrls:
+  - https://azure.microsoft.com/pricing/details/app-service/windows/
+  - https://learn.microsoft.com/azure/app-service/overview
+featured: false
+---
+Azure App Service provides a managed platform for deploying web apps and APIs with integrated scaling, security, and DevOps support. The free tier is ideal for learning, prototyping, and low-traffic demos, but lacks production-grade features such as custom domain SSL and guaranteed uptime.

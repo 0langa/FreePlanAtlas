@@ -1,0 +1,70 @@
+---
+title: "CodeBuild"
+description: "AWS CodeBuild is a fully managed continuous integration service that compiles source code, runs tests, and produces software packages."
+provider: "AWS"
+category: "CI/CD"
+domain: devops
+subtypes:
+  - continuous integration
+  - build automation
+  - testing
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - ci
+  - build
+  - automation
+  - aws
+  - testing
+pricingModel: freemium
+freeTierDetails:
+  summary: "100 build minutes per month on the general1.small instance type."
+  limits:
+    - 100 build minutes/month
+    - general1.small instance only
+  caveats:
+    - Charges apply after free minutes are used
+    - Other instance types not included
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Usage beyond free tier incurs charges
+useCases:
+  - Automated code builds
+  - Continuous integration pipelines
+  - Running unit and integration tests
+quickstartSteps:
+  - Sign in to the AWS Management Console.
+  - Navigate to CodeBuild and create a new build project.
+  - Connect your source repository (e.g., GitHub, CodeCommit).
+  - Configure build environment and specify buildspec.yml.
+  - Start a build and monitor the results.
+whenToUse: "Use CodeBuild when you need managed CI/CD builds for AWS-integrated projects or want to automate testing and packaging."
+whenNotToUse: "Avoid if you require unlimited free builds, need advanced build matrix features, or want to avoid AWS account setup and billing risk."
+bestFor:
+  - AWS users
+  - teams automating builds
+  - projects needing scalable CI
+avoidIf:
+  - you need unlimited free builds
+  - you want local build runners
+  - you avoid AWS billing
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://aws.amazon.com/codebuild/
+docsUrl: https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html
+sourceUrls:
+  - https://aws.amazon.com/codebuild/pricing/
+  - https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html
+featured: false
+---
+AWS CodeBuild offers a managed CI/CD service with a free tier suitable for small workloads, integrating seamlessly with other AWS developer tools.

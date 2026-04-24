@@ -1,0 +1,68 @@
+---
+title: "Datree"
+description: "Datree provides policy enforcement and best practices validation for Kubernetes configurations."
+provider: "Datree"
+category: "Kubernetes Security"
+domain: security
+subtypes:
+  - policy enforcement
+  - Kubernetes
+  - configuration validation
+audiences:
+  - team
+  - startup
+  - enterprise
+  - oss
+tags:
+  - kubernetes
+  - security
+  - policy
+  - validation
+  - devops
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows policy checks for up to 5 repositories with limited rule sets."
+  limits:
+    - 5 repositories
+    - Limited built-in rules
+    - Community support
+  caveats:
+    - Advanced rules and integrations require paid plans
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Preventing misconfigurations in Kubernetes manifests
+  - Enforcing security policies in CI/CD pipelines
+  - Standardizing Kubernetes best practices
+quickstartSteps:
+  - Sign up for a free Datree account.
+  - Install the Datree CLI on your local machine or CI environment.
+  - Connect your GitHub or GitLab repositories.
+  - Run 'datree test' on your Kubernetes manifests to validate them.
+  - Review policy check results and fix any reported issues.
+whenToUse: "Use Datree to automate Kubernetes manifest validation and enforce security or compliance policies in your development workflow."
+whenNotToUse: "Avoid if you need unlimited repositories, advanced custom rules, or integrations beyond the free tier's scope."
+bestFor:
+  - teams adopting Kubernetes
+  - devops engineers
+  - security-conscious organizations
+avoidIf:
+  - you need unlimited policy checks
+  - require advanced integrations
+  - do not use Kubernetes
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-12
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.datree.io/
+docsUrl: https://hub.datree.io/
+sourceUrls:
+  - https://www.datree.io/pricing
+  - https://hub.datree.io/
+featured: false
+---
+Datree helps teams prevent Kubernetes misconfigurations by enforcing policies and best practices during development and CI/CD workflows.

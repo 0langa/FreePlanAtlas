@@ -1,0 +1,75 @@
+---
+title: "Azure AI Custom Vision"
+description: "Train, deploy, and improve custom image classification and object detection models with minimal code using Azure's managed service."
+provider: "Azure"
+category: "AI Vision"
+domain: ai
+subtypes:
+  - image-classification
+  - object-detection
+  - model-training
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - computer-vision
+  - image-classification
+  - object-detection
+  - machine-learning
+  - cloud-ai
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes limited training hours and prediction transactions per month."
+  limits:
+    - 2 projects per resource
+    - 5,000 training images per project
+    - 1 hour training per month
+    - 10,000 prediction transactions per month
+  caveats:
+    - Limited to S0 (free) resource tier
+    - No SLA on free tier
+    - Limited scalability and support
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Classifying product images
+  - Detecting objects in photos
+  - Building custom visual search
+  - Prototyping AI-powered apps
+quickstartSteps:
+  - Sign in to the Azure Portal and create a Custom Vision resource.
+  - Upload and label your training images in the Custom Vision portal.
+  - Train your model using the provided interface.
+  - Test your model with new images to evaluate performance.
+  - Export or deploy the model as needed for your application.
+whenToUse: "Use when you need to quickly build and deploy custom image classification or object detection models without deep ML expertise."
+whenNotToUse: "Avoid if you require large-scale training, advanced customization, or on-premises deployment beyond the free tier limits."
+bestFor:
+  - rapid prototyping
+  - small-scale production
+  - educational projects
+avoidIf:
+  - need high-volume training
+  - require advanced ML customization
+  - must run fully offline
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/cognitive-services/custom-vision-service/
+docsUrl: https://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/cognitive-services/custom-vision-service/
+  - https://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/overview
+featured: false
+---
+Azure AI Custom Vision enables users to train and deploy custom image classification and object detection models with minimal setup, ideal for rapid prototyping and small-scale applications.

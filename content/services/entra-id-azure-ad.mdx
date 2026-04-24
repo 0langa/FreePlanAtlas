@@ -1,0 +1,70 @@
+---
+title: "Entra ID / Azure AD"
+description: "Microsoft Entra ID (formerly Azure AD) provides cloud-based identity and access management for apps, users, and devices."
+provider: "Microsoft"
+category: "Identity Management"
+domain: auth
+subtypes:
+  - SSO
+  - MFA
+  - Directory Service
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - identity
+  - access-control
+  - sso
+  - mfa
+  - directory
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes basic directory services, SSO for up to 10 apps, and limited user management features."
+  limits:
+    - 500,000 directory objects
+    - SSO for 10 apps per user
+    - Basic security and usage reports
+  caveats:
+    - No conditional access or advanced security features
+    - Premium features require paid plans
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Enable SSO for SaaS applications
+  - Manage employee access to cloud resources
+  - Integrate MFA for user sign-ins
+quickstartSteps:
+  - Sign up for an Azure account and access the Azure portal.
+  - Navigate to 'Microsoft Entra ID' and create a new directory if needed.
+  - Add users or groups to your directory.
+  - Register an application or configure SSO for an existing app.
+  - Assign users to applications and test sign-in.
+whenToUse: "Use Entra ID when you need centralized identity management, SSO, or basic directory services for your organization or apps."
+whenNotToUse: "Avoid if you require advanced security policies, conditional access, or need to manage external identities at scale without premium features."
+bestFor:
+  - centralized authentication
+  - enterprise SSO
+  - basic directory services
+avoidIf:
+  - need advanced security
+  - require B2C/B2B at scale
+  - must avoid Microsoft ecosystem
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/services/active-directory/
+docsUrl: https://learn.microsoft.com/azure/active-directory/
+sourceUrls:
+  - https://azure.microsoft.com/pricing/details/active-directory/
+  - https://learn.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis
+featured: false
+---
+Microsoft Entra ID (formerly Azure AD) offers free basic identity and access management, including SSO and user directory, with paid upgrades for advanced features.

@@ -1,0 +1,70 @@
+---
+title: "ipbase.com"
+description: "ipbase.com provides a fast API for IP geolocation, ASN, and timezone lookups."
+provider: "ipbase.com"
+category: "Apis"
+domain: integration
+subtypes:
+  - IP Geolocation
+  - ASN Lookup
+  - Timezone API
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+tags:
+  - ip-geolocation
+  - api
+  - asn
+  - timezone
+  - location
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 1,500 API requests per month."
+  limits:
+    - 1,500 requests/month
+    - Standard endpoints only
+    - No SLA
+  caveats:
+    - No support for premium endpoints
+    - Rate limiting applies
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Detect user location for personalization
+  - Restrict or customize content by region
+  - Analyze traffic by country or ASN
+  - Timezone-aware features
+quickstartSteps:
+  - Sign up for a free ipbase.com account.
+  - Log in and generate your API key from the dashboard.
+  - Read the API documentation to understand available endpoints.
+  - Make your first API request using your key (e.g., to /v2/info).
+  - Integrate the API into your application as needed.
+whenToUse: "Use ipbase.com when you need reliable IP geolocation or ASN data for web or mobile apps with moderate request volumes."
+whenNotToUse: "Avoid if you need high request volumes, premium data, or guaranteed uptime, as the free tier has strict limits and no SLA."
+bestFor:
+  - location-based personalization
+  - basic analytics
+  - region restrictions
+avoidIf:
+  - high-traffic production
+  - premium data needs
+  - strict SLA requirements
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-11
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://ipbase.com
+docsUrl: https://ipbase.com/docs
+sourceUrls:
+  - https://ipbase.com/pricing
+  - https://ipbase.com/docs
+featured: false
+---
+ipbase.com offers a simple, fast API for IP geolocation, ASN, and timezone lookups with a generous free tier for low-traffic projects.

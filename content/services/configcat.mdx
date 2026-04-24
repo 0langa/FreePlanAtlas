@@ -1,0 +1,71 @@
+---
+title: "ConfigCat"
+description: "ConfigCat is a feature flag and remote configuration service for managing feature rollouts and toggles."
+provider: "ConfigCat"
+category: "Feature Management"
+domain: devops
+subtypes:
+  - feature flags
+  - remote config
+  - A/B testing
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - feature-flags
+  - remote-config
+  - rollout
+  - ab-testing
+  - devops
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 10,000 MAUs, 2 environments, and 2 team members."
+  limits:
+    - 10,000 monthly active users
+    - 2 environments
+    - 2 team members
+    - Unlimited feature flags
+  caveats:
+    - No SLA or premium support
+    - Limited to basic integrations
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Gradual feature rollouts
+  - A/B testing
+  - Remote configuration
+  - Kill switch implementation
+quickstartSteps:
+  - Sign up for a free ConfigCat account.
+  - Create a new project and environment.
+  - Define your feature flags in the dashboard.
+  - Integrate the ConfigCat SDK into your application.
+  - Fetch and evaluate feature flags in your code.
+whenToUse: "Use ConfigCat when you need to manage feature flags or remotely control app features without redeploying."
+whenNotToUse: "Avoid if you require advanced enterprise integrations, on-premise hosting, or need more than 10,000 MAUs for free."
+bestFor:
+  - feature flag management
+  - remote configuration
+  - small teams
+  - startups
+avoidIf:
+  - need on-premise
+  - require advanced integrations
+  - large enterprise scale
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://configcat.com
+docsUrl: https://configcat.com/docs/
+sourceUrls:
+  - https://configcat.com/pricing/
+featured: false
+---
+ConfigCat provides a simple, scalable way to manage feature flags and remote configuration, enabling safe and controlled feature rollouts for modern applications.

@@ -1,0 +1,69 @@
+---
+title: "Webhook.site"
+description: "Webhook.site lets you instantly receive, inspect, and debug HTTP requests and webhooks online."
+provider: "Webhook.site"
+category: "Webhooks Testing"
+domain: devops
+subtypes:
+  - webhook-inspection
+  - http-debugging
+  - request-capture
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - webhooks
+  - debugging
+  - testing
+  - http
+  - devtools
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier provides temporary, anonymous endpoints for capturing and inspecting HTTP requests."
+  limits:
+    - Temporary endpoints auto-expire after a period
+    - Limited retention of request history
+    - No authentication or custom domains
+  caveats:
+    - Data is public and not intended for sensitive payloads
+    - No guaranteed data persistence
+  resetPeriod: none
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Debugging webhook integrations
+  - Testing HTTP requests from third-party services
+  - Inspecting payloads during development
+quickstartSteps:
+  - Go to https://webhook.site.
+  - Copy your unique generated URL.
+  - Configure your service or app to send HTTP requests to this URL.
+  - View incoming requests and inspect headers, body, and metadata in real time.
+whenToUse: "Use when you need to quickly capture and inspect HTTP requests or webhooks during development or integration testing."
+whenNotToUse: "Avoid for production monitoring, sensitive data, or when persistent, authenticated endpoints are required."
+bestFor:
+  - debugging
+  - integration testing
+  - learning webhooks
+avoidIf:
+  - handling sensitive data
+  - requiring persistent endpoints
+  - production monitoring
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://webhook.site
+docsUrl: https://docs.webhook.site
+sourceUrls:
+  - https://webhook.site
+  - https://webhook.site/docs
+featured: false
+---
+Webhook.site provides instant, disposable endpoints for capturing and inspecting HTTP requests, making it ideal for debugging and testing webhook integrations during development.

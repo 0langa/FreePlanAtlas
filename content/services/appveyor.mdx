@@ -1,0 +1,71 @@
+---
+title: "Appveyor"
+description: "Appveyor provides cloud-based continuous integration and deployment for Windows, Linux, and macOS projects."
+provider: "Appveyor"
+category: "CI/CD"
+domain: devops
+subtypes:
+  - continuous integration
+  - continuous deployment
+  - build automation
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+  - team
+tags:
+  - ci
+  - cd
+  - windows
+  - linux
+  - macos
+  - build
+  - deployment
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier for public repositories and limited private projects."
+  limits:
+    - 1 concurrent job
+    - 100 build minutes/month for private projects
+    - Unlimited for public OSS projects
+  caveats:
+    - Private project builds are limited
+    - No parallel jobs on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Automated testing for open source projects
+  - CI/CD for Windows-based applications
+  - Cross-platform build automation
+quickstartSteps:
+  - Sign up for an Appveyor account.
+  - Connect your GitHub, Bitbucket, or GitLab repository.
+  - Add an appveyor.yml configuration file to your project.
+  - Trigger a build by pushing code to your repository.
+  - Review build results and artifacts in the Appveyor dashboard.
+whenToUse: "Use Appveyor for CI/CD pipelines, especially if you need Windows build environments or support for open source projects."
+whenNotToUse: "Avoid if you require multiple concurrent builds for private projects or advanced deployment features without upgrading."
+bestFor:
+  - open source projects
+  - Windows builds
+  - small teams
+avoidIf:
+  - need high concurrency
+  - require advanced deployment automation
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.appveyor.com/
+docsUrl: https://www.appveyor.com/docs/
+sourceUrls:
+  - https://www.appveyor.com/pricing/
+  - https://www.appveyor.com/docs/
+featured: false
+---
+Appveyor offers free continuous integration for public repositories and limited private builds, making it ideal for open source and Windows-centric projects.

@@ -1,0 +1,78 @@
+---
+title: "Cloud Storage"
+description: "Google Cloud Storage offers scalable, secure object storage for any amount of data with global accessibility."
+provider: "Google Cloud"
+category: "Object Storage"
+domain: storage
+subtypes:
+  - object storage
+  - blob storage
+  - static hosting
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - object-storage
+  - cloud
+  - static-assets
+  - backup
+  - gcp
+pricingModel: freemium
+freeTierDetails:
+  summary: "Always-free tier includes limited storage, network, and operations per month."
+  limits:
+    - 5 GB Regional Storage (US regions only)
+    - 1 GB outbound data
+    - 5,000 Class A operations
+    - 50,000 Class B operations
+  caveats:
+    - Free tier applies only to select US regions.
+    - Overages billed at standard rates.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free limits incurs charges.
+    - No hard cap; monitor usage to avoid unexpected costs.
+useCases:
+  - Static website hosting
+  - Backup and archival
+  - Serving media assets
+  - Data lake storage
+quickstartSteps:
+  - Sign up for a Google Cloud account and enable billing.
+  - Navigate to Cloud Storage in the Google Cloud Console.
+  - Create a new storage bucket in a supported US region.
+  - Upload files or configure bucket permissions as needed.
+  - Monitor usage to stay within free tier limits.
+whenToUse: "Use when you need reliable, scalable object storage for static files, backups, or serving assets with global access."
+whenNotToUse: "Avoid if you require storage outside US regions for the free tier, or need strict hard caps to prevent overages."
+bestFor:
+  - static assets
+  - backups
+  - media hosting
+  - data lakes
+avoidIf:
+  - need free tier outside US
+  - require hard usage caps
+  - prefer local storage
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://cloud.google.com/storage
+docsUrl: https://cloud.google.com/storage/docs
+sourceUrls:
+  - https://cloud.google.com/free/docs/free-cloud-features#storage
+  - https://cloud.google.com/storage/pricing
+featured: false
+---
+Google Cloud Storage provides secure, highly available object storage with an always-free tier for small-scale use in select US regions. It is suitable for hosting static websites, storing backups, and serving media files, but users should monitor usage to avoid overages as there is no hard cap on the free tier.

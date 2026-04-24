@@ -1,0 +1,73 @@
+---
+title: "Pusher"
+description: "Pusher provides real-time messaging APIs for web and mobile applications with simple integration and scalable infrastructure."
+provider: "Pusher"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - pub/sub
+  - websockets
+  - real-time
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - realtime
+  - websockets
+  - pubsub
+  - notifications
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 100 concurrent connections and 200,000 messages per day."
+  limits:
+    - 100 concurrent connections
+    - 200,000 messages/day
+    - 2,000 peak messages/minute
+    - 1 app per account
+  caveats:
+    - No SLA on free tier
+    - Limited to public channels
+    - Support is community only
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Live chat
+  - Real-time notifications
+  - Collaborative editing
+  - Live dashboards
+quickstartSteps:
+  - Sign up for a free Pusher account.
+  - Create a new app in the Pusher dashboard.
+  - Copy your app credentials (App ID, Key, Secret, Cluster).
+  - Install the Pusher SDK in your project.
+  - Initialize the SDK with your credentials and start sending/receiving events.
+whenToUse: "Use Pusher when you need to add real-time messaging or notifications to web or mobile apps with minimal setup."
+whenNotToUse: "Avoid if you need guaranteed message delivery, private channels on the free tier, or require on-premise hosting."
+bestFor:
+  - real-time features
+  - prototyping
+  - low-traffic apps
+avoidIf:
+  - strict SLAs
+  - private channels on free tier
+  - high concurrency needs
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-15
+popularityScore: 7
+usefulnessScore: 7
+officialUrl: https://pusher.com/
+docsUrl: https://pusher.com/docs
+sourceUrls:
+  - https://pusher.com/pricing
+  - https://pusher.com/docs
+featured: false
+---
+Pusher offers a simple and scalable way to add real-time messaging and notifications to your applications, with a generous free tier for low-traffic use.

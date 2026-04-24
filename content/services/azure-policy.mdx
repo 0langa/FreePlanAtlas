@@ -1,0 +1,68 @@
+---
+title: "Azure Policy"
+description: "Azure Policy helps you enforce organizational standards and assess compliance at scale across Azure resources."
+provider: "Azure"
+category: "Governance"
+domain: security
+subtypes:
+  - policy management
+  - compliance
+  - resource governance
+audiences:
+  - enterprise
+  - team
+  - startup
+tags:
+  - compliance
+  - governance
+  - security
+  - automation
+  - azure
+pricingModel: free
+freeTierDetails:
+  summary: "Azure Policy is free for built-in policy definitions and assignments."
+  limits:
+    - Unlimited built-in policy assignments
+    - Custom policy definitions may incur costs
+    - No charge for policy evaluation
+  caveats:
+    - Charges may apply for guest configuration and custom policies
+    - Some advanced features require additional Azure services
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - Custom or guest configuration policies may incur charges
+useCases:
+  - Enforcing security baselines
+  - Ensuring regulatory compliance
+  - Auditing resource configurations
+  - Automating remediation of non-compliance
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Navigate to 'Policy' under Azure services.
+  - Assign a built-in policy to a subscription or resource group.
+  - Review compliance results and remediate non-compliant resources.
+whenToUse: "Use Azure Policy to enforce compliance and governance rules automatically across your Azure resources."
+whenNotToUse: "Avoid if you need policy enforcement outside Azure or require advanced custom policies without incurring extra costs."
+bestFor:
+  - compliance teams
+  - cloud administrators
+  - security engineers
+avoidIf:
+  - managing non-Azure environments
+  - avoiding any Azure-specific lock-in
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-policy/
+docsUrl: https://learn.microsoft.com/en-us/azure/governance/policy/overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/azure-policy/
+  - https://learn.microsoft.com/en-us/azure/governance/policy/overview
+featured: false
+---
+Azure Policy enables organizations to define, assign, and manage policies that enforce rules and effects for Azure resources, ensuring compliance and governance at scale.

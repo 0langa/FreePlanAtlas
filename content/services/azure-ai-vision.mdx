@@ -1,0 +1,75 @@
+---
+title: "Azure AI Vision"
+description: "Azure AI Vision provides cloud-based image and video analysis APIs for extracting information and insights from visual content."
+provider: "Azure"
+category: "AI Services"
+domain: ai
+subtypes:
+  - image analysis
+  - video analysis
+  - OCR
+  - face detection
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - computer-vision
+  - image-recognition
+  - video-processing
+  - ocr
+  - cloud-api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes limited monthly transactions for core vision APIs."
+  limits:
+    - 5,000 transactions/month for Computer Vision API
+    - 1,000 transactions/month for Face API
+    - 1,000 transactions/month for OCR
+  caveats:
+    - Higher usage requires paid tier
+    - Some advanced features may not be included in free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Extracting text from images
+  - Detecting objects and faces in photos
+  - Automating image moderation
+  - Video content analysis
+quickstartSteps:
+  - Sign in to the Azure portal and create an AI Vision resource.
+  - Retrieve your API key and endpoint from the resource overview.
+  - Install the Azure AI Vision SDK or use REST API in your application.
+  - Authenticate using your API key and endpoint.
+  - Send an image or video to the API and process the response.
+whenToUse: "Use when you need scalable, cloud-based image or video analysis without building custom ML models."
+whenNotToUse: "Avoid if you require on-premises processing, real-time edge inference, or need unlimited free usage."
+bestFor:
+  - image analysis
+  - OCR
+  - object detection
+  - face recognition
+avoidIf:
+  - offline processing
+  - large-scale free usage
+  - custom model training
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-vision/
+docsUrl: https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-vision/
+  - https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/
+featured: false
+---
+Azure AI Vision offers cloud APIs for extracting information from images and videos, including OCR, object detection, and face recognition, with a generous free tier for development and prototyping.

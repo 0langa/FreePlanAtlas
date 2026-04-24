@@ -1,0 +1,68 @@
+---
+title: "Cirun.io"
+description: "Cirun.io provides cloud-based ephemeral GPU runners for CI/CD pipelines and development workflows."
+provider: "Cirun.io"
+category: "CI/CD Tools"
+domain: devops
+subtypes:
+  - GPU Runners
+  - CI/CD Integration
+  - Cloud Runners
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - gpu
+  - ci
+  - cd
+  - cloud
+  - automation
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers limited GPU runner hours for CI/CD and development."
+  limits:
+    - Up to 20 GPU hours per month
+    - Limited to select GPU types
+    - 1 concurrent runner
+  caveats:
+    - Requires GitHub or GitLab integration
+    - Limited support for custom hardware
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Run GPU-accelerated CI/CD jobs
+  - Test machine learning models in pipelines
+  - Automate GPU-based build and test workflows
+quickstartSteps:
+  - Sign up at cirun.io with your GitHub or GitLab account.
+  - Connect your repository and authorize Cirun.io access.
+  - Configure your CI/CD workflow to use Cirun GPU runners.
+  - Push a commit to trigger a GPU-enabled pipeline job.
+  - Monitor job status and GPU usage in the Cirun dashboard.
+whenToUse: "Use Cirun.io when you need GPU resources for CI/CD or development without managing hardware."
+whenNotToUse: "Avoid if you require persistent GPU servers or need more than the free tier's limited GPU hours."
+bestFor:
+  - ML engineers
+  - open-source projects
+  - startups testing GPU workflows
+avoidIf:
+  - need persistent GPU access
+  - require specific GPU models not supported
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 5
+usefulnessScore: 7
+officialUrl: https://cirun.io
+docsUrl: https://docs.cirun.io
+sourceUrls:
+  - https://cirun.io/pricing
+featured: false
+---
+Cirun.io offers ephemeral cloud GPU runners for CI/CD and development, enabling easy access to GPU resources without infrastructure management.

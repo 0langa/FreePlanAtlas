@@ -1,0 +1,76 @@
+---
+title: "Railway"
+description: "Railway is a developer platform for deploying, hosting, and managing web apps and databases with minimal configuration."
+provider: "Railway"
+category: "App Hosting"
+domain: hosting
+subtypes:
+  - PaaS
+  - Web Hosting
+  - Database Hosting
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - deployment
+  - postgres
+  - web-apps
+  - ci-cd
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes $5/month of usage for hosting apps and databases."
+  limits:
+    - $5/month usage credit
+    - 1GB RAM per project
+    - 512MB database storage
+    - 1000 build minutes/month
+  caveats:
+    - Projects are paused when credit is exhausted until next reset.
+    - Custom domains require paid plan.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - No charges unless you upgrade to a paid plan.
+  monthlyCreditAmount: "$5"
+useCases:
+  - Deploying full-stack web apps
+  - Hosting APIs and microservices
+  - Prototyping SaaS products
+  - Running managed Postgres databases
+quickstartSteps:
+  - Sign up at railway.app with your GitHub account.
+  - Create a new project and connect your GitHub repository.
+  - Configure environment variables if needed.
+  - Deploy your app with one click or via CLI.
+  - Access your app's live URL and monitor logs.
+whenToUse: "Use Railway to quickly deploy web apps or APIs without managing infrastructure, especially for prototypes, demos, or small production workloads."
+whenNotToUse: "Avoid if you need persistent custom domains on the free tier, require advanced networking, or have workloads exceeding $5/month usage."
+bestFor:
+  - prototyping
+  - hackathons
+  - side-projects
+  - student projects
+avoidIf:
+  - high-traffic production
+  - custom domain required
+  - complex networking
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://railway.app/
+docsUrl: https://docs.railway.app/
+sourceUrls:
+  - https://railway.app/pricing
+  - https://docs.railway.app/develop/cli
+featured: false
+---
+Railway offers a simple platform for deploying and managing web apps and databases, ideal for rapid prototyping and small-scale production use.

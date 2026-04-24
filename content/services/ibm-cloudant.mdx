@@ -1,0 +1,74 @@
+---
+title: "IBM Cloudant"
+description: "IBM Cloudant is a fully managed NoSQL JSON document database optimized for web, mobile, and serverless applications."
+provider: "IBM"
+category: "Nosql Database"
+domain: database
+subtypes:
+  - document
+  - NoSQL
+  - managed
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - nosql
+  - json
+  - managed
+  - cloud
+  - database
+pricingModel: freemium
+freeTierDetails:
+  summary: "Lite plan offers 1 GB storage and 20 reads/writes per second."
+  limits:
+    - 1 GB storage
+    - 20 lookups/sec
+    - 10 writes/sec
+    - 20 queries/sec
+  caveats:
+    - Lite plan limited to one instance per account
+    - No SLA on Lite plan
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Mobile app data storage
+  - Web app backends
+  - IoT data ingestion
+  - Rapid prototyping
+quickstartSteps:
+  - Sign up for an IBM Cloud account.
+  - Navigate to the Cloudant service in the IBM Cloud catalog.
+  - Create a new Cloudant Lite instance.
+  - Obtain your service credentials from the dashboard.
+  - Connect to Cloudant using your preferred SDK or REST API.
+whenToUse: "Use when you need a scalable, managed NoSQL database for JSON documents with minimal setup and generous free limits."
+whenNotToUse: "Avoid if you require high throughput, advanced analytics, or strict SLAs on the free tier."
+bestFor:
+  - prototyping
+  - learning
+  - low-traffic apps
+  - mobile backends
+avoidIf:
+  - high-throughput workloads
+  - strict SLA needs
+  - large-scale production
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.ibm.com/cloud/cloudant
+docsUrl: https://cloud.ibm.com/docs/Cloudant
+sourceUrls:
+  - https://www.ibm.com/cloud/cloudant/pricing
+  - https://cloud.ibm.com/docs/Cloudant
+featured: false
+---
+IBM Cloudant provides a managed, scalable NoSQL document database with a free Lite plan suitable for prototyping, learning, and low-traffic applications.

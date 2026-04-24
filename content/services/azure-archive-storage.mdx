@@ -1,0 +1,72 @@
+---
+title: "Azure Archive Storage"
+description: "Azure Archive Storage provides low-cost, long-term cloud storage for rarely accessed data with high durability and security."
+provider: "Azure"
+category: "Object Storage"
+domain: storage
+subtypes:
+  - cold storage
+  - object storage
+  - archival
+audiences:
+  - startup
+  - team
+  - enterprise
+  - agency
+tags:
+  - archive
+  - cloud-storage
+  - cold-data
+  - long-term
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "5 GB of Archive Storage free per month for 12 months."
+  limits:
+    - 5 GB/month archive storage
+    - Standard storage account only
+  caveats:
+    - Free tier valid for 12 months
+    - Retrieval and early deletion fees apply
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: time-limited
+  hasHardCap: true
+  overageRisk: medium
+  billingRiskNotes:
+    - Retrieval and early deletion can incur unexpected charges
+  trialDays: 365
+useCases:
+  - Long-term backup of compliance data
+  - Archiving infrequently accessed files
+  - Storing regulatory or legal records
+  - Disaster recovery data retention
+quickstartSteps:
+  - Sign up for an Azure account and activate the free tier.
+  - Create a Storage Account in the Azure Portal.
+  - Add a new Blob container and set its access tier to Archive.
+  - Upload files to the container using Azure Portal, CLI, or SDK.
+  - Monitor usage and manage retrievals to avoid unexpected costs.
+whenToUse: "Use when you need to store large amounts of infrequently accessed data at low cost for long-term retention."
+whenNotToUse: "Avoid if you require frequent or low-latency access, or need instant data retrieval."
+bestFor:
+  - archival storage
+  - compliance retention
+  - backup
+avoidIf:
+  - frequent access needed
+  - real-time analytics
+  - hot data workloads
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/storage/archive/
+docsUrl: https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/storage/archive/
+  - https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers
+featured: false
+---
+Azure Archive Storage is designed for organizations needing secure, durable, and cost-effective storage for data that is rarely accessed but must be retained for long periods. The free tier allows limited archival storage for up to 12 months, making it suitable for testing or small-scale archival needs. Retrieval times are slow and may incur additional costs, so it's best for compliance, backup, or regulatory scenarios where immediate access is not required.

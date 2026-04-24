@@ -1,0 +1,72 @@
+---
+title: "SikkerAPI"
+description: "SikkerAPI provides a secure API gateway with rate limiting, authentication, and analytics for developers and teams."
+provider: "SikkerAPI"
+category: "API Gateway"
+domain: security
+subtypes:
+  - API security
+  - rate limiting
+  - analytics
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - api
+  - gateway
+  - security
+  - rate-limiting
+  - analytics
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes basic API gateway features with limited monthly requests."
+  limits:
+    - 10,000 API requests/month
+    - 1 API key
+    - Basic analytics
+    - Standard rate limiting
+  caveats:
+    - No custom domain support on free tier
+    - Limited support options
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Protecting public APIs
+  - Adding authentication to endpoints
+  - Monitoring API usage
+  - Preventing abuse with rate limits
+quickstartSteps:
+  - Sign up for a free SikkerAPI account.
+  - Register your API endpoint in the dashboard.
+  - Configure rate limits and authentication settings.
+  - Obtain your API key and update your application to route traffic through SikkerAPI.
+  - Monitor usage and analytics in the dashboard.
+whenToUse: "Use SikkerAPI when you need to secure, monitor, and limit access to your APIs without managing your own gateway infrastructure."
+whenNotToUse: "Avoid if you require custom domains, advanced routing, or unlimited requests, or if you need on-premise deployment."
+bestFor:
+  - indie
+  - startup
+  - oss
+  - team
+avoidIf:
+  - enterprise
+  - high-volume
+  - custom-domain-required
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 7
+officialUrl: https://sikkerapi.com
+docsUrl: https://docs.sikkerapi.com
+sourceUrls:
+  - https://sikkerapi.com
+  - https://docs.sikkerapi.com
+featured: false
+---
+SikkerAPI offers a simple, secure API gateway with built-in rate limiting, authentication, and analytics, ideal for small teams and indie developers.

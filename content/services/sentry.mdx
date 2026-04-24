@@ -1,0 +1,72 @@
+---
+title: "Sentry"
+description: "Sentry provides error tracking and performance monitoring for web and mobile applications."
+provider: "Sentry"
+category: "Observability"
+domain: observability
+subtypes:
+  - error monitoring
+  - performance monitoring
+  - logging
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - error-tracking
+  - monitoring
+  - logging
+  - performance
+  - alerts
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes basic error and performance monitoring for small projects."
+  limits:
+    - 5,000 errors/month
+    - 1,000 performance transactions/month
+    - 1 user
+    - 30-day data retention
+  caveats:
+    - Limited to one user
+    - No advanced features like release health or custom dashboards
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Track and fix application errors
+  - Monitor frontend and backend performance
+  - Receive real-time alerts for production issues
+quickstartSteps:
+  - Sign up for a free Sentry account at sentry.io.
+  - Create a new project for your application.
+  - Install the Sentry SDK in your app using the recommended method for your stack.
+  - Configure the SDK with your project DSN.
+  - Deploy your app and trigger an error to verify integration.
+whenToUse: "Use Sentry to monitor and debug errors or performance issues in web, mobile, or backend applications with minimal setup."
+whenNotToUse: "Avoid Sentry if you need unlimited users, advanced analytics, or high-volume monitoring without upgrading to a paid plan."
+bestFor:
+  - bug tracking
+  - performance monitoring
+  - small teams
+  - open source projects
+avoidIf:
+  - need unlimited users
+  - require advanced analytics
+  - have high event volume
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-12
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://sentry.io/
+docsUrl: https://docs.sentry.io/
+sourceUrls:
+  - https://sentry.io/pricing/
+  - https://docs.sentry.io/product/accounts/quotas/
+featured: false
+---
+Sentry offers a generous free tier for error and performance monitoring, making it ideal for small projects, students, and open source maintainers. The platform provides real-time alerts, integrations with popular frameworks, and a simple setup process. However, teams needing more users, advanced analytics, or higher event volumes will need to upgrade to a paid plan.

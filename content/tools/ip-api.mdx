@@ -1,0 +1,73 @@
+---
+title: "ip-api"
+description: "ip-api provides a simple API for IP geolocation and related network information."
+provider: "ip-api"
+category: "Geolocation API"
+domain: integration
+subtypes:
+  - ip-geolocation
+  - network-tools
+  - rest-api
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ip
+  - geolocation
+  - api
+  - network
+  - location
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows up to 45 HTTP requests per minute from one IP address."
+  limits:
+    - 45 requests per minute per IP
+    - HTTP only (no HTTPS)
+    - Limited support and features
+  caveats:
+    - No HTTPS support on free tier
+    - No SLA or guaranteed uptime
+    - Usage from multiple IPs may be rate-limited
+  resetPeriod: minute
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Detect user location for personalization
+  - Restrict access by region
+  - Display network or ISP information
+  - Analyze traffic sources
+quickstartSteps:
+  - Visit https://ip-api.com/docs to review API endpoints and usage.
+  - Choose the endpoint (e.g., /json/{IP}) for your use case.
+  - Make a simple HTTP GET request to the endpoint using your preferred tool or code.
+  - Parse the JSON response to extract geolocation or network data.
+  - Respect the 45 requests/minute/IP limit to avoid being blocked.
+whenToUse: "Use ip-api when you need basic, fast IP geolocation or network info with minimal setup and no account required."
+whenNotToUse: "Avoid if you need HTTPS, higher request volumes, or guaranteed uptime for production workloads."
+bestFor:
+  - prototyping
+  - side-projects
+  - student projects
+  - basic analytics
+avoidIf:
+  - need HTTPS
+  - require high request volume
+  - require SLA
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://ip-api.com
+docsUrl: https://ip-api.com/docs
+sourceUrls:
+  - https://ip-api.com/docs
+  - https://ip-api.com/pricing
+featured: false
+---
+ip-api offers a fast, no-signup IP geolocation API suitable for basic location detection and network info, with a generous free tier for low-volume use.

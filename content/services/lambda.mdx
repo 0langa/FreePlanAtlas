@@ -1,0 +1,75 @@
+---
+title: "Lambda"
+description: "AWS Lambda runs code in response to events without provisioning or managing servers."
+provider: "AWS"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - functions
+  - event-driven
+  - serverless
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - serverless
+  - functions
+  - event-driven
+  - aws
+  - compute
+pricingModel: freemium
+freeTierDetails:
+  summary: "1M free requests and 400,000 GB-seconds compute time per month."
+  limits:
+    - 1 million requests/month
+    - 400,000 GB-seconds compute/month
+  caveats:
+    - Limits apply per AWS account, not per function.
+    - Charges apply for usage above free tier.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages are billed automatically if limits are exceeded.
+useCases:
+  - API backends
+  - Event-driven automation
+  - Scheduled tasks
+  - Data processing
+quickstartSteps:
+  - Sign in to the AWS Management Console.
+  - Navigate to AWS Lambda and click 'Create function'.
+  - Choose 'Author from scratch', enter a function name, and select a runtime.
+  - Write or upload your function code.
+  - Configure a trigger (e.g., API Gateway, S3 event).
+  - Deploy and test your Lambda function.
+whenToUse: "Use Lambda for event-driven workloads, APIs, or automation where you want to avoid server management and scale automatically."
+whenNotToUse: "Avoid Lambda for long-running processes, heavy compute workloads, or when you need predictable, sustained performance."
+bestFor:
+  - event-driven apps
+  - microservices
+  - automation scripts
+avoidIf:
+  - need long-running compute
+  - require low-latency at scale
+  - prefer dedicated servers
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 9
+officialUrl: https://aws.amazon.com/lambda/
+docsUrl: https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+sourceUrls:
+  - https://aws.amazon.com/lambda/pricing/
+  - https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html
+featured: false
+---
+AWS Lambda lets you run code in response to events without managing servers, with a generous free tier suitable for many workloads and easy scaling.

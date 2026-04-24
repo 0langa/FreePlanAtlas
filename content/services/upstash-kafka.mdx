@@ -1,0 +1,73 @@
+---
+title: "Upstash Kafka"
+description: "Upstash Kafka offers managed, serverless Apache Kafka with a generous free tier for low-latency event streaming and messaging workloads."
+provider: "Upstash"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - event streaming
+  - pub/sub
+  - serverless
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - kafka
+  - serverless
+  - event-streaming
+  - pubsub
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 100 MB storage, 1,000,000 messages/month, and 2 consumers."
+  limits:
+    - 100 MB storage
+    - 1,000,000 messages/month
+    - 2 consumers
+    - 1 partition per topic
+  caveats:
+    - No VPC peering on free tier
+    - Limited to 1 region
+    - No SLA
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototyping event-driven apps
+  - Learning Kafka basics
+  - Building low-traffic microservices
+  - Integrating with serverless functions
+quickstartSteps:
+  - Sign up for an Upstash account.
+  - Create a new Kafka cluster from the dashboard.
+  - Configure a topic and note connection credentials.
+  - Connect your app using provided Kafka endpoints.
+  - Send and consume messages using your preferred Kafka client.
+whenToUse: "Use when you need a simple, managed Kafka cluster for low-volume event streaming or prototyping without infrastructure overhead."
+whenNotToUse: "Avoid if you require high throughput, advanced Kafka features, or private networking such as VPC peering."
+bestFor:
+  - prototyping
+  - learning
+  - low-traffic apps
+avoidIf:
+  - high-throughput workloads
+  - strict compliance
+  - private networking needs
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://upstash.com/docs/kafka
+docsUrl: https://upstash.com/docs/kafka
+sourceUrls:
+  - https://upstash.com/pricing
+  - https://upstash.com/docs/kafka
+featured: false
+---
+Upstash Kafka provides a managed, serverless Kafka service with a free tier suitable for learning, prototyping, and low-volume event streaming workloads.

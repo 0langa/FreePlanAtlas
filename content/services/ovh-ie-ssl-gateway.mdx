@@ -1,0 +1,72 @@
+---
+title: "OVH.ie SSL Gateway"
+description: "Provides free SSL termination and HTTP/HTTPS reverse proxy for your web applications."
+provider: "OVH"
+category: "SSL Management"
+domain: networking
+subtypes:
+  - SSL termination
+  - reverse proxy
+  - HTTPS
+  - web security
+audiences:
+  - indie
+  - startup
+  - student
+  - oss
+tags:
+  - ssl
+  - tls
+  - https
+  - reverse-proxy
+  - web-security
+pricingModel: free
+freeTierDetails:
+  summary: "Free SSL Gateway with basic features for one domain."
+  limits:
+    - 1 free SSL Gateway per OVH account
+    - 1 backend server per gateway
+    - No custom SSL certificates
+  caveats:
+    - Advanced features require paid plan
+    - No wildcard or multi-domain support
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Securing a single website with HTTPS
+  - Adding SSL to legacy web servers
+  - Protecting web traffic with basic reverse proxy
+quickstartSteps:
+  - Sign up for an OVH account.
+  - Navigate to the SSL Gateway product page.
+  - Create a new SSL Gateway and specify your domain.
+  - Configure your backend server IP address.
+  - Update your DNS records to point to the SSL Gateway endpoint.
+  - Wait for SSL certificate issuance and test HTTPS access.
+whenToUse: "Use when you need free SSL for a single domain and basic reverse proxy without managing certificates."
+whenNotToUse: "Avoid if you need wildcard, multi-domain, or advanced proxy features, or require custom SSL certificates."
+bestFor:
+  - personal sites
+  - small business
+  - student projects
+  - open source demos
+avoidIf:
+  - multi-domain needs
+  - custom certificate requirements
+  - enterprise-grade features
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-11
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://www.ovh.ie/ssl-gateway/
+docsUrl: https://docs.ovh.ie
+sourceUrls:
+  - https://www.ovh.ie/ssl-gateway/
+  - https://help.ovhcloud.com/csm/en-ssl-gateway-overview?id=kb_article_view&sysparm_article=KB0044066
+featured: false
+---
+OVH.ie SSL Gateway offers a free, easy way to secure a single website with HTTPS using OVH's managed SSL and reverse proxy service.

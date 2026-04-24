@@ -1,0 +1,72 @@
+---
+title: "Azure File Storage"
+description: "Azure File Storage provides fully managed file shares accessible via SMB and NFS protocols in the cloud."
+provider: "Azure"
+category: "Cloud Storage"
+domain: storage
+subtypes:
+  - file storage
+  - SMB
+  - NFS
+  - cloud storage
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - azure
+  - file-storage
+  - cloud
+  - smb
+  - nfs
+pricingModel: freemium
+freeTierDetails:
+  summary: "5 GB standard performance file shares per month free in general-purpose v2 storage accounts."
+  limits:
+    - 5 GB storage per month
+    - Standard performance tier
+    - General-purpose v2 accounts only
+  caveats:
+    - Premium tier not included
+    - Network egress and operations may incur charges
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Charges apply if you exceed 5 GB or use premium features
+useCases:
+  - Lift-and-shift file shares to cloud
+  - Shared storage for VMs
+  - Cross-platform file access
+  - Backup and disaster recovery
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Create a general-purpose v2 storage account.
+  - Navigate to File shares and create a new file share.
+  - Connect using SMB or NFS from your client or VM.
+  - Upload or access files as needed.
+whenToUse: "Use when you need managed, cloud-based file shares accessible via SMB or NFS for applications or users."
+whenNotToUse: "Avoid if you require object storage, block storage, or need high-performance workloads not covered by the standard tier."
+bestFor:
+  - shared file storage
+  - cloud migration
+  - hybrid environments
+avoidIf:
+  - object storage needs
+  - high-performance premium workloads
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/storage/files/
+docsUrl: https://learn.microsoft.com/en-us/azure/storage/files/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/storage/files/
+  - https://learn.microsoft.com/en-us/azure/storage/files/
+featured: false
+---
+Azure File Storage offers managed file shares in the cloud with SMB and NFS support, suitable for shared storage, migration, and hybrid scenarios.

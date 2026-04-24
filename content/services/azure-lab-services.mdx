@@ -1,0 +1,74 @@
+---
+title: "Azure Lab Services"
+description: "Azure Lab Services provides on-demand, managed lab environments for classrooms, training, and development scenarios."
+provider: "Azure"
+category: "Virtual Labs"
+domain: compute
+subtypes:
+  - virtual-lab
+  - classroom
+  - training
+audiences:
+  - student
+  - team
+  - enterprise
+  - learning
+tags:
+  - virtual-machines
+  - education
+  - training
+  - labs
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "No always-free tier; costs depend on VM usage and configuration."
+  limits:
+    - No free hours included
+    - Pay-as-you-go for VM usage
+    - Billing based on lab and VM size
+  caveats:
+    - No always-free resources
+    - Requires Azure subscription
+  requiresCard: true
+  freeTierType: trial
+  hasHardCap: false
+  overageRisk: high
+  billingRiskNotes:
+    - Charges accrue as labs are used
+    - No hard cap on usage
+  trialDays: 30
+useCases:
+  - Classroom virtual labs
+  - Online training environments
+  - Hands-on workshops
+  - Development sandboxes
+quickstartSteps:
+  - Sign in to the Azure portal and create a Lab Services account.
+  - Set up a new lab and configure the virtual machine template.
+  - Publish the lab and invite users or students.
+  - Monitor usage and manage lab schedules.
+  - Shut down or delete labs to avoid unnecessary charges.
+whenToUse: "Use when you need to provide managed, scalable lab environments for training, education, or testing with minimal infrastructure overhead."
+whenNotToUse: "Avoid if you require a free, always-on lab environment or need persistent VMs without ongoing usage costs."
+bestFor:
+  - classroom training
+  - workshops
+  - education
+  - sandbox environments
+avoidIf:
+  - seeking always-free labs
+  - need persistent VMs
+  - tight budget constraints
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/lab-services/
+docsUrl: https://learn.microsoft.com/en-us/azure/lab-services/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/lab-services/
+  - https://learn.microsoft.com/en-us/azure/lab-services/
+featured: false
+---
+Azure Lab Services enables educators and teams to quickly set up, manage, and scale virtual lab environments for hands-on learning and training scenarios.

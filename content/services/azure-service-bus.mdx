@@ -1,0 +1,72 @@
+---
+title: "Azure Service Bus"
+description: "Azure Service Bus is a fully managed enterprise message broker for reliable cloud messaging between applications and services."
+provider: "Azure"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - queue
+  - topic
+  - pub/sub
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - messaging
+  - queue
+  - pubsub
+  - cloud
+  - integration
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 750,000 standard operations per month."
+  limits:
+    - 750,000 standard operations/month
+    - Standard tier only
+    - Shared namespace
+  caveats:
+    - Premium features not included
+    - Overages billed per operation
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Charges accrue if usage exceeds free operations
+useCases:
+  - Decoupling microservices
+  - Reliable event delivery
+  - Order processing workflows
+  - Distributed application integration
+quickstartSteps:
+  - Sign in to the Azure Portal and create a Service Bus namespace.
+  - Add a queue or topic within your namespace.
+  - Obtain connection string from the Azure Portal.
+  - Integrate Service Bus SDK in your application.
+  - Send and receive messages using the SDK.
+whenToUse: "Use when you need reliable, cloud-based messaging between distributed applications or services with built-in retry and dead-lettering."
+whenNotToUse: "Avoid if you require on-premises messaging, ultra-low latency, or want to avoid potential overage charges from high message volume."
+bestFor:
+  - cloud integration
+  - enterprise messaging
+  - microservices
+avoidIf:
+  - on-premises only
+  - ultra-low latency
+  - strict cost control
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/service-bus/
+docsUrl: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/service-bus/
+  - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+featured: false
+---
+Azure Service Bus provides reliable cloud messaging with queues and topics, supporting enterprise integration, decoupling, and scalable event-driven architectures.

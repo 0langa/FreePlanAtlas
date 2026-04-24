@@ -1,0 +1,72 @@
+---
+title: "IPTrace"
+description: "IPTrace provides free IP geolocation and lookup APIs for developers and businesses."
+provider: "IPTrace"
+category: "Apis"
+domain: networking
+subtypes:
+  - ip-geolocation
+  - lookup
+  - api
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ip
+  - geolocation
+  - api
+  - lookup
+  - networking
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers a limited number of IP lookup API requests per month."
+  limits:
+    - 1,000 requests/month
+    - Basic geolocation data
+    - No authentication required
+  caveats:
+    - Advanced features require paid plan
+    - Rate limiting applies
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Website visitor analytics
+  - Fraud prevention
+  - Personalized content by location
+  - Network diagnostics
+  - Security monitoring
+quickstartSteps:
+  - Visit https://iptrace.io and sign up for a free account.
+  - Review the API documentation for endpoint details.
+  - Copy your API key if required (for advanced usage).
+  - Send a GET request to the IPTrace endpoint with the target IP address.
+  - Parse the JSON response for geolocation data.
+whenToUse: "Use IPTrace when you need quick, simple IP geolocation or lookup for small-scale projects or prototyping."
+whenNotToUse: "Avoid if you require high request volumes, advanced data, or enterprise-grade SLAs."
+bestFor:
+  - prototyping
+  - small websites
+  - student projects
+  - basic analytics
+avoidIf:
+  - high-traffic production
+  - detailed threat intelligence
+  - enterprise compliance
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://iptrace.io
+docsUrl: https://docs.iptrace.io
+sourceUrls:
+  - https://iptrace.io
+featured: false
+---
+IPTrace offers a simple, free API for basic IP geolocation and lookup, ideal for low-volume, non-critical use cases and prototyping.

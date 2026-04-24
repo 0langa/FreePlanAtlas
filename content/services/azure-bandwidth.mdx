@@ -1,0 +1,70 @@
+---
+title: "Azure Bandwidth"
+description: "Azure Bandwidth provides outbound data transfer for Azure resources with a limited free monthly allowance."
+provider: "Azure"
+category: "Networking"
+domain: networking
+subtypes:
+  - egress
+  - data transfer
+  - outbound
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+tags:
+  - egress
+  - data-transfer
+  - network
+  - azure
+  - bandwidth
+pricingModel: freemium
+freeTierDetails:
+  summary: "5 GB outbound data transfer per month is free for all Azure accounts."
+  limits:
+    - 5 GB/month outbound data transfer
+  caveats:
+    - Applies only to outbound data; inbound is always free.
+    - Overages billed at standard rates.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding the free limit incurs automatic charges.
+useCases:
+  - Hosting small websites
+  - Testing outbound APIs
+  - Low-traffic applications
+  - Prototyping networked services
+quickstartSteps:
+  - Sign up for an Azure account and verify your identity.
+  - Create a resource (e.g., VM, App Service) in the Azure portal.
+  - Configure your resource to send outbound data (e.g., serve a website or API).
+  - Monitor bandwidth usage in the Azure portal to stay within the free tier.
+  - Set up billing alerts to avoid unexpected charges.
+whenToUse: "Use when you need limited outbound data transfer for small apps, tests, or prototypes on Azure."
+whenNotToUse: "Avoid if your workload regularly exceeds 5 GB/month outbound data or requires predictable, capped costs."
+bestFor:
+  - prototyping
+  - testing
+  - low-traffic sites
+  - learning
+avoidIf:
+  - high-traffic production
+  - large file transfers
+  - strict cost controls
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 6
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/bandwidth/
+docsUrl: https://docs.azure.microsoft.com
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/bandwidth/
+featured: false
+---
+Azure Bandwidth offers a small free outbound data transfer allowance, suitable for low-traffic apps, testing, and learning on Azure. Monitor usage to avoid overage charges.

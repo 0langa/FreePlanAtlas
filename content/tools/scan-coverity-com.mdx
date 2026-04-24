@@ -1,0 +1,71 @@
+---
+title: "Scan.coverity.com"
+description: "Scan.coverity.com offers free static code analysis for open source projects to detect security and quality defects."
+provider: "Coverity"
+category: "Code Analysis"
+domain: devops
+subtypes:
+  - static analysis
+  - security
+  - quality assurance
+audiences:
+  - oss
+  - student
+  - indie
+  - startup
+  - team
+tags:
+  - static-analysis
+  - security
+  - open-source
+  - code-quality
+  - ci
+pricingModel: free
+freeTierDetails:
+  summary: "Free static code analysis for qualifying open source projects."
+  limits:
+    - Only for open source projects
+    - Project must be publicly available
+    - Requires project registration and approval
+  caveats:
+    - Not available for private or commercial codebases
+    - Manual approval process may delay access
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - No billing or overage risk for approved open source projects
+useCases:
+  - Detecting security vulnerabilities in open source code
+  - Improving code quality for public repositories
+  - Integrating static analysis into CI pipelines
+quickstartSteps:
+  - Sign up for a Scan.coverity.com account.
+  - Register your open source project and provide repository details.
+  - Wait for project approval by the Coverity team.
+  - Download and configure the Coverity analysis tool.
+  - Run analysis and upload results to Scan.coverity.com.
+whenToUse: "Use when you need free, automated static analysis for open source projects to find security and quality issues."
+whenNotToUse: "Do not use for private, commercial, or closed-source projects, or if you need immediate onboarding without approval delays."
+bestFor:
+  - open source maintainers
+  - security-focused developers
+  - CI/CD users
+avoidIf:
+  - you need analysis for private code
+  - you require instant access
+  - your project is not open source
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-12
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://scan.coverity.com/
+docsUrl: https://scan.coverity.com/faq
+sourceUrls:
+  - https://scan.coverity.com/
+  - https://scan.coverity.com/faq
+featured: false
+---
+Scan.coverity.com provides free static code analysis for open source projects, helping maintainers find and fix security and quality issues before release.

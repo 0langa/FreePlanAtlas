@@ -1,0 +1,75 @@
+---
+title: "Azure DevOps"
+description: "Azure DevOps provides cloud-based tools for CI/CD, code repositories, agile planning, and collaboration for software development teams."
+provider: "Azure"
+category: "Devops Platform"
+domain: devops
+subtypes:
+  - CI/CD
+  - Source Control
+  - Project Management
+audiences:
+  - team
+  - startup
+  - enterprise
+  - oss
+  - agency
+tags:
+  - ci
+  - cd
+  - pipelines
+  - git
+  - agile
+  - project-management
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 5 users with unlimited private Git repos, 1 Microsoft-hosted CI/CD parallel job, and basic project management."
+  limits:
+    - 5 free users per organization
+    - 1 Microsoft-hosted CI/CD parallel job (1800 min/month)
+    - Unlimited private Git repositories
+    - Basic boards and agile tools
+  caveats:
+    - Additional users require paid licenses
+    - Self-hosted agents are limited to 1 parallel job
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Adding more than 5 users or exceeding build minutes incurs charges
+useCases:
+  - Automated CI/CD pipelines
+  - Source code hosting with Git
+  - Agile project tracking
+  - Release management
+quickstartSteps:
+  - Sign up for an Azure account and access Azure DevOps.
+  - Create a new DevOps organization and project.
+  - Import or create a Git repository.
+  - Set up a CI/CD pipeline using Azure Pipelines.
+  - Invite up to 4 additional users to collaborate.
+whenToUse: "Use Azure DevOps when you need integrated CI/CD, code hosting, and agile planning for small to medium teams."
+whenNotToUse: "Avoid if you need unlimited free users, advanced enterprise features without cost, or prefer open-source/self-hosted DevOps tools."
+bestFor:
+  - small teams
+  - startups
+  - agencies
+  - OSS projects
+avoidIf:
+  - large organizations needing unlimited free users
+  - teams requiring on-premises only solutions
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/services/devops/
+docsUrl: https://learn.microsoft.com/en-us/azure/devops/?view=azure-devops
+sourceUrls:
+  - https://azure.microsoft.com/pricing/details/devops-services/
+  - https://learn.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops
+featured: false
+---
+Azure DevOps offers a comprehensive suite for code hosting, CI/CD, and agile project management, ideal for teams seeking integrated cloud-based DevOps workflows.

@@ -1,0 +1,71 @@
+---
+title: "IP Geolocation"
+description: "Provides IP-based geolocation data, including country, city, timezone, and ASN information via a simple API."
+provider: "IPGeolocation.io"
+category: "Apis"
+domain: integration
+subtypes:
+  - geolocation
+  - ip-intelligence
+  - api
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ip
+  - geolocation
+  - api
+  - location
+  - geoip
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers up to 1,000 API requests per day."
+  limits:
+    - 1,000 requests/day
+    - Standard geolocation fields
+    - No SLA
+    - Limited support
+  caveats:
+    - No access to premium data fields
+    - Rate limiting applies
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Personalizing content by user location
+  - Blocking or allowing traffic by region
+  - Displaying timezone-aware information
+  - Analyzing website visitor distribution
+quickstartSteps:
+  - Sign up for a free account at ipgeolocation.io.
+  - Verify your email and log in to the dashboard.
+  - Copy your API key from the dashboard.
+  - Make a test API request using your API key.
+  - Integrate the API into your application.
+whenToUse: "Use when you need basic, reliable IP geolocation data for moderate daily API usage without cost."
+whenNotToUse: "Avoid if you require high request volumes, advanced data fields, or guaranteed uptime for critical production workloads."
+bestFor:
+  - location-based personalization
+  - regional analytics
+  - basic fraud detection
+avoidIf:
+  - high-traffic production
+  - need for premium data
+  - strict SLA requirements
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-08
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://ipgeolocation.io/
+docsUrl: https://ipgeolocation.io/documentation/ip-geolocation-api.html
+sourceUrls:
+  - https://ipgeolocation.io/pricing.html
+  - https://ipgeolocation.io/documentation/ip-geolocation-api.html
+featured: false
+---
+IP Geolocation by IPGeolocation.io offers a free API tier suitable for low-traffic apps needing basic location data, with simple setup and clear usage limits.

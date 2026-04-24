@@ -1,0 +1,76 @@
+---
+title: "Azure Blob Storage"
+description: "Scalable object storage for unstructured data such as images, videos, backups, and logs on Azure."
+provider: "Azure"
+category: "Object Storage"
+domain: storage
+subtypes:
+  - object storage
+  - cloud storage
+  - blob
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+  - student
+  - oss
+tags:
+  - storage
+  - blob
+  - azure
+  - object
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "5 GB LRS hot block blob storage and 20,000 read/write operations per month free."
+  limits:
+    - 5 GB hot block blob storage
+    - 20,000 read operations
+    - 20,000 write operations
+  caveats:
+    - Only applies to locally redundant storage (LRS) in hot tier.
+    - Additional usage incurs charges.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Charges accrue if you exceed free tier limits.
+    - No hard cap—monitor usage to avoid unexpected costs.
+useCases:
+  - Static website hosting
+  - Backup and disaster recovery
+  - Media storage
+  - Data lake for analytics
+  - Log archiving
+quickstartSteps:
+  - Sign in to the Azure Portal and create a new Storage Account.
+  - Select 'BlobStorage' as the account kind and choose the 'Hot' access tier.
+  - Create a new container within your storage account.
+  - Upload files to the container using the portal or Azure CLI.
+  - Configure access policies or generate SAS tokens as needed.
+whenToUse: "Use when you need scalable, reliable object storage for unstructured data with global access and integration with Azure services."
+whenNotToUse: "Avoid if you need a hard usage cap, require on-premises storage, or want a free tier without a credit card."
+bestFor:
+  - cloud backups
+  - media storage
+  - analytics data lakes
+avoidIf:
+  - need hard cap
+  - on-premises only
+  - no credit card
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-14
+popularityScore: 8
+usefulnessScore: 9
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/storage/blobs/
+docsUrl: https://learn.microsoft.com/en-us/azure/storage/blobs/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/storage/blobs/
+  - https://learn.microsoft.com/en-us/azure/storage/blobs/
+featured: false
+---
+Azure Blob Storage provides scalable, secure object storage for a wide range of unstructured data, with a free tier suitable for small projects and testing.

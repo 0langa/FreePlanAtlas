@@ -1,0 +1,71 @@
+---
+title: "Courier"
+description: "Courier provides a unified API to send notifications across email, SMS, push, and chat channels."
+provider: "Courier"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - notification
+  - multi-channel
+  - API
+audiences:
+  - startup
+  - team
+  - indie
+  - oss
+tags:
+  - notifications
+  - email
+  - sms
+  - push
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Send up to 10,000 notifications per month for free."
+  limits:
+    - 10,000 notifications/month
+    - Access to all channels
+    - Basic templates
+  caveats:
+    - Overages billed automatically
+    - Some integrations may require third-party accounts
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Automatic charges if you exceed free tier limit
+useCases:
+  - Send transactional emails and SMS
+  - Push notifications for apps
+  - Multi-channel user alerts
+  - Automated onboarding messages
+quickstartSteps:
+  - Sign up for a Courier account.
+  - Create a new notification template in the dashboard.
+  - Connect your preferred channels (email, SMS, push, chat).
+  - Obtain your API key from the Courier dashboard.
+  - Integrate the Courier API into your application to send notifications.
+whenToUse: "Use Courier when you need to send notifications across multiple channels with a single API and manage templates easily."
+whenNotToUse: "Avoid Courier if you require on-premise deployment or need unlimited free notifications without risk of overage charges."
+bestFor:
+  - multi-channel notifications
+  - rapid prototyping
+  - startups
+avoidIf:
+  - require on-premise
+  - need unlimited free usage
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.courier.com/
+docsUrl: https://docs.courier.com/
+sourceUrls:
+  - https://www.courier.com/pricing/
+  - https://docs.courier.com/docs/getting-started
+featured: false
+---
+Courier is a notification service that lets you send messages via email, SMS, push, and chat using a single API and unified templates.

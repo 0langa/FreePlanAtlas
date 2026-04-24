@@ -1,0 +1,70 @@
+---
+title: "Ethereal Email"
+description: "Ethereal Email provides free, disposable SMTP accounts for testing email sending in development environments."
+provider: "Ethereal Email"
+category: "Email Testing"
+domain: devops
+subtypes:
+  - smtp
+  - email-testing
+  - mock-service
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - smtp
+  - email
+  - testing
+  - mock
+  - development
+pricingModel: free
+freeTierDetails:
+  summary: "Unlimited free disposable SMTP accounts for email testing."
+  limits:
+    - Not for production use
+    - Emails are auto-deleted after a few hours
+    - No delivery to real inboxes
+  caveats:
+    - Emails are accessible publicly if account credentials are shared
+    - Not suitable for sending emails to real users
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - No billing required; service is always free
+useCases:
+  - Testing email sending in development
+  - Previewing transactional emails
+  - Debugging SMTP integration
+quickstartSteps:
+  - Visit https://ethereal.email and click 'Create Ethereal Account'.
+  - Copy the generated SMTP credentials.
+  - Configure your application or email library with these credentials.
+  - Send a test email from your application.
+  - Log in to Ethereal Email with your credentials to view received emails.
+whenToUse: "Use Ethereal Email when you need to test email sending in development without sending real emails."
+whenNotToUse: "Do not use for production or sending emails to real users, as emails are not delivered outside Ethereal."
+bestFor:
+  - development
+  - testing
+  - debugging
+avoidIf:
+  - production
+  - real-user-delivery
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://ethereal.email
+docsUrl: https://docs.ethereal.email
+sourceUrls:
+  - https://ethereal.email/
+  - https://github.com/nodemailer/ethereal-email
+featured: false
+---
+Ethereal Email is a free service that provides disposable SMTP accounts for safely testing email functionality in development environments, without risk of spamming real users.

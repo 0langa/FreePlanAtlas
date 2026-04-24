@@ -1,0 +1,69 @@
+---
+title: "Tugboat"
+description: "Tugboat provides on-demand, ephemeral staging environments for web applications and websites."
+provider: "Tugboat"
+category: "Preview Environments"
+domain: devops
+subtypes:
+  - ephemeral environments
+  - staging
+  - CI/CD integration
+audiences:
+  - team
+  - startup
+  - oss
+  - agency
+tags:
+  - preview
+  - staging
+  - cicd
+  - environments
+  - collaboration
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 project, 5GB storage, and 3 preview environments."
+  limits:
+    - 1 project
+    - 3 preview environments
+    - 5GB storage
+  caveats:
+    - Limited to public repositories for free tier
+    - No custom domains
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Test website changes before merging
+  - Share live previews with stakeholders
+  - Automate staging environment creation
+quickstartSteps:
+  - Sign up at tugboat.qa and connect your GitHub, GitLab, or Bitbucket account.
+  - Create a new project and link it to your repository.
+  - Configure your Tugboat setup using the provided YAML file.
+  - Push a pull request or branch to trigger a preview environment build.
+  - Share the preview URL with collaborators for review.
+whenToUse: "Use Tugboat when you need automated, shareable preview environments for web projects integrated with your version control system."
+whenNotToUse: "Avoid Tugboat if you require private repository support or custom domains on the free tier, or need more than 3 environments."
+bestFor:
+  - collaborative teams
+  - agencies
+  - open source projects
+avoidIf:
+  - need private repo support on free tier
+  - require custom domains
+  - need more than 3 environments
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-12
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://tugboat.qa
+docsUrl: https://docs.tugboat.qa/
+sourceUrls:
+  - https://tugboat.qa/pricing
+  - https://docs.tugboat.qa/
+featured: false
+---
+Tugboat lets teams and developers create on-demand preview environments for web applications, making it easy to review changes before deployment. The free tier is suitable for open source or small team projects with public repositories, offering limited environments and storage. Integration with popular version control systems streamlines the workflow, but private repo support and advanced features require a paid plan.

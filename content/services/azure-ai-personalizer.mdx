@@ -1,0 +1,71 @@
+---
+title: "Azure AI Personalizer"
+description: "Azure AI Personalizer delivers real-time, adaptive content and experience personalization using reinforcement learning."
+provider: "Azure"
+category: "AI Personalization"
+domain: ai
+subtypes:
+  - recommendation
+  - reinforcement-learning
+  - personalization
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - ai
+  - personalization
+  - recommendation
+  - azure
+  - machine-learning
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 50,000 transactions per month."
+  limits:
+    - 50,000 transactions/month
+    - Standard features only
+    - No SLA on free tier
+  caveats:
+    - Overages billed at standard rates
+    - No enterprise support on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Usage above free tier incurs charges automatically
+useCases:
+  - Personalized product recommendations
+  - Dynamic content ranking
+  - Adaptive user experiences
+quickstartSteps:
+  - Sign in to the Azure portal and create a Personalizer resource.
+  - Obtain your resource endpoint and API key from the Azure portal.
+  - Install the Azure Personalizer SDK or use the REST API.
+  - Configure your application to send rank and reward events.
+  - Monitor usage and adjust parameters as needed.
+whenToUse: "Use when you need to personalize content or experiences in real time with minimal machine learning expertise."
+whenNotToUse: "Avoid if you require offline batch recommendations, on-premises deployment, or strict hard caps on usage."
+bestFor:
+  - dynamic websites
+  - e-commerce
+  - media platforms
+avoidIf:
+  - offline-only systems
+  - strict cost controls
+  - on-premises requirements
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/cognitive-services/personalizer/
+docsUrl: https://learn.microsoft.com/en-us/azure/cognitive-services/personalizer/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/cognitive-services/personalizer/
+  - https://learn.microsoft.com/en-us/azure/cognitive-services/personalizer/
+featured: false
+---
+Azure AI Personalizer provides real-time, adaptive personalization using reinforcement learning, suitable for dynamic content and recommendation scenarios with a generous free tier.

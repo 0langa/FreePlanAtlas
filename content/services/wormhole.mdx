@@ -1,0 +1,70 @@
+---
+title: "Wormhole"
+description: "Wormhole offers secure, end-to-end encrypted file sharing with automatic link expiration and no account required."
+provider: "Wormhole"
+category: "File Sharing"
+domain: storage
+subtypes:
+  - encrypted
+  - temporary
+  - link-based
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - file-transfer
+  - encryption
+  - privacy
+  - temporary
+  - no-signup
+pricingModel: free
+freeTierDetails:
+  summary: "Free, no-signup file sharing with 10GB per transfer and automatic link expiration."
+  limits:
+    - 10GB max per transfer
+    - Links expire after 24 hours or 100 downloads
+    - No account required
+  caveats:
+    - Files are deleted after expiration
+    - No persistent storage
+  resetPeriod: per transfer
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Quickly sharing large files securely
+  - Sending sensitive documents without email
+  - Temporary file transfer for collaboration
+quickstartSteps:
+  - Go to https://wormhole.app/ in your browser.
+  - Drag and drop or select the file(s) you want to share (up to 10GB).
+  - Wait for the upload and encryption to complete.
+  - Copy the generated link and share it with your recipient.
+  - Recipient downloads the file before the link expires (24 hours or 100 downloads).
+whenToUse: "Use Wormhole for securely sharing large files quickly without creating an account or leaving files online permanently."
+whenNotToUse: "Avoid Wormhole if you need persistent file storage, collaboration features, or transfers larger than 10GB."
+bestFor:
+  - secure file sharing
+  - temporary transfers
+  - privacy-focused users
+avoidIf:
+  - need persistent storage
+  - require file versioning
+  - need transfers over 10GB
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-08
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://wormhole.app/
+docsUrl: https://docs.wormhole.app
+sourceUrls:
+  - https://wormhole.app/
+  - https://wormhole.app/privacy
+featured: false
+---
+Wormhole is a privacy-focused, browser-based service for sending encrypted files up to 10GB with automatic link expiration and no account required.

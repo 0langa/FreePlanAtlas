@@ -1,0 +1,68 @@
+---
+title: "DB-IP"
+description: "DB-IP provides a free API for IP geolocation and related data lookup."
+provider: "DB-IP"
+category: "Geolocation API"
+domain: integration
+subtypes:
+  - ip-geolocation
+  - api
+  - lookup
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - ip
+  - geolocation
+  - api
+  - lookup
+  - location
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free API tier for basic IP geolocation lookups."
+  limits:
+    - Up to 1,000 requests per day
+    - Basic geolocation fields only
+  caveats:
+    - No HTTPS on free tier
+    - No advanced data (e.g., carrier, ASN)
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Show user location on website
+  - Basic IP-based access control
+  - Personalization by country or city
+quickstartSteps:
+  - Go to https://db-ip.com/api/free.
+  - Review the free API documentation and usage limits.
+  - Construct a GET request to the API endpoint with the target IP address.
+  - Parse the JSON response for geolocation data.
+  - Integrate the API call into your application.
+whenToUse: "Use when you need simple, low-volume IP geolocation for websites, apps, or prototypes."
+whenNotToUse: "Avoid if you need HTTPS, high request volumes, or advanced geolocation data such as ASN or carrier info."
+bestFor:
+  - prototyping
+  - student projects
+  - personal sites
+avoidIf:
+  - need HTTPS
+  - require advanced data
+  - high traffic
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://db-ip.com/api/free
+docsUrl: https://db-ip.com/api/#free
+sourceUrls:
+  - https://db-ip.com/api/free
+  - https://db-ip.com/api/#free
+featured: false
+---
+DB-IP's free API tier enables basic IP geolocation lookups for up to 1,000 daily requests, suitable for prototypes and low-traffic applications.

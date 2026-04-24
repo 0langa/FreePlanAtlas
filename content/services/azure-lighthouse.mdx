@@ -1,0 +1,68 @@
+---
+title: "Azure Lighthouse"
+description: "Azure Lighthouse enables cross-tenant management and automation for service providers and enterprises managing multiple Azure environments."
+provider: "Azure"
+category: "Cloud Management"
+domain: operations
+subtypes:
+  - delegated management
+  - multi-tenant
+  - automation
+audiences:
+  - agency
+  - enterprise
+  - team
+  - startup
+tags:
+  - multi-tenant
+  - delegated-access
+  - automation
+  - azure
+  - management
+pricingModel: free
+freeTierDetails:
+  summary: "Azure Lighthouse is free to use; you only pay for underlying Azure resources consumed."
+  limits:
+    - No direct usage limits
+    - Underlying Azure resource costs apply
+  caveats:
+    - No additional charge for Lighthouse itself
+    - Resource consumption billed per standard Azure rates
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - Only pay for Azure resources used, not for Lighthouse features
+useCases:
+  - Managed service provider cross-tenant management
+  - Delegated resource access for clients
+  - Automated policy enforcement across tenants
+  - Centralized monitoring and governance
+quickstartSteps:
+  - Sign in to the Azure portal with an account that has the required permissions.
+  - Create an Azure Lighthouse delegation ARM template or use the Azure portal to onboard a customer tenant.
+  - Deploy the delegation template to the customer tenant or invite the customer to onboard.
+  - Verify delegated access and manage resources across tenants from your service provider tenant.
+whenToUse: "Use Azure Lighthouse when you need to manage resources across multiple Azure tenants with delegated access and automation."
+whenNotToUse: "Avoid if you only manage a single Azure tenant or do not require cross-tenant automation and governance."
+bestFor:
+  - managed service providers
+  - IT consultancies
+  - large enterprises
+avoidIf:
+  - single-tenant environments
+  - non-Azure workloads
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-lighthouse/
+docsUrl: https://learn.microsoft.com/en-us/azure/lighthouse/overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/azure-lighthouse/
+  - https://learn.microsoft.com/en-us/azure/lighthouse/overview
+featured: false
+---
+Azure Lighthouse provides secure, scalable cross-tenant management, enabling service providers and enterprises to automate and govern resources across multiple Azure environments from a single control plane.

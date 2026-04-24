@@ -1,0 +1,69 @@
+---
+title: "Azure Notification Hubs"
+description: "Azure Notification Hubs enables scalable push notifications to mobile devices across platforms."
+provider: "Azure"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - push notifications
+  - mobile messaging
+  - cross-platform
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - push
+  - mobile
+  - notifications
+  - cross-platform
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 1 million push notifications per month with basic features."
+  limits:
+    - 1 million pushes/month
+    - Unlimited devices
+    - Basic notification features
+  caveats:
+    - No advanced features like telemetry or scheduled notifications
+    - Limited support and SLA
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Send push notifications to iOS, Android, and Windows devices
+  - Broadcast alerts to app users
+  - Engage users with targeted messaging
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Create a new Notification Hub resource.
+  - Configure platform credentials (e.g., APNS, FCM).
+  - Integrate the SDK into your mobile app.
+  - Send a test notification from the Azure portal.
+whenToUse: "Use when you need to send scalable push notifications to multiple mobile platforms from a single backend."
+whenNotToUse: "Avoid if you require advanced analytics, scheduling, or if your app does not use push notifications."
+bestFor:
+  - mobile apps
+  - cross-platform messaging
+  - broadcast notifications
+avoidIf:
+  - need advanced analytics
+  - require scheduled notifications
+  - not using push notifications
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-13
+popularityScore: 7
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/notification-hubs/
+docsUrl: https://learn.microsoft.com/en-us/azure/notification-hubs/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/notification-hubs/
+  - https://learn.microsoft.com/en-us/azure/notification-hubs/
+featured: false
+---
+Azure Notification Hubs provides a scalable, cross-platform push notification service with a generous free tier for basic mobile messaging needs.

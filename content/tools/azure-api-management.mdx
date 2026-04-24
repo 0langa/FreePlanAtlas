@@ -1,0 +1,71 @@
+---
+title: "Azure API Management"
+description: "Azure API Management enables organizations to publish, secure, transform, and monitor APIs at scale."
+provider: "Azure"
+category: "API Gateway"
+domain: integration
+subtypes:
+  - api-gateway
+  - api-management
+  - developer-portal
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - api
+  - gateway
+  - management
+  - azure
+  - security
+pricingModel: freemium
+freeTierDetails:
+  summary: "Developer tier offers free usage for evaluation and development."
+  limits:
+    - 1 unit per subscription
+    - No SLA
+    - Non-production use only
+  caveats:
+    - No SLA or uptime guarantee
+    - Not intended for production workloads
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - Production use requires paid tier
+useCases:
+  - Centralizing API access and security
+  - Creating developer portals
+  - Monitoring API usage
+  - Transforming and versioning APIs
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new API Management instance using the Developer tier.
+  - Add your API or import an OpenAPI specification.
+  - Configure policies for security, rate limiting, or transformation.
+  - Publish the API and access the developer portal.
+whenToUse: "Use when you need to centralize, secure, and monitor APIs for development or evaluation purposes."
+whenNotToUse: "Avoid for production workloads or if you require SLA-backed uptime and support."
+bestFor:
+  - api management evaluation
+  - internal development
+  - testing api gateways
+avoidIf:
+  - need production SLA
+  - require high availability
+  - need large-scale throughput
+difficulty: intermediate
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/api-management/
+docsUrl: https://learn.microsoft.com/en-us/azure/api-management/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/api-management/
+  - https://learn.microsoft.com/en-us/azure/api-management/
+featured: false
+---
+Azure API Management provides a centralized platform for managing, securing, and monitoring APIs, with a free Developer tier suitable for non-production use.

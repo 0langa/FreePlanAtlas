@@ -1,0 +1,72 @@
+---
+title: "CodeCommit"
+description: "AWS CodeCommit is a fully managed source control service for hosting secure Git repositories."
+provider: "AWS"
+category: "Source Control"
+domain: devops
+subtypes:
+  - git-repository
+  - version-control
+  - collaboration
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - git
+  - repository
+  - source-control
+  - aws
+  - devops
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free for up to 5 active users per month with unlimited repositories and storage."
+  limits:
+    - 5 active users/month
+    - Unlimited repositories
+    - 50 GB-month storage
+    - 10,000 Git requests/month
+  caveats:
+    - Charges apply for additional users or requests.
+    - Requires AWS account.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding user or request limits incurs charges.
+useCases:
+  - Private Git repository hosting
+  - Collaborative code development
+  - Integrating with AWS CI/CD pipelines
+quickstartSteps:
+  - Sign in to the AWS Management Console.
+  - Navigate to CodeCommit and create a new repository.
+  - Configure Git credentials or AWS CLI access.
+  - Clone the repository to your local machine.
+  - Push your code to the CodeCommit repository.
+whenToUse: "Use CodeCommit when you need secure, managed Git repositories integrated with AWS services and IAM for access control."
+whenNotToUse: "Avoid if you need public repositories, advanced code review tools, or want to avoid AWS account and billing complexities."
+bestFor:
+  - AWS-centric teams
+  - private repositories
+  - integrated AWS workflows
+avoidIf:
+  - need public/open-source hosting
+  - prefer GitHub/GitLab features
+  - want no AWS account
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://aws.amazon.com/codecommit/
+docsUrl: https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html
+sourceUrls:
+  - https://aws.amazon.com/codecommit/pricing/
+  - https://docs.aws.amazon.com/codecommit/latest/userguide/limits.html
+featured: false
+---
+AWS CodeCommit offers secure, scalable Git repositories with deep AWS integration, suitable for teams needing private source control and seamless AWS workflow support.

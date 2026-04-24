@@ -1,0 +1,69 @@
+---
+title: "Nx Cloud"
+description: "Nx Cloud accelerates and manages distributed builds and caching for Nx monorepos with collaboration features."
+provider: "Nx"
+category: "CI/CD"
+domain: devops
+subtypes:
+  - build cache
+  - remote execution
+  - monorepo tools
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - monorepo
+  - build
+  - cache
+  - ci
+  - devops
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 500 hours of computation and 3 seats per month."
+  limits:
+    - 500 computation hours/month
+    - 3 seats
+    - Community support
+  caveats:
+    - No SLA or advanced support
+    - Limited to public or small private projects
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Speeding up CI for Nx monorepos
+  - Sharing build cache across teams
+  - Optimizing developer workflows
+quickstartSteps:
+  - Sign up for an Nx Cloud account at https://nx.app.
+  - Install Nx CLI and initialize your monorepo if not already done.
+  - Run 'nx connect-to-nx-cloud' in your project directory.
+  - Follow the prompts to link your workspace to Nx Cloud.
+  - Push changes and verify build caching in your CI pipeline.
+whenToUse: "Use Nx Cloud to accelerate builds and enable remote caching for Nx-based monorepos, especially in collaborative or CI environments."
+whenNotToUse: "Avoid if you do not use Nx or monorepos, or require advanced enterprise features or SLAs."
+bestFor:
+  - Nx monorepo users
+  - teams needing faster CI
+  - open source projects
+avoidIf:
+  - not using Nx
+  - require enterprise support
+  - need unlimited seats
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://nx.dev/ci
+docsUrl: https://nx.dev/ci/using-nx-cloud
+sourceUrls:
+  - https://nx.dev/ci/using-nx-cloud
+  - https://nx.app/pricing
+featured: false
+---
+Nx Cloud provides remote build caching and distributed computation for Nx monorepos, helping teams speed up CI and developer workflows with a generous free tier.

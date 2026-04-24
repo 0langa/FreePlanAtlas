@@ -1,0 +1,71 @@
+---
+title: "Imitate Email"
+description: "Imitate Email provides a fake SMTP server for testing email sending in development environments without sending real emails."
+provider: "Imitate Email"
+category: "Email Testing"
+domain: devops
+subtypes:
+  - SMTP server
+  - email sandbox
+  - testing tool
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - email
+  - testing
+  - smtp
+  - development
+  - sandbox
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows basic email testing with limited inboxes and messages."
+  limits:
+    - 1 inbox
+    - 100 messages per inbox
+    - 7-day message retention
+  caveats:
+    - No team collaboration on free tier
+    - Limited integrations
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Test email sending in development
+  - Preview transactional emails
+  - Debug email formatting
+  - Automate email-related CI tests
+quickstartSteps:
+  - Sign up for a free Imitate Email account.
+  - Create a new inbox from the dashboard.
+  - Configure your app's SMTP settings to use the provided server and credentials.
+  - Send a test email from your application.
+  - View and debug received emails in the Imitate Email dashboard.
+whenToUse: "Use when you need to safely test email sending from your app without delivering real emails to users."
+whenNotToUse: "Avoid for production email delivery or when testing with actual user inboxes is required."
+bestFor:
+  - development environments
+  - QA teams
+  - CI pipelines
+avoidIf:
+  - sending real emails
+  - production use
+  - large-scale team collaboration
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://imitate.email
+docsUrl: https://imitate.email/docs
+sourceUrls:
+  - https://imitate.email/pricing
+  - https://imitate.email/docs
+featured: false
+---
+Imitate Email is a developer-focused fake SMTP server that captures and displays outgoing emails for safe testing, debugging, and previewing during application development.

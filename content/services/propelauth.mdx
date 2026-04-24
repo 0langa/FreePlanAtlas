@@ -1,0 +1,72 @@
+---
+title: "PropelAuth"
+description: "PropelAuth provides authentication, user management, and multi-tenant support for web and mobile applications."
+provider: "PropelAuth"
+category: "Authentication"
+domain: auth
+subtypes:
+  - user-auth
+  - multi-tenant
+  - SAML
+  - OAuth
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - auth
+  - user-management
+  - multi-tenant
+  - oauth
+  - saml
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes authentication and user management for up to 1,000 monthly active users."
+  limits:
+    - 1,000 monthly active users
+    - Unlimited tenants
+    - Basic SSO (OAuth, SAML)
+    - Email/password, social logins
+  caveats:
+    - No custom domains on free tier
+    - Limited to basic branding
+    - Advanced SSO and audit logs require paid plans
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add authentication to a SaaS app
+  - Enable multi-tenant user management
+  - Integrate SSO for web/mobile projects
+quickstartSteps:
+  - Sign up for a PropelAuth account.
+  - Create a new project in the dashboard.
+  - Configure authentication methods (email/password, social logins, SSO).
+  - Integrate the SDK into your app using provided documentation.
+  - Test user signup and login flows.
+whenToUse: "Use PropelAuth when you need quick, secure authentication and multi-tenant support without building from scratch."
+whenNotToUse: "Avoid if you require advanced customization, on-premise deployment, or need features only available on paid plans."
+bestFor:
+  - SaaS startups
+  - indie developers
+  - teams needing multi-tenant auth
+avoidIf:
+  - require on-premise
+  - need deep customization
+  - enterprise SSO only
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://propelauth.com
+docsUrl: https://docs.propelauth.com/
+sourceUrls:
+  - https://propelauth.com/pricing
+  - https://docs.propelauth.com/
+featured: false
+---
+PropelAuth offers a developer-friendly authentication service with built-in user management and multi-tenant support, ideal for SaaS and modern web apps.

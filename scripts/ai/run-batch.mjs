@@ -79,9 +79,12 @@ async function main() {
   const batchDir = args.get("batchDir") || positional[0] || path.join(root, "batch-intake");
   const kind = args.get("kind") || positional[1] || "services";
   const force = args.get("force") === "true" || args.get("force") === "1";
+  const skipFoundry = args.get("skipFoundry") === "true" || args.get("skipFoundry") === "1";
   const reportsDir = path.join(root, "reports");
   const batchFiles = parseBatchList(args.get("batchFiles"));
   const limit = args.get("limit") ? Number(args.get("limit")) : undefined;
+
+  let lastContentDir = null;
 
   let batches = batchFiles;
   if (!batches.length) {
@@ -100,6 +103,7 @@ async function main() {
     const batchBase = path.parse(batchPath).name;
     const batchKind = resolveKindForBatch(path.basename(batchPath), kind);
     const contentDir = path.join(root, "content", batchKind);
+    lastContentDir = contentDir;
     const inputPath = path.join(batchDir, `${batchBase}.requests.jsonl`);
     const outputPath = path.join(batchDir, `${batchBase}.responses.jsonl`);
     const timestamp = nowStamp();
@@ -120,8 +124,12 @@ async function main() {
     let failure = null;
 
     try {
-      await run("node", ["scripts/ai/build-ai-input.mjs", "--batch", batchPath, "--out", inputPath, "--kind", batchKind], { cwd: root });
-      await run("node", ["scripts/ai/run-foundry-batch.mjs", "--in", inputPath, "--out", outputPath], { cwd: root });
+      if (!skipFoundry) {
+        await run("node", ["scripts/ai/build-ai-input.mjs", "--batch", batchPath, "--out", inputPath, "--kind", batchKind], { cwd: root });
+        await run("node", ["scripts/ai/run-foundry-batch.mjs", "--in", inputPath, "--out", outputPath], { cwd: root });
+      } else if (!fs.existsSync(outputPath)) {
+        throw new Error(`Missing responses file at ${outputPath}. Run Foundry or disable --skipFoundry.`);
+      }
       const applyArgs = ["scripts/ai/apply-ai-output.mjs", "--in", outputPath, "--out", contentDir, "--kind", batchKind];
       if (force) {
         applyArgs.push("--force", "true");
@@ -149,7 +157,7 @@ async function main() {
     "--batchDir",
     batchDir,
     "--contentDir",
-    contentDir,
+    lastContentDir ?? path.join(root, "content", kind),
     "--outDir",
     reportsDir,
   ];

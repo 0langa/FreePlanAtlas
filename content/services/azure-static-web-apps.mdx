@@ -1,0 +1,75 @@
+---
+title: "Azure Static Web Apps"
+description: "Azure Static Web Apps offers fast, secure hosting for static sites with integrated CI/CD and serverless APIs."
+provider: "Azure"
+category: "Static Hosting"
+domain: hosting
+subtypes:
+  - static-sites
+  - serverless-api
+  - cdn
+  - ci-cd
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - static
+  - web
+  - hosting
+  - serverless
+  - azure
+  - cdn
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes hosting for static sites with custom domains, SSL, and serverless APIs."
+  limits:
+    - 1 custom domain
+    - 100 GB bandwidth/month
+    - 2 million function executions/month
+    - SSL included
+  caveats:
+    - Limited to 1 custom domain on free tier
+    - No custom authentication providers on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Personal portfolios
+  - Documentation sites
+  - Jamstack apps
+  - Prototyping static web projects
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new Static Web App resource.
+  - Connect your GitHub repository containing your static site.
+  - Configure build settings and deployment branch.
+  - Review and create the Static Web App.
+whenToUse: "Use when you need fast, secure static site hosting with built-in CI/CD and simple serverless API integration."
+whenNotToUse: "Avoid if you require dynamic server-side rendering, advanced authentication, or complex backend integrations."
+bestFor:
+  - static sites
+  - Jamstack apps
+  - prototypes
+  - personal projects
+avoidIf:
+  - dynamic web apps
+  - complex backend needs
+  - advanced auth requirements
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/static-web-apps/
+docsUrl: https://learn.microsoft.com/en-us/azure/static-web-apps/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/static-web-apps/
+  - https://learn.microsoft.com/en-us/azure/static-web-apps/
+featured: false
+---
+Azure Static Web Apps provides free static site hosting with integrated CI/CD, custom domains, SSL, and serverless API support, ideal for personal or small team projects.

@@ -1,0 +1,68 @@
+---
+title: "Vatcheckapi.com"
+description: "Vatcheckapi.com provides a simple API to validate European VAT numbers in real time."
+provider: "Vatcheckapi.com"
+category: "API Tools"
+domain: integration
+subtypes:
+  - vat-validation
+  - api
+  - compliance
+audiences:
+  - startup
+  - team
+  - indie
+  - oss
+tags:
+  - vat
+  - validation
+  - europe
+  - api
+  - compliance
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows up to 100 VAT number checks per month."
+  limits:
+    - 100 requests/month
+  caveats:
+    - No SLA on free tier
+    - Rate limits apply
+    - No batch validation
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Validating customer VAT numbers during checkout
+  - Automating VAT compliance for EU businesses
+  - Integrating VAT checks into CRM or ERP systems
+quickstartSteps:
+  - Sign up for a free Vatcheckapi.com account.
+  - Log in and obtain your API key from the dashboard.
+  - Read the API documentation for endpoint details.
+  - Send a GET request to the VAT validation endpoint with your API key and VAT number.
+  - Check the response for validation status.
+whenToUse: "Use when you need to validate EU VAT numbers automatically in your app or workflow with minimal setup."
+whenNotToUse: "Avoid if you require high-volume validation, batch processing, or guaranteed uptime, as the free tier is limited and has no SLA."
+bestFor:
+  - EU e-commerce
+  - SaaS billing
+  - Accounting tools
+avoidIf:
+  - High-volume validation
+  - Non-EU VAT needs
+  - Strict uptime requirements
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 5
+usefulnessScore: 7
+officialUrl: https://vatcheckapi.com
+docsUrl: https://docs.vatcheckapi.com
+sourceUrls:
+  - https://vatcheckapi.com/pricing
+  - https://vatcheckapi.com/
+featured: false
+---
+Vatcheckapi.com offers a straightforward API for real-time validation of European VAT numbers, making it easy to automate compliance checks for EU businesses and applications. The always-free tier is suitable for low-volume use cases, such as startups or prototypes, but is not intended for high-throughput or mission-critical scenarios.

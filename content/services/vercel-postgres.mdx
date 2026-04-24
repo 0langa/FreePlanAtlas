@@ -1,0 +1,72 @@
+---
+title: "Vercel Postgres"
+description: "Vercel Postgres offers managed PostgreSQL databases with instant provisioning and seamless integration for Vercel-hosted applications."
+provider: "Vercel"
+category: "Database"
+domain: database
+subtypes:
+  - PostgreSQL
+  - Managed Database
+  - Serverless
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - postgres
+  - serverless
+  - managed
+  - vercel
+  - database
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes one development database with limited storage and connections."
+  limits:
+    - 1 development database
+    - Up to 3 branches
+    - Up to 1 GB storage
+    - 20 max connections
+  caveats:
+    - No production SLA on free tier
+    - Limited to development use
+    - Performance may be throttled
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototyping web apps
+  - Developing serverless backends
+  - Testing PostgreSQL integrations
+quickstartSteps:
+  - Sign up or log in to Vercel.
+  - Navigate to the Storage > Postgres section in the dashboard.
+  - Click 'Create Database' and select the free development tier.
+  - Configure database name and region, then create the database.
+  - Copy connection string and use it in your app or Vercel project.
+whenToUse: "Use when you need a quick, managed PostgreSQL database for development or prototyping, especially if deploying on Vercel."
+whenNotToUse: "Avoid for production workloads, high-traffic apps, or if you need advanced PostgreSQL features or custom configurations."
+bestFor:
+  - prototyping
+  - side-projects
+  - Vercel deployments
+avoidIf:
+  - production workloads
+  - large databases
+  - custom PostgreSQL tuning
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-11
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://vercel.com/storage/postgres
+docsUrl: https://vercel.com/docs/storage/vercel-postgres
+sourceUrls:
+  - https://vercel.com/storage/postgres
+  - https://vercel.com/docs/storage/vercel-postgres
+featured: false
+---
+Vercel Postgres provides a simple, serverless PostgreSQL experience tightly integrated with the Vercel platform, ideal for rapid development and testing.

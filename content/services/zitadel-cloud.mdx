@@ -1,0 +1,70 @@
+---
+title: "ZITADEL Cloud"
+description: "Managed cloud identity and access management with authentication, authorization, and user self-service features."
+provider: "ZITADEL"
+category: "Identity Management"
+domain: auth
+subtypes:
+  - OAuth2
+  - OIDC
+  - SAML
+  - User Management
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - authentication
+  - authorization
+  - iam
+  - user-management
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 50,000 monthly active users and basic authentication features."
+  limits:
+    - 50,000 monthly active users
+    - Basic authentication and authorization
+    - Community support
+  caveats:
+    - No SLA on free tier
+    - Advanced features require paid plans
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add secure login to web or mobile apps
+  - Enable SSO for SaaS products
+  - Manage user roles and permissions
+quickstartSteps:
+  - Sign up for a free ZITADEL Cloud account.
+  - Create a new project and configure your application.
+  - Set up authentication methods (e.g., email, social login).
+  - Integrate ZITADEL SDK or OIDC endpoints into your app.
+  - Test user registration and login flows.
+whenToUse: "Use ZITADEL Cloud when you need managed authentication, authorization, and user management for your apps without running your own identity server."
+whenNotToUse: "Avoid if you require on-premise deployment, advanced enterprise features, or strict SLAs on the free tier."
+bestFor:
+  - indie
+  - startup
+  - oss
+  - team
+avoidIf:
+  - enterprise
+  - agency
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://zitadel.com
+docsUrl: https://docs.zitadel.com/
+sourceUrls:
+  - https://zitadel.com/pricing
+  - https://docs.zitadel.com/
+featured: false
+---
+ZITADEL Cloud provides managed identity and access management with modern authentication protocols, user self-service, and scalable free tier for app developers.

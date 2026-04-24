@@ -1,0 +1,73 @@
+---
+title: "Supabase Edge Functions"
+description: "Supabase Edge Functions let you run TypeScript or JavaScript serverless functions close to your users."
+provider: "Supabase"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - serverless
+  - edge
+  - functions
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - edge
+  - typescript
+  - javascript
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 500,000 function invocations per month."
+  limits:
+    - 500,000 invocations/month
+    - Up to 5MB request/response size
+    - Max 10 seconds execution time
+  caveats:
+    - Shared compute resources
+    - Cold starts may occur
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Usage above free tier is blocked unless you upgrade
+useCases:
+  - API endpoints
+  - Webhooks
+  - Custom authentication logic
+  - Data processing
+quickstartSteps:
+  - Sign up for a free Supabase account.
+  - Create a new project in the Supabase dashboard.
+  - Install the Supabase CLI and initialize functions in your project directory.
+  - Write your TypeScript or JavaScript function in the 'functions' folder.
+  - Deploy your function using the Supabase CLI.
+whenToUse: "Use when you need to deploy lightweight serverless APIs or event-driven logic close to your Supabase project."
+whenNotToUse: "Avoid if you require long-running processes, advanced compute resources, or need to run non-JS/TS code."
+bestFor:
+  - API endpoints
+  - event-driven logic
+  - Supabase integrations
+avoidIf:
+  - heavy compute workloads
+  - non-JS/TS runtimes
+  - long-running jobs
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-11
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://supabase.com/docs/guides/functions
+docsUrl: https://supabase.com/docs/guides/functions
+sourceUrls:
+  - https://supabase.com/pricing
+  - https://supabase.com/docs/guides/functions
+featured: false
+---
+Supabase Edge Functions provide a simple way to run serverless TypeScript or JavaScript code at the edge, tightly integrated with your Supabase project.

@@ -9,7 +9,8 @@
     "build:static": "npm run build",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "search:index": "node scripts/build-search-index.mjs"
+    "search:index": "node scripts/build-search-index.mjs",
+    "ai:launch": "node scripts/ai/launch-batch.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

@@ -1,0 +1,72 @@
+---
+title: "Azure SignalR Service"
+description: "Azure SignalR Service provides real-time messaging and WebSocket management for scalable web applications."
+provider: "Azure"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - real-time
+  - websocket
+  - pubsub
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+  - oss
+tags:
+  - realtime
+  - websocket
+  - push
+  - pubsub
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 20 concurrent connections and 20,000 messages per day."
+  limits:
+    - 20 concurrent connections
+    - 20,000 messages/day
+    - 1 unit
+  caveats:
+    - No SLA on free tier
+    - Limited to one free unit per subscription
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Live chat in web apps
+  - Real-time dashboards
+  - Collaborative editing
+  - Push notifications
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new SignalR Service instance using the Free tier.
+  - Configure connection settings and access keys.
+  - Integrate the SignalR SDK into your application.
+  - Test real-time messaging between clients.
+whenToUse: "Use when you need to add scalable real-time messaging or WebSocket support to web or mobile applications without managing infrastructure."
+whenNotToUse: "Avoid if you require high connection counts, strict SLAs, or advanced scaling, as the free tier is limited and lacks SLA guarantees."
+bestFor:
+  - prototyping
+  - student projects
+  - small apps
+  - learning
+avoidIf:
+  - high-scale production
+  - strict SLA needs
+  - large concurrent users
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/signalr-service/
+docsUrl: https://learn.microsoft.com/en-us/azure/azure-signalr/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/signalr-service/
+  - https://learn.microsoft.com/en-us/azure/azure-signalr/
+featured: false
+---
+Azure SignalR Service enables developers to add real-time messaging and WebSocket support to applications without managing servers or scaling infrastructure.

@@ -1,0 +1,73 @@
+---
+title: "Svix"
+description: "Svix provides a managed webhooks service for sending, receiving, and monitoring webhook events at scale."
+provider: "Svix"
+category: "Webhooks"
+domain: integration
+subtypes:
+  - webhooks
+  - event delivery
+  - notifications
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+  - oss
+tags:
+  - webhooks
+  - event-driven
+  - notifications
+  - integration
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 500 messages per month with basic features."
+  limits:
+    - 500 messages/month
+    - 1 endpoint per application
+    - 1 application
+    - Basic retry logic
+  caveats:
+    - No custom branding
+    - Limited to basic analytics
+    - No advanced security features
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Sending webhook notifications from SaaS apps
+  - Reliable event delivery to third-party services
+  - Monitoring webhook delivery status
+quickstartSteps:
+  - Sign up for a Svix account.
+  - Create a new application in the Svix dashboard.
+  - Add an endpoint URL to receive webhooks.
+  - Send a test event from the dashboard to verify delivery.
+  - Integrate the Svix API into your application for automated event sending.
+whenToUse: "Use Svix when you need reliable, managed webhook delivery without building your own infrastructure."
+whenNotToUse: "Avoid Svix if you require high message volumes, advanced security, or custom branding on the free tier."
+bestFor:
+  - SaaS products
+  - internal tools
+  - MVPs
+  - event-driven apps
+avoidIf:
+  - need unlimited endpoints
+  - require advanced analytics
+  - must have custom branding
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.svix.com/
+docsUrl: https://docs.svix.com/
+sourceUrls:
+  - https://www.svix.com/pricing/
+  - https://docs.svix.com/
+featured: false
+---
+Svix offers a simple way to send and manage webhooks, with a generous free tier for low-volume use and easy integration for developers.

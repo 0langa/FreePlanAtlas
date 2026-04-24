@@ -1,0 +1,71 @@
+---
+title: "Authress"
+description: "Authress provides authentication and authorization as a service for modern applications with fine-grained access control."
+provider: "Authress"
+category: "Authentication"
+domain: auth
+subtypes:
+  - OAuth
+  - User Management
+  - Authorization
+audiences:
+  - startup
+  - team
+  - indie
+  - oss
+tags:
+  - authentication
+  - authorization
+  - oauth
+  - user-management
+  - api-security
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 100 monthly active users with core authentication and authorization features."
+  limits:
+    - 100 monthly active users
+    - Unlimited tenants
+    - Unlimited applications
+    - Core authentication and authorization
+  caveats:
+    - No SAML SSO in free tier
+    - Support limited to community channels
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add secure authentication to web or mobile apps
+  - Implement fine-grained access control
+  - Manage multi-tenant user permissions
+quickstartSteps:
+  - Sign up for a free Authress account at https://authress.io/.
+  - Create a new application in the Authress dashboard.
+  - Configure your application's callback URLs and authentication settings.
+  - Integrate the Authress SDK or API with your app.
+  - Test user login and access control flows.
+whenToUse: "Use Authress when you need to quickly add secure authentication and fine-grained authorization to your application without managing your own auth infrastructure."
+whenNotToUse: "Avoid if you require SAML SSO, advanced enterprise integrations, or need to support more than 100 monthly active users for free."
+bestFor:
+  - startups
+  - indie developers
+  - small teams
+  - open source projects
+avoidIf:
+  - require SAML SSO
+  - need advanced enterprise features
+  - expect high user volumes on free tier
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://authress.io/
+docsUrl: https://authress.io/knowledge-base/docs
+sourceUrls:
+  - https://authress.io/pricing
+  - https://authress.io/knowledge-base/docs
+featured: false
+---
+Authress offers a developer-friendly authentication and authorization platform with a generous free tier for small projects, enabling secure user management and access control without complex setup.

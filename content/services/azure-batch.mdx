@@ -1,0 +1,74 @@
+---
+title: "Azure Batch"
+description: "Azure Batch provides cloud-scale job scheduling and compute management for parallel and high-performance computing workloads."
+provider: "Azure"
+category: "Batch Compute"
+domain: compute
+subtypes:
+  - batch processing
+  - job scheduling
+  - HPC
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - batch
+  - compute
+  - hpc
+  - parallel
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "750 hours per month of low-priority Standard_A1 v2 VMs free."
+  limits:
+    - 750 VM hours/month (Standard_A1 v2, low-priority)
+    - Limited to select VM sizes
+    - Standard storage and networking charges apply
+  caveats:
+    - Only low-priority VMs are free; other resources billed separately
+    - Free tier does not include premium support
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free VM hours or using non-eligible VM sizes incurs charges
+    - Storage and outbound data transfer may generate costs
+useCases:
+  - Large-scale parallel data processing
+  - Rendering and simulation workloads
+  - Automated job scheduling
+  - Scientific computing
+  - Batch ETL operations
+quickstartSteps:
+  - Sign up for an Azure account and activate the free tier.
+  - Create a Batch account in the Azure portal.
+  - Configure a pool with eligible low-priority VMs.
+  - Upload your application and input data to Azure Storage.
+  - Define and submit jobs and tasks to the Batch account.
+  - Monitor job progress and retrieve output upon completion.
+whenToUse: "Use Azure Batch for automating large-scale parallel jobs or high-performance computing workloads without managing infrastructure."
+whenNotToUse: "Avoid if you need real-time processing, persistent compute, or require VM types not covered by the free tier."
+bestFor:
+  - batch processing
+  - HPC workloads
+  - automated job scheduling
+avoidIf:
+  - real-time workloads
+  - always-on compute
+  - unsupported VM sizes
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-11
+popularityScore: 7
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/batch/
+docsUrl: https://learn.microsoft.com/en-us/azure/batch/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/batch/
+  - https://learn.microsoft.com/en-us/azure/batch/
+featured: false
+---
+Azure Batch enables you to run large-scale parallel and high-performance computing jobs in the cloud, automating resource management and job scheduling.

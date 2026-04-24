@@ -1,0 +1,74 @@
+---
+title: "CacheFly"
+description: "CacheFly is a global content delivery network (CDN) offering fast, reliable content distribution with a generous free tier."
+provider: "CacheFly"
+category: "Content Delivery Network"
+domain: networking
+subtypes:
+  - CDN
+  - Edge Delivery
+  - Static Content
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - cdn
+  - content-delivery
+  - networking
+  - static-assets
+  - edge
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free CDN plan with 2 TB monthly bandwidth and global edge delivery."
+  limits:
+    - 2 TB bandwidth/month
+    - Global edge locations
+    - 1 user
+    - Standard support
+  caveats:
+    - Overages billed at standard rates
+    - No advanced analytics on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages beyond 2 TB are charged automatically
+useCases:
+  - Accelerating website static assets
+  - Distributing software downloads
+  - Serving video or audio files
+  - Reducing server load
+quickstartSteps:
+  - Sign up for a free CacheFly account at the official signup page.
+  - Add your website or application domain in the CacheFly dashboard.
+  - Configure your origin server settings for content pull.
+  - Update your DNS or application to point static asset URLs to CacheFly.
+  - Verify content is being served via CacheFly CDN.
+whenToUse: "Use CacheFly when you need a simple, high-bandwidth CDN for static content with generous free limits and global reach."
+whenNotToUse: "Avoid if you require advanced analytics, custom edge logic, or need more than 2 TB/month bandwidth without incurring overage charges."
+bestFor:
+  - static websites
+  - media distribution
+  - open source projects
+  - startups
+avoidIf:
+  - need advanced analytics
+  - require custom edge scripting
+  - expect high bandwidth overages
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://portal.cachefly.com/signup/free2023
+docsUrl: https://docs.portal.cachefly.com
+sourceUrls:
+  - https://www.cachefly.com/free-cdn/
+  - https://portal.cachefly.com/signup/free2023
+featured: false
+---
+CacheFly provides a generous always-free CDN tier suitable for static content delivery, with global edge locations and a 2 TB monthly bandwidth cap. It's ideal for indie developers, startups, and open source projects needing fast, reliable content distribution without upfront costs. Overages are billed automatically, so monitor usage if you expect high traffic.

@@ -1,0 +1,71 @@
+---
+title: "Azure VPN Gateway"
+description: "Azure VPN Gateway enables secure site-to-site, point-to-site, and VNet-to-VNet connectivity across Azure and on-premises networks."
+provider: "Azure"
+category: "Networking"
+domain: networking
+subtypes:
+  - VPN
+  - Gateway
+  - Site-to-Site
+  - Point-to-Site
+audiences:
+  - startup
+  - team
+  - enterprise
+  - agency
+tags:
+  - vpn
+  - gateway
+  - azure
+  - networking
+  - security
+pricingModel: freemium
+freeTierDetails:
+  summary: "No always-free tier; new users may access VPN Gateway via Azure free account credits."
+  limits:
+    - $200 credit for 30 days (new users only)
+  caveats:
+    - No ongoing free tier; charges apply after credits expire
+    - VPN Gateway incurs hourly and data transfer costs
+  resetPeriod: none
+  requiresCard: true
+  freeTierType: credit
+  hasHardCap: false
+  overageRisk: high
+  billingRiskNotes:
+    - Charges accrue automatically after credits are used or expire
+  trialDays: 30
+  monthlyCreditAmount: "$200"
+useCases:
+  - Securely connect on-premises networks to Azure
+  - Enable encrypted communication between Azure VNets
+  - Remote access for distributed teams
+quickstartSteps:
+  - Sign up for an Azure account and activate your free $200 credit.
+  - Navigate to the Azure Portal and search for 'VPN Gateway'.
+  - Create a new Virtual Network and subnet for the gateway.
+  - Deploy a VPN Gateway in your Virtual Network.
+  - Configure site-to-site or point-to-site VPN connections as needed.
+whenToUse: "Use Azure VPN Gateway to securely connect on-premises infrastructure or remote users to Azure virtual networks."
+whenNotToUse: "Avoid if you need a permanent free VPN solution or have low tolerance for unexpected network egress costs."
+bestFor:
+  - Hybrid cloud networking
+  - Enterprise connectivity
+  - Secure remote access
+avoidIf:
+  - Seeking always-free VPN
+  - Low budget for ongoing network costs
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/
+docsUrl: https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/
+  - https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+featured: false
+---
+Azure VPN Gateway provides secure, scalable connectivity between Azure virtual networks and on-premises or remote environments, but does not offer an ongoing free tier.

@@ -1,0 +1,76 @@
+---
+title: "Azure Maps"
+description: "Azure Maps provides geospatial APIs for maps, search, routing, traffic, and weather data integration in web and mobile applications."
+provider: "Azure"
+category: "Geospatial Apis"
+domain: integration
+subtypes:
+  - maps
+  - geolocation
+  - routing
+  - weather
+  - traffic
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+tags:
+  - maps
+  - geospatial
+  - api
+  - azure
+  - location
+pricingModel: freemium
+freeTierDetails:
+  summary: "1,000 map renders and 25,000 search transactions per month free."
+  limits:
+    - 1,000 map renders/month
+    - 25,000 search transactions/month
+    - 5,000 route transactions/month
+    - 5,000 weather requests/month
+  caveats:
+    - Free tier applies to S0 pricing tier only.
+    - Overages billed at standard rates.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Usage beyond free limits incurs charges.
+    - No hard cap; monitor usage to avoid unexpected costs.
+useCases:
+  - Display interactive maps in web or mobile apps
+  - Geocode addresses and search locations
+  - Calculate routes and travel times
+  - Integrate real-time traffic or weather data
+quickstartSteps:
+  - Sign up for an Azure account and create an Azure Maps resource.
+  - Obtain your Azure Maps primary key from the Azure portal.
+  - Install the Azure Maps SDK or use REST APIs in your application.
+  - Configure authentication using your subscription key.
+  - Start making API calls for maps, search, routing, or weather features.
+whenToUse: "Use Azure Maps when you need scalable, cloud-based mapping, geolocation, or routing APIs integrated with other Azure services."
+whenNotToUse: "Avoid if you require unlimited free usage, offline maps, or need to avoid credit card registration for the free tier."
+bestFor:
+  - developers integrating maps
+  - businesses needing geospatial APIs
+  - Azure-centric teams
+avoidIf:
+  - need offline maps
+  - require unlimited free usage
+  - cannot provide payment details
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-08
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-maps/
+docsUrl: https://learn.microsoft.com/en-us/azure/azure-maps/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/azure-maps/
+  - https://learn.microsoft.com/en-us/azure/azure-maps/
+featured: false
+---
+Azure Maps offers robust APIs for mapping, geolocation, routing, and real-time data, with a generous free tier for developers and businesses building location-aware applications.

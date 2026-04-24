@@ -1,0 +1,73 @@
+---
+title: "Turso"
+description: "Turso is a distributed, edge-hosted SQLite database service designed for low-latency, global applications."
+provider: "Turso"
+category: "Database"
+domain: database
+subtypes:
+  - Edge Database
+  - SQLite
+  - Distributed
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - edge
+  - sqlite
+  - serverless
+  - distributed
+  - global
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 500MB storage, 3 databases, and 3 locations."
+  limits:
+    - 500MB total storage
+    - 3 databases
+    - 3 locations
+    - Up to 100,000 requests/month
+  caveats:
+    - Overages require upgrade to paid plan
+    - No dedicated support on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Deploying globally distributed apps
+  - Prototyping edge-first applications
+  - Building low-latency APIs
+  - Syncing data close to users
+quickstartSteps:
+  - Sign up for a Turso account at https://turso.tech/.
+  - Install the Turso CLI following the official instructions.
+  - Create a new database using the CLI.
+  - Add locations to distribute your database globally.
+  - Connect your application using the provided connection string.
+whenToUse: "Use Turso when you need a fast, distributed SQLite database close to your users for edge or global applications."
+whenNotToUse: "Avoid Turso if you require advanced relational features, large-scale storage, or strict enterprise compliance."
+bestFor:
+  - edge apps
+  - global prototypes
+  - indie projects
+  - student projects
+avoidIf:
+  - need large storage
+  - require complex SQL features
+  - enterprise compliance required
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://turso.tech/
+docsUrl: https://docs.turso.tech/
+sourceUrls:
+  - https://turso.tech/pricing
+  - https://docs.turso.tech/
+featured: false
+---
+Turso offers a globally distributed, serverless SQLite database ideal for edge applications, with a generous free tier for small projects and prototyping.

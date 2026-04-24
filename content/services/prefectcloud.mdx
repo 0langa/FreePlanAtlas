@@ -1,0 +1,69 @@
+---
+title: "PrefectCloud"
+description: "PrefectCloud is a managed workflow orchestration service for scheduling, monitoring, and managing data pipelines."
+provider: "Prefect"
+category: "Workflow Orchestration"
+domain: devops
+subtypes:
+  - workflow
+  - data-pipeline
+  - automation
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - workflow
+  - orchestration
+  - data
+  - automation
+  - pipelines
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes unlimited flows, 20,000 task runs per month, and 3 users."
+  limits:
+    - 20,000 task runs/month
+    - 3 users
+    - Unlimited flows
+  caveats:
+    - No SSO or advanced RBAC on free tier
+    - Support limited to community channels
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Automating ETL pipelines
+  - Orchestrating machine learning workflows
+  - Monitoring scheduled data jobs
+quickstartSteps:
+  - Sign up for a PrefectCloud account.
+  - Install the Prefect Python package locally.
+  - Connect your local Prefect agent to PrefectCloud.
+  - Define and register a flow using Prefect's Python API.
+  - Run and monitor your flow from the PrefectCloud dashboard.
+whenToUse: "Use PrefectCloud when you need to orchestrate, schedule, and monitor Python-based data workflows without managing your own infrastructure."
+whenNotToUse: "Avoid if you require on-premises orchestration, need advanced enterprise features, or must run non-Python workflows."
+bestFor:
+  - data teams
+  - ML engineers
+  - analytics engineers
+avoidIf:
+  - require on-premises
+  - need non-Python support
+  - require advanced RBAC
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://www.prefect.io/cloud/
+docsUrl: https://docs.prefect.io/latest/
+sourceUrls:
+  - https://www.prefect.io/pricing/
+  - https://docs.prefect.io/latest/
+featured: false
+---
+PrefectCloud provides a managed platform for orchestrating, scheduling, and monitoring data workflows, with a generous free tier suitable for small teams and projects.

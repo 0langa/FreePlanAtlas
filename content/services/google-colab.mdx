@@ -1,0 +1,75 @@
+---
+title: "Google Colab"
+description: "Google Colab provides free cloud-hosted Jupyter notebooks with GPU support for interactive Python development and data science."
+provider: "Google Cloud"
+category: "Notebook Hosting"
+domain: ai
+subtypes:
+  - jupyter-notebook
+  - gpu
+  - python
+  - data-science
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - notebook
+  - python
+  - machine-learning
+  - gpu
+  - data-science
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free access to hosted Jupyter notebooks with limited CPU, GPU, and RAM resources."
+  limits:
+    - Up to 12 hours per session
+    - Limited free GPU/TPU usage
+    - Idle disconnects after 90 minutes
+    - 5GB storage per user
+  caveats:
+    - No guaranteed resource availability
+    - Sessions may disconnect without warning
+    - Data not persisted between sessions unless saved to Google Drive
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Machine learning prototyping
+  - Collaborative data analysis
+  - Educational tutorials
+  - Experimenting with Python libraries
+quickstartSteps:
+  - Sign in with your Google account at https://colab.research.google.com/.
+  - Click 'New Notebook' to create a new Jupyter notebook.
+  - Select 'Runtime' > 'Change runtime type' to enable GPU or TPU if needed.
+  - Write and execute Python code in the notebook cells.
+  - Save your work to Google Drive for persistence.
+whenToUse: "Use Google Colab for quick prototyping, learning, or sharing Python notebooks with free access to GPUs and collaborative features."
+whenNotToUse: "Avoid Colab for long-running jobs, sensitive data, or production workloads requiring persistent compute or storage."
+bestFor:
+  - learning
+  - prototyping
+  - collaboration
+  - teaching
+avoidIf:
+  - need-persistent-compute
+  - require-high-security
+  - require-long-running-jobs
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://colab.research.google.com/
+docsUrl: https://research.google.com/colaboratory/faq.html
+sourceUrls:
+  - https://research.google.com/colaboratory/faq.html
+  - https://colab.research.google.com/
+featured: false
+---
+Google Colab offers free, cloud-based Jupyter notebooks with GPU/TPU support, ideal for prototyping, learning, and collaborative data science projects.

@@ -1,0 +1,72 @@
+---
+title: "Netlify Functions"
+description: "Netlify Functions lets you run serverless backend code with automatic deployment and scaling from your Netlify site."
+provider: "Netlify"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - serverless
+  - lambda
+  - edge functions
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - jamstack
+  - api
+  - backend
+  - functions
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 125,000 requests and 100 hours of execution time per month."
+  limits:
+    - 125,000 requests/month
+    - 100 hours execution/month
+    - Up to 10 MB per function
+    - 1 MB request/response size
+  caveats:
+    - Hard cap on requests and execution time
+    - Cold starts may affect latency
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add serverless APIs to static sites
+  - Handle form submissions
+  - Integrate with third-party APIs
+  - Run scheduled background jobs
+quickstartSteps:
+  - Sign up for a free Netlify account.
+  - Create or import a site on Netlify.
+  - Add a 'netlify/functions' directory to your project.
+  - Write a JavaScript or TypeScript function and save it in the functions directory.
+  - Deploy your site to Netlify; functions are automatically deployed.
+whenToUse: "Use when you need to add backend logic or APIs to static sites without managing servers."
+whenNotToUse: "Avoid if you need long-running processes, high memory, or custom runtime environments."
+bestFor:
+  - jamstack sites
+  - static site APIs
+  - simple backend tasks
+avoidIf:
+  - heavy computation
+  - custom runtimes
+  - stateful services
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://www.netlify.com/products/functions/
+docsUrl: https://docs.netlify.com/functions/overview/
+sourceUrls:
+  - https://www.netlify.com/products/functions/
+  - https://docs.netlify.com/functions/overview/
+featured: false
+---
+Netlify Functions provide a simple way to add serverless backend logic to your Netlify-hosted sites, with generous free tier limits and easy deployment.

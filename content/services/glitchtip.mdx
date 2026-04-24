@@ -1,0 +1,72 @@
+---
+title: "GlitchTip"
+description: "GlitchTip is an open-source error tracking and monitoring service for web and mobile applications."
+provider: "GlitchTip"
+category: "Error Monitoring"
+domain: observability
+subtypes:
+  - error tracking
+  - exception monitoring
+  - alerting
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - open-source
+  - monitoring
+  - errors
+  - alerts
+  - self-hosted
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1,000 events per month and 1 project."
+  limits:
+    - 1,000 events/month
+    - 1 project
+    - Unlimited users
+  caveats:
+    - Overages require paid plan
+    - No phone support on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Track application errors
+  - Monitor exceptions in production
+  - Receive real-time alerts
+  - Integrate with Sentry SDKs
+quickstartSteps:
+  - Sign up for a free GlitchTip account.
+  - Create a new project in the dashboard.
+  - Copy the provided DSN (Data Source Name).
+  - Install a compatible Sentry SDK in your app.
+  - Configure the SDK with your GlitchTip DSN.
+  - Trigger a test error to verify integration.
+whenToUse: "Use GlitchTip when you need simple, open-source error monitoring with a generous free tier for small projects."
+whenNotToUse: "Avoid if you need advanced analytics, high event volumes, or enterprise integrations beyond basic error tracking."
+bestFor:
+  - indie
+  - startup
+  - oss
+  - small teams
+avoidIf:
+  - enterprise
+  - high-volume
+  - advanced analytics
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-12
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://glitchtip.com/
+docsUrl: https://glitchtip.com/docs/
+sourceUrls:
+  - https://glitchtip.com/pricing
+  - https://glitchtip.com/docs/
+featured: false
+---
+GlitchTip provides open-source error tracking with a free tier suitable for small projects, supporting Sentry SDKs and easy integration for web and mobile apps.

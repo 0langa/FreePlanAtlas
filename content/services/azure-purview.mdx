@@ -1,0 +1,68 @@
+---
+title: "Azure Purview"
+description: "Azure Purview is a unified data governance service for managing and discovering data across your organization."
+provider: "Azure"
+category: "Data Governance"
+domain: analytics
+subtypes:
+  - data catalog
+  - data discovery
+  - metadata management
+audiences:
+  - enterprise
+  - team
+  - startup
+tags:
+  - data-governance
+  - catalog
+  - compliance
+  - metadata
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 vCore and 25 GB of data processed per month."
+  limits:
+    - 1 vCore per month
+    - 25 GB data processed per month
+  caveats:
+    - Additional usage billed per vCore-hour and per GB processed
+    - Some features may require paid tier
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Charges accrue if you exceed free tier limits
+useCases:
+  - Centralized data cataloging
+  - Data discovery and lineage tracking
+  - Compliance and data governance
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new Azure Purview account.
+  - Configure data sources and scan your data.
+  - Review cataloged assets and metadata.
+  - Set up access policies and governance rules.
+whenToUse: "Use Azure Purview to organize, discover, and govern data assets across multiple sources in your organization."
+whenNotToUse: "Avoid if you need a free, unlimited data catalog or are not using Azure as your primary cloud platform."
+bestFor:
+  - enterprise
+  - team
+avoidIf:
+  - student
+  - indie
+  - oss
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/purview/
+docsUrl: https://learn.microsoft.com/en-us/azure/purview/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/purview/
+  - https://learn.microsoft.com/en-us/azure/purview/
+featured: false
+---
+Azure Purview provides unified data governance, enabling organizations to catalog, discover, and manage data assets for compliance and analytics.

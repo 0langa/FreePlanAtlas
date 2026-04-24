@@ -1,0 +1,69 @@
+---
+title: "Dotenv"
+description: "Dotenv provides secure cloud-based management and sharing of environment variables for teams and projects."
+provider: "Dotenv"
+category: "Secrets Management"
+domain: security
+subtypes:
+  - environment variables
+  - secret storage
+  - env sync
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - env
+  - secrets
+  - configuration
+  - security
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows unlimited projects, 3 team members, and 100 secrets per project."
+  limits:
+    - 3 team members
+    - 100 secrets per project
+    - Unlimited projects
+  caveats:
+    - No SSO or advanced audit logs on free tier
+    - API access may be rate-limited
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Share environment variables securely with collaborators
+  - Centralize secrets for multiple projects
+  - Automate environment variable syncing in CI/CD
+quickstartSteps:
+  - Sign up for a free Dotenv account at dotenv.org.
+  - Create a new project and add your environment variables.
+  - Invite up to 2 collaborators to your project.
+  - Install the Dotenv CLI and authenticate with your account.
+  - Sync environment variables to your local or CI environment.
+whenToUse: "Use Dotenv when you need to securely manage and share environment variables across projects or teams without self-hosting."
+whenNotToUse: "Avoid if you require advanced enterprise features, on-premise hosting, or need to manage secrets beyond environment variables."
+bestFor:
+  - small teams
+  - open source projects
+  - startups
+avoidIf:
+  - enterprise compliance
+  - on-premise requirements
+  - non-env secret types
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://dotenv.org/
+docsUrl: https://docs.dotenv.org/
+sourceUrls:
+  - https://dotenv.org/pricing
+  - https://docs.dotenv.org/
+featured: false
+---
+Dotenv is a cloud-based service for managing and sharing environment variables, making it easier to collaborate securely on configuration across projects.

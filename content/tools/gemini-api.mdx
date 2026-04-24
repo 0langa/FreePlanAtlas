@@ -1,0 +1,74 @@
+---
+title: "Gemini API"
+description: "Google Cloud's Gemini API provides access to advanced generative AI models for text, code, and multimodal tasks."
+provider: "Google Cloud"
+category: "AI API"
+domain: ai
+subtypes:
+  - generative
+  - multimodal
+  - text
+  - code
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - genai
+  - llm
+  - multimodal
+  - text-generation
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers limited monthly usage of Gemini Pro and Gemini Pro Vision models."
+  limits:
+    - 60 requests/minute
+    - Up to 2,000,000 tokens/month for Gemini Pro
+    - Up to 60,000 tokens/month for Gemini Pro Vision
+  caveats:
+    - Usage above free tier is billed.
+    - Some models or features may not be included.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Text summarization
+  - Chatbots
+  - Code generation
+  - Image captioning
+  - Multimodal analysis
+quickstartSteps:
+  - Sign in to Google Cloud and enable the Gemini API in your project.
+  - Create or select a service account with appropriate permissions.
+  - Obtain an API key or set up OAuth credentials.
+  - Install the Google AI SDK or use the REST API.
+  - Make your first API call using sample code from the documentation.
+whenToUse: "Use Gemini API when you need scalable, managed access to Google's latest generative AI models for text or multimodal tasks."
+whenNotToUse: "Avoid if you require on-premise deployment, strict data residency, or need unlimited free usage for high-volume workloads."
+bestFor:
+  - prototyping
+  - AI-powered apps
+  - multimodal projects
+avoidIf:
+  - self-hosting required
+  - strict data locality
+  - large-scale free usage
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://ai.google.dev/pricing
+docsUrl: https://ai.google.dev/docs
+sourceUrls:
+  - https://ai.google.dev/pricing
+  - https://ai.google.dev/docs
+featured: false
+---
+Gemini API provides developers with access to Google's advanced generative AI models for building applications that require text, code, or multimodal understanding. The free tier is suitable for experimentation, prototyping, and low-volume production use, with clear monthly limits and no risk of surprise overages. Integration is straightforward via REST or SDK, and the service is ideal for teams looking to quickly add AI capabilities without managing infrastructure.

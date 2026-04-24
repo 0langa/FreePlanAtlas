@@ -1,0 +1,74 @@
+---
+title: "Azure SQL Database"
+description: "Managed relational database service for scalable, high-availability SQL workloads on Azure."
+provider: "Azure"
+category: "Managed Database"
+domain: database
+subtypes:
+  - relational
+  - SQL
+  - managed
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+tags:
+  - sql
+  - relational
+  - managed
+  - cloud
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "250 GB S0 database free for 12 months with Azure Free Account."
+  limits:
+    - 1 S0 database
+    - 250 GB storage
+    - 12 months duration
+  caveats:
+    - Requires Azure Free Account
+    - After 12 months, standard rates apply
+  resetPeriod: 12 months
+  requiresCard: true
+  freeTierType: time-limited
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - Service stops if free tier is exceeded during trial period
+  trialDays: 365
+useCases:
+  - Developing cloud-based applications
+  - Testing SQL workloads
+  - Learning SQL Server on Azure
+  - Prototyping data-driven apps
+quickstartSteps:
+  - Sign up for an Azure Free Account.
+  - Navigate to Azure Portal and select 'Create a resource'.
+  - Choose 'SQL Database' and configure database settings.
+  - Select the S0 pricing tier and review free tier eligibility.
+  - Deploy the database and connect using Azure SQL tools.
+whenToUse: "Use when you need a managed SQL Server database for development, prototyping, or learning on Azure with minimal setup."
+whenNotToUse: "Avoid if you need always-free production databases, require non-SQL engines, or want to avoid time-limited free tiers."
+bestFor:
+  - prototyping
+  - learning
+  - testing
+  - development
+avoidIf:
+  - need always-free
+  - require non-SQL
+  - production workloads with no budget
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-sql/database/
+docsUrl: https://learn.microsoft.com/en-us/azure/azure-sql/database/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/azure-sql/database/
+  - https://learn.microsoft.com/en-us/azure/azure-sql/database/
+featured: false
+---
+Azure SQL Database offers a managed, scalable SQL Server experience with a 12-month free S0 database for new Azure Free Account users.

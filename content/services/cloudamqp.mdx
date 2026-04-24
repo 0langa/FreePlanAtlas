@@ -1,0 +1,73 @@
+---
+title: "CloudAMQP"
+description: "CloudAMQP provides managed RabbitMQ clusters for reliable message queuing and pub/sub workloads."
+provider: "CloudAMQP"
+category: "Messaging Queue"
+domain: messaging
+subtypes:
+  - RabbitMQ
+  - Managed Service
+  - Queue
+  - Pub/Sub
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - rabbitmq
+  - queue
+  - messaging
+  - pubsub
+  - managed
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free Little Lemur plan offers a single-node RabbitMQ instance with basic features."
+  limits:
+    - Single node
+    - 20 connections
+    - 100 queues
+    - 100,000 messages/month
+    - No high availability
+  caveats:
+    - No support for clustering or high availability
+    - Limited monitoring and plugins
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototyping message-driven apps
+  - Learning RabbitMQ
+  - Small-scale pub/sub workloads
+  - Testing distributed systems
+quickstartSteps:
+  - Sign up for a CloudAMQP account.
+  - Create a new instance using the free Little Lemur plan.
+  - Copy the provided RabbitMQ connection URL.
+  - Connect your application or client library to the instance.
+  - Send and receive test messages to verify setup.
+whenToUse: "Use CloudAMQP for quick RabbitMQ setup when you need managed messaging for development, prototyping, or learning."
+whenNotToUse: "Avoid if you require high availability, clustering, or need to handle production-scale workloads."
+bestFor:
+  - prototyping
+  - learning
+  - small apps
+  - testing
+avoidIf:
+  - production workloads
+  - high availability required
+  - large scale messaging
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.cloudamqp.com/
+docsUrl: https://www.cloudamqp.com/docs/index.html
+sourceUrls:
+  - https://www.cloudamqp.com/plans.html
+featured: false
+---
+CloudAMQP offers a managed RabbitMQ service with a free tier suitable for development, testing, and learning, but not for production workloads.

@@ -1,0 +1,70 @@
+---
+title: "Localit"
+description: "Localit provides free, privacy-focused geolocation APIs for IP address lookup and location-based personalization."
+provider: "Localit"
+category: "Apis"
+domain: integration
+subtypes:
+  - geolocation
+  - IP lookup
+  - location API
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - geolocation
+  - api
+  - ip
+  - privacy
+  - location
+pricingModel: free
+freeTierDetails:
+  summary: "Free API tier with generous daily request limits and no credit card required."
+  limits:
+    - 10,000 requests/day
+    - No authentication required
+    - Basic geolocation data
+  caveats:
+    - Advanced features may require paid plan
+    - No SLA on free tier
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Personalizing website content by user location
+  - Blocking or allowing access by country
+  - Displaying local currency or language
+  - Basic analytics by region
+quickstartSteps:
+  - Go to https://localit.io.
+  - Review API documentation for endpoint details.
+  - Send a GET request to the API endpoint with an IP address.
+  - Parse the JSON response for location data.
+  - Integrate the API call into your application.
+whenToUse: "Use Localit when you need a simple, privacy-respecting IP geolocation API with generous free limits and no signup required."
+whenNotToUse: "Avoid if you need advanced geolocation features, guaranteed uptime, or enterprise support."
+bestFor:
+  - developers
+  - students
+  - hobbyists
+  - small projects
+avoidIf:
+  - enterprise
+  - strict SLA requirements
+  - advanced geolocation needs
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 7
+officialUrl: https://localit.io
+docsUrl: https://docs.localit.io
+sourceUrls:
+  - https://localit.io
+featured: false
+---
+Localit offers a free, privacy-first geolocation API for IP address lookup, suitable for basic personalization and analytics without requiring authentication or payment.

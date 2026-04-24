@@ -1,0 +1,74 @@
+---
+title: "SES"
+description: "Amazon SES is a cloud-based email sending service for transactional, marketing, and notification emails."
+provider: "AWS"
+category: "Email Delivery"
+domain: messaging
+subtypes:
+  - transactional email
+  - bulk email
+  - SMTP relay
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+  - oss
+tags:
+  - email
+  - transactional
+  - smtp
+  - bulk
+  - aws
+pricingModel: freemium
+freeTierDetails:
+  summary: "62,000 emails per month sent from EC2 or AWS Lambda, plus 1,000 incoming emails per month."
+  limits:
+    - 62,000 outbound emails/month from EC2 or Lambda
+    - 1,000 inbound emails/month
+    - No free tier for sending from outside EC2/Lambda
+  caveats:
+    - Free tier applies only when sending from EC2 or Lambda.
+    - Additional charges for attachments and data transfer.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Sending from non-EC2/Lambda sources incurs charges.
+    - High volume or attachment-heavy emails may exceed free tier quickly.
+useCases:
+  - Sending transactional emails
+  - Marketing campaigns
+  - Automated notifications
+  - Bulk email delivery
+quickstartSteps:
+  - Sign up for an AWS account and verify your email/domain in SES.
+  - Request production access to move out of SES sandbox mode.
+  - Configure SMTP credentials or use AWS SDK for integration.
+  - Set up sending and receiving rules as needed.
+  - Test sending emails from your application.
+whenToUse: "Use SES when you need reliable, scalable email delivery integrated with AWS services or infrastructure."
+whenNotToUse: "Avoid SES if you require a no-code interface, advanced marketing automation, or need to send emails from outside AWS infrastructure for free."
+bestFor:
+  - transactional email
+  - AWS-integrated apps
+  - developers
+avoidIf:
+  - no AWS experience
+  - need free sending from non-AWS servers
+  - require advanced marketing tools
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://aws.amazon.com/ses/
+docsUrl: https://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html
+sourceUrls:
+  - https://aws.amazon.com/ses/pricing/
+  - https://aws.amazon.com/ses/
+featured: false
+---
+Amazon SES provides scalable, cost-effective email sending for transactional, marketing, and notification use cases, with a generous free tier for AWS-hosted workloads.

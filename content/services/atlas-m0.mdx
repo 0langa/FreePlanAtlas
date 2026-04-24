@@ -1,0 +1,75 @@
+---
+title: "Atlas M0"
+description: "Atlas M0 is MongoDB's free cloud database tier for small-scale development and prototyping."
+provider: "MongoDB"
+category: "Database"
+domain: database
+subtypes:
+  - NoSQL
+  - Document Database
+  - Managed Service
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - mongodb
+  - cloud
+  - nosql
+  - database
+  - free-tier
+pricingModel: free
+freeTierDetails:
+  summary: "Free, always-on MongoDB cluster with limited resources for development and learning."
+  limits:
+    - 512 MB storage
+    - Shared RAM
+    - 3-node replica set
+    - Limited cloud regions
+    - No custom VPC peering
+  caveats:
+    - No backups
+    - No custom network isolation
+    - Limited performance
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Learning MongoDB
+  - Prototyping apps
+  - Small personal projects
+  - Open source demos
+quickstartSteps:
+  - Sign up for a MongoDB Atlas account.
+  - Create a new project and select the M0 free tier cluster.
+  - Choose your preferred cloud provider and region (from available free options).
+  - Configure cluster settings and deploy.
+  - Add database users and whitelist your IP address.
+  - Connect to your cluster using the provided connection string.
+whenToUse: "Use Atlas M0 for learning MongoDB, prototyping, or developing low-traffic apps without production requirements."
+whenNotToUse: "Avoid Atlas M0 for production workloads, high-traffic apps, or when you need backups, custom networking, or higher performance."
+bestFor:
+  - learning
+  - prototyping
+  - personal projects
+  - demos
+avoidIf:
+  - production workloads
+  - high performance needs
+  - custom networking required
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-11
+popularityScore: 8
+usefulnessScore: 7
+officialUrl: https://www.mongodb.com/products/platform/atlas
+docsUrl: https://www.mongodb.com/docs/atlas/
+sourceUrls:
+  - https://www.mongodb.com/docs/atlas/reference/free-cluster/
+  - https://www.mongodb.com/pricing
+featured: false
+---
+Atlas M0 provides a free, managed MongoDB cluster suitable for learning, prototyping, and small-scale development, but is not intended for production use.

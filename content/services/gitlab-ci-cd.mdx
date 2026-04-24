@@ -1,0 +1,73 @@
+---
+title: "GitLab CI/CD"
+description: "GitLab CI/CD automates code builds, tests, and deployments directly from your GitLab repositories."
+provider: "GitLab"
+category: "CI/CD"
+domain: devops
+subtypes:
+  - continuous-integration
+  - continuous-deployment
+  - automation
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ci
+  - cd
+  - automation
+  - pipelines
+  - gitlab
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 400 CI/CD minutes per month for public and private repositories."
+  limits:
+    - 400 CI/CD minutes/month
+    - Shared runners only
+    - Limited to 5 users per namespace
+  caveats:
+    - Additional minutes require payment
+    - Minutes reset monthly
+    - Free tier may have slower shared runners
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Automating build and test pipelines
+  - Continuous deployment to staging or production
+  - Running code quality checks
+  - Open source project automation
+quickstartSteps:
+  - Sign up for a free GitLab account.
+  - Create or import a repository.
+  - Add a .gitlab-ci.yml file to define your pipeline.
+  - Push your code to trigger the pipeline.
+  - Monitor pipeline status in the GitLab UI.
+whenToUse: "Use when you need integrated CI/CD for GitLab-hosted projects with moderate build frequency and simple automation needs."
+whenNotToUse: "Avoid if you require unlimited build minutes, advanced enterprise features, or integration with non-GitLab repositories."
+bestFor:
+  - small teams
+  - open source projects
+  - students
+  - startups
+avoidIf:
+  - large enterprise
+  - heavy CI/CD workloads
+  - multi-provider SCM
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-08
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/
+docsUrl: https://docs.gitlab.com/ee/ci/
+sourceUrls:
+  - https://about.gitlab.com/pricing/
+  - https://docs.gitlab.com/ee/ci/
+featured: false
+---
+GitLab CI/CD offers integrated pipelines for automating builds, tests, and deployments directly within GitLab, with a generous free tier for small teams and open source.

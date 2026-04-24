@@ -1,0 +1,68 @@
+---
+title: "Paste.sh"
+description: "Paste.sh is a simple, encrypted command-line pastebin for sharing text or code snippets securely."
+provider: "Paste.sh"
+category: "Pastebin"
+domain: productivity
+subtypes:
+  - encrypted pastebin
+  - cli tool
+  - text sharing
+audiences:
+  - student
+  - indie
+  - oss
+  - startup
+tags:
+  - pastebin
+  - encryption
+  - cli
+  - sharing
+  - text
+pricingModel: free
+freeTierDetails:
+  summary: "Unlimited encrypted pastes via CLI with no account required."
+  limits:
+    - No account needed
+    - Unlimited pastes
+    - CLI only
+    - Text only
+  caveats:
+    - No web UI for creating pastes
+    - No file uploads
+    - Pastes may expire or be deleted at any time
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Share code snippets securely
+  - Send logs or error messages
+  - Quickly transfer text between devices
+quickstartSteps:
+  - Install curl or httpie if not already available.
+  - Prepare your text or code snippet in a file.
+  - Run: curl --data-binary @yourfile.txt https://paste.sh
+  - Copy the returned URL to share your encrypted paste.
+whenToUse: "Use Paste.sh when you need to share text or code securely and quickly from the command line."
+whenNotToUse: "Avoid if you need a web UI, file uploads, or persistent storage for pastes."
+bestFor:
+  - CLI users
+  - developers
+  - privacy-focused users
+avoidIf:
+  - You require file uploads
+  - You need a web interface
+  - You need permanent storage
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://paste.sh/
+docsUrl: https://docs.paste.sh
+sourceUrls:
+  - https://paste.sh/
+featured: false
+---
+Paste.sh is a free, encrypted CLI-based pastebin for sharing text or code snippets securely without requiring an account.

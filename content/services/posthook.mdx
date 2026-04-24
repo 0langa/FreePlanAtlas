@@ -1,0 +1,68 @@
+---
+title: "Posthook"
+description: "Posthook provides scheduled and delayed HTTP webhooks for background jobs and workflows."
+provider: "Posthook"
+category: "Task Scheduling"
+domain: integration
+subtypes:
+  - webhooks
+  - delayed-jobs
+  - background-tasks
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - webhooks
+  - scheduling
+  - background-jobs
+  - automation
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 100 scheduled jobs per month."
+  limits:
+    - 100 scheduled jobs/month
+    - Basic support
+    - Limited to core features
+  caveats:
+    - No SLA on free tier
+    - Limited retry attempts
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Schedule delayed webhooks
+  - Automate background tasks
+  - Trigger time-based workflows
+quickstartSteps:
+  - Sign up for a free Posthook account.
+  - Create a new project in the dashboard.
+  - Obtain your API key from project settings.
+  - Use the API or dashboard to schedule a webhook.
+  - Monitor job status and logs in the dashboard.
+whenToUse: "Use Posthook when you need to schedule HTTP webhooks or automate delayed tasks without managing your own job queue."
+whenNotToUse: "Avoid if you require high-throughput, complex workflows, or on-premise deployment; not suitable for real-time or sub-minute precision tasks."
+bestFor:
+  - background-job scheduling
+  - webhook automation
+  - simple workflow triggers
+avoidIf:
+  - need high-frequency jobs
+  - require on-premise
+  - need advanced workflow orchestration
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://posthook.io
+docsUrl: https://docs.posthook.io
+sourceUrls:
+  - https://posthook.io/pricing
+  - https://docs.posthook.io
+featured: false
+---
+Posthook is a simple service for scheduling HTTP webhooks and background jobs, ideal for automating delayed tasks and lightweight workflow triggers.

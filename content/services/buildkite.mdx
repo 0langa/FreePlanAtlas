@@ -1,0 +1,69 @@
+---
+title: "Buildkite"
+description: "Buildkite is a CI/CD platform for running fast, scalable pipelines on your own infrastructure."
+provider: "Buildkite"
+category: "CI/CD"
+domain: devops
+subtypes:
+  - continuous-integration
+  - continuous-delivery
+  - pipeline
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - ci
+  - cd
+  - pipelines
+  - automation
+  - self-hosted
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier for open source projects and a 30-day trial for private projects."
+  limits:
+    - Unlimited builds for open source
+    - 30-day trial for private projects
+    - Unlimited users and pipelines
+  caveats:
+    - Private projects require payment after trial
+    - Self-hosted agents required
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+  trialDays: 30
+useCases:
+  - Automated testing for open source projects
+  - Custom CI/CD pipelines on self-hosted agents
+  - Integrating with GitHub, GitLab, or Bitbucket
+quickstartSteps:
+  - Sign up for a Buildkite account.
+  - Connect your code repository (GitHub, GitLab, or Bitbucket).
+  - Install and configure a Buildkite agent on your infrastructure.
+  - Create a pipeline and add your build steps.
+  - Trigger your first build to verify setup.
+whenToUse: "Use Buildkite if you need scalable CI/CD pipelines with control over your build infrastructure and strong support for open source projects."
+whenNotToUse: "Avoid Buildkite if you require fully managed build agents or need a free tier for private, non-open-source projects."
+bestFor:
+  - teams needing self-hosted CI
+  - open source maintainers
+  - organizations with security requirements
+avoidIf:
+  - you need managed build infrastructure
+  - you want free private project builds
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-13
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://buildkite.com
+docsUrl: https://buildkite.com/docs
+sourceUrls:
+  - https://buildkite.com/pricing
+  - https://buildkite.com/docs
+featured: false
+---
+Buildkite provides a flexible CI/CD platform that lets you run pipelines on your own infrastructure, ideal for teams needing control and scalability.

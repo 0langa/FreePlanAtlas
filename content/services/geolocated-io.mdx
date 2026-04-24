@@ -1,0 +1,71 @@
+---
+title: "Geolocated.io"
+description: "Geolocated.io provides free IP geolocation API services for identifying user locations by IP address."
+provider: "Geolocated.io"
+category: "API Services"
+domain: integration
+subtypes:
+  - IP Geolocation
+  - API
+  - Location Services
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ip-geolocation
+  - api
+  - location
+  - geo
+  - integration
+pricingModel: free
+freeTierDetails:
+  summary: "Free tier offers up to 1,000 API requests per day with basic geolocation data."
+  limits:
+    - 1,000 requests/day
+    - Basic geolocation fields
+    - No authentication required
+  caveats:
+    - No SLA or uptime guarantee
+    - Advanced data fields require paid plan
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Show user location on websites
+  - Personalize content by region
+  - Basic fraud detection
+  - Analytics enrichment
+quickstartSteps:
+  - Go to https://geolocated.io.
+  - Review API documentation for endpoint usage.
+  - Send a GET request to the API endpoint with an IP address.
+  - Parse the JSON response for location data.
+  - Integrate the API call into your application.
+whenToUse: "Use Geolocated.io for simple, low-volume IP geolocation needs without authentication or payment setup."
+whenNotToUse: "Avoid if you need high request volumes, advanced data fields, or guaranteed uptime for production-critical applications."
+bestFor:
+  - prototyping
+  - side-projects
+  - student projects
+  - MVPs
+avoidIf:
+  - enterprise production
+  - high-traffic apps
+  - detailed geodata needs
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://geolocated.io
+docsUrl: https://docs.geolocated.io
+sourceUrls:
+  - https://geolocated.io
+featured: false
+---
+Geolocated.io offers a simple, free API for basic IP geolocation, suitable for low-volume and non-critical use cases.

@@ -1,0 +1,75 @@
+---
+title: "Supabase"
+description: "Supabase is an open-source backend-as-a-service offering instant APIs, authentication, and real-time database for web and mobile apps."
+provider: "Supabase"
+category: "Backend Platform"
+domain: database
+subtypes:
+  - Postgres Database
+  - Auth
+  - Storage
+  - Edge Functions
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - postgres
+  - backend
+  - realtime
+  - auth
+  - open-source
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes a hosted Postgres database, authentication, storage, and edge functions with usage limits."
+  limits:
+    - 500 MB database & 1 GB file storage
+    - 50,000 monthly active users
+    - 2 million edge function invocations
+    - 500,000 real-time messages
+  caveats:
+    - No custom domain on free tier
+    - Limited to 2 projects
+    - Performance throttled under heavy load
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Rapid prototyping with Postgres backend
+  - Adding authentication to web/mobile apps
+  - Building real-time collaborative features
+  - Storing and serving user files
+quickstartSteps:
+  - Sign up at supabase.com and verify your email.
+  - Create a new project and choose a database password.
+  - Access your project dashboard and copy API keys.
+  - Install the Supabase client library in your app.
+  - Connect using your project URL and API key to start using the database and auth.
+whenToUse: "Use Supabase when you need a quick, scalable backend with authentication, storage, and real-time features for web or mobile apps."
+whenNotToUse: "Avoid if you require advanced Postgres extensions, custom server logic, or strict on-premise hosting requirements."
+bestFor:
+  - prototyping
+  - MVPs
+  - student projects
+  - open-source apps
+avoidIf:
+  - enterprise compliance
+  - complex backend logic
+  - custom Postgres extensions
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://supabase.com/
+docsUrl: https://supabase.com/docs
+sourceUrls:
+  - https://supabase.com/pricing
+  - https://supabase.com/docs/guides/faq
+featured: true
+---
+Supabase provides a developer-friendly backend platform with instant APIs, authentication, storage, and real-time capabilities, making it ideal for rapid app development and prototyping.

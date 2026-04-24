@@ -1,0 +1,70 @@
+---
+title: "CodePipeline"
+description: "AWS CodePipeline automates continuous integration and continuous delivery for fast and reliable application and infrastructure updates."
+provider: "AWS"
+category: "CI/CD"
+domain: devops
+subtypes:
+  - continuous-integration
+  - continuous-delivery
+  - automation
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - ci
+  - cd
+  - pipeline
+  - automation
+  - aws
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 active pipeline per month."
+  limits:
+    - 1 active pipeline per month
+  caveats:
+    - Additional pipelines incur charges
+    - Some integrations may have separate costs
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Charges apply if you exceed 1 active pipeline
+useCases:
+  - Automate code deployments
+  - Integrate with AWS developer tools
+  - Implement CI/CD for microservices
+  - Orchestrate multi-stage build and test workflows
+quickstartSteps:
+  - Sign in to the AWS Management Console.
+  - Navigate to CodePipeline and click 'Create pipeline'.
+  - Configure pipeline settings and select a source provider (e.g., GitHub, CodeCommit).
+  - Add build and deploy stages as needed.
+  - Review and create the pipeline to start automating deployments.
+whenToUse: "Use CodePipeline to automate CI/CD workflows for applications deployed on AWS or when integrating with other AWS services."
+whenNotToUse: "Avoid if you need multi-cloud CI/CD or want to avoid AWS lock-in, or if your team already uses a different CI/CD platform."
+bestFor:
+  - AWS-centric teams
+  - Automated deployments
+  - Infrastructure as code workflows
+avoidIf:
+  - Multi-cloud environments
+  - Non-AWS deployments
+  - Preference for open-source CI/CD
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-10
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://aws.amazon.com/codepipeline/
+docsUrl: https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html
+sourceUrls:
+  - https://aws.amazon.com/codepipeline/pricing/
+  - https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html
+featured: false
+---
+AWS CodePipeline is a managed CI/CD service that helps automate build, test, and deployment phases for applications and infrastructure on AWS. The free tier allows one active pipeline per month, making it suitable for small teams or projects starting with AWS automation. It integrates natively with other AWS developer tools and supports custom actions, but additional pipelines or integrations may incur charges. CodePipeline is best for AWS-centric workflows and teams looking for a managed, scalable CI/CD solution.

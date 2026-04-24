@@ -1,0 +1,68 @@
+---
+title: "Mergify"
+description: "Mergify automates pull request merging, queueing, and workflow management for GitHub repositories."
+provider: "Mergify"
+category: "Devops Automation"
+domain: devops
+subtypes:
+  - pull request automation
+  - merge queue
+  - workflow automation
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - github
+  - automation
+  - cicd
+  - pull-requests
+  - merge-queue
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free for public repositories and limited usage on private repositories."
+  limits:
+    - Unlimited public repositories
+    - Up to 2 private repositories
+    - Limited merge queue features
+  caveats:
+    - Some advanced features require a paid plan
+    - Support is limited on the free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Automating pull request merges
+  - Managing merge queues for busy repositories
+  - Enforcing branch protection rules
+  - Reducing manual review workload
+quickstartSteps:
+  - Sign up at mergify.com and connect your GitHub account.
+  - Install the Mergify GitHub App on your repositories.
+  - Configure Mergify rules using the .mergify.yml file in your repository.
+  - Test automation by opening a pull request and observing Mergify actions.
+whenToUse: "Use Mergify to automate merging and queue management for GitHub repositories, especially for open source or small private projects."
+whenNotToUse: "Avoid if you need advanced merge queue features for many private repositories or require integration with platforms other than GitHub."
+bestFor:
+  - open source maintainers
+  - small teams
+  - automation enthusiasts
+avoidIf:
+  - large enterprises needing advanced features
+  - teams not using GitHub
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-17
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://mergify.com
+docsUrl: https://docs.mergify.com/
+sourceUrls:
+  - https://mergify.com/pricing
+  - https://docs.mergify.com/getting-started/
+featured: false
+---
+Mergify helps automate pull request merges and manage merge queues on GitHub, offering a generous free tier for public and small private repositories.

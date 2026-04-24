@@ -1,0 +1,72 @@
+---
+title: "Azure AI Machine Learning"
+description: "Azure AI Machine Learning provides cloud-based tools for building, training, and deploying machine learning models at scale."
+provider: "Azure"
+category: "Machine Learning"
+domain: ai
+subtypes:
+  - managed-ml
+  - model-training
+  - deployment
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+tags:
+  - mlops
+  - model-training
+  - deployment
+  - cloud-ml
+  - notebooks
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes limited compute hours and storage for experimentation and small workloads."
+  limits:
+    - 60 free hours/month of standard compute instance
+    - 10 GB storage
+    - Limited to 1 workspace
+  caveats:
+    - Compute and storage overages billed at standard rates
+    - Some advanced features require paid tiers
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Charges apply if usage exceeds free tier limits
+useCases:
+  - Experimenting with machine learning models
+  - Automating ML workflows
+  - Collaborative data science projects
+  - Deploying models as APIs
+quickstartSteps:
+  - Sign in to the Azure Portal and create a Machine Learning workspace.
+  - Launch the Azure Machine Learning Studio.
+  - Create a compute instance within your workspace.
+  - Upload your data and start a new notebook or experiment.
+  - Train and deploy your model using built-in tools.
+whenToUse: "Use when you need managed infrastructure for ML experiments, training, and deployment with easy scaling and collaboration."
+whenNotToUse: "Avoid if you require fully offline, on-premise ML workflows or need unlimited compute without cost concerns."
+bestFor:
+  - collaborative teams
+  - data scientists
+  - ML engineers
+  - students
+avoidIf:
+  - on-premise-only environments
+  - large-scale compute without budget
+difficulty: intermediate
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/machine-learning/
+docsUrl: https://learn.microsoft.com/en-us/azure/machine-learning/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/machine-learning/
+  - https://learn.microsoft.com/en-us/azure/machine-learning/
+featured: false
+---
+Azure AI Machine Learning offers a managed environment for building, training, and deploying machine learning models, with a free tier suitable for experimentation and small projects.

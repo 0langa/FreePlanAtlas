@@ -1,0 +1,69 @@
+---
+title: "Imgur API"
+description: "Imgur API enables developers to upload, manage, and share images programmatically on the Imgur platform."
+provider: "Imgur"
+category: "Media Hosting"
+domain: hosting
+subtypes:
+  - image-hosting
+  - media-api
+  - REST API
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - image
+  - media
+  - api
+  - hosting
+  - gallery
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows limited API usage for uploading and managing images."
+  limits:
+    - 1,250 uploads per day
+    - 12,500 requests per day
+    - 125,000 requests per month
+  caveats:
+    - Commercial use may require approval
+    - Strict rate limits apply
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Embed user-uploaded images in apps
+  - Automate image gallery creation
+  - Host images for blogs or forums
+quickstartSteps:
+  - Register for a free Imgur account.
+  - Create an application in the Imgur dashboard to obtain a Client ID and secret.
+  - Read the API documentation to understand authentication and endpoints.
+  - Use your Client ID to authenticate API requests.
+  - Test uploading an image using the API.
+whenToUse: "Use when you need a simple, reliable way to host and share images via API with generous free limits."
+whenNotToUse: "Avoid if you require video hosting, advanced image processing, or need guaranteed uptime for critical production workloads."
+bestFor:
+  - prototyping
+  - side-projects
+  - student projects
+  - community forums
+avoidIf:
+  - video hosting
+  - enterprise SLAs
+  - custom CDN needs
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 6
+officialUrl: https://api.imgur.com
+docsUrl: https://apidocs.imgur.com/
+sourceUrls:
+  - https://apidocs.imgur.com/
+featured: false
+---
+Imgur API provides a straightforward way to upload, manage, and share images, making it ideal for lightweight apps, prototypes, and community-driven projects. The free tier is generous for most non-commercial use cases, but strict rate limits and lack of advanced features may limit suitability for high-volume or enterprise scenarios.

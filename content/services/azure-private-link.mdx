@@ -1,0 +1,69 @@
+---
+title: "Azure Private Link"
+description: "Azure Private Link enables secure, private connectivity to Azure services over the Microsoft backbone network."
+provider: "Azure"
+category: "Networking"
+domain: networking
+subtypes:
+  - private-endpoint
+  - service-endpoint
+  - VNet integration
+audiences:
+  - startup
+  - team
+  - enterprise
+  - agency
+tags:
+  - private-networking
+  - security
+  - vnet
+  - endpoint
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 50 hours of Private Link service and 50 GB data processed per month."
+  limits:
+    - 50 Private Link service hours/month
+    - 50 GB data processed/month
+  caveats:
+    - Overages billed per additional hour and GB.
+    - Some Azure services may incur additional charges.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free limits incurs pay-as-you-go charges.
+useCases:
+  - Securely access Azure PaaS services from private networks
+  - Restrict public internet exposure
+  - Enable compliance for sensitive workloads
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Create or select a Virtual Network (VNet).
+  - Navigate to Private Link Center and create a Private Endpoint.
+  - Select the Azure resource to connect privately.
+  - Approve the connection if required and test connectivity.
+whenToUse: "Use when you need private, secure connectivity to Azure services without exposing endpoints to the public internet."
+whenNotToUse: "Avoid if your workloads do not require private network isolation or if you need global, public access to services."
+bestFor:
+  - secure workloads
+  - regulated industries
+  - hybrid cloud
+avoidIf:
+  - public-only access
+  - cost-sensitive prototypes
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/private-link/
+docsUrl: https://learn.microsoft.com/en-us/azure/private-link/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/private-link/
+  - https://learn.microsoft.com/en-us/azure/private-link/
+featured: false
+---
+Azure Private Link allows you to securely connect to Azure services over a private endpoint, reducing exposure to the public internet and improving compliance.

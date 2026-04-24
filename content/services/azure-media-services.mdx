@@ -1,0 +1,75 @@
+---
+title: "Azure Media Services"
+description: "Azure Media Services provides cloud-based encoding, streaming, and content protection for video and audio workflows."
+provider: "Azure"
+category: "Media Processing"
+domain: hosting
+subtypes:
+  - video streaming
+  - encoding
+  - DRM
+  - content delivery
+audiences:
+  - startup
+  - team
+  - enterprise
+  - agency
+tags:
+  - video
+  - media
+  - streaming
+  - encoding
+  - drm
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "Includes 20 encoding output minutes, 5 streaming units, and 100 GB streaming per month."
+  limits:
+    - 20 encoding output minutes/month
+    - 5 streaming units/month
+    - 100 GB streaming/month
+  caveats:
+    - Charges apply for usage above free limits.
+    - Some advanced features may not be included in free tier.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages are billed automatically if limits are exceeded.
+useCases:
+  - Live and on-demand video streaming
+  - Encoding and transcoding media files
+  - Content protection with DRM
+  - Video analytics integration
+quickstartSteps:
+  - Sign in to the Azure portal and create a Media Services account.
+  - Set up a storage account for your media assets.
+  - Upload a video file to your storage account.
+  - Create an encoding job to process your video.
+  - Publish the output asset and obtain a streaming URL.
+whenToUse: "Use when you need scalable video encoding, streaming, or DRM for web or mobile applications without managing infrastructure."
+whenNotToUse: "Avoid if you require a completely free solution for high-volume streaming or need on-premises media processing."
+bestFor:
+  - video platforms
+  - media companies
+  - e-learning
+  - enterprise video
+avoidIf:
+  - budget-constrained
+  - on-premises only
+  - open-source preferred
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/media-services/
+docsUrl: https://learn.microsoft.com/en-us/azure/media-services/latest/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/media-services/
+  - https://learn.microsoft.com/en-us/azure/media-services/latest/
+featured: false
+---
+Azure Media Services offers cloud-based video encoding, streaming, and content protection with a limited free tier suitable for testing and small workloads.

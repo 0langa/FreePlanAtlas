@@ -1,0 +1,72 @@
+---
+title: "Pinecone"
+description: "Pinecone is a managed vector database for building fast, scalable similarity search and AI applications."
+provider: "Pinecone"
+category: "Vector Database"
+domain: database
+subtypes:
+  - vector
+  - managed
+  - AI
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+  - oss
+tags:
+  - vector
+  - database
+  - ai
+  - search
+  - embedding
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers a single pod with 1GB storage for development and testing."
+  limits:
+    - 1 pod
+    - 1GB vector storage
+    - Limited to Starter environment
+    - No SLAs
+  caveats:
+    - No production SLAs
+    - Limited performance and features compared to paid plans
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Semantic search
+  - Recommendation systems
+  - AI-powered search
+  - Similarity matching
+quickstartSteps:
+  - Sign up for a Pinecone account.
+  - Create a new project and select the free Starter environment.
+  - Set up your first index with default settings.
+  - Integrate Pinecone SDK in your application.
+  - Insert and query vectors using the API.
+whenToUse: "Use Pinecone when you need a managed vector database for prototyping or small-scale AI search and similarity applications."
+whenNotToUse: "Avoid Pinecone if you need high-throughput, production SLAs, or advanced features not available in the free tier."
+bestFor:
+  - Developers building AI prototypes
+  - Teams testing vector search
+  - Startups exploring semantic search
+avoidIf:
+  - You require high-availability SLAs
+  - You need large-scale storage
+  - You need advanced security features
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://www.pinecone.io/
+docsUrl: https://docs.pinecone.io/
+sourceUrls:
+  - https://www.pinecone.io/pricing/
+  - https://docs.pinecone.io/docs/overview
+featured: false
+---
+Pinecone provides a fully managed vector database for fast similarity search, ideal for prototyping AI and semantic search applications with a generous free tier.

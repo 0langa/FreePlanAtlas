@@ -1,0 +1,70 @@
+---
+title: "Azure Bastion"
+description: "Azure Bastion provides secure RDP and SSH connectivity to Azure VMs without exposing public IP addresses."
+provider: "Azure"
+category: "Networking"
+domain: networking
+subtypes:
+  - bastion host
+  - remote access
+  - secure connectivity
+audiences:
+  - startup
+  - team
+  - enterprise
+  - agency
+tags:
+  - bastion
+  - ssh
+  - rdp
+  - security
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Azure Bastion offers 750 hours and 50 GB outbound data transfer free per month for Standard SKU."
+  limits:
+    - 750 hours/month Standard SKU usage
+    - 50 GB/month outbound data transfer
+  caveats:
+    - Only Standard SKU is included in free tier.
+    - Additional usage incurs charges.
+    - Free tier applies per subscription.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Charges accrue if usage exceeds free tier limits.
+useCases:
+  - Secure VM access without public IPs
+  - Remote administration of Azure VMs
+  - Compliance-driven access control
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create or select a Virtual Network.
+  - Deploy Azure Bastion to the Virtual Network.
+  - Assign Bastion access permissions.
+  - Connect to your VM using Bastion via the Azure Portal.
+whenToUse: "Use Azure Bastion when you need secure, browser-based RDP or SSH access to Azure VMs without exposing public IP addresses."
+whenNotToUse: "Avoid if you require access to on-premises or non-Azure VMs, or need advanced session recording features."
+bestFor:
+  - secure remote VM access
+  - compliance
+  - cloud-only environments
+avoidIf:
+  - managing non-Azure infrastructure
+  - need for advanced auditing
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/azure-bastion/
+docsUrl: https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/azure-bastion/
+  - https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
+featured: false
+---
+Azure Bastion enables secure, seamless RDP and SSH connectivity to Azure VMs directly from the Azure Portal, eliminating the need for public IP addresses and reducing exposure to threats.

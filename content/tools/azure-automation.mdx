@@ -1,0 +1,69 @@
+---
+title: "Azure Automation"
+description: "Azure Automation provides cloud-based process automation, configuration management, and update management for Azure and hybrid environments."
+provider: "Azure"
+category: "Automation"
+domain: devops
+subtypes:
+  - process automation
+  - configuration management
+  - update management
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - automation
+  - runbooks
+  - cloud
+  - devops
+  - configuration
+pricingModel: freemium
+freeTierDetails:
+  summary: "500 minutes of job runtime and 500 configuration management nodes per month are free."
+  limits:
+    - 500 minutes of job runtime/month
+    - 500 configuration management nodes/month
+  caveats:
+    - Overages are billed per minute and per node.
+    - Some features may incur additional charges.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Jobs or nodes beyond free tier are billed automatically.
+useCases:
+  - Automating cloud resource management
+  - Scheduling maintenance tasks
+  - Managing configuration drift
+  - Automating patch updates
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create an Automation Account.
+  - Add a Runbook or import a sample Runbook.
+  - Configure authentication and permissions.
+  - Start or schedule your Runbook.
+whenToUse: "Use when you need to automate repetitive Azure or hybrid cloud tasks, such as resource provisioning or patch management."
+whenNotToUse: "Avoid if you require automation outside Azure or need advanced orchestration features not supported by Azure Automation."
+bestFor:
+  - teams automating Azure workloads
+  - enterprises managing hybrid environments
+  - startups with cloud infrastructure
+avoidIf:
+  - you need cross-cloud automation
+  - you require advanced workflow orchestration
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/automation/
+docsUrl: https://learn.microsoft.com/en-us/azure/automation/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/automation/
+  - https://learn.microsoft.com/en-us/azure/automation/
+featured: false
+---
+Azure Automation enables users to automate, configure, and update Azure and hybrid resources, reducing manual effort and improving operational efficiency.

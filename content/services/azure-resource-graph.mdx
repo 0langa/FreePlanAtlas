@@ -1,0 +1,67 @@
+---
+title: "Azure Resource Graph"
+description: "Azure Resource Graph enables fast, efficient exploration and query of Azure resources at scale across subscriptions."
+provider: "Azure"
+category: "Resource Management"
+domain: devops
+subtypes:
+  - resource-query
+  - inventory
+  - governance
+audiences:
+  - team
+  - enterprise
+  - startup
+tags:
+  - azure
+  - resource-management
+  - query
+  - inventory
+  - governance
+pricingModel: free
+freeTierDetails:
+  summary: "Free unlimited queries for resource exploration and management."
+  limits:
+    - No query count limit
+    - No data size limit
+    - Subject to Azure subscription limits
+  caveats:
+    - Only supports Azure resources
+    - Requires Azure subscription
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Inventory all Azure resources across subscriptions
+  - Audit resource configurations
+  - Support governance and compliance reporting
+quickstartSteps:
+  - Sign in to the Azure Portal with your account.
+  - Navigate to Azure Resource Graph Explorer.
+  - Select your subscriptions to query.
+  - Write and run a Kusto Query Language (KQL) query to explore resources.
+  - Review and export query results as needed.
+whenToUse: "Use when you need to query, inventory, or audit Azure resources across multiple subscriptions efficiently."
+whenNotToUse: "Avoid if you need to manage or query non-Azure resources, or require real-time event-based monitoring."
+bestFor:
+  - resource inventory
+  - compliance
+  - governance
+  - cost management
+avoidIf:
+  - multi-cloud inventory
+  - real-time monitoring
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/resource-graph/
+docsUrl: https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/resource-graph/
+  - https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview
+featured: false
+---
+Azure Resource Graph provides a scalable, always-free solution for querying and inventorying Azure resources, supporting governance, compliance, and management tasks across large environments.

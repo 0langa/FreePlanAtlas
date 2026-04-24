@@ -1,0 +1,71 @@
+---
+title: "Jitpack.io"
+description: "Jitpack.io builds and hosts Maven/Gradle packages directly from Git repositories for easy Java dependency management."
+provider: "Jitpack.io"
+category: "Package Hosting"
+domain: devops
+subtypes:
+  - Java
+  - Maven
+  - Gradle
+  - CI/CD
+  - Dependency Management
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - java
+  - maven
+  - gradle
+  - dependency
+  - ci
+  - package-hosting
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free for public repositories and limited private repository builds."
+  limits:
+    - Unlimited public repo builds
+    - Limited private repo builds per month
+    - Build time and storage quotas apply
+  caveats:
+    - Private repo support is limited on free tier
+    - Builds may be queued during peak times
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Distributing Java libraries from GitHub
+  - Quickly sharing Java builds without publishing to Maven Central
+  - Testing Java dependencies from feature branches
+quickstartSteps:
+  - Push your Java project to a public Git repository (e.g., GitHub).
+  - Visit https://jitpack.io and search for your repository.
+  - Follow the instructions to add the Jitpack repository and dependency to your build.gradle or pom.xml.
+  - Trigger a build by referencing a commit, tag, or branch in your dependency declaration.
+  - Verify the build status and download artifacts from Jitpack.io.
+whenToUse: "Use Jitpack.io to quickly distribute Java/Gradle/Maven projects from Git repositories without publishing to Maven Central."
+whenNotToUse: "Avoid if you need guaranteed uptime, advanced access controls, or must host large private packages."
+bestFor:
+  - open source libraries
+  - prototyping
+  - feature branch testing
+avoidIf:
+  - enterprise compliance
+  - large private package hosting
+  - strict SLAs required
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://jitpack.io/
+docsUrl: https://docs.jitpack.io/
+sourceUrls:
+  - https://jitpack.io/docs/BUILDING/
+featured: false
+---
+Jitpack.io offers a simple way to build and host Java packages directly from Git repositories, ideal for open source and rapid prototyping.

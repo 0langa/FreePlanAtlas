@@ -1,0 +1,71 @@
+---
+title: "Elastic Load Balancing"
+description: "AWS Elastic Load Balancing automatically distributes incoming application traffic across multiple targets for high availability and fault tolerance."
+provider: "AWS"
+category: "Load Balancer"
+domain: networking
+subtypes:
+  - Application Load Balancer
+  - Network Load Balancer
+  - Gateway Load Balancer
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - load-balancer
+  - scalability
+  - high-availability
+  - aws
+  - networking
+pricingModel: freemium
+freeTierDetails:
+  summary: "The AWS Free Tier includes 750 hours per month of load balancer usage and 15 GB data processing for the first 12 months."
+  limits:
+    - 750 hours/month per load balancer
+    - 15 GB data processing/month
+  caveats:
+    - Free Tier valid for 12 months after AWS account creation
+    - Overages billed at standard rates
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: time-limited
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Usage beyond free limits incurs charges
+    - No hard cap; monitor usage to avoid unexpected costs
+  trialDays: 365
+useCases:
+  - Distributing web traffic across multiple servers
+  - Improving application fault tolerance
+  - Enabling zero-downtime deployments
+quickstartSteps:
+  - Sign up for an AWS account and log in to the AWS Management Console.
+  - Navigate to the EC2 dashboard and select 'Load Balancers' under 'Load Balancing'.
+  - Click 'Create Load Balancer' and choose the appropriate load balancer type.
+  - Configure listeners, target groups, and security settings as required.
+  - Review and launch the load balancer, then register your targets (EC2 instances or IPs).
+whenToUse: "Use Elastic Load Balancing to automatically distribute incoming traffic and increase availability for applications hosted on AWS."
+whenNotToUse: "Avoid if you need a free, always-on load balancer after 12 months or if your workloads are not hosted on AWS."
+bestFor:
+  - scalable web applications
+  - microservices architectures
+  - high-availability deployments
+avoidIf:
+  - seeking always-free load balancing
+  - running workloads outside AWS
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://aws.amazon.com/elasticloadbalancing/
+docsUrl: https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-elastic-load-balancing.html
+sourceUrls:
+  - https://aws.amazon.com/elasticloadbalancing/pricing/
+  - https://aws.amazon.com/free/
+featured: false
+---
+AWS Elastic Load Balancing offers scalable, managed load balancing for applications on AWS, supporting multiple protocols and high availability with minimal configuration.

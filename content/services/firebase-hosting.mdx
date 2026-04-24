@@ -1,0 +1,76 @@
+---
+title: "Firebase Hosting"
+description: "Firebase Hosting provides fast, secure static and dynamic web hosting with global CDN and SSL, integrated with other Firebase services."
+provider: "Google Cloud"
+category: "Static Hosting"
+domain: hosting
+subtypes:
+  - static-sites
+  - dynamic-sites
+  - CDN
+  - SSL
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - static
+  - web
+  - cdn
+  - ssl
+  - firebase
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes generous monthly limits for hosting bandwidth and storage."
+  limits:
+    - 10 GB storage
+    - 10 GB/month data transfer
+    - SSL included
+    - Custom domains
+  caveats:
+    - Overages billed per GB
+    - No backend compute included
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages can incur charges if limits are exceeded.
+useCases:
+  - Deploying static websites
+  - Hosting single-page apps
+  - Serving web apps with global CDN
+  - Integrating with Firebase backend
+quickstartSteps:
+  - Install Firebase CLI with npm install -g firebase-tools.
+  - Run firebase login to authenticate with your Google account.
+  - Initialize your project using firebase init hosting.
+  - Build your static site and place files in the public directory.
+  - Deploy with firebase deploy.
+whenToUse: "Use when you need fast, secure static or single-page app hosting with easy deployment and global CDN."
+whenNotToUse: "Avoid if you require backend compute, advanced server-side rendering, or need hard caps to prevent overages."
+bestFor:
+  - static sites
+  - SPAs
+  - prototypes
+  - personal projects
+avoidIf:
+  - heavy backend logic
+  - strict cost controls
+  - complex SSR
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-13
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://firebase.google.com/products/hosting
+docsUrl: https://firebase.google.com/docs/hosting
+sourceUrls:
+  - https://firebase.google.com/pricing
+  - https://firebase.google.com/docs/hosting
+featured: false
+---
+Firebase Hosting offers fast, secure, and reliable web hosting for static and dynamic content, with easy integration into the Firebase ecosystem and global CDN.

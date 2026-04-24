@@ -1,0 +1,71 @@
+---
+title: "Azure AI Content Safety"
+description: "Detects and filters harmful, offensive, or inappropriate content in text and images using AI models."
+provider: "Azure"
+category: "Content Moderation"
+domain: ai
+subtypes:
+  - text moderation
+  - image moderation
+  - AI API
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - content-moderation
+  - ai
+  - safety
+  - text
+  - image
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 10,000 text records and 1,000 image records per month."
+  limits:
+    - 10,000 text records/month
+    - 1,000 image records/month
+  caveats:
+    - Requires Azure account
+    - Overages billed at standard rates
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Usage beyond free tier is automatically billed.
+useCases:
+  - Moderate user-generated content
+  - Filter offensive language in chat apps
+  - Detect harmful images in uploads
+quickstartSteps:
+  - Sign in to the Azure portal and create an AI Content Safety resource.
+  - Obtain your API key and endpoint from the resource overview.
+  - Install the Azure AI Content Safety SDK or use the REST API.
+  - Send sample text or image data to the API for moderation.
+  - Review moderation results and integrate into your application workflow.
+whenToUse: "Use when you need to automatically detect and filter harmful or inappropriate content in user-generated text or images."
+whenNotToUse: "Avoid if you require moderation for video, audio, or need an on-premises solution; not ideal for extremely high-volume, cost-sensitive use cases."
+bestFor:
+  - moderating forums
+  - chat applications
+  - social platforms
+avoidIf:
+  - requiring offline moderation
+  - needing video/audio analysis
+  - strict cost controls
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-content-safety/
+docsUrl: https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-content-safety/
+  - https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview
+featured: false
+---
+Azure AI Content Safety provides AI-powered moderation for text and images, helping developers automatically detect and filter harmful or inappropriate content at scale.

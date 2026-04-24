@@ -1,0 +1,71 @@
+---
+title: "IPLocate"
+description: "IPLocate provides a free API for IP geolocation lookup with fast response and simple integration."
+provider: "IPLocate"
+category: "Geolocation API"
+domain: integration
+subtypes:
+  - ip-geolocation
+  - api
+  - lookup
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - geolocation
+  - ip
+  - api
+  - lookup
+  - integration
+pricingModel: free
+freeTierDetails:
+  summary: "Free tier allows up to 1,000 requests per day with no credit card required."
+  limits:
+    - 1,000 requests/day
+    - No authentication required
+  caveats:
+    - No SLA or uptime guarantee
+    - Limited support
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Detecting user location for personalization
+  - Blocking or allowing access by region
+  - Logging IP geolocation data
+  - Basic analytics
+  - Integrating with web or mobile apps
+quickstartSteps:
+  - Go to https://www.iplocate.io.
+  - Review API documentation on the homepage.
+  - Make a GET request to https://www.iplocate.io/api/lookup/{IP} or /api/lookup/ for your own IP.
+  - Parse the JSON response in your application.
+  - Monitor your daily usage to stay within the free tier limit.
+whenToUse: "Use IPLocate when you need simple, low-volume IP geolocation for web or app projects without authentication or setup."
+whenNotToUse: "Avoid if you need high request volumes, advanced data, guaranteed uptime, or enterprise support."
+bestFor:
+  - prototyping
+  - side projects
+  - student projects
+  - open source tools
+avoidIf:
+  - enterprise workloads
+  - high-traffic production
+  - strict compliance needs
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://www.iplocate.io
+docsUrl: https://www.iplocate.io/docs
+sourceUrls:
+  - https://www.iplocate.io
+  - https://www.iplocate.io/docs
+featured: false
+---
+IPLocate offers a free, easy-to-use IP geolocation API suitable for low-volume, non-critical applications, with no authentication or credit card required.

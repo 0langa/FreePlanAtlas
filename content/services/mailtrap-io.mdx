@@ -1,0 +1,71 @@
+---
+title: "Mailtrap.io"
+description: "Mailtrap.io provides a safe email testing environment for staging and development, preventing accidental email delivery to real users."
+provider: "Mailtrap"
+category: "Email Testing"
+domain: devops
+subtypes:
+  - email sandbox
+  - SMTP testing
+  - inbox simulation
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - email
+  - testing
+  - smtp
+  - sandbox
+  - development
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free plan includes a single inbox with limited monthly emails for safe email testing."
+  limits:
+    - 1 inbox
+    - 500 emails/month
+    - 50 emails/hour
+    - No team sharing
+  caveats:
+    - No team collaboration on free tier
+    - Limited to non-production use
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Testing email functionality in development
+  - Validating email templates
+  - Preventing accidental email delivery
+  - Debugging SMTP integration
+quickstartSteps:
+  - Sign up for a free Mailtrap.io account.
+  - Create a new inbox in your Mailtrap dashboard.
+  - Copy the SMTP credentials provided for your inbox.
+  - Configure your application to use Mailtrap's SMTP settings.
+  - Send a test email and verify it appears in your Mailtrap inbox.
+whenToUse: "Use Mailtrap.io when you need to safely test and debug email sending in development or staging environments."
+whenNotToUse: "Do not use for sending emails to real users or in production environments, as emails are not delivered externally."
+bestFor:
+  - developers
+  - QA engineers
+  - teams testing email flows
+avoidIf:
+  - you need to send real emails
+  - production email delivery is required
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://mailtrap.io/
+docsUrl: https://mailtrap.io/docs/
+sourceUrls:
+  - https://mailtrap.io/pricing
+  - https://mailtrap.io/docs/
+featured: false
+---
+Mailtrap.io is a developer-focused tool for safely testing and debugging email sending without risk of spamming real users. Its free tier is ideal for individual developers or small teams needing to validate email flows in non-production environments, offering a single inbox and generous monthly limits. Mailtrap is easy to integrate with most frameworks and languages, making it a popular choice for email testing during development.

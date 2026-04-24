@@ -1,0 +1,70 @@
+---
+title: "Azure Anomaly Detector"
+description: "Detects anomalies in time-series data using AI-powered models with simple API integration."
+provider: "Azure"
+category: "AI Services"
+domain: ai
+subtypes:
+  - anomaly-detection
+  - time-series
+  - api
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+tags:
+  - anomaly-detection
+  - machine-learning
+  - time-series
+  - api
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 20,000 transactions per month."
+  limits:
+    - 20,000 transactions/month
+    - Up to 12MB per API call
+    - Maximum 8640 data points per request
+  caveats:
+    - Requires Azure account
+    - API usage only; no on-prem deployment
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Charges apply if monthly transaction limit is exceeded
+useCases:
+  - Monitor IoT sensor data for anomalies
+  - Detect fraud in financial transactions
+  - Identify unexpected trends in business metrics
+quickstartSteps:
+  - Sign in to the Azure Portal and create an Anomaly Detector resource.
+  - Obtain your API key and endpoint from the resource overview.
+  - Install the Azure Anomaly Detector SDK or use REST API.
+  - Send time-series data to the API endpoint for anomaly detection.
+  - Review results and integrate anomaly alerts into your application.
+whenToUse: "Use when you need to detect anomalies in time-series data without building custom ML models."
+whenNotToUse: "Avoid if you require on-premises deployment or need to analyze non-time-series data."
+bestFor:
+  - time-series monitoring
+  - rapid prototyping
+  - business analytics
+avoidIf:
+  - on-premises only
+  - non-time-series data
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/ai-services/anomaly-detector/
+docsUrl: https://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/ai-services/anomaly-detector/
+  - https://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/
+featured: false
+---
+Azure Anomaly Detector provides scalable, AI-powered anomaly detection for time-series data via a simple API, ideal for monitoring and alerting use cases.

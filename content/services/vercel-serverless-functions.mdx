@@ -1,0 +1,73 @@
+---
+title: "Vercel Serverless Functions"
+description: "Deploy serverless APIs and backend logic with zero-config on Vercel’s global edge network."
+provider: "Vercel"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - serverless
+  - api
+  - edge
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - api
+  - edge
+  - javascript
+  - typescript
+pricingModel: freemium
+freeTierDetails:
+  summary: "125 hours of serverless function execution per month on the Hobby plan."
+  limits:
+    - 125 hours/month execution time
+    - 1000 maximum concurrent executions
+    - 10 seconds max execution per request
+    - 1024 MB memory per function
+  caveats:
+    - Cold starts may affect latency
+    - Limited to Hobby (free) projects
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Deploying REST or GraphQL APIs
+  - Webhook handlers
+  - Backend logic for static sites
+  - Rapid prototyping
+quickstartSteps:
+  - Sign up for a free Vercel account.
+  - Install Vercel CLI or connect your GitHub/GitLab/Bitbucket repository.
+  - Create an `api/` directory in your project and add a JavaScript or TypeScript file.
+  - Write your serverless function code and export a default handler.
+  - Deploy your project with `vercel` CLI or push to your connected repository.
+whenToUse: "Use for lightweight APIs, webhooks, or backend logic that benefit from global edge deployment and simple scaling."
+whenNotToUse: "Avoid for long-running processes, heavy compute workloads, or when you need fine-grained control over infrastructure."
+bestFor:
+  - prototyping
+  - static site backends
+  - personal projects
+  - small teams
+avoidIf:
+  - need long execution times
+  - require custom runtimes
+  - heavy compute workloads
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://vercel.com/docs/functions/serverless-functions
+docsUrl: https://vercel.com/docs/functions/serverless-functions
+sourceUrls:
+  - https://vercel.com/pricing
+  - https://vercel.com/docs/functions/serverless-functions
+featured: false
+---
+Vercel Serverless Functions let you deploy backend logic and APIs with minimal configuration, scaling automatically and running close to your users on Vercel’s edge network.

@@ -1,0 +1,69 @@
+---
+title: "Azure AI Document Intelligence"
+description: "Extracts structured data from documents using AI-powered OCR and form recognition."
+provider: "Azure"
+category: "Document Processing"
+domain: ai
+subtypes:
+  - OCR
+  - Form Recognition
+  - Document Analysis
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - ocr
+  - ai
+  - document
+  - azure
+  - form-recognition
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 500 pages per month for key features."
+  limits:
+    - 500 pages/month for Read, Layout, General Document, Prebuilt Invoice, Receipt, Business Card, Identity Document, and Tax W-2 APIs
+  caveats:
+    - Other features may not be included in free tier
+    - Overages are billed per page
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Charges apply if you exceed free page limits
+useCases:
+  - Automated invoice processing
+  - Extracting data from receipts
+  - Digitizing business cards
+  - Form data extraction
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create an AI Document Intelligence resource.
+  - Obtain your endpoint and API key from the resource.
+  - Install the Azure AI Document Intelligence SDK or use REST API.
+  - Send a document to the API and retrieve extracted data.
+whenToUse: "Use when you need to extract structured data from documents like invoices, receipts, or forms at scale."
+whenNotToUse: "Avoid if you need on-premises processing or have strict data residency requirements, as processing occurs in Azure's cloud."
+bestFor:
+  - automating document workflows
+  - digitizing paper records
+  - accounts payable automation
+avoidIf:
+  - requiring offline processing
+  - handling highly sensitive documents with strict compliance needs
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-document-intelligence/
+docsUrl: https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/ai-services/ai-document-intelligence/
+  - https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview
+featured: false
+---
+Azure AI Document Intelligence provides AI-powered OCR and form recognition to extract structured data from documents, supporting automated workflows and digitization. The free tier offers 500 pages per month for key APIs, making it suitable for small to medium workloads. Overages are billed per page, and processing is cloud-based, so consider compliance and data residency requirements.

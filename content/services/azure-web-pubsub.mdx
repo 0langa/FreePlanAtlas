@@ -1,0 +1,71 @@
+---
+title: "Azure Web PubSub"
+description: "Azure Web PubSub provides real-time messaging for web applications using WebSockets and publish-subscribe patterns."
+provider: "Azure"
+category: "Messaging"
+domain: messaging
+subtypes:
+  - websockets
+  - pubsub
+  - real-time
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+  - indie
+tags:
+  - websockets
+  - real-time
+  - pubsub
+  - azure
+  - messaging
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 20 concurrent connections and 20,000 messages per day."
+  limits:
+    - 20 concurrent connections
+    - 20,000 messages per day
+    - 1 unit
+  caveats:
+    - No SLA on free tier
+    - Limited to one free unit per subscription
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Real-time chat
+  - Live dashboards
+  - Collaborative apps
+  - IoT device messaging
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Create a new Web PubSub resource.
+  - Configure connection settings and keys.
+  - Integrate the Web PubSub SDK into your app.
+  - Start sending and receiving messages.
+whenToUse: "Use when you need scalable, real-time messaging for web or mobile apps without managing WebSocket infrastructure."
+whenNotToUse: "Avoid if you need high connection counts, advanced routing, or on-premises deployment, as the free tier is limited and cloud-only."
+bestFor:
+  - real-time collaboration
+  - live notifications
+  - prototyping messaging features
+avoidIf:
+  - need high concurrency
+  - require on-premises hosting
+  - need advanced message routing
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/web-pubsub/
+docsUrl: https://learn.microsoft.com/en-us/azure/azure-web-pubsub/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/web-pubsub/
+  - https://learn.microsoft.com/en-us/azure/azure-web-pubsub/
+featured: false
+---
+Azure Web PubSub offers managed WebSocket-based real-time messaging, ideal for chat, live dashboards, and collaborative applications with a generous free tier for prototyping.

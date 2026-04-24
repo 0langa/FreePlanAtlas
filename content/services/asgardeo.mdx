@@ -1,0 +1,70 @@
+---
+title: "Asgardeo"
+description: "Asgardeo is a cloud-based identity and access management (IAM) service for secure authentication, authorization, and user management."
+provider: "WSO2"
+category: "Identity Management"
+domain: auth
+subtypes:
+  - IAM
+  - OAuth
+  - OIDC
+  - SAML
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - iam
+  - authentication
+  - authorization
+  - sso
+  - user-management
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 1000 monthly active users and essential IAM features."
+  limits:
+    - 1000 monthly active users
+    - Basic authentication flows
+    - Standard connectors
+    - Limited API calls
+  caveats:
+    - Advanced features require paid plans
+    - Support is limited on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add SSO to web and mobile apps
+  - Manage user authentication securely
+  - Integrate OAuth2/OIDC/SAML for apps
+quickstartSteps:
+  - Sign up for a free Asgardeo account.
+  - Create a new application in the Asgardeo console.
+  - Configure authentication methods (e.g., email, social login).
+  - Integrate the Asgardeo SDK or use OAuth/OIDC endpoints in your app.
+  - Test user login and access flows.
+whenToUse: "Use Asgardeo when you need secure, managed authentication and SSO for your apps without building IAM infrastructure."
+whenNotToUse: "Avoid if you require on-premises IAM, advanced customization, or need to support more than 1000 monthly users for free."
+bestFor:
+  - secure authentication
+  - SSO
+  - user management
+avoidIf:
+  - need on-premises deployment
+  - require deep IAM customization
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://wso2.com/asgardeo
+docsUrl: https://wso2.com/asgardeo/docs/
+sourceUrls:
+  - https://wso2.com/asgardeo/pricing/
+  - https://wso2.com/asgardeo/docs/
+featured: false
+---
+Asgardeo offers a managed IAM platform with SSO, OAuth2, OIDC, and SAML support, suitable for startups and teams needing secure authentication without complex setup.

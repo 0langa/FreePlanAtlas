@@ -1,0 +1,73 @@
+---
+title: "Redis Cloud"
+description: "Fully managed Redis service offering scalable in-memory data storage and caching with a generous always-free tier."
+provider: "Redis"
+category: "Database"
+domain: database
+subtypes:
+  - in-memory
+  - key-value
+  - cache
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - redis
+  - cache
+  - in-memory
+  - key-value
+  - managed
+pricingModel: freemium
+freeTierDetails:
+  summary: "Always-free tier with 30 MB storage and basic features."
+  limits:
+    - 30 MB storage
+    - Single database
+    - Community edition features
+  caveats:
+    - No high availability or clustering
+    - Limited to one free database per account
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Session storage
+  - Application caching
+  - Leaderboard data
+  - Pub/sub messaging
+  - Rate limiting
+quickstartSteps:
+  - Sign up for a Redis Cloud account.
+  - Create a new free database instance.
+  - Select your preferred cloud provider and region.
+  - Copy the database endpoint and credentials.
+  - Connect your application using a Redis client.
+whenToUse: "Use when you need a managed, low-latency cache or key-value store for small apps, prototypes, or learning purposes."
+whenNotToUse: "Avoid if you require high availability, clustering, or need more than 30 MB storage for production workloads."
+bestFor:
+  - learning
+  - prototyping
+  - small apps
+  - caching
+avoidIf:
+  - large-scale production
+  - high availability required
+  - advanced Redis modules needed
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://www.redis.com/cloud/
+docsUrl: https://docs.redis.com/latest/rc/
+sourceUrls:
+  - https://redis.com/redis-enterprise-cloud/overview/
+  - https://redis.com/redis-enterprise-cloud/pricing/
+featured: false
+---
+Redis Cloud provides a fully managed, always-free Redis database ideal for caching, session storage, and rapid prototyping with minimal setup.

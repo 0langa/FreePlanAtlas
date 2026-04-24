@@ -1,0 +1,67 @@
+---
+title: "Socket"
+description: "Socket provides automated open source supply chain security for JavaScript, Python, and other package ecosystems."
+provider: "Socket"
+category: "Security"
+domain: security
+subtypes:
+  - Dependency Scanning
+  - Supply Chain Security
+  - Vulnerability Detection
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - open-source
+  - npm
+  - python
+  - security
+  - dependency
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes unlimited public repositories and limited private repo scanning."
+  limits:
+    - Unlimited public repositories
+    - 5 private repositories
+    - Basic vulnerability and malware detection
+  caveats:
+    - Advanced features require paid plans
+    - Private repo limit is per organization
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Detecting malicious or vulnerable dependencies
+  - Automated supply chain monitoring
+  - Securing open source projects
+quickstartSteps:
+  - Sign up at socket.dev with your GitHub account.
+  - Authorize Socket to access your repositories.
+  - Select repositories to monitor for vulnerabilities.
+  - Review security alerts and suggested remediations in the Socket dashboard.
+whenToUse: "Use Socket to monitor open source dependencies for vulnerabilities and malware in JavaScript or Python projects, especially for public repos."
+whenNotToUse: "Avoid if you need scanning for more than 5 private repositories or require advanced enterprise security features."
+bestFor:
+  - open source maintainers
+  - small teams
+  - startups
+avoidIf:
+  - need unlimited private repo scanning
+  - require enterprise compliance
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-08
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://socket.dev
+docsUrl: https://docs.socket.dev/
+sourceUrls:
+  - https://socket.dev/pricing
+  - https://docs.socket.dev/
+featured: false
+---
+Socket offers automated supply chain security for open source projects, providing free vulnerability and malware scanning for public and limited private repositories.

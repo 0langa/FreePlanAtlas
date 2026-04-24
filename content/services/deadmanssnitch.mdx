@@ -1,0 +1,70 @@
+---
+title: "Deadmanssnitch"
+description: "Deadmanssnitch monitors scheduled jobs and alerts you when they fail to check in on time."
+provider: "Deadmanssnitch"
+category: "Monitoring"
+domain: observability
+subtypes:
+  - cron monitoring
+  - uptime alerting
+  - job monitoring
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - cron
+  - monitoring
+  - alerting
+  - uptime
+  - scheduling
+pricingModel: trial
+freeTierDetails:
+  summary: "14-day free trial with full access to all features."
+  limits:
+    - Unlimited snitches during trial
+    - Full feature access
+  caveats:
+    - Requires upgrade after trial to continue monitoring
+  resetPeriod: 14 days
+  requiresCard: false
+  freeTierType: trial
+  hasHardCap: true
+  overageRisk: none
+  billingRiskNotes:
+    - No charges unless you upgrade
+  trialDays: 14
+useCases:
+  - Monitor cron jobs for failures
+  - Receive alerts if scheduled tasks don't run
+  - Track background job health
+quickstartSteps:
+  - Sign up for a Deadmanssnitch account.
+  - Create a new snitch for your scheduled job.
+  - Copy the unique check-in URL provided.
+  - Add an HTTP request to the check-in URL at the end of your job script.
+  - Configure alert preferences for missed check-ins.
+whenToUse: "Use Deadmanssnitch to monitor cron jobs or scheduled tasks where missing a run could cause issues."
+whenNotToUse: "Avoid if you need continuous application monitoring or want a free, always-available tier."
+bestFor:
+  - cron job monitoring
+  - scheduled task alerting
+  - simple uptime notifications
+avoidIf:
+  - need always-free monitoring
+  - require deep application metrics
+  - want integrated infrastructure monitoring
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-11
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://deadmanssnitch.com/
+docsUrl: https://docs.deadmanssnitch.com
+sourceUrls:
+  - https://deadmanssnitch.com/pricing
+  - https://deadmanssnitch.com/docs
+featured: false
+---
+Deadmanssnitch provides simple monitoring for scheduled jobs, alerting you if your jobs fail to check in as expected.

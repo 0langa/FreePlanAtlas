@@ -1,0 +1,69 @@
+---
+title: "Qdrant"
+description: "Qdrant is a vector database service for storing, searching, and managing embeddings at scale."
+provider: "Qdrant"
+category: "Vector Database"
+domain: database
+subtypes:
+  - vector search
+  - embedding storage
+  - similarity search
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - vector
+  - database
+  - ai
+  - search
+  - embeddings
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1GB storage, 1M operations/month, and 1 project."
+  limits:
+    - 1GB storage
+    - 1M operations/month
+    - 1 project
+  caveats:
+    - No SLA or support on free tier
+    - Limited to shared infrastructure
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Semantic search for documents
+  - Recommendation systems
+  - Image or audio similarity search
+quickstartSteps:
+  - Sign up for a free Qdrant Cloud account.
+  - Create a new project and collection.
+  - Connect using the Qdrant client or REST API.
+  - Upload your vector embeddings.
+  - Run similarity search queries.
+whenToUse: "Use Qdrant when you need fast, scalable vector search for AI-powered applications or semantic search features."
+whenNotToUse: "Avoid Qdrant if you need traditional relational queries or require on-premise deployment without using their open-source version."
+bestFor:
+  - AI projects
+  - semantic search
+  - recommendation engines
+avoidIf:
+  - need SQL queries
+  - require on-premise managed service
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://qdrant.tech/
+docsUrl: https://qdrant.tech/documentation/
+sourceUrls:
+  - https://qdrant.tech/documentation/guides/cloud/
+  - https://qdrant.tech/pricing/
+featured: false
+---
+Qdrant provides a managed vector database for storing and searching embeddings, suitable for AI-driven search and recommendation use cases.

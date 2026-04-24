@@ -1,0 +1,71 @@
+---
+title: "ImprovMX"
+description: "ImprovMX lets you create free email forwarding for your custom domain with simple setup and no hosting required."
+provider: "ImprovMX"
+category: "Email Forwarding"
+domain: productivity
+subtypes:
+  - email
+  - forwarding
+  - custom-domain
+audiences:
+  - student
+  - indie
+  - startup
+  - oss
+tags:
+  - email
+  - forwarding
+  - custom-domain
+  - productivity
+  - smtp
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free plan allows unlimited aliases and domains with up to 1,000 forwarded emails per month."
+  limits:
+    - 1,000 emails/month
+    - Unlimited aliases
+    - Unlimited domains
+  caveats:
+    - No SMTP sending on free plan
+    - No custom domain for outgoing emails
+    - Basic support only
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Forwarding custom domain emails to Gmail or other inboxes
+  - Setting up catch-all addresses for a domain
+  - Receiving emails for side projects without hosting mail servers
+quickstartSteps:
+  - Sign up for a free ImprovMX account.
+  - Add your custom domain to the dashboard.
+  - Update your domain's DNS MX records as instructed.
+  - Create email aliases to forward to your preferred inbox.
+  - Verify forwarding by sending a test email.
+whenToUse: "Use ImprovMX to receive emails at your custom domain and forward them to your main inbox without running your own mail server."
+whenNotToUse: "Avoid if you need to send emails from your domain or require advanced filtering, as the free plan only supports forwarding."
+bestFor:
+  - custom domain owners
+  - side projects
+  - students
+  - open source maintainers
+avoidIf:
+  - need outbound SMTP
+  - require advanced spam filtering
+  - need enterprise support
+difficulty: beginner
+productionReadiness: side-project
+lastUpdated: 2024-06-13
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://improvmx.com
+docsUrl: https://improvmx.com/guides/
+sourceUrls:
+  - https://improvmx.com/pricing/
+  - https://improvmx.com/guides/
+featured: false
+---
+ImprovMX provides a simple, free way to forward emails from your custom domain to any inbox, making it ideal for personal or small project use without the need to manage mail servers.

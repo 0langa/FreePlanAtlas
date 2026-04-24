@@ -1,0 +1,73 @@
+---
+title: "Azure AI Search"
+description: "Azure AI Search is a cloud search service for building rich search experiences over private, heterogeneous content."
+provider: "Azure"
+category: "Search"
+domain: ai
+subtypes:
+  - full-text search
+  - cognitive search
+  - indexing
+audiences:
+  - startup
+  - team
+  - enterprise
+  - indie
+tags:
+  - search
+  - ai
+  - cloud
+  - indexing
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes one search service with up to 3 indexes and 50 MB storage."
+  limits:
+    - 1 free search service per subscription
+    - 3 indexes
+    - 50 MB storage
+    - 2 replicas
+    - 3 partitions
+  caveats:
+    - No SLA on free tier
+    - Limited to development and testing
+    - Cannot scale beyond free limits
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototype search for web or mobile apps
+  - Testing AI-powered search features
+  - Learning and demos
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Create a new Azure AI Search service using the Free tier.
+  - Define and import your data source (e.g., Azure Blob Storage, SQL Database).
+  - Create an index and configure fields.
+  - Upload or connect your data and test search queries.
+whenToUse: "Use when you need to prototype or test search features in Azure without incurring costs."
+whenNotToUse: "Avoid for production workloads or large-scale search needs due to strict resource and SLA limitations."
+bestFor:
+  - prototyping
+  - learning
+  - demos
+  - internal tools
+avoidIf:
+  - production workloads
+  - large datasets
+  - high availability requirements
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-12
+popularityScore: 7
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/search/
+docsUrl: https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/search/
+  - https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search
+featured: false
+---
+Azure AI Search provides a managed search-as-a-service platform with AI enrichment, ideal for prototyping and learning but not suitable for production-scale workloads on the free tier.

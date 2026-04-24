@@ -1,0 +1,68 @@
+---
+title: "UseWebhook.com"
+description: "UseWebhook.com provides managed webhook endpoints for capturing, inspecting, and forwarding HTTP requests during development and testing."
+provider: "UseWebhook.com"
+category: "Webhooks"
+domain: integration
+subtypes:
+  - webhook forwarding
+  - request inspection
+  - testing
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - webhooks
+  - testing
+  - request-inspection
+  - devtools
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers limited endpoints and request retention for development and testing."
+  limits:
+    - 2 endpoints
+    - 100 requests per month
+    - 3-day request retention
+  caveats:
+    - No custom domains on free tier
+    - Limited retention and request volume
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Testing webhook integrations
+  - Debugging third-party webhooks
+  - Capturing and replaying HTTP requests
+quickstartSteps:
+  - Sign up for a free UseWebhook.com account.
+  - Create a new webhook endpoint from the dashboard.
+  - Copy the generated endpoint URL.
+  - Configure your service or app to send webhooks to this URL.
+  - Inspect incoming requests in the dashboard.
+whenToUse: "Use when you need to capture, inspect, or debug webhooks during development or integration testing."
+whenNotToUse: "Avoid for production workloads, high-volume webhooks, or when custom domains and long-term retention are required."
+bestFor:
+  - development
+  - testing
+  - debugging webhooks
+avoidIf:
+  - need production-grade reliability
+  - require custom domains
+  - need high request volume
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 5
+usefulnessScore: 7
+officialUrl: https://usewebhook.com
+docsUrl: https://docs.usewebhook.com
+sourceUrls:
+  - https://usewebhook.com/pricing
+featured: false
+---
+UseWebhook.com is a developer tool for capturing and inspecting webhook requests, ideal for debugging and testing integrations with minimal setup.

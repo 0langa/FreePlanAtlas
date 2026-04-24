@@ -1,0 +1,69 @@
+---
+title: "Azure Traffic Manager"
+description: "Azure Traffic Manager is a DNS-based global traffic distribution service for high availability and performance."
+provider: "Azure"
+category: "Traffic Management"
+domain: networking
+subtypes:
+  - DNS-based Routing
+  - Load Balancing
+  - Failover
+audiences:
+  - startup
+  - team
+  - enterprise
+  - agency
+tags:
+  - dns
+  - load-balancer
+  - geo-routing
+  - failover
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "First 1 million DNS queries per month are free."
+  limits:
+    - 1 million DNS queries/month
+    - No SLA on free tier
+  caveats:
+    - Overages billed per million queries
+    - No advanced features in free tier
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Charges accrue if query limit exceeded
+useCases:
+  - Distribute user traffic across multiple Azure regions
+  - Implement automatic failover for web applications
+  - Improve global application responsiveness
+quickstartSteps:
+  - Sign in to the Azure portal and create a Traffic Manager profile.
+  - Select a routing method (e.g., Priority, Weighted, Performance).
+  - Add endpoints for your application resources.
+  - Configure DNS settings to point your domain to the Traffic Manager profile.
+  - Monitor traffic and adjust routing as needed.
+whenToUse: "Use when you need to route global user traffic to multiple endpoints for high availability or performance."
+whenNotToUse: "Avoid if you require application-layer load balancing or need a free tier with no risk of overages."
+bestFor:
+  - multi-region apps
+  - disaster recovery
+  - global web services
+avoidIf:
+  - single-region deployments
+  - strictly zero-cost requirements
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/traffic-manager/
+docsUrl: https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/traffic-manager/
+  - https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview
+featured: false
+---
+Azure Traffic Manager provides DNS-based global traffic distribution, enabling high availability and performance for applications deployed across multiple regions.

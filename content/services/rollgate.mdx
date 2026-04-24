@@ -1,0 +1,71 @@
+---
+title: "Rollgate"
+description: "Rollgate provides managed reverse proxy and secure tunneling for exposing local or private services to the internet."
+provider: "Rollgate"
+category: "Networking"
+domain: networking
+subtypes:
+  - reverse proxy
+  - tunneling
+  - secure access
+audiences:
+  - indie
+  - startup
+  - team
+  - student
+  - oss
+tags:
+  - reverse-proxy
+  - tunnel
+  - devops
+  - remote-access
+  - networking
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows exposing one service with basic features and limited bandwidth."
+  limits:
+    - 1 tunnel
+    - Limited bandwidth (1GB/month)
+    - Basic authentication only
+  caveats:
+    - No custom domains on free tier
+    - Limited support
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Expose local development servers for testing
+  - Share webhooks from localhost
+  - Remote access to private dashboards
+quickstartSteps:
+  - Sign up for a free Rollgate account.
+  - Download and install the Rollgate CLI for your platform.
+  - Authenticate the CLI with your account credentials.
+  - Create a new tunnel specifying your local service port.
+  - Start the tunnel and use the provided public URL.
+whenToUse: "Use Rollgate when you need to securely expose a local or private service to the internet for testing, demos, or remote access."
+whenNotToUse: "Avoid if you require high bandwidth, custom domains, or advanced security features on the free tier."
+bestFor:
+  - developers
+  - startups
+  - students
+  - open source projects
+avoidIf:
+  - enterprise
+  - high-traffic production
+  - custom domain required
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://rollgate.io
+docsUrl: https://docs.rollgate.io
+sourceUrls:
+  - https://rollgate.io
+  - https://docs.rollgate.io
+featured: false
+---
+Rollgate is a managed reverse proxy and tunneling service that lets you securely expose local or private services to the public internet, ideal for development, testing, and demos. The free tier is suitable for basic use cases with limited bandwidth and no custom domains, making it a good fit for individuals and small teams needing quick, secure access to local services.

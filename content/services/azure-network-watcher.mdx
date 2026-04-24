@@ -1,0 +1,69 @@
+---
+title: "Azure Network Watcher"
+description: "Azure Network Watcher provides network monitoring, diagnostic, and analytics tools for Azure resources."
+provider: "Azure"
+category: "Network Monitoring"
+domain: networking
+subtypes:
+  - monitoring
+  - diagnostics
+  - analytics
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - azure
+  - network
+  - monitoring
+  - diagnostics
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes limited monitoring and diagnostic operations per month."
+  limits:
+    - 5 GB diagnostic logs/month
+    - 1,000 connection monitors/month
+    - 10,000 packet captures/month
+  caveats:
+    - Some advanced features may incur charges.
+    - Exceeding limits results in pay-as-you-go charges.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Monitor usage to avoid unexpected charges if limits are exceeded.
+useCases:
+  - Monitor network traffic and diagnose connectivity issues
+  - Analyze network performance bottlenecks
+  - Automate network monitoring workflows
+quickstartSteps:
+  - Sign in to the Azure portal and ensure you have an active subscription.
+  - Navigate to 'Network Watcher' in the Azure portal.
+  - Enable Network Watcher for your desired region.
+  - Configure monitoring tools such as Connection Monitor or Packet Capture.
+  - Review collected data and set up alerts as needed.
+whenToUse: "Use when you need to monitor, diagnose, or analyze network traffic and connectivity within Azure resources."
+whenNotToUse: "Avoid if you require monitoring for non-Azure environments or need unlimited diagnostics without risk of overage charges."
+bestFor:
+  - Azure network monitoring
+  - diagnostics
+  - performance analysis
+avoidIf:
+  - monitoring non-Azure networks
+  - avoiding any risk of overage
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/network-watcher/
+docsUrl: https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/network-watcher/
+  - https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview
+featured: false
+---
+Azure Network Watcher offers essential monitoring and diagnostic tools for Azure networks, with a free tier suitable for moderate usage and pay-as-you-go for higher volumes.

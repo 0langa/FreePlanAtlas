@@ -1,0 +1,72 @@
+---
+title: "ipapi"
+description: "ipapi provides a fast API for IP geolocation, timezone, and related data enrichment."
+provider: "ipapi"
+category: "Apis"
+domain: integration
+subtypes:
+  - geolocation
+  - ip-lookup
+  - timezone
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ip
+  - geolocation
+  - api
+  - timezone
+  - lookup
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows up to 1,000 requests per day with basic geolocation data."
+  limits:
+    - 1,000 requests/day
+    - Basic fields only
+    - No HTTPS on free tier
+  caveats:
+    - No HTTPS support on free plan
+    - Advanced data fields require paid plan
+  resetPeriod: daily
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Show user location on websites
+  - Personalize content by region
+  - Basic fraud detection
+  - Timezone-aware features
+quickstartSteps:
+  - Go to https://ipapi.co/ and sign up for a free account.
+  - Review the API documentation for endpoint usage and response formats.
+  - Copy your API key from the dashboard (optional for free tier).
+  - Make a GET request to https://ipapi.co/{ip}/json/ to retrieve geolocation data.
+  - Integrate the API call into your application as needed.
+whenToUse: "Use ipapi when you need quick, simple IP geolocation or timezone data for low-traffic projects or prototypes."
+whenNotToUse: "Avoid if you require HTTPS, advanced data fields, or high request volumes without upgrading to a paid plan."
+bestFor:
+  - prototyping
+  - personal projects
+  - student apps
+  - basic analytics
+avoidIf:
+  - need HTTPS
+  - require advanced data
+  - expect high traffic
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-13
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://ipapi.co/
+docsUrl: https://ipapi.co/api/
+sourceUrls:
+  - https://ipapi.co/
+  - https://ipapi.co/api/
+featured: false
+---
+ipapi offers a simple, fast API for IP address geolocation and timezone lookup, ideal for basic enrichment and prototyping with a generous free tier.

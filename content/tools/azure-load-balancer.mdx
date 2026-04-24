@@ -1,0 +1,68 @@
+---
+title: "Azure Load Balancer"
+description: "Azure Load Balancer distributes incoming network traffic across multiple Azure resources for high availability and reliability."
+provider: "Azure"
+category: "Load Balancing"
+domain: networking
+subtypes:
+  - Layer 4
+  - Public
+  - Internal
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - load-balancer
+  - networking
+  - azure
+  - traffic-distribution
+pricingModel: freemium
+freeTierDetails:
+  summary: "750 hours and 15 GB data processing per month for Standard Load Balancer."
+  limits:
+    - 750 hours/month
+    - 15 GB data processing/month
+  caveats:
+    - Free tier applies to Standard SKU only
+    - Additional usage billed per hour and per GB
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages billed automatically if limits are exceeded
+useCases:
+  - Distribute web traffic across VMs
+  - Increase application availability
+  - Enable high availability for internal services
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Create a new Standard Load Balancer resource.
+  - Configure frontend IP and backend pool with your VMs.
+  - Set up health probes and load balancing rules.
+  - Review and create the load balancer.
+whenToUse: "Use when you need to distribute incoming TCP/UDP traffic across multiple Azure resources for high availability."
+whenNotToUse: "Avoid if you require Layer 7 (application-level) load balancing or advanced routing; consider Azure Application Gateway instead."
+bestFor:
+  - Basic network load balancing
+  - High availability setups
+  - Simple traffic distribution
+avoidIf:
+  - Need Layer 7 routing
+  - Require SSL termination
+  - Need web application firewall
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/load-balancer/
+docsUrl: https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/load-balancer/
+  - https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
+featured: false
+---
+Azure Load Balancer provides network-level traffic distribution for high availability and scalability, with a free tier suitable for basic workloads.

@@ -1,0 +1,70 @@
+---
+title: "Gemfury"
+description: "Gemfury is a cloud-hosted private package repository for npm, PyPI, RubyGems, and more."
+provider: "Gemfury"
+category: "Package Registry"
+domain: devops
+subtypes:
+  - private registry
+  - package hosting
+  - artifact management
+audiences:
+  - indie
+  - startup
+  - team
+  - oss
+  - agency
+tags:
+  - npm
+  - pypi
+  - rubygems
+  - private-registry
+  - artifact-hosting
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free plan allows one user and one private package repository."
+  limits:
+    - 1 user
+    - 1 private repository
+    - Limited support
+  caveats:
+    - No team features
+    - Limited to one package type
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Host private npm, PyPI, or RubyGems packages
+  - Distribute internal libraries securely
+  - Simplify dependency management for small projects
+quickstartSteps:
+  - Sign up for a free Gemfury account.
+  - Create a new private repository.
+  - Upload your package using the CLI or web interface.
+  - Configure your package manager (npm, pip, gem) to use your Gemfury repo.
+  - Install your private package in your project.
+whenToUse: "Use Gemfury when you need a simple, cloud-hosted private package registry for a solo or very small project."
+whenNotToUse: "Avoid if you need team collaboration, multiple package types, or advanced access controls on the free tier."
+bestFor:
+  - solo developers
+  - indie projects
+  - OSS maintainers testing private packages
+avoidIf:
+  - large teams
+  - enterprise needs
+  - multi-language package hosting
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-11
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://gemfury.com
+docsUrl: https://docs.gemfury.com/article/34-getting-started
+sourceUrls:
+  - https://gemfury.com/pricing
+  - https://docs.gemfury.com/article/34-getting-started
+featured: false
+---
+Gemfury offers a straightforward, always-free plan for individuals needing a private package registry, but is limited for teams or multiple package types.

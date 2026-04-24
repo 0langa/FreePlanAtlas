@@ -1,0 +1,72 @@
+---
+title: "IPinfo"
+description: "IPinfo provides IP address data APIs for geolocation, ASN, privacy detection, and more."
+provider: "IPinfo"
+category: "Apis"
+domain: integration
+subtypes:
+  - ip-geolocation
+  - asn-lookup
+  - privacy-detection
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ip
+  - geolocation
+  - api
+  - asn
+  - privacy
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier offers up to 50,000 API requests per month with basic data fields."
+  limits:
+    - 50,000 requests/month
+    - Basic geolocation and ASN data
+    - Limited privacy detection
+  caveats:
+    - Advanced data fields require paid plans
+    - Rate limits apply
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Show user location on websites
+  - Personalize content by region
+  - Detect VPN or proxy usage
+  - Analyze traffic by ASN
+quickstartSteps:
+  - Sign up for a free IPinfo account at https://ipinfo.io/signup.
+  - Retrieve your API token from the dashboard.
+  - Read the API documentation for endpoint details.
+  - Make a test API request using your token.
+  - Integrate the API into your application.
+whenToUse: "Use IPinfo when you need reliable IP geolocation, ASN, or privacy data for web or app integrations."
+whenNotToUse: "Avoid if you need unlimited requests, advanced data fields, or require on-premises deployment."
+bestFor:
+  - web developers
+  - app developers
+  - analytics tools
+  - security monitoring
+avoidIf:
+  - need unlimited usage
+  - require advanced data fields
+  - must self-host
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://ipinfo.io/
+docsUrl: https://ipinfo.io/developers
+sourceUrls:
+  - https://ipinfo.io/pricing
+  - https://ipinfo.io/developers
+featured: false
+---
+IPinfo offers a generous free tier for IP geolocation and ASN data, making it easy to add location awareness and network insights to your applications.

@@ -1,0 +1,75 @@
+---
+title: "Authy"
+description: "Authy provides two-factor authentication (2FA) services for securing user logins and sensitive actions."
+provider: "Twilio"
+category: "Authentication"
+domain: auth
+subtypes:
+  - 2FA
+  - MFA
+  - OTP
+  - SMS
+  - TOTP
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - 2fa
+  - mfa
+  - security
+  - otp
+  - authentication
+pricingModel: freemium
+freeTierDetails:
+  summary: "Authy offers a free tier with limited authentications per month."
+  limits:
+    - 100 authentications/month
+  caveats:
+    - Requires Twilio account
+    - SMS/voice may incur carrier fees
+    - API usage beyond free tier is billed
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - API calls above free tier are charged at standard Twilio rates
+useCases:
+  - Add 2FA to web or mobile apps
+  - Protect user logins with OTP
+  - Secure sensitive actions with step-up authentication
+quickstartSteps:
+  - Sign up for a Twilio account and enable Authy.
+  - Create a new Authy application in the Twilio Console.
+  - Integrate the Authy API into your app using official SDKs.
+  - Register users and enable 2FA via SMS, voice, or app-based OTP.
+  - Test authentication flows and monitor usage in the Twilio Console.
+whenToUse: "Use Authy when you need to quickly add 2FA to your app with minimal setup and broad device support."
+whenNotToUse: "Avoid if you need unlimited free authentications, on-premise deployment, or want to avoid external dependencies."
+bestFor:
+  - adding 2FA to SaaS apps
+  - MFA for startups
+  - secure login for mobile apps
+avoidIf:
+  - need unlimited free usage
+  - require self-hosted solution
+  - cannot use third-party services
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://authy.com
+docsUrl: https://www.twilio.com/docs/authy
+sourceUrls:
+  - https://authy.com/pricing/
+  - https://www.twilio.com/docs/authy
+featured: false
+---
+Authy by Twilio enables developers to add secure two-factor authentication to applications using SMS, voice, or app-based OTP, with a generous free tier for low-volume use.

@@ -1,0 +1,75 @@
+---
+title: "Firebase Cloud Functions"
+description: "Run backend code in response to events triggered by Firebase features and HTTPS requests, without managing servers."
+provider: "Google Cloud"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - functions-as-a-service
+  - event-driven
+  - serverless
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - serverless
+  - functions
+  - event-driven
+  - firebase
+  - backend
+pricingModel: freemium
+freeTierDetails:
+  summary: "Generous always-free tier for invocations, compute time, and outbound networking."
+  limits:
+    - 2 million invocations/month
+    - 400,000 GB-seconds compute/month
+    - 200,000 CPU-seconds/month
+    - 5GB outbound networking/month
+  caveats:
+    - Outbound networking limit applies to non-Google services.
+    - Cold starts may affect latency.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free limits incurs charges.
+    - No hard cap; monitor usage to avoid unexpected costs.
+useCases:
+  - Trigger backend logic on Firestore/Realtime Database changes
+  - Send notifications on authentication events
+  - Build REST APIs for mobile/web apps
+  - Integrate with third-party APIs
+quickstartSteps:
+  - Install Firebase CLI and initialize your project with 'firebase init functions'.
+  - Write your function code in 'functions/index.js' or 'functions/src/index.ts'.
+  - Deploy your functions using 'firebase deploy --only functions'.
+  - Test your functions via Firebase console or HTTP requests.
+whenToUse: "Use when you need to run backend code in response to Firebase events or HTTP requests without managing infrastructure."
+whenNotToUse: "Avoid if you require long-running processes, custom runtimes, or need strict control over server resources and networking."
+bestFor:
+  - event-driven apps
+  - mobile backends
+  - prototyping
+  - Firebase-integrated projects
+avoidIf:
+  - need for custom runtimes
+  - long-running tasks
+  - strict latency requirements
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-08
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://firebase.google.com/products/functions
+docsUrl: https://firebase.google.com/docs/functions
+sourceUrls:
+  - https://firebase.google.com/pricing
+  - https://firebase.google.com/docs/functions
+featured: false
+---
+Firebase Cloud Functions lets you run backend code in response to Firebase events or HTTP requests, with a generous free tier and seamless integration with other Firebase services.

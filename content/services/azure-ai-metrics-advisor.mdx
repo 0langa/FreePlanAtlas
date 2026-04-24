@@ -1,0 +1,70 @@
+---
+title: "Azure AI Metrics Advisor"
+description: "Azure AI Metrics Advisor provides anomaly detection and diagnostics for time-series data to monitor business metrics at scale."
+provider: "Azure"
+category: "AI Monitoring"
+domain: ai
+subtypes:
+  - anomaly detection
+  - time-series analysis
+  - monitoring
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - anomaly-detection
+  - monitoring
+  - ai
+  - metrics
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 10,000 data points per month and 1 anomaly alert per hour."
+  limits:
+    - 10,000 data points/month
+    - 1 anomaly alert/hour
+    - Limited diagnostics
+  caveats:
+    - Additional usage billed per data point and alert
+    - Requires Azure account
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free tier limits incurs charges automatically
+useCases:
+  - Detecting anomalies in business KPIs
+  - Monitoring IoT device metrics
+  - Alerting on unexpected trends
+quickstartSteps:
+  - Sign in to the Azure Portal and create a Metrics Advisor resource.
+  - Connect your data source (e.g., Azure Blob Storage, SQL Database).
+  - Configure metrics and set up anomaly detection parameters.
+  - Set up alerting rules and notification channels.
+  - Monitor dashboards and review detected anomalies.
+whenToUse: "Use when you need automated anomaly detection and diagnostics for time-series business metrics with minimal setup."
+whenNotToUse: "Avoid if you require unlimited free usage, advanced custom models, or need to monitor metrics outside Azure-supported sources."
+bestFor:
+  - business monitoring
+  - IoT analytics
+  - KPI tracking
+avoidIf:
+  - budget-constrained
+  - non-Azure environments
+  - custom AI model needs
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/ai-services/metrics-advisor/
+docsUrl: https://learn.microsoft.com/en-us/azure/ai-services/metrics-advisor/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/ai-services/metrics-advisor/
+  - https://learn.microsoft.com/en-us/azure/ai-services/metrics-advisor/
+featured: false
+---
+Azure AI Metrics Advisor offers scalable, automated anomaly detection and diagnostics for time-series data, ideal for monitoring business metrics and alerting on unexpected trends.

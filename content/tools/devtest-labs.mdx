@@ -1,0 +1,72 @@
+---
+title: "DevTest Labs"
+description: "Azure DevTest Labs enables fast, cost-controlled provisioning of development and test environments in the cloud."
+provider: "Azure"
+category: "Development Tools"
+domain: compute
+subtypes:
+  - virtual machines
+  - sandbox
+  - environment management
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+tags:
+  - devops
+  - testing
+  - automation
+  - cost-control
+  - azure
+pricingModel: freemium
+freeTierDetails:
+  summary: "No additional charge for DevTest Labs; pay only for underlying Azure resources used."
+  limits:
+    - No charge for lab management features
+    - Pay for VMs, storage, and networking resources consumed
+    - Free tier applies to eligible Azure resources only
+  caveats:
+    - Resource usage beyond free Azure quotas incurs standard charges
+    - No separate DevTest Labs-specific free credits
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Costs depend on provisioned resources; monitor usage to avoid unexpected charges
+useCases:
+  - Provisioning test environments
+  - Sandboxing experiments
+  - Automating VM creation for development
+  - Cost-controlled dev/test workloads
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Search for 'DevTest Labs' and create a new lab.
+  - Configure lab policies, such as VM sizes and quotas.
+  - Add users and set up reusable VM images or formulas.
+  - Provision VMs or environments as needed.
+whenToUse: "Use DevTest Labs when you need to quickly provision, manage, and control costs for dev/test environments on Azure."
+whenNotToUse: "Avoid if you require persistent production environments or need advanced automation beyond what DevTest Labs supports."
+bestFor:
+  - cost-controlled testing
+  - sandbox environments
+  - temporary dev workloads
+avoidIf:
+  - production workloads
+  - non-Azure environments
+  - complex multi-cloud automation
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/services/devtest-lab/
+docsUrl: https://learn.microsoft.com/azure/devtest-labs/
+sourceUrls:
+  - https://azure.microsoft.com/services/devtest-lab/
+  - https://learn.microsoft.com/azure/devtest-labs/
+featured: false
+---
+Azure DevTest Labs provides an easy way to create and manage cost-effective development and test environments, with built-in policies and automation for resource control.

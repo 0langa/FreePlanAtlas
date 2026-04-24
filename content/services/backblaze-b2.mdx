@@ -1,0 +1,75 @@
+---
+title: "Backblaze B2"
+description: "Backblaze B2 offers affordable, scalable cloud object storage with a generous always-free tier for developers and small projects."
+provider: "Backblaze"
+category: "Object Storage"
+domain: storage
+subtypes:
+  - object storage
+  - cloud storage
+  - S3-compatible
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - object-storage
+  - cloud-storage
+  - s3-compatible
+  - backup
+  - media
+pricingModel: freemium
+freeTierDetails:
+  summary: "10 GB free storage, 1 GB daily outbound downloads, and unlimited uploads."
+  limits:
+    - 10 GB free storage
+    - 1 GB/day outbound downloads
+    - Unlimited uploads
+  caveats:
+    - Overages billed at standard rates
+    - API calls and lifecycle rules may incur costs
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Exceeding free limits incurs automatic charges
+useCases:
+  - Website asset hosting
+  - Backup and archival
+  - Media storage
+  - App data storage
+  - S3-compatible integrations
+quickstartSteps:
+  - Sign up for a Backblaze account.
+  - Create a B2 bucket in the dashboard.
+  - Generate an application key for API access.
+  - Upload files via web UI, CLI, or S3-compatible tools.
+  - Configure bucket permissions and lifecycle rules as needed.
+whenToUse: "Use Backblaze B2 for affordable, scalable object storage when you need S3 compatibility or simple backups for small to medium workloads."
+whenNotToUse: "Avoid if you require advanced CDN features, ultra-low latency, or need to store and serve large volumes of data for free."
+bestFor:
+  - backups
+  - media storage
+  - indie projects
+  - S3-compatible workflows
+avoidIf:
+  - need global CDN
+  - require ultra-low latency
+  - expect high free bandwidth
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://www.backblaze.com/b2/cloud-storage/pricing
+docsUrl: https://www.backblaze.com/b2/docs/
+sourceUrls:
+  - https://www.backblaze.com/b2/cloud-storage/pricing
+  - https://www.backblaze.com/b2/docs/
+featured: false
+---
+Backblaze B2 provides cost-effective, S3-compatible object storage with a generous always-free tier, ideal for backups, media, and small-scale cloud storage needs.

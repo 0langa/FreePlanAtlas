@@ -1,0 +1,75 @@
+---
+title: "Azure Functions"
+description: "Azure Functions is a serverless compute service for running event-driven code without managing infrastructure."
+provider: "Azure"
+category: "Serverless Compute"
+domain: compute
+subtypes:
+  - serverless
+  - event-driven
+  - functions-as-a-service
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - serverless
+  - functions
+  - event-driven
+  - cloud
+  - compute
+pricingModel: freemium
+freeTierDetails:
+  summary: "1 million free requests and 400,000 GB-s compute per month."
+  limits:
+    - 1 million requests/month
+    - 400,000 GB-s compute/month
+  caveats:
+    - Premium and Dedicated plans not included
+    - Some triggers may incur additional costs
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: low
+  billingRiskNotes:
+    - Overages billed per request and GB-s beyond free tier
+useCases:
+  - API backends
+  - Event processing
+  - Scheduled jobs
+  - IoT data ingestion
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new Function App resource.
+  - Choose a runtime stack (e.g., Node.js, Python, .NET).
+  - Create a new function using the portal or VS Code extension.
+  - Configure a trigger (HTTP, timer, queue, etc.) and deploy your code.
+whenToUse: "Use when you need to run code in response to events or HTTP requests without managing servers."
+whenNotToUse: "Avoid if you require long-running processes, custom OS dependencies, or predictable dedicated compute resources."
+bestFor:
+  - event-driven workloads
+  - microservices
+  - prototyping
+  - scalable APIs
+avoidIf:
+  - long-running tasks
+  - custom OS requirements
+  - heavy compute workloads
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/services/functions/
+docsUrl: https://learn.microsoft.com/azure/azure-functions/
+sourceUrls:
+  - https://azure.microsoft.com/pricing/details/functions/
+  - https://learn.microsoft.com/azure/azure-functions/functions-overview
+featured: false
+---
+Azure Functions enables you to build and deploy event-driven applications with minimal setup, offering a generous free tier for lightweight and scalable workloads.

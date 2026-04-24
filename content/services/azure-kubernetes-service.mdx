@@ -1,0 +1,71 @@
+---
+title: "Azure Kubernetes Service"
+description: "Managed Kubernetes clusters with integrated scaling, monitoring, and security on Azure."
+provider: "Azure"
+category: "Managed Kubernetes"
+domain: compute
+subtypes:
+  - orchestration
+  - containers
+  - managed-service
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - kubernetes
+  - containers
+  - orchestration
+  - cloud
+  - managed
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes no charge for cluster management and one free node pool with Linux nodes."
+  limits:
+    - No charge for cluster management
+    - One free node pool with Linux nodes
+    - Node VM costs apply separately
+  caveats:
+    - You pay for VM instances and storage used by your nodes.
+    - Windows node pools are not included in the free tier.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: always-free
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - VM and storage charges can accrue quickly if not monitored.
+useCases:
+  - Deploying containerized applications
+  - Running scalable microservices
+  - CI/CD pipeline integration
+  - Development and test environments
+quickstartSteps:
+  - Sign in to the Azure Portal.
+  - Create a new Kubernetes Service (AKS) cluster.
+  - Configure node pool and networking settings.
+  - Deploy your containerized app using kubectl.
+  - Monitor and scale your cluster as needed.
+whenToUse: "Use when you need a managed Kubernetes cluster with integrated Azure services and simplified scaling for containerized workloads."
+whenNotToUse: "Avoid if you require a fully free solution or want to avoid VM and storage charges, or need support for non-Azure environments."
+bestFor:
+  - teams deploying containers
+  - Azure-centric organizations
+  - scalable microservices
+avoidIf:
+  - seeking zero infrastructure cost
+  - multi-cloud orchestration
+  - non-container workloads
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/kubernetes-service/
+docsUrl: https://learn.microsoft.com/en-us/azure/aks/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/kubernetes-service/
+  - https://learn.microsoft.com/en-us/azure/aks/
+featured: false
+---
+Azure Kubernetes Service (AKS) provides a managed Kubernetes environment for deploying, managing, and scaling containerized applications with integrated Azure features.

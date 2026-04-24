@@ -1,0 +1,71 @@
+---
+title: "Azure IoT Hub"
+description: "Azure IoT Hub is a managed service for secure, scalable device-to-cloud and cloud-to-device communication."
+provider: "Azure"
+category: "Iot Platform"
+domain: integration
+subtypes:
+  - device management
+  - messaging
+  - telemetry
+audiences:
+  - startup
+  - team
+  - enterprise
+  - student
+tags:
+  - iot
+  - device-management
+  - cloud-messaging
+  - azure
+  - integration
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier allows up to 8,000 messages per day with basic device management."
+  limits:
+    - 8,000 messages/day
+    - 500 devices
+    - Basic tier features only
+  caveats:
+    - No SLA on free tier
+    - Limited to S1 tier features
+    - No support for advanced security or scaling
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototype IoT solutions
+  - Remote device monitoring
+  - Basic telemetry ingestion
+  - Learning IoT cloud integration
+quickstartSteps:
+  - Sign in to the Azure portal.
+  - Create a new IoT Hub using the Free tier.
+  - Register a device identity in the IoT Hub.
+  - Download the device connection string.
+  - Send test telemetry from your device or simulator.
+whenToUse: "Use when you need to prototype or test IoT solutions with basic device connectivity and messaging at no cost."
+whenNotToUse: "Avoid if you require advanced security, high message throughput, or production-grade SLAs."
+bestFor:
+  - prototyping
+  - learning
+  - small-scale IoT projects
+avoidIf:
+  - need high throughput
+  - require advanced security
+  - production SLAs
+difficulty: beginner
+productionReadiness: prototype
+lastUpdated: 2024-06-10
+popularityScore: 7
+usefulnessScore: 7
+officialUrl: https://azure.microsoft.com/en-us/pricing/details/iot-hub/
+docsUrl: https://learn.microsoft.com/en-us/azure/iot-hub/
+sourceUrls:
+  - https://azure.microsoft.com/en-us/pricing/details/iot-hub/
+  - https://learn.microsoft.com/en-us/azure/iot-hub/
+featured: false
+---
+Azure IoT Hub provides a managed, scalable platform for connecting, monitoring, and managing IoT devices with secure cloud integration and basic messaging features.

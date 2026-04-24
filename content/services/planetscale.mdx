@@ -1,0 +1,75 @@
+---
+title: "PlanetScale"
+description: "PlanetScale offers a serverless MySQL-compatible database platform with horizontal scaling and non-blocking schema changes."
+provider: "PlanetScale"
+category: "Database"
+domain: database
+subtypes:
+  - MySQL-compatible
+  - Serverless
+  - Cloud Database
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - mysql
+  - serverless
+  - scalable
+  - cloud
+  - database
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 1 production database with generous storage and connection limits."
+  limits:
+    - 1 production database
+    - 5GB storage
+    - 1 billion row reads/month
+    - 10 million row writes/month
+    - 1 branch
+  caveats:
+    - No backups on free tier
+    - No support for private networking
+    - Limited to 1 production branch
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Prototype MySQL-backed web apps
+  - Side projects needing managed SQL
+  - Open source project demos
+  - Student learning environments
+quickstartSteps:
+  - Sign up at planetscale.com with your GitHub account.
+  - Create a new database from the dashboard.
+  - Connect using the provided credentials and a MySQL client or ORM.
+  - Deploy schema changes using PlanetScale's branching workflow.
+  - Start building and querying your application.
+whenToUse: "Use PlanetScale when you need a scalable, managed MySQL database with zero-downtime schema changes and a generous free tier."
+whenNotToUse: "Avoid if you require advanced MySQL features like triggers, or need private networking and backups on the free plan."
+bestFor:
+  - web apps
+  - prototypes
+  - student projects
+  - open source demos
+avoidIf:
+  - need triggers
+  - require private networking
+  - require backups on free tier
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-10
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://planetscale.com/
+docsUrl: https://docs.planetscale.com/
+sourceUrls:
+  - https://planetscale.com/pricing
+  - https://docs.planetscale.com/concepts/planetscale-limits
+featured: false
+---
+PlanetScale provides a serverless, MySQL-compatible cloud database with a generous free tier, ideal for prototypes, learning, and small production workloads. The platform supports branching workflows for schema changes, but the free plan lacks backups and private networking. It's well-suited for developers seeking managed SQL without operational overhead.

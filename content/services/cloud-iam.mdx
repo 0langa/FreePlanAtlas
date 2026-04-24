@@ -1,0 +1,69 @@
+---
+title: "Cloud-IAM"
+description: "Cloud-IAM provides managed identity and access management services for cloud applications and APIs."
+provider: "Cloud-IAM"
+category: "Identity Management"
+domain: auth
+subtypes:
+  - IAM
+  - OAuth2
+  - SAML
+  - SSO
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - identity
+  - access-control
+  - authentication
+  - authorization
+  - sso
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes basic IAM features for small teams and projects."
+  limits:
+    - Up to 100 active users
+    - Single application integration
+    - Basic SSO and OAuth2 support
+  caveats:
+    - Advanced features require paid plans
+    - Limited support on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add SSO to web apps
+  - Centralize user management
+  - Integrate OAuth2 for APIs
+quickstartSteps:
+  - Sign up for a free Cloud-IAM account.
+  - Create a new application in the dashboard.
+  - Configure redirect URIs and authentication settings.
+  - Integrate Cloud-IAM SDK or endpoints in your app.
+  - Test user login and access flows.
+whenToUse: "Use Cloud-IAM when you need simple, managed authentication and SSO for a small app or team."
+whenNotToUse: "Avoid if you require advanced IAM features, custom policies, or support for large-scale enterprise deployments."
+bestFor:
+  - small teams
+  - startups
+  - open source projects
+avoidIf:
+  - enterprise with complex IAM needs
+  - custom policy requirements
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 5
+usefulnessScore: 6
+officialUrl: https://www.cloud-iam.com/
+docsUrl: https://docs.cloud-iam.com
+sourceUrls:
+  - https://www.cloud-iam.com/
+  - https://docs.cloud-iam.com
+featured: false
+---
+Cloud-IAM offers a managed identity and access management platform with a free tier suitable for small projects needing basic authentication and SSO.

@@ -1,0 +1,71 @@
+---
+title: "The IP API"
+description: "A simple API for IP geolocation, ASN, and threat intelligence lookups with a generous free tier."
+provider: "The IP API"
+category: "Apis"
+domain: integration
+subtypes:
+  - ip-geolocation
+  - threat-intelligence
+  - asn-lookup
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - ip
+  - geolocation
+  - api
+  - threat-intel
+  - asn
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes 30,000 requests per month with access to core geolocation and ASN data."
+  limits:
+    - 30,000 requests/month
+    - Core geolocation data
+    - ASN and threat info included
+  caveats:
+    - No SLA on free tier
+    - Rate limits apply
+    - Advanced features require paid plan
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - IP-based geolocation for websites
+  - Fraud detection and threat analysis
+  - Personalizing content by location
+quickstartSteps:
+  - Sign up for a free account at theipapi.com.
+  - Retrieve your API key from the dashboard.
+  - Read the API documentation for endpoint details.
+  - Make a GET request to the API with your IP and key.
+  - Parse the JSON response in your application.
+whenToUse: "Use when you need reliable IP geolocation or threat data for moderate traffic apps or prototypes."
+whenNotToUse: "Avoid if you need high-volume, enterprise-grade SLAs or advanced analytics features."
+bestFor:
+  - prototyping
+  - side-projects
+  - moderate-traffic apps
+avoidIf:
+  - enterprise SLA required
+  - very high request volumes
+  - need for advanced analytics
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://theipapi.com/
+docsUrl: https://theipapi.com/docs/
+sourceUrls:
+  - https://theipapi.com/pricing
+  - https://theipapi.com/docs/
+featured: false
+---
+The IP API offers a generous free tier for IP geolocation, ASN, and threat intelligence, making it suitable for developers needing reliable location and security data in their apps.

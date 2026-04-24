@@ -1,0 +1,69 @@
+---
+title: "Okta"
+description: "Okta provides secure authentication, authorization, and user management for web and mobile applications."
+provider: "Okta"
+category: "Authentication"
+domain: auth
+subtypes:
+  - OAuth
+  - SSO
+  - MFA
+audiences:
+  - startup
+  - team
+  - enterprise
+  - oss
+tags:
+  - identity
+  - authentication
+  - user-management
+  - oauth
+  - sso
+pricingModel: freemium
+freeTierDetails:
+  summary: "Okta offers a free developer tier with limited active users and features."
+  limits:
+    - Up to 1,000 monthly active users
+    - Basic authentication and authorization
+    - Limited integrations
+  caveats:
+    - Advanced features require paid plans
+    - Support is limited on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Add secure login to web or mobile apps
+  - Implement SSO for internal tools
+  - Enable MFA for user accounts
+quickstartSteps:
+  - Sign up for a free Okta developer account.
+  - Create a new application in the Okta dashboard.
+  - Configure authentication settings and redirect URIs.
+  - Integrate Okta SDK or API into your app.
+  - Test login and user flows.
+whenToUse: "Use Okta when you need robust, scalable authentication and user management for your applications without building from scratch."
+whenNotToUse: "Avoid Okta if you require full control over authentication infrastructure or need advanced features only available on paid plans."
+bestFor:
+  - secure authentication
+  - user management
+  - SSO integration
+avoidIf:
+  - need on-premise auth
+  - require unlimited users for free
+  - must avoid external auth providers
+difficulty: beginner
+productionReadiness: production-ready
+lastUpdated: 2024-06-09
+popularityScore: 8
+usefulnessScore: 8
+officialUrl: https://developer.okta.com/signup/
+docsUrl: https://developer.okta.com/docs/
+sourceUrls:
+  - https://developer.okta.com/signup/
+  - https://developer.okta.com/docs/concepts/overview/
+featured: false
+---
+Okta's free developer tier is ideal for adding secure authentication, SSO, and user management to applications, with generous limits for most small projects.

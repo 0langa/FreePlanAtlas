@@ -1,0 +1,68 @@
+---
+title: "SuprSend"
+description: "SuprSend is a unified notification infrastructure for managing multi-channel product notifications via APIs and dashboards."
+provider: "SuprSend"
+category: "Notification Service"
+domain: messaging
+subtypes:
+  - multi-channel
+  - notification
+  - API
+audiences:
+  - startup
+  - team
+  - indie
+  - oss
+tags:
+  - notifications
+  - email
+  - sms
+  - push
+  - api
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes up to 10,000 notifications per month across all channels."
+  limits:
+    - 10,000 notifications/month
+    - All channels included
+    - Basic dashboard access
+  caveats:
+    - Some advanced features may require paid plans
+    - Support is limited on free tier
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Send transactional notifications
+  - Manage multi-channel messaging
+  - Centralize notification logic
+quickstartSteps:
+  - Sign up for a SuprSend account.
+  - Create a new project in the dashboard.
+  - Obtain your API keys from the project settings.
+  - Integrate the SuprSend SDK or REST API into your application.
+  - Configure notification templates and channels as needed.
+whenToUse: "Use SuprSend when you need to send notifications across multiple channels without building custom integrations."
+whenNotToUse: "Avoid if you require on-premise deployment or need deep customization beyond supported channels and templates."
+bestFor:
+  - product teams
+  - startups
+  - indie developers
+avoidIf:
+  - require on-premise
+  - need custom channel integrations
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.suprsend.com/
+docsUrl: https://docs.suprsend.com/
+sourceUrls:
+  - https://www.suprsend.com/pricing
+  - https://docs.suprsend.com/
+featured: false
+---
+SuprSend provides a unified API and dashboard to manage, send, and track notifications across email, SMS, push, and other channels, simplifying notification infrastructure for modern applications.

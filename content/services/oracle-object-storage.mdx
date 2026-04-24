@@ -1,0 +1,71 @@
+---
+title: "Oracle Object Storage"
+description: "Oracle Object Storage provides scalable, secure cloud storage for unstructured data, supporting backup, archiving, and application data needs."
+provider: "Oracle Cloud"
+category: "Cloud Storage"
+domain: storage
+subtypes:
+  - object-storage
+  - cloud-storage
+  - S3-compatible
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - enterprise
+  - oss
+  - agency
+tags:
+  - object-storage
+  - cloud
+  - s3-compatible
+  - backup
+  - archive
+pricingModel: freemium
+freeTierDetails:
+  summary: "Always-free tier includes 10 GB of standard storage and 10,000 GET/PUT requests per month."
+  limits:
+    - 10 GB standard storage
+    - 10,000 GET/PUT requests per month
+  caveats:
+    - Overages are billed at standard rates
+    - Requires Oracle Cloud Free Tier account
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Backup and archive files
+  - Store application data
+  - Host static website assets
+quickstartSteps:
+  - Sign up for an Oracle Cloud Free Tier account.
+  - Navigate to the Object Storage service in the Oracle Cloud Console.
+  - Create a new bucket and set access permissions.
+  - Upload files or connect via S3-compatible tools.
+whenToUse: "Use when you need reliable, S3-compatible cloud storage for backups, archives, or serving static assets with a generous free tier."
+whenNotToUse: "Avoid if you need high-throughput, multi-region replication, or advanced CDN integration not natively supported by Oracle."
+bestFor:
+  - backups
+  - archiving
+  - static asset hosting
+  - application data
+avoidIf:
+  - require advanced CDN
+  - need multi-region replication
+  - require ultra-low latency
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 6
+usefulnessScore: 7
+officialUrl: https://www.oracle.com/cloud/free/
+docsUrl: https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm
+sourceUrls:
+  - https://www.oracle.com/cloud/free/
+  - https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm
+featured: false
+---
+Oracle Object Storage offers always-free cloud storage with S3 compatibility, ideal for backups, archives, and static content with simple setup and management.

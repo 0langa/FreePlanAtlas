@@ -1,0 +1,72 @@
+---
+title: "CockroachDB Cloud"
+description: "CockroachDB Cloud offers a fully managed, distributed SQL database with PostgreSQL compatibility and high resilience."
+provider: "CockroachDB"
+category: "Managed Database"
+domain: database
+subtypes:
+  - distributed SQL
+  - PostgreSQL-compatible
+  - cloud database
+audiences:
+  - student
+  - indie
+  - startup
+  - team
+  - oss
+tags:
+  - sql
+  - distributed
+  - managed
+  - cloud
+  - postgresql-compatible
+pricingModel: freemium
+freeTierDetails:
+  summary: "Free tier includes a single cluster with up to 5GB storage and limited compute resources."
+  limits:
+    - 1 free cluster
+    - 5GB storage
+    - 1 vCPU
+    - 1GB RAM
+  caveats:
+    - Compute and storage limits are enforced.
+    - Free clusters may be paused after 60 days of inactivity.
+  resetPeriod: monthly
+  requiresCard: false
+  freeTierType: always-free
+  hasHardCap: true
+  overageRisk: none
+useCases:
+  - Building resilient web apps
+  - Prototyping distributed systems
+  - Learning SQL and distributed databases
+quickstartSteps:
+  - Sign up for a CockroachDB Cloud account.
+  - Create a new free cluster from the dashboard.
+  - Configure network access and obtain connection string.
+  - Connect using a PostgreSQL-compatible client.
+  - Start creating databases and tables.
+whenToUse: "Use when you need a resilient, scalable SQL database with minimal operational overhead and PostgreSQL compatibility."
+whenNotToUse: "Avoid if you need advanced PostgreSQL extensions, require on-premise deployment, or need large-scale production clusters without cost."
+bestFor:
+  - prototyping
+  - learning
+  - small apps
+  - distributed SQL exploration
+avoidIf:
+  - require advanced PostgreSQL features
+  - need on-premise
+  - require high storage or compute
+difficulty: beginner
+productionReadiness: production-light
+lastUpdated: 2024-06-09
+popularityScore: 7
+usefulnessScore: 8
+officialUrl: https://www.cockroachlabs.com/product/cockroachdb/
+docsUrl: https://www.cockroachlabs.com/docs/cockroachcloud
+sourceUrls:
+  - https://www.cockroachlabs.com/docs/cockroachcloud
+  - https://www.cockroachlabs.com/pricing/
+featured: false
+---
+CockroachDB Cloud provides a managed, distributed SQL database service with a generous free tier suitable for learning, prototyping, and small-scale applications.

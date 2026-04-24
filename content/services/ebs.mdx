@@ -1,0 +1,71 @@
+---
+title: "EBS"
+description: "AWS Elastic Block Store (EBS) provides persistent block storage volumes for use with Amazon EC2 instances."
+provider: "AWS"
+category: "Block Storage"
+domain: storage
+subtypes:
+  - block storage
+  - persistent disk
+  - cloud storage
+audiences:
+  - startup
+  - team
+  - enterprise
+tags:
+  - block-storage
+  - ec2
+  - persistent
+  - aws
+  - cloud
+pricingModel: freemium
+freeTierDetails:
+  summary: "12 months free with up to 30 GB of EBS storage per month for new AWS accounts."
+  limits:
+    - 30 GB of General Purpose (SSD) or Magnetic storage
+    - 2 million I/O requests
+    - 1 GB of snapshot storage
+  caveats:
+    - Free tier only applies to new AWS accounts for 12 months.
+    - Charges apply for usage beyond free limits.
+  resetPeriod: monthly
+  requiresCard: true
+  freeTierType: time-limited
+  hasHardCap: false
+  overageRisk: medium
+  billingRiskNotes:
+    - Overages are billed at standard EBS rates.
+    - Deleting volumes or snapshots is required to avoid extra charges.
+  trialDays: 365
+useCases:
+  - Attach persistent storage to EC2 instances
+  - Host databases or file systems
+  - Backup and restore data using snapshots
+quickstartSteps:
+  - Sign up for an AWS account and log in to the AWS Management Console.
+  - Navigate to the EC2 dashboard and select 'Volumes' under 'Elastic Block Store'.
+  - Click 'Create Volume', select type and size within free tier limits.
+  - Attach the created volume to an existing or new EC2 instance.
+  - Format and mount the volume on your EC2 instance.
+whenToUse: "Use EBS when you need persistent, high-performance block storage for EC2 instances with flexible scaling and snapshot support."
+whenNotToUse: "Avoid EBS if you need shared storage across multiple instances or object storage for unstructured data."
+bestFor:
+  - persistent storage
+  - databases
+  - EC2 workloads
+avoidIf:
+  - need shared file storage
+  - require object storage
+difficulty: intermediate
+productionReadiness: production-ready
+lastUpdated: 2024-06-11
+popularityScore: 9
+usefulnessScore: 8
+officialUrl: https://aws.amazon.com/ebs/
+docsUrl: https://docs.aws.amazon.com/ebs/
+sourceUrls:
+  - https://aws.amazon.com/ebs/
+  - https://aws.amazon.com/free/
+featured: false
+---
+AWS EBS offers reliable, high-performance block storage for EC2, suitable for databases, file systems, and backup solutions with snapshot support.
