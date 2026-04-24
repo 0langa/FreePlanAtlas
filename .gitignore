@@ -50,3 +50,5 @@ yarn-error.log*
 
 # Static export output (built in CI)
 /out/*
+
+/docs/*

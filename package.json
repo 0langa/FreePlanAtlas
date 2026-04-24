@@ -1,5 +1,5 @@
 {
-  "name": "free-tier-atlas",
+  "name": "freetierwiki",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,8 +12,8 @@
     "search:index": "node scripts/build-search-index.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "validate:content:all": "node scripts/validate-content.mjs content",
-    "validate:content:all:list": "node scripts/validate-content.mjs content --list all_free_services_batched.md",
-    "ai:launch": "node scripts/ai/launch-batch.mjs"
+    "validate:content:all:list": "node scripts/validate-content.mjs content --list development/all_free_services_batched.md",
+    "ai:launch": "node development/scripts/ai/launch-batch.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

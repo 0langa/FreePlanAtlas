@@ -40,7 +40,7 @@ export function HeaderBar({
           <SheetContent side="left" className="w-80 p-0">
             <div className="border-b px-4 py-3">
               <Link href="/" className="text-sm font-semibold tracking-wide text-muted-foreground">
-                FreeTierAtlas
+                FreeTierWiki
               </Link>
             </div>
             <div className="h-[calc(100%-61px)] p-4">
@@ -55,7 +55,7 @@ export function HeaderBar({
         </Sheet>
 
         <Link href="/" className="shrink-0 text-base font-semibold tracking-tight">
-          FreeTierAtlas
+          FreeTierWiki
         </Link>
 
         <GlobalSearch />

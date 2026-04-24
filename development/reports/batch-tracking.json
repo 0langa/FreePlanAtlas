@@ -1,0 +1,3966 @@
+{
+  "timestamp": "2026-04-23T09:28:22.885Z",
+  "batchDir": "batch-intake",
+  "contentDir": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services",
+  "totals": {
+    "total": 760,
+    "added": 759,
+    "missing": 1
+  },
+  "batches": [
+    {
+      "batch": "auth.md",
+      "total": 11,
+      "added": [
+        {
+          "name": "Auth0",
+          "slug": "auth0",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\auth0.mdx"
+        },
+        {
+          "name": "Authgear",
+          "slug": "authgear",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\authgear.mdx"
+        },
+        {
+          "name": "Authress",
+          "slug": "authress",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\authress.mdx"
+        },
+        {
+          "name": "Authy",
+          "slug": "authy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\authy.mdx"
+        },
+        {
+          "name": "Azure Active Directory B2C",
+          "slug": "azure-active-directory-b2c",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-active-directory-b2c.mdx"
+        },
+        {
+          "name": "Firebase Auth",
+          "slug": "firebase-auth",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\firebase-auth.mdx"
+        },
+        {
+          "name": "LoginLlama",
+          "slug": "loginllama",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\loginllama.mdx"
+        },
+        {
+          "name": "PropelAuth",
+          "slug": "propelauth",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\propelauth.mdx"
+        },
+        {
+          "name": "SimpleLogin",
+          "slug": "simplelogin",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\simplelogin.mdx"
+        },
+        {
+          "name": "Stack Auth",
+          "slug": "stack-auth",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\stack-auth.mdx"
+        },
+        {
+          "name": "Supabase Auth",
+          "slug": "supabase-auth",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supabase-auth.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "compute.md",
+      "total": 19,
+      "added": [
+        {
+          "name": "Azure Batch",
+          "slug": "azure-batch",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-batch.mdx"
+        },
+        {
+          "name": "Azure Container Apps",
+          "slug": "azure-container-apps",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-container-apps.mdx"
+        },
+        {
+          "name": "Azure Container Registry",
+          "slug": "azure-container-registry",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-container-registry.mdx"
+        },
+        {
+          "name": "Azure Functions",
+          "slug": "azure-functions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-functions.mdx"
+        },
+        {
+          "name": "Azure Kubernetes Service",
+          "slug": "azure-kubernetes-service",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-kubernetes-service.mdx"
+        },
+        {
+          "name": "Azure VM Image Builder",
+          "slug": "azure-vm-image-builder",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-vm-image-builder.mdx"
+        },
+        {
+          "name": "Cloud Functions",
+          "slug": "cloud-functions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloud-functions.mdx"
+        },
+        {
+          "name": "Cloud Run",
+          "slug": "cloud-run",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloud-run.mdx"
+        },
+        {
+          "name": "Cloudflare Workers",
+          "slug": "cloudflare-workers",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudflare-workers.mdx"
+        },
+        {
+          "name": "Cloudflare Workers KV",
+          "slug": "cloudflare-workers-kv",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudflare-workers-kv.mdx"
+        },
+        {
+          "name": "Compute Engine e2-micro",
+          "slug": "compute-engine-e2-micro",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\compute-engine-e2-micro.mdx"
+        },
+        {
+          "name": "EMQX Serverless",
+          "slug": "emqx-serverless",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\emqx-serverless.mdx"
+        },
+        {
+          "name": "Firebase Cloud Functions",
+          "slug": "firebase-cloud-functions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\firebase-cloud-functions.mdx"
+        },
+        {
+          "name": "Google Kubernetes Engine",
+          "slug": "google-kubernetes-engine",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\google-kubernetes-engine.mdx"
+        },
+        {
+          "name": "Khan Academy",
+          "slug": "khan-academy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\khan-academy.mdx"
+        },
+        {
+          "name": "Lambda",
+          "slug": "lambda",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\lambda.mdx"
+        },
+        {
+          "name": "Oracle Always Free Compute",
+          "slug": "oracle-always-free-compute",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\oracle-always-free-compute.mdx"
+        },
+        {
+          "name": "Supabase Edge Functions",
+          "slug": "supabase-edge-functions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supabase-edge-functions.mdx"
+        },
+        {
+          "name": "Virtual Machines",
+          "slug": "virtual-machines",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\virtual-machines.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "database.md",
+      "total": 20,
+      "added": [
+        {
+          "name": "Atlas M0",
+          "slug": "atlas-m0",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\atlas-m0.mdx"
+        },
+        {
+          "name": "Atlassian Jira Free",
+          "slug": "atlassian-jira-free",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\atlassian-jira-free.mdx"
+        },
+        {
+          "name": "Azure Cosmos DB",
+          "slug": "azure-cosmos-db",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-cosmos-db.mdx"
+        },
+        {
+          "name": "Azure PostgreSQL Flexible Server",
+          "slug": "azure-postgresql-flexible-server",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-postgresql-flexible-server.mdx"
+        },
+        {
+          "name": "Azure SQL Database",
+          "slug": "azure-sql-database",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-sql-database.mdx"
+        },
+        {
+          "name": "CockroachDB Cloud",
+          "slug": "cockroachdb-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cockroachdb-cloud.mdx"
+        },
+        {
+          "name": "DynamoDB",
+          "slug": "dynamodb",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\dynamodb.mdx"
+        },
+        {
+          "name": "EverSQL",
+          "slug": "eversql",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\eversql.mdx"
+        },
+        {
+          "name": "Firebase Firestore",
+          "slug": "firebase-firestore",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\firebase-firestore.mdx"
+        },
+        {
+          "name": "Firebase Realtime Database",
+          "slug": "firebase-realtime-database",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\firebase-realtime-database.mdx"
+        },
+        {
+          "name": "MongoDB Atlas",
+          "slug": "mongodb-atlas",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mongodb-atlas.mdx"
+        },
+        {
+          "name": "Neon",
+          "slug": "neon",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\neon.mdx"
+        },
+        {
+          "name": "Pinecone",
+          "slug": "pinecone",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pinecone.mdx"
+        },
+        {
+          "name": "PlanetScale",
+          "slug": "planetscale",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\planetscale.mdx"
+        },
+        {
+          "name": "Qdrant",
+          "slug": "qdrant",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\qdrant.mdx"
+        },
+        {
+          "name": "Redis",
+          "slug": "redis",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\redis.mdx"
+        },
+        {
+          "name": "Redis Cloud",
+          "slug": "redis-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\redis-cloud.mdx"
+        },
+        {
+          "name": "Sqlable",
+          "slug": "sqlable",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sqlable.mdx"
+        },
+        {
+          "name": "Supabase Database",
+          "slug": "supabase-database",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supabase-database.mdx"
+        },
+        {
+          "name": "Upstash Redis",
+          "slug": "upstash-redis",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\upstash-redis.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "devops.md",
+      "total": 13,
+      "added": [
+        {
+          "name": "Appveyor",
+          "slug": "appveyor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\appveyor.mdx"
+        },
+        {
+          "name": "Astro",
+          "slug": "astro",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\astro.mdx"
+        },
+        {
+          "name": "Azure DevOps",
+          "slug": "azure-devops",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-devops.mdx"
+        },
+        {
+          "name": "Buildkite",
+          "slug": "buildkite",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\buildkite.mdx"
+        },
+        {
+          "name": "Cloud Build",
+          "slug": "cloud-build",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloud-build.mdx"
+        },
+        {
+          "name": "CodeBuild",
+          "slug": "codebuild",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\codebuild.mdx"
+        },
+        {
+          "name": "CodeCommit",
+          "slug": "codecommit",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\codecommit.mdx"
+        },
+        {
+          "name": "CodePipeline",
+          "slug": "codepipeline",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\codepipeline.mdx"
+        },
+        {
+          "name": "Deployment.io",
+          "slug": "deployment-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\deployment-io.mdx"
+        },
+        {
+          "name": "GitHub Actions",
+          "slug": "github-actions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\github-actions.mdx"
+        },
+        {
+          "name": "GitLab",
+          "slug": "gitlab",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gitlab.mdx"
+        },
+        {
+          "name": "GitLab CI/CD",
+          "slug": "gitlab-ci-cd",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gitlab-ci-cd.mdx"
+        },
+        {
+          "name": "Pulumi",
+          "slug": "pulumi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pulumi.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "hosting.md",
+      "total": 15,
+      "added": [
+        {
+          "name": "Atlas App Services",
+          "slug": "atlas-app-services",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\atlas-app-services.mdx"
+        },
+        {
+          "name": "Azure App Service",
+          "slug": "azure-app-service",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-app-service.mdx"
+        },
+        {
+          "name": "Azure Static Web Apps",
+          "slug": "azure-static-web-apps",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-static-web-apps.mdx"
+        },
+        {
+          "name": "Cloudflare Pages",
+          "slug": "cloudflare-pages",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudflare-pages.mdx"
+        },
+        {
+          "name": "Firebase Hosting",
+          "slug": "firebase-hosting",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\firebase-hosting.mdx"
+        },
+        {
+          "name": "Fly.io",
+          "slug": "fly-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fly-io.mdx"
+        },
+        {
+          "name": "GitHub Pages",
+          "slug": "github-pages",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\github-pages.mdx"
+        },
+        {
+          "name": "Netlify",
+          "slug": "netlify",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\netlify.mdx"
+        },
+        {
+          "name": "Netlify Functions",
+          "slug": "netlify-functions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\netlify-functions.mdx"
+        },
+        {
+          "name": "Railway",
+          "slug": "railway",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\railway.mdx"
+        },
+        {
+          "name": "Render",
+          "slug": "render",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\render.mdx"
+        },
+        {
+          "name": "Vercel",
+          "slug": "vercel",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\vercel.mdx"
+        },
+        {
+          "name": "Vercel Edge Functions",
+          "slug": "vercel-edge-functions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\vercel-edge-functions.mdx"
+        },
+        {
+          "name": "Vercel Postgres",
+          "slug": "vercel-postgres",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\vercel-postgres.mdx"
+        },
+        {
+          "name": "Vercel Serverless Functions",
+          "slug": "vercel-serverless-functions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\vercel-serverless-functions.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-devtools-api-data.md",
+      "total": 65,
+      "added": [
+        {
+          "name": "Abstract API",
+          "slug": "abstract-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\abstract-api.mdx"
+        },
+        {
+          "name": "Apify",
+          "slug": "apify",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\apify.mdx"
+        },
+        {
+          "name": "APITemplate.io",
+          "slug": "apitemplate-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\apitemplate-io.mdx"
+        },
+        {
+          "name": "Azure API Management",
+          "slug": "azure-api-management",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\azure-api-management.mdx"
+        },
+        {
+          "name": "CarAPI.dev",
+          "slug": "carapi-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\carapi-dev.mdx"
+        },
+        {
+          "name": "Compare JSON",
+          "slug": "compare-json",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\compare-json.mdx"
+        },
+        {
+          "name": "CraftMyPDF",
+          "slug": "craftmypdf",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\craftmypdf.mdx"
+        },
+        {
+          "name": "FabForm",
+          "slug": "fabform",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\fabform.mdx"
+        },
+        {
+          "name": "FluidForms",
+          "slug": "fluidforms",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\fluidforms.mdx"
+        },
+        {
+          "name": "Form.taxi",
+          "slug": "form-taxi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\form-taxi.mdx"
+        },
+        {
+          "name": "FormatJSONOnline.com",
+          "slug": "formatjsononline-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formatjsononline-com.mdx"
+        },
+        {
+          "name": "Formcarry.com",
+          "slug": "formcarry-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formcarry-com.mdx"
+        },
+        {
+          "name": "Formester.com",
+          "slug": "formester-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formester-com.mdx"
+        },
+        {
+          "name": "FormKeep.com",
+          "slug": "formkeep-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formkeep-com.mdx"
+        },
+        {
+          "name": "Forms.app",
+          "slug": "forms-app",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\forms-app.mdx"
+        },
+        {
+          "name": "Formspark.io",
+          "slug": "formspark-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formspark-io.mdx"
+        },
+        {
+          "name": "Formspree.io",
+          "slug": "formspree-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formspree-io.mdx"
+        },
+        {
+          "name": "Formsubmit.co",
+          "slug": "formsubmit-co",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formsubmit-co.mdx"
+        },
+        {
+          "name": "Formware.io",
+          "slug": "formware-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\formware-io.mdx"
+        },
+        {
+          "name": "FreeIPAPI",
+          "slug": "freeipapi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\freeipapi.mdx"
+        },
+        {
+          "name": "Geekflare API",
+          "slug": "geekflare-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\geekflare-api.mdx"
+        },
+        {
+          "name": "Gemini API",
+          "slug": "gemini-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\gemini-api.mdx"
+        },
+        {
+          "name": "Generative AI API",
+          "slug": "generative-ai-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\generative-ai-api.mdx"
+        },
+        {
+          "name": "HeyForm.net",
+          "slug": "heyform-net",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\heyform-net.mdx"
+        },
+        {
+          "name": "Hugging Face Inference API",
+          "slug": "hugging-face-inference-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\hugging-face-inference-api.mdx"
+        },
+        {
+          "name": "IBM API Connect",
+          "slug": "ibm-api-connect",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ibm-api-connect.mdx"
+        },
+        {
+          "name": "Imgur API",
+          "slug": "imgur-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\imgur-api.mdx"
+        },
+        {
+          "name": "IP Geolocation API",
+          "slug": "ip-geolocation-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ip-geolocation-api.mdx"
+        },
+        {
+          "name": "IP Geolocation API by ipwho.org",
+          "slug": "ip-geolocation-api-by-ipwho-org",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ip-geolocation-api-by-ipwho-org.mdx"
+        },
+        {
+          "name": "ip-api",
+          "slug": "ip-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ip-api.mdx"
+        },
+        {
+          "name": "ipapi",
+          "slug": "ipapi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ipapi.mdx"
+        },
+        {
+          "name": "ipapi.is",
+          "slug": "ipapi-is",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ipapi-is.mdx"
+        },
+        {
+          "name": "JSON IP",
+          "slug": "json-ip",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\json-ip.mdx"
+        },
+        {
+          "name": "JSON to Table",
+          "slug": "json-to-table",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\json-to-table.mdx"
+        },
+        {
+          "name": "JSON2Video",
+          "slug": "json2video",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\json2video.mdx"
+        },
+        {
+          "name": "JSONGrid",
+          "slug": "jsongrid",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\jsongrid.mdx"
+        },
+        {
+          "name": "JSONing",
+          "slug": "jsoning",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\jsoning.mdx"
+        },
+        {
+          "name": "JSONSwiss",
+          "slug": "jsonswiss",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\jsonswiss.mdx"
+        },
+        {
+          "name": "KillBait API",
+          "slug": "killbait-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\killbait-api.mdx"
+        },
+        {
+          "name": "Market Data API",
+          "slug": "market-data-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\market-data-api.mdx"
+        },
+        {
+          "name": "MockAPI",
+          "slug": "mockapi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\mockapi.mdx"
+        },
+        {
+          "name": "Mockerito",
+          "slug": "mockerito",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\mockerito.mdx"
+        },
+        {
+          "name": "Mockfly",
+          "slug": "mockfly",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\mockfly.mdx"
+        },
+        {
+          "name": "Mocko.dev",
+          "slug": "mocko-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\mocko-dev.mdx"
+        },
+        {
+          "name": "News API",
+          "slug": "news-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\news-api.mdx"
+        },
+        {
+          "name": "Numlookupapi.com",
+          "slug": "numlookupapi-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\numlookupapi-com.mdx"
+        },
+        {
+          "name": "OCR.Space",
+          "slug": "ocr-space",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ocr-space.mdx"
+        },
+        {
+          "name": "OpenAI API",
+          "slug": "openai-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\openai-api.mdx"
+        },
+        {
+          "name": "OpenAPI3 Designer",
+          "slug": "openapi3-designer",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\openapi3-designer.mdx"
+        },
+        {
+          "name": "Pageclip",
+          "slug": "pageclip",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\pageclip.mdx"
+        },
+        {
+          "name": "PDF-API.io",
+          "slug": "pdf-api-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\pdf-api-io.mdx"
+        },
+        {
+          "name": "PDFBolt",
+          "slug": "pdfbolt",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\pdfbolt.mdx"
+        },
+        {
+          "name": "RapidAPI",
+          "slug": "rapidapi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\rapidapi.mdx"
+        },
+        {
+          "name": "SerpApi",
+          "slug": "serpapi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\serpapi.mdx"
+        },
+        {
+          "name": "SimplePDF.eu",
+          "slug": "simplepdf-eu",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\simplepdf-eu.mdx"
+        },
+        {
+          "name": "Smartforms.dev",
+          "slug": "smartforms-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\smartforms-dev.mdx"
+        },
+        {
+          "name": "The IP API",
+          "slug": "the-ip-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\the-ip-api.mdx"
+        },
+        {
+          "name": "Tomorrow.io Weather API",
+          "slug": "tomorrow-io-weather-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\tomorrow-io-weather-api.mdx"
+        },
+        {
+          "name": "UniRateAPI",
+          "slug": "unirateapi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\unirateapi.mdx"
+        },
+        {
+          "name": "Vatcheckapi.com",
+          "slug": "vatcheckapi-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\vatcheckapi-com.mdx"
+        },
+        {
+          "name": "Wrapapi.com",
+          "slug": "wrapapi-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\wrapapi-com.mdx"
+        },
+        {
+          "name": "Zapier",
+          "slug": "zapier",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\zapier.mdx"
+        },
+        {
+          "name": "Zipcodebase",
+          "slug": "zipcodebase",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\zipcodebase.mdx"
+        },
+        {
+          "name": "Zipcodestack",
+          "slug": "zipcodestack",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\zipcodestack.mdx"
+        },
+        {
+          "name": "Zoho Forms",
+          "slug": "zoho-forms",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\zoho-forms.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-devtools-ci-devops.md",
+      "total": 17,
+      "added": [
+        {
+          "name": "Appcircle",
+          "slug": "appcircle",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\appcircle.mdx"
+        },
+        {
+          "name": "Azure Automation",
+          "slug": "azure-automation",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\azure-automation.mdx"
+        },
+        {
+          "name": "CircleCI",
+          "slug": "circleci",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\circleci.mdx"
+        },
+        {
+          "name": "Cirrus CI",
+          "slug": "cirrus-ci",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\cirrus-ci.mdx"
+        },
+        {
+          "name": "Cirun.io",
+          "slug": "cirun-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\cirun-io.mdx"
+        },
+        {
+          "name": "Codeberg",
+          "slug": "codeberg",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\codeberg.mdx"
+        },
+        {
+          "name": "CodeMagic",
+          "slug": "codemagic",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\codemagic.mdx"
+        },
+        {
+          "name": "Country-State-City Microservice API",
+          "slug": "country-state-city-microservice-api",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\country-state-city-microservice-api.mdx"
+        },
+        {
+          "name": "Elastic Load Balancing",
+          "slug": "elastic-load-balancing",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\elastic-load-balancing.mdx"
+        },
+        {
+          "name": "Everystep-automation.com",
+          "slug": "everystep-automation-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\everystep-automation-com.mdx"
+        },
+        {
+          "name": "Financial Data",
+          "slug": "financial-data",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\financial-data.mdx"
+        },
+        {
+          "name": "Flat.social",
+          "slug": "flat-social",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\flat-social.mdx"
+        },
+        {
+          "name": "Framagit.org",
+          "slug": "framagit-org",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\framagit-org.mdx"
+        },
+        {
+          "name": "Houndci.com",
+          "slug": "houndci-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\houndci-com.mdx"
+        },
+        {
+          "name": "IP.City",
+          "slug": "ip-city",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\ip-city.mdx"
+        },
+        {
+          "name": "Scrutinizer-ci.com",
+          "slug": "scrutinizer-ci-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\scrutinizer-ci-com.mdx"
+        },
+        {
+          "name": "Traducciones.app",
+          "slug": "traducciones-app",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\traducciones-app.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-devtools-observ-security.md",
+      "total": 10,
+      "added": [
+        {
+          "name": "Azure Security Center",
+          "slug": "azure-security-center",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\azure-security-center.mdx"
+        },
+        {
+          "name": "GitGuardian",
+          "slug": "gitguardian",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\gitguardian.mdx"
+        },
+        {
+          "name": "Hostedscan.com",
+          "slug": "hostedscan-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\hostedscan-com.mdx"
+        },
+        {
+          "name": "IPTrace",
+          "slug": "iptrace",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\iptrace.mdx"
+        },
+        {
+          "name": "Langtrace",
+          "slug": "langtrace",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\langtrace.mdx"
+        },
+        {
+          "name": "Mozilla Observatory",
+          "slug": "mozilla-observatory",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\mozilla-observatory.mdx"
+        },
+        {
+          "name": "OpenObserve.ai",
+          "slug": "openobserve-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\openobserve-ai.mdx"
+        },
+        {
+          "name": "PostHog",
+          "slug": "posthog",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\posthog.mdx"
+        },
+        {
+          "name": "SikkerAPI",
+          "slug": "sikkerapi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\sikkerapi.mdx"
+        },
+        {
+          "name": "Virgil Security",
+          "slug": "virgil-security",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\virgil-security.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-devtools-other.md",
+      "total": 13,
+      "added": [
+        {
+          "name": "Azure Digital Twins",
+          "slug": "azure-digital-twins",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\azure-digital-twins.mdx"
+        },
+        {
+          "name": "Codeac.io",
+          "slug": "codeac-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\codeac-io.mdx"
+        },
+        {
+          "name": "CodeFactor",
+          "slug": "codefactor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\codefactor.mdx"
+        },
+        {
+          "name": "CodeKeep",
+          "slug": "codekeep",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\codekeep.mdx"
+        },
+        {
+          "name": "CodeRabbit",
+          "slug": "coderabbit",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\coderabbit.mdx"
+        },
+        {
+          "name": "Export SDK",
+          "slug": "export-sdk",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\export-sdk.mdx"
+        },
+        {
+          "name": "Flagsmith",
+          "slug": "flagsmith",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\flagsmith.mdx"
+        },
+        {
+          "name": "GitDailies",
+          "slug": "gitdailies",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\gitdailies.mdx"
+        },
+        {
+          "name": "GitGud",
+          "slug": "gitgud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\gitgud.mdx"
+        },
+        {
+          "name": "RepoFlow",
+          "slug": "repoflow",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\repoflow.mdx"
+        },
+        {
+          "name": "RepoForge",
+          "slug": "repoforge",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\repoforge.mdx"
+        },
+        {
+          "name": "ReportGPT",
+          "slug": "reportgpt",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\reportgpt.mdx"
+        },
+        {
+          "name": "Tickgit.com",
+          "slug": "tickgit-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\tickgit-com.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-devtools-testing-qa.md",
+      "total": 19,
+      "added": [
+        {
+          "name": "Azure Load Balancer",
+          "slug": "azure-load-balancer",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\azure-load-balancer.mdx"
+        },
+        {
+          "name": "Azure Load Testing",
+          "slug": "azure-load-testing",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\azure-load-testing.mdx"
+        },
+        {
+          "name": "Codecov",
+          "slug": "codecov",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\codecov.mdx"
+        },
+        {
+          "name": "Cypress",
+          "slug": "cypress",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\cypress.mdx"
+        },
+        {
+          "name": "DeepScan",
+          "slug": "deepscan",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\deepscan.mdx"
+        },
+        {
+          "name": "DevTest Labs",
+          "slug": "devtest-labs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\devtest-labs.mdx"
+        },
+        {
+          "name": "Goreportcard.com",
+          "slug": "goreportcard-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\goreportcard-com.mdx"
+        },
+        {
+          "name": "Kogiqa",
+          "slug": "kogiqa",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\kogiqa.mdx"
+        },
+        {
+          "name": "Loader.io",
+          "slug": "loader-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\loader-io.mdx"
+        },
+        {
+          "name": "LoadMill.com",
+          "slug": "loadmill-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\loadmill-com.mdx"
+        },
+        {
+          "name": "OTHRio Test Cloud",
+          "slug": "othrio-test-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\othrio-test-cloud.mdx"
+        },
+        {
+          "name": "Percy.io",
+          "slug": "percy-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\percy-io.mdx"
+        },
+        {
+          "name": "Qase.io",
+          "slug": "qase-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\qase-io.mdx"
+        },
+        {
+          "name": "Scan.coverity.com",
+          "slug": "scan-coverity-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\scan-coverity-com.mdx"
+        },
+        {
+          "name": "SeoTest.me",
+          "slug": "seotest-me",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\seotest-me.mdx"
+        },
+        {
+          "name": "TestingBot.com",
+          "slug": "testingbot-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\testingbot-com.mdx"
+        },
+        {
+          "name": "Testspace.com",
+          "slug": "testspace-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\testspace-com.mdx"
+        },
+        {
+          "name": "TestTLS.com",
+          "slug": "testtls-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\testtls-com.mdx"
+        },
+        {
+          "name": "Visual Debug",
+          "slug": "visual-debug",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\visual-debug.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-devtools-utilities.md",
+      "total": 8,
+      "added": [
+        {
+          "name": "Appetize",
+          "slug": "appetize",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\appetize.mdx"
+        },
+        {
+          "name": "BrowserCat",
+          "slug": "browsercat",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\browsercat.mdx"
+        },
+        {
+          "name": "CurlHub",
+          "slug": "curlhub",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\curlhub.mdx"
+        },
+        {
+          "name": "DevToolLab",
+          "slug": "devtoollab",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\devtoollab.mdx"
+        },
+        {
+          "name": "Insomnia",
+          "slug": "insomnia",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\insomnia.mdx"
+        },
+        {
+          "name": "Postman",
+          "slug": "postman",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\postman.mdx"
+        },
+        {
+          "name": "Requestly",
+          "slug": "requestly",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\requestly.mdx"
+        },
+        {
+          "name": "Zoho Cliq",
+          "slug": "zoho-cliq",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\tools\\zoho-cliq.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-docs-community.md",
+      "total": 22,
+      "added": [
+        {
+          "name": "Discord",
+          "slug": "discord",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\discord.mdx"
+        },
+        {
+          "name": "DocsSearch",
+          "slug": "docssearch",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\docssearch.mdx"
+        },
+        {
+          "name": "DynamicDocs",
+          "slug": "dynamicdocs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\dynamicdocs.mdx"
+        },
+        {
+          "name": "GitBook",
+          "slug": "gitbook",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\gitbook.mdx"
+        },
+        {
+          "name": "Gitter.im",
+          "slug": "gitter-im",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\gitter-im.mdx"
+        },
+        {
+          "name": "Hackmd.io",
+          "slug": "hackmd-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\hackmd-io.mdx"
+        },
+        {
+          "name": "Meet.jit.si",
+          "slug": "meet-jit-si",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\meet-jit-si.mdx"
+        },
+        {
+          "name": "Mintlify",
+          "slug": "mintlify",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\mintlify.mdx"
+        },
+        {
+          "name": "Notion",
+          "slug": "notion",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\notion.mdx"
+        },
+        {
+          "name": "Nuclino",
+          "slug": "nuclino",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\nuclino.mdx"
+        },
+        {
+          "name": "React Documentation",
+          "slug": "react-documentation",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\react-documentation.mdx"
+        },
+        {
+          "name": "Revolt.chat",
+          "slug": "revolt-chat",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\revolt-chat.mdx"
+        },
+        {
+          "name": "Rocket.Chat",
+          "slug": "rocket-chat",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\rocket-chat.mdx"
+        },
+        {
+          "name": "Substack",
+          "slug": "substack",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\substack.mdx"
+        },
+        {
+          "name": "Telegram",
+          "slug": "telegram",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\telegram.mdx"
+        },
+        {
+          "name": "Twist.com",
+          "slug": "twist-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\twist-com.mdx"
+        },
+        {
+          "name": "Webex",
+          "slug": "webex",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\webex.mdx"
+        },
+        {
+          "name": "Whereby.com",
+          "slug": "whereby-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\whereby-com.mdx"
+        },
+        {
+          "name": "Zoho Docs",
+          "slug": "zoho-docs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\zoho-docs.mdx"
+        },
+        {
+          "name": "Zoho Wiki",
+          "slug": "zoho-wiki",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\zoho-wiki.mdx"
+        },
+        {
+          "name": "Zoom.us",
+          "slug": "zoom-us",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\zoom-us.mdx"
+        },
+        {
+          "name": "Zulip",
+          "slug": "zulip",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\zulip.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-learning.md",
+      "total": 12,
+      "added": [
+        {
+          "name": "Azure AI Machine Learning",
+          "slug": "azure-ai-machine-learning",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\azure-ai-machine-learning.mdx"
+        },
+        {
+          "name": "Cisco Networking Academy",
+          "slug": "cisco-networking-academy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\cisco-networking-academy.mdx"
+        },
+        {
+          "name": "DevNet Academy",
+          "slug": "devnet-academy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\devnet-academy.mdx"
+        },
+        {
+          "name": "Django-tutorial.dev",
+          "slug": "django-tutorial-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\django-tutorial-dev.mdx"
+        },
+        {
+          "name": "edX",
+          "slug": "edx",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\edx.mdx"
+        },
+        {
+          "name": "FreeCodeCamp",
+          "slug": "freecodecamp",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\freecodecamp.mdx"
+        },
+        {
+          "name": "Full Stack Open",
+          "slug": "full-stack-open",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\full-stack-open.mdx"
+        },
+        {
+          "name": "LabEx",
+          "slug": "labex",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\labex.mdx"
+        },
+        {
+          "name": "MIT OpenCourseWare",
+          "slug": "mit-opencourseware",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\mit-opencourseware.mdx"
+        },
+        {
+          "name": "Roadmap.sh",
+          "slug": "roadmap-sh",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\roadmap-sh.mdx"
+        },
+        {
+          "name": "The Odin Project",
+          "slug": "the-odin-project",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\the-odin-project.mdx"
+        },
+        {
+          "name": "W3Schools",
+          "slug": "w3schools",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\resources\\w3schools.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-saas-ai-ml.md",
+      "total": 45,
+      "added": [
+        {
+          "name": "Aikido",
+          "slug": "aikido",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\aikido.mdx"
+        },
+        {
+          "name": "Aiven",
+          "slug": "aiven",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\aiven.mdx"
+        },
+        {
+          "name": "Arize AI",
+          "slug": "arize-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\arize-ai.mdx"
+        },
+        {
+          "name": "Azure AI Bot Service",
+          "slug": "azure-ai-bot-service",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-bot-service.mdx"
+        },
+        {
+          "name": "Azure AI Content Safety",
+          "slug": "azure-ai-content-safety",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-content-safety.mdx"
+        },
+        {
+          "name": "Azure AI Custom Vision",
+          "slug": "azure-ai-custom-vision",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-custom-vision.mdx"
+        },
+        {
+          "name": "Azure AI Document Intelligence",
+          "slug": "azure-ai-document-intelligence",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-document-intelligence.mdx"
+        },
+        {
+          "name": "Azure AI Face",
+          "slug": "azure-ai-face",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-face.mdx"
+        },
+        {
+          "name": "Azure AI Health Bot",
+          "slug": "azure-ai-health-bot",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-health-bot.mdx"
+        },
+        {
+          "name": "Azure AI Immersive Reader",
+          "slug": "azure-ai-immersive-reader",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-immersive-reader.mdx"
+        },
+        {
+          "name": "Azure AI Language",
+          "slug": "azure-ai-language",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-language.mdx"
+        },
+        {
+          "name": "Azure AI Personalizer",
+          "slug": "azure-ai-personalizer",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-personalizer.mdx"
+        },
+        {
+          "name": "Azure AI Search",
+          "slug": "azure-ai-search",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-search.mdx"
+        },
+        {
+          "name": "Azure AI Speech",
+          "slug": "azure-ai-speech",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-speech.mdx"
+        },
+        {
+          "name": "Azure AI Translator",
+          "slug": "azure-ai-translator",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-translator.mdx"
+        },
+        {
+          "name": "Azure AI Vision",
+          "slug": "azure-ai-vision",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-vision.mdx"
+        },
+        {
+          "name": "Brainboard",
+          "slug": "brainboard",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\brainboard.mdx"
+        },
+        {
+          "name": "Braintrust",
+          "slug": "braintrust",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\braintrust.mdx"
+        },
+        {
+          "name": "Browse AI",
+          "slug": "browse-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\browse-ai.mdx"
+        },
+        {
+          "name": "Clair",
+          "slug": "clair",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\clair.mdx"
+        },
+        {
+          "name": "Comet ML",
+          "slug": "comet-ml",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\comet-ml.mdx"
+        },
+        {
+          "name": "CrewAI",
+          "slug": "crewai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\crewai.mdx"
+        },
+        {
+          "name": "Dataimporter.io",
+          "slug": "dataimporter-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\dataimporter-io.mdx"
+        },
+        {
+          "name": "Flair",
+          "slug": "flair",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\flair.mdx"
+        },
+        {
+          "name": "Groq",
+          "slug": "groq",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\groq.mdx"
+        },
+        {
+          "name": "Hugging Face Hub",
+          "slug": "hugging-face-hub",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hugging-face-hub.mdx"
+        },
+        {
+          "name": "Hugging Face Spaces",
+          "slug": "hugging-face-spaces",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hugging-face-spaces.mdx"
+        },
+        {
+          "name": "InstallOnAir",
+          "slug": "installonair",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\installonair.mdx"
+        },
+        {
+          "name": "IntoDNS.ai",
+          "slug": "intodns-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\intodns-ai.mdx"
+        },
+        {
+          "name": "Langfuse",
+          "slug": "langfuse",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\langfuse.mdx"
+        },
+        {
+          "name": "LangWatch",
+          "slug": "langwatch",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\langwatch.mdx"
+        },
+        {
+          "name": "Localhero.ai",
+          "slug": "localhero-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\localhero-ai.mdx"
+        },
+        {
+          "name": "Lumenfall.ai",
+          "slug": "lumenfall-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\lumenfall-ai.mdx"
+        },
+        {
+          "name": "Maxim AI",
+          "slug": "maxim-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\maxim-ai.mdx"
+        },
+        {
+          "name": "MediaWorkbench.ai",
+          "slug": "mediaworkbench-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mediaworkbench-ai.mdx"
+        },
+        {
+          "name": "Othor AI",
+          "slug": "othor-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\othor-ai.mdx"
+        },
+        {
+          "name": "Pollinations.AI",
+          "slug": "pollinations-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pollinations-ai.mdx"
+        },
+        {
+          "name": "Raindrop.io",
+          "slug": "raindrop-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\raindrop-io.mdx"
+        },
+        {
+          "name": "SSH.ai",
+          "slug": "ssh-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ssh-ai.mdx"
+        },
+        {
+          "name": "Syagent.com",
+          "slug": "syagent-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\syagent-com.mdx"
+        },
+        {
+          "name": "Tavily AI",
+          "slug": "tavily-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tavily-ai.mdx"
+        },
+        {
+          "name": "Upstash Vector",
+          "slug": "upstash-vector",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\upstash-vector.mdx"
+        },
+        {
+          "name": "Waitlio",
+          "slug": "waitlio",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\waitlio.mdx"
+        },
+        {
+          "name": "WaiverStevie.com",
+          "slug": "waiverstevie-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\waiverstevie-com.mdx"
+        },
+        {
+          "name": "Wolfram Language",
+          "slug": "wolfram-language",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\wolfram-language.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-saas-comms-collab.md",
+      "total": 12,
+      "added": [
+        {
+          "name": "cally.com",
+          "slug": "cally-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cally-com.mdx"
+        },
+        {
+          "name": "Chanty",
+          "slug": "chanty",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\chanty.mdx"
+        },
+        {
+          "name": "HeySpace",
+          "slug": "heyspace",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\heyspace.mdx"
+        },
+        {
+          "name": "Huly",
+          "slug": "huly",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\huly.mdx"
+        },
+        {
+          "name": "Miro",
+          "slug": "miro",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\miro.mdx"
+        },
+        {
+          "name": "Pumble",
+          "slug": "pumble",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pumble.mdx"
+        },
+        {
+          "name": "Talky.io",
+          "slug": "talky-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\talky-io.mdx"
+        },
+        {
+          "name": "Teamcamp",
+          "slug": "teamcamp",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\teamcamp.mdx"
+        },
+        {
+          "name": "Teamhood",
+          "slug": "teamhood",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\teamhood.mdx"
+        },
+        {
+          "name": "Teamplify",
+          "slug": "teamplify",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\teamplify.mdx"
+        },
+        {
+          "name": "Terrateam",
+          "slug": "terrateam",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\terrateam.mdx"
+        },
+        {
+          "name": "Zoho Meeting",
+          "slug": "zoho-meeting",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-meeting.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-saas-design-media.md",
+      "total": 20,
+      "added": [
+        {
+          "name": "Audio Enhancer",
+          "slug": "audio-enhancer",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\audio-enhancer.mdx"
+        },
+        {
+          "name": "Azure Media Services",
+          "slug": "azure-media-services",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-media-services.mdx"
+        },
+        {
+          "name": "Befonts",
+          "slug": "befonts",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\befonts.mdx"
+        },
+        {
+          "name": "Bunny Fonts",
+          "slug": "bunny-fonts",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bunny-fonts.mdx"
+        },
+        {
+          "name": "Dafont",
+          "slug": "dafont",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\dafont.mdx"
+        },
+        {
+          "name": "DB Designer",
+          "slug": "db-designer",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\db-designer.mdx"
+        },
+        {
+          "name": "DrawDB",
+          "slug": "drawdb",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\drawdb.mdx"
+        },
+        {
+          "name": "Everything Fonts",
+          "slug": "everything-fonts",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\everything-fonts.mdx"
+        },
+        {
+          "name": "Font of web",
+          "slug": "font-of-web",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\font-of-web.mdx"
+        },
+        {
+          "name": "Font Squirrel",
+          "slug": "font-squirrel",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\font-squirrel.mdx"
+        },
+        {
+          "name": "FontGet",
+          "slug": "fontget",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fontget.mdx"
+        },
+        {
+          "name": "Fontsensei",
+          "slug": "fontsensei",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fontsensei.mdx"
+        },
+        {
+          "name": "Fontshare",
+          "slug": "fontshare",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fontshare.mdx"
+        },
+        {
+          "name": "FontShift",
+          "slug": "fontshift",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fontshift.mdx"
+        },
+        {
+          "name": "Google Fonts",
+          "slug": "google-fonts",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\google-fonts.mdx"
+        },
+        {
+          "name": "Quidlo Timesheets",
+          "slug": "quidlo-timesheets",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\quidlo-timesheets.mdx"
+        },
+        {
+          "name": "Tldraw.com",
+          "slug": "tldraw-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tldraw-com.mdx"
+        },
+        {
+          "name": "v0.dev",
+          "slug": "v0-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\v0-dev.mdx"
+        },
+        {
+          "name": "Vidhook",
+          "slug": "vidhook",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\vidhook.mdx"
+        },
+        {
+          "name": "Wistia.com",
+          "slug": "wistia-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\wistia-com.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-saas-email-marketing.md",
+      "total": 33,
+      "added": [
+        {
+          "name": "AhaSend",
+          "slug": "ahasend",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ahasend.mdx"
+        },
+        {
+          "name": "Brevo",
+          "slug": "brevo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\brevo.mdx"
+        },
+        {
+          "name": "Burnermail",
+          "slug": "burnermail",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\burnermail.mdx"
+        },
+        {
+          "name": "Buttondown",
+          "slug": "buttondown",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\buttondown.mdx"
+        },
+        {
+          "name": "EmailJS",
+          "slug": "emailjs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\emailjs.mdx"
+        },
+        {
+          "name": "Ethereal Email",
+          "slug": "ethereal-email",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ethereal-email.mdx"
+        },
+        {
+          "name": "Imitate Email",
+          "slug": "imitate-email",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\imitate-email.mdx"
+        },
+        {
+          "name": "MailerLite",
+          "slug": "mailerlite",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mailerlite.mdx"
+        },
+        {
+          "name": "MailerSend.com",
+          "slug": "mailersend-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mailersend-com.mdx"
+        },
+        {
+          "name": "Mailgun",
+          "slug": "mailgun",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mailgun.mdx"
+        },
+        {
+          "name": "Mailinator.com",
+          "slug": "mailinator-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mailinator-com.mdx"
+        },
+        {
+          "name": "Mailjet",
+          "slug": "mailjet",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mailjet.mdx"
+        },
+        {
+          "name": "Mailsac.com",
+          "slug": "mailsac-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mailsac-com.mdx"
+        },
+        {
+          "name": "Mailtrap.io",
+          "slug": "mailtrap-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mailtrap-io.mdx"
+        },
+        {
+          "name": "Mutant Mail",
+          "slug": "mutant-mail",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mutant-mail.mdx"
+        },
+        {
+          "name": "Plunk",
+          "slug": "plunk",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\plunk.mdx"
+        },
+        {
+          "name": "Postmark",
+          "slug": "postmark",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\postmark.mdx"
+        },
+        {
+          "name": "Proton Mail",
+          "slug": "proton-mail",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\proton-mail.mdx"
+        },
+        {
+          "name": "Resend",
+          "slug": "resend",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\resend.mdx"
+        },
+        {
+          "name": "Sender",
+          "slug": "sender",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sender.mdx"
+        },
+        {
+          "name": "SendGrid",
+          "slug": "sendgrid",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sendgrid.mdx"
+        },
+        {
+          "name": "SendPulse",
+          "slug": "sendpulse",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sendpulse.mdx"
+        },
+        {
+          "name": "SendStreak",
+          "slug": "sendstreak",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sendstreak.mdx"
+        },
+        {
+          "name": "SuprSend",
+          "slug": "suprsend",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\suprsend.mdx"
+        },
+        {
+          "name": "Sweego",
+          "slug": "sweego",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sweego.mdx"
+        },
+        {
+          "name": "Temp-mail.io",
+          "slug": "temp-mail-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\temp-mail-io.mdx"
+        },
+        {
+          "name": "Temp-Mail.org",
+          "slug": "temp-mail-org",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\temp-mail-org.mdx"
+        },
+        {
+          "name": "TempMailDetector.com",
+          "slug": "tempmaildetector-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tempmaildetector-com.mdx"
+        },
+        {
+          "name": "Trashmail.com",
+          "slug": "trashmail-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\trashmail-com.mdx"
+        },
+        {
+          "name": "Verimail.io",
+          "slug": "verimail-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\verimail-io.mdx"
+        },
+        {
+          "name": "Webpushr",
+          "slug": "webpushr",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\webpushr.mdx"
+        },
+        {
+          "name": "Zoho Campaigns",
+          "slug": "zoho-campaigns",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-campaigns.mdx"
+        },
+        {
+          "name": "Zoho Email",
+          "slug": "zoho-email",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-email.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-saas-identity-access.md",
+      "total": 22,
+      "added": [
+        {
+          "name": "Aserto",
+          "slug": "aserto",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\aserto.mdx"
+        },
+        {
+          "name": "Asgardeo",
+          "slug": "asgardeo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\asgardeo.mdx"
+        },
+        {
+          "name": "Azure Data Factory",
+          "slug": "azure-data-factory",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-data-factory.mdx"
+        },
+        {
+          "name": "Azure Key Vault",
+          "slug": "azure-key-vault",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-key-vault.mdx"
+        },
+        {
+          "name": "Clerk",
+          "slug": "clerk",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\clerk.mdx"
+        },
+        {
+          "name": "Cloud-IAM",
+          "slug": "cloud-iam",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloud-iam.mdx"
+        },
+        {
+          "name": "Descope",
+          "slug": "descope",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\descope.mdx"
+        },
+        {
+          "name": "Keybase",
+          "slug": "keybase",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\keybase.mdx"
+        },
+        {
+          "name": "Keywords AI",
+          "slug": "keywords-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\keywords-ai.mdx"
+        },
+        {
+          "name": "Kinde",
+          "slug": "kinde",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\kinde.mdx"
+        },
+        {
+          "name": "Okta",
+          "slug": "okta",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\okta.mdx"
+        },
+        {
+          "name": "Ory",
+          "slug": "ory",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ory.mdx"
+        },
+        {
+          "name": "Permit.io",
+          "slug": "permit-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\permit-io.mdx"
+        },
+        {
+          "name": "Phase Two",
+          "slug": "phase-two",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\phase-two.mdx"
+        },
+        {
+          "name": "Portkey",
+          "slug": "portkey",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\portkey.mdx"
+        },
+        {
+          "name": "Scalekit",
+          "slug": "scalekit",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\scalekit.mdx"
+        },
+        {
+          "name": "SikkerKey",
+          "slug": "sikkerkey",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sikkerkey.mdx"
+        },
+        {
+          "name": "Smart Grow Vault",
+          "slug": "smart-grow-vault",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\smart-grow-vault.mdx"
+        },
+        {
+          "name": "SuperTokens",
+          "slug": "supertokens",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supertokens.mdx"
+        },
+        {
+          "name": "WorkOS",
+          "slug": "workos",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\workos.mdx"
+        },
+        {
+          "name": "ZITADEL Cloud",
+          "slug": "zitadel-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zitadel-cloud.mdx"
+        },
+        {
+          "name": "Zoho Vault",
+          "slug": "zoho-vault",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-vault.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "long-tail-saas-other.md",
+      "total": 317,
+      "added": [
+        {
+          "name": "360username",
+          "slug": "360username",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\360username.mdx"
+        },
+        {
+          "name": "Abby",
+          "slug": "abby",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\abby.mdx"
+        },
+        {
+          "name": "Algolia",
+          "slug": "algolia",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\algolia.mdx"
+        },
+        {
+          "name": "anon.li Alias",
+          "slug": "anon-li-alias",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\anon-li-alias.mdx"
+        },
+        {
+          "name": "AnonAddy",
+          "slug": "anonaddy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\anonaddy.mdx"
+        },
+        {
+          "name": "Antideo",
+          "slug": "antideo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\antideo.mdx"
+        },
+        {
+          "name": "Appho.st",
+          "slug": "appho-st",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\appho-st.mdx"
+        },
+        {
+          "name": "Appinvento",
+          "slug": "appinvento",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\appinvento.mdx"
+        },
+        {
+          "name": "Argos",
+          "slug": "argos",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\argos.mdx"
+        },
+        {
+          "name": "Assertible",
+          "slug": "assertible",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\assertible.mdx"
+        },
+        {
+          "name": "Asurity",
+          "slug": "asurity",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\asurity.mdx"
+        },
+        {
+          "name": "AutoLocalise",
+          "slug": "autolocalise",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\autolocalise.mdx"
+        },
+        {
+          "name": "Axiom",
+          "slug": "axiom",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\axiom.mdx"
+        },
+        {
+          "name": "Azure Advisor",
+          "slug": "azure-advisor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-advisor.mdx"
+        },
+        {
+          "name": "Azure Anomaly Detector",
+          "slug": "azure-anomaly-detector",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-anomaly-detector.mdx"
+        },
+        {
+          "name": "Azure App Configuration",
+          "slug": "azure-app-configuration",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-app-configuration.mdx"
+        },
+        {
+          "name": "Azure Arc",
+          "slug": "azure-arc",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-arc.mdx"
+        },
+        {
+          "name": "Azure Bandwidth",
+          "slug": "azure-bandwidth",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-bandwidth.mdx"
+        },
+        {
+          "name": "Azure Bastion",
+          "slug": "azure-bastion",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-bastion.mdx"
+        },
+        {
+          "name": "Azure Blueprints",
+          "slug": "azure-blueprints",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-blueprints.mdx"
+        },
+        {
+          "name": "Azure Chaos Studio",
+          "slug": "azure-chaos-studio",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-chaos-studio.mdx"
+        },
+        {
+          "name": "Azure Cost Management",
+          "slug": "azure-cost-management",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-cost-management.mdx"
+        },
+        {
+          "name": "Azure IoT Hub",
+          "slug": "azure-iot-hub",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-iot-hub.mdx"
+        },
+        {
+          "name": "Azure Lab Services",
+          "slug": "azure-lab-services",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-lab-services.mdx"
+        },
+        {
+          "name": "Azure Lighthouse",
+          "slug": "azure-lighthouse",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-lighthouse.mdx"
+        },
+        {
+          "name": "Azure Managed Identities",
+          "slug": "azure-managed-identities",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-managed-identities.mdx"
+        },
+        {
+          "name": "Azure Maps",
+          "slug": "azure-maps",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-maps.mdx"
+        },
+        {
+          "name": "Azure Network Watcher",
+          "slug": "azure-network-watcher",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-network-watcher.mdx"
+        },
+        {
+          "name": "Azure Open Datasets",
+          "slug": "azure-open-datasets",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-open-datasets.mdx"
+        },
+        {
+          "name": "Azure Policy",
+          "slug": "azure-policy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-policy.mdx"
+        },
+        {
+          "name": "Azure Private Link",
+          "slug": "azure-private-link",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-private-link.mdx"
+        },
+        {
+          "name": "Azure Purview",
+          "slug": "azure-purview",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-purview.mdx"
+        },
+        {
+          "name": "Azure Resource Graph",
+          "slug": "azure-resource-graph",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-resource-graph.mdx"
+        },
+        {
+          "name": "Azure Resource Manager",
+          "slug": "azure-resource-manager",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-resource-manager.mdx"
+        },
+        {
+          "name": "Azure Traffic Manager",
+          "slug": "azure-traffic-manager",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-traffic-manager.mdx"
+        },
+        {
+          "name": "Azure Virtual Networks",
+          "slug": "azure-virtual-networks",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-virtual-networks.mdx"
+        },
+        {
+          "name": "Azure VPN Gateway",
+          "slug": "azure-vpn-gateway",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-vpn-gateway.mdx"
+        },
+        {
+          "name": "Beeceptor",
+          "slug": "beeceptor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\beeceptor.mdx"
+        },
+        {
+          "name": "Bencher",
+          "slug": "bencher",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bencher.mdx"
+        },
+        {
+          "name": "Bitrise",
+          "slug": "bitrise",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bitrise.mdx"
+        },
+        {
+          "name": "Buddy",
+          "slug": "buddy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\buddy.mdx"
+        },
+        {
+          "name": "BugBug",
+          "slug": "bugbug",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bugbug.mdx"
+        },
+        {
+          "name": "Bugfender",
+          "slug": "bugfender",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bugfender.mdx"
+        },
+        {
+          "name": "Bugsink",
+          "slug": "bugsink",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bugsink.mdx"
+        },
+        {
+          "name": "Bump",
+          "slug": "bump",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bump.mdx"
+        },
+        {
+          "name": "CacheFly",
+          "slug": "cachefly",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cachefly.mdx"
+        },
+        {
+          "name": "Calendarific",
+          "slug": "calendarific",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\calendarific.mdx"
+        },
+        {
+          "name": "Calendly",
+          "slug": "calendly",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\calendly.mdx"
+        },
+        {
+          "name": "Canopy",
+          "slug": "canopy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\canopy.mdx"
+        },
+        {
+          "name": "CatchJS.com",
+          "slug": "catchjs-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\catchjs-com.mdx"
+        },
+        {
+          "name": "cdnjs",
+          "slug": "cdnjs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cdnjs.mdx"
+        },
+        {
+          "name": "cDox",
+          "slug": "cdox",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cdox.mdx"
+        },
+        {
+          "name": "Cerbos Hub",
+          "slug": "cerbos-hub",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cerbos-hub.mdx"
+        },
+        {
+          "name": "CertKit",
+          "slug": "certkit",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\certkit.mdx"
+        },
+        {
+          "name": "Checkbot.io",
+          "slug": "checkbot-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\checkbot-io.mdx"
+        },
+        {
+          "name": "Cloud 66",
+          "slug": "cloud-66",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloud-66.mdx"
+        },
+        {
+          "name": "Cloud Shell",
+          "slug": "cloud-shell",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloud-shell.mdx"
+        },
+        {
+          "name": "CloudAMQP",
+          "slug": "cloudamqp",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudamqp.mdx"
+        },
+        {
+          "name": "Cloudflare",
+          "slug": "cloudflare",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudflare.mdx"
+        },
+        {
+          "name": "Cloudflare D1",
+          "slug": "cloudflare-d1",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudflare-d1.mdx"
+        },
+        {
+          "name": "Cloudflare Zero Trust",
+          "slug": "cloudflare-zero-trust",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudflare-zero-trust.mdx"
+        },
+        {
+          "name": "Cloudinary",
+          "slug": "cloudinary",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudinary.mdx"
+        },
+        {
+          "name": "Cloudmersive",
+          "slug": "cloudmersive",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudmersive.mdx"
+        },
+        {
+          "name": "CloudWatch",
+          "slug": "cloudwatch",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudwatch.mdx"
+        },
+        {
+          "name": "Codacy",
+          "slug": "codacy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\codacy.mdx"
+        },
+        {
+          "name": "CodSpeed",
+          "slug": "codspeed",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\codspeed.mdx"
+        },
+        {
+          "name": "Comet Opik",
+          "slug": "comet-opik",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\comet-opik.mdx"
+        },
+        {
+          "name": "CommandBar",
+          "slug": "commandbar",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\commandbar.mdx"
+        },
+        {
+          "name": "Commerce Layer",
+          "slug": "commerce-layer",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\commerce-layer.mdx"
+        },
+        {
+          "name": "Composio",
+          "slug": "composio",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\composio.mdx"
+        },
+        {
+          "name": "ConfigCat",
+          "slug": "configcat",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\configcat.mdx"
+        },
+        {
+          "name": "Contentful",
+          "slug": "contentful",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\contentful.mdx"
+        },
+        {
+          "name": "Conversion Tools",
+          "slug": "conversion-tools",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\conversion-tools.mdx"
+        },
+        {
+          "name": "Cosmic",
+          "slug": "cosmic",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cosmic.mdx"
+        },
+        {
+          "name": "Coupler",
+          "slug": "coupler",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\coupler.mdx"
+        },
+        {
+          "name": "Courier",
+          "slug": "courier",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\courier.mdx"
+        },
+        {
+          "name": "Coveralls",
+          "slug": "coveralls",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\coveralls.mdx"
+        },
+        {
+          "name": "Cray",
+          "slug": "cray",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cray.mdx"
+        },
+        {
+          "name": "Crowdin",
+          "slug": "crowdin",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\crowdin.mdx"
+        },
+        {
+          "name": "Crystallize",
+          "slug": "crystallize",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\crystallize.mdx"
+        },
+        {
+          "name": "Cube",
+          "slug": "cube",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cube.mdx"
+        },
+        {
+          "name": "CurrencyScoop",
+          "slug": "currencyscoop",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\currencyscoop.mdx"
+        },
+        {
+          "name": "CustomJS",
+          "slug": "customjs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\customjs.mdx"
+        },
+        {
+          "name": "CyberChef",
+          "slug": "cyberchef",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cyberchef.mdx"
+        },
+        {
+          "name": "Data Fetcher",
+          "slug": "data-fetcher",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\data-fetcher.mdx"
+        },
+        {
+          "name": "Data Miner",
+          "slug": "data-miner",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\data-miner.mdx"
+        },
+        {
+          "name": "Datalore",
+          "slug": "datalore",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\datalore.mdx"
+        },
+        {
+          "name": "Datocms",
+          "slug": "datocms",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\datocms.mdx"
+        },
+        {
+          "name": "Datree",
+          "slug": "datree",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\datree.mdx"
+        },
+        {
+          "name": "DB-IP",
+          "slug": "db-ip",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\db-ip.mdx"
+        },
+        {
+          "name": "Deadmanssnitch",
+          "slug": "deadmanssnitch",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\deadmanssnitch.mdx"
+        },
+        {
+          "name": "DeepAR",
+          "slug": "deepar",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\deepar.mdx"
+        },
+        {
+          "name": "Deepnote",
+          "slug": "deepnote",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\deepnote.mdx"
+        },
+        {
+          "name": "DeepSource",
+          "slug": "deepsource",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\deepsource.mdx"
+        },
+        {
+          "name": "DhiWise",
+          "slug": "dhiwise",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\dhiwise.mdx"
+        },
+        {
+          "name": "Diawi",
+          "slug": "diawi",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\diawi.mdx"
+        },
+        {
+          "name": "DiffText",
+          "slug": "difftext",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\difftext.mdx"
+        },
+        {
+          "name": "Disease.sh",
+          "slug": "disease-sh",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\disease-sh.mdx"
+        },
+        {
+          "name": "Doczilla",
+          "slug": "doczilla",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\doczilla.mdx"
+        },
+        {
+          "name": "Doppio",
+          "slug": "doppio",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\doppio.mdx"
+        },
+        {
+          "name": "Doppler",
+          "slug": "doppler",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\doppler.mdx"
+        },
+        {
+          "name": "Dotenv",
+          "slug": "dotenv",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\dotenv.mdx"
+        },
+        {
+          "name": "Earnings Feed",
+          "slug": "earnings-feed",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\earnings-feed.mdx"
+        },
+        {
+          "name": "EBS",
+          "slug": "ebs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ebs.mdx"
+        },
+        {
+          "name": "EC2",
+          "slug": "ec2",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ec2.mdx"
+        },
+        {
+          "name": "Elmah.io",
+          "slug": "elmah-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\elmah-io.mdx"
+        },
+        {
+          "name": "Embrace",
+          "slug": "embrace",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\embrace.mdx"
+        },
+        {
+          "name": "Engage",
+          "slug": "engage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\engage.mdx"
+        },
+        {
+          "name": "Engagespot",
+          "slug": "engagespot",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\engagespot.mdx"
+        },
+        {
+          "name": "Entra ID / Azure AD",
+          "slug": "entra-id-azure-ad",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\entra-id-azure-ad.mdx"
+        },
+        {
+          "name": "Event Grid",
+          "slug": "event-grid",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\event-grid.mdx"
+        },
+        {
+          "name": "Eventbrite",
+          "slug": "eventbrite",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\eventbrite.mdx"
+        },
+        {
+          "name": "Evernote",
+          "slug": "evernote",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\evernote.mdx"
+        },
+        {
+          "name": "Exceptionless",
+          "slug": "exceptionless",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\exceptionless.mdx"
+        },
+        {
+          "name": "ExtendsClass",
+          "slug": "extendsclass",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\extendsclass.mdx"
+        },
+        {
+          "name": "Feathery",
+          "slug": "feathery",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\feathery.mdx"
+        },
+        {
+          "name": "Feedback.fish",
+          "slug": "feedback-fish",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\feedback-fish.mdx"
+        },
+        {
+          "name": "Fibery",
+          "slug": "fibery",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fibery.mdx"
+        },
+        {
+          "name": "Fibo",
+          "slug": "fibo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fibo.mdx"
+        },
+        {
+          "name": "Fizzy",
+          "slug": "fizzy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fizzy.mdx"
+        },
+        {
+          "name": "FlareWarden",
+          "slug": "flarewarden",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\flarewarden.mdx"
+        },
+        {
+          "name": "Flock",
+          "slug": "flock",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\flock.mdx"
+        },
+        {
+          "name": "FraudLabs Pro",
+          "slug": "fraudlabs-pro",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\fraudlabs-pro.mdx"
+        },
+        {
+          "name": "FreePO editor",
+          "slug": "freepo-editor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\freepo-editor.mdx"
+        },
+        {
+          "name": "FreeProxies.io",
+          "slug": "freeproxies-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\freeproxies-io.mdx"
+        },
+        {
+          "name": "Gcore",
+          "slug": "gcore",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gcore.mdx"
+        },
+        {
+          "name": "Gemfury",
+          "slug": "gemfury",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gemfury.mdx"
+        },
+        {
+          "name": "Geolocated.io",
+          "slug": "geolocated-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\geolocated-io.mdx"
+        },
+        {
+          "name": "Gerrithub.io",
+          "slug": "gerrithub-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gerrithub-io.mdx"
+        },
+        {
+          "name": "GetUpdraft",
+          "slug": "getupdraft",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\getupdraft.mdx"
+        },
+        {
+          "name": "Gokanban.io",
+          "slug": "gokanban-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gokanban-io.mdx"
+        },
+        {
+          "name": "Google Colab",
+          "slug": "google-colab",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\google-colab.mdx"
+        },
+        {
+          "name": "Gridlastic.com",
+          "slug": "gridlastic-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gridlastic-com.mdx"
+        },
+        {
+          "name": "GrowthBook",
+          "slug": "growthbook",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\growthbook.mdx"
+        },
+        {
+          "name": "GTMetrix.com",
+          "slug": "gtmetrix-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\gtmetrix-com.mdx"
+        },
+        {
+          "name": "Heptapod.net",
+          "slug": "heptapod-net",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\heptapod-net.mdx"
+        },
+        {
+          "name": "HeroTofu.com",
+          "slug": "herotofu-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\herotofu-com.mdx"
+        },
+        {
+          "name": "Hex",
+          "slug": "hex",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hex.mdx"
+        },
+        {
+          "name": "Holistic.dev",
+          "slug": "holistic-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\holistic-dev.mdx"
+        },
+        {
+          "name": "Hook0",
+          "slug": "hook0",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hook0.mdx"
+        },
+        {
+          "name": "Hoppscotch",
+          "slug": "hoppscotch",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hoppscotch.mdx"
+        },
+        {
+          "name": "Hygraph",
+          "slug": "hygraph",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hygraph.mdx"
+        },
+        {
+          "name": "Hypertune",
+          "slug": "hypertune",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hypertune.mdx"
+        },
+        {
+          "name": "IBM Cloud",
+          "slug": "ibm-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ibm-cloud.mdx"
+        },
+        {
+          "name": "IBM Cloudant",
+          "slug": "ibm-cloudant",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ibm-cloudant.mdx"
+        },
+        {
+          "name": "IBM Db2",
+          "slug": "ibm-db2",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ibm-db2.mdx"
+        },
+        {
+          "name": "ImprovMX",
+          "slug": "improvmx",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\improvmx.mdx"
+        },
+        {
+          "name": "Inboxes App",
+          "slug": "inboxes-app",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\inboxes-app.mdx"
+        },
+        {
+          "name": "Inboxkitten.com",
+          "slug": "inboxkitten-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\inboxkitten-com.mdx"
+        },
+        {
+          "name": "Infisical",
+          "slug": "infisical",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\infisical.mdx"
+        },
+        {
+          "name": "Inspector.dev",
+          "slug": "inspector-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\inspector-dev.mdx"
+        },
+        {
+          "name": "Interactive CV",
+          "slug": "interactive-cv",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\interactive-cv.mdx"
+        },
+        {
+          "name": "Internet.nl",
+          "slug": "internet-nl",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\internet-nl.mdx"
+        },
+        {
+          "name": "Invantive Cloud",
+          "slug": "invantive-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\invantive-cloud.mdx"
+        },
+        {
+          "name": "IP address.sh",
+          "slug": "ip-address-sh",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ip-address-sh.mdx"
+        },
+        {
+          "name": "IP Geolocation",
+          "slug": "ip-geolocation",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ip-geolocation.mdx"
+        },
+        {
+          "name": "ip2geo.dev",
+          "slug": "ip2geo-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ip2geo-dev.mdx"
+        },
+        {
+          "name": "IP2Location.io",
+          "slug": "ip2location-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ip2location-io.mdx"
+        },
+        {
+          "name": "ipbase.com",
+          "slug": "ipbase-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ipbase-com.mdx"
+        },
+        {
+          "name": "IPinfo",
+          "slug": "ipinfo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ipinfo.mdx"
+        },
+        {
+          "name": "IPLocate",
+          "slug": "iplocate",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\iplocate.mdx"
+        },
+        {
+          "name": "Jam",
+          "slug": "jam",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\jam.mdx"
+        },
+        {
+          "name": "Jitpack.io",
+          "slug": "jitpack-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\jitpack-io.mdx"
+        },
+        {
+          "name": "JWT.io",
+          "slug": "jwt-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\jwt-io.mdx"
+        },
+        {
+          "name": "Keploy",
+          "slug": "keploy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\keploy.mdx"
+        },
+        {
+          "name": "Koyeb",
+          "slug": "koyeb",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\koyeb.mdx"
+        },
+        {
+          "name": "Kreya",
+          "slug": "kreya",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\kreya.mdx"
+        },
+        {
+          "name": "Kwes.io",
+          "slug": "kwes-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\kwes-io.mdx"
+        },
+        {
+          "name": "Let's Encrypt",
+          "slug": "let-s-encrypt",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\let-s-encrypt.mdx"
+        },
+        {
+          "name": "Libraries.io",
+          "slug": "libraries-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\libraries-io.mdx"
+        },
+        {
+          "name": "Lingo.dev",
+          "slug": "lingo-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\lingo-dev.mdx"
+        },
+        {
+          "name": "Lingohub.com",
+          "slug": "lingohub-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\lingohub-com.mdx"
+        },
+        {
+          "name": "Linkinize",
+          "slug": "linkinize",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\linkinize.mdx"
+        },
+        {
+          "name": "Linkok.com",
+          "slug": "linkok-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\linkok-com.mdx"
+        },
+        {
+          "name": "Localazy.com",
+          "slug": "localazy-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\localazy-com.mdx"
+        },
+        {
+          "name": "Localise.biz",
+          "slug": "localise-biz",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\localise-biz.mdx"
+        },
+        {
+          "name": "Localit",
+          "slug": "localit",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\localit.mdx"
+        },
+        {
+          "name": "Localizely.com",
+          "slug": "localizely-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\localizely-com.mdx"
+        },
+        {
+          "name": "LocalOps",
+          "slug": "localops",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\localops.mdx"
+        },
+        {
+          "name": "Lockitbot",
+          "slug": "lockitbot",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\lockitbot.mdx"
+        },
+        {
+          "name": "Lost-pixel.com",
+          "slug": "lost-pixel-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\lost-pixel-com.mdx"
+        },
+        {
+          "name": "Make",
+          "slug": "make",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\make.mdx"
+        },
+        {
+          "name": "Memfault.com",
+          "slug": "memfault-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\memfault-com.mdx"
+        },
+        {
+          "name": "Mergify",
+          "slug": "mergify",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\mergify.mdx"
+        },
+        {
+          "name": "Metalama",
+          "slug": "metalama",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\metalama.mdx"
+        },
+        {
+          "name": "Metashot",
+          "slug": "metashot",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\metashot.mdx"
+        },
+        {
+          "name": "Meterian.io",
+          "slug": "meterian-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\meterian-io.mdx"
+        },
+        {
+          "name": "Microlink.io",
+          "slug": "microlink-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\microlink-io.mdx"
+        },
+        {
+          "name": "Middleware.io",
+          "slug": "middleware-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\middleware-io.mdx"
+        },
+        {
+          "name": "Monix",
+          "slug": "monix",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\monix.mdx"
+        },
+        {
+          "name": "Multi-Exit IP Address Checker",
+          "slug": "multi-exit-ip-address-checker",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\multi-exit-ip-address-checker.mdx"
+        },
+        {
+          "name": "Namae",
+          "slug": "namae",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\namae.mdx"
+        },
+        {
+          "name": "Namecheap Supersonic",
+          "slug": "namecheap-supersonic",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\namecheap-supersonic.mdx"
+        },
+        {
+          "name": "Netdata.cloud",
+          "slug": "netdata-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\netdata-cloud.mdx"
+        },
+        {
+          "name": "Newsroom",
+          "slug": "newsroom",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\newsroom.mdx"
+        },
+        {
+          "name": "Next.js",
+          "slug": "next-js",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\next-js.mdx"
+        },
+        {
+          "name": "Nx Cloud",
+          "slug": "nx-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\nx-cloud.mdx"
+        },
+        {
+          "name": "OnlineInterview.io",
+          "slug": "onlineinterview-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\onlineinterview-io.mdx"
+        },
+        {
+          "name": "OnlineOrNot.com",
+          "slug": "onlineornot-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\onlineornot-com.mdx"
+        },
+        {
+          "name": "OpenRouter",
+          "slug": "openrouter",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\openrouter.mdx"
+        },
+        {
+          "name": "Oracle Autonomous DB",
+          "slug": "oracle-autonomous-db",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\oracle-autonomous-db.mdx"
+        },
+        {
+          "name": "Pagecrawl.io",
+          "slug": "pagecrawl-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pagecrawl-io.mdx"
+        },
+        {
+          "name": "Pagertree.com",
+          "slug": "pagertree-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pagertree-com.mdx"
+        },
+        {
+          "name": "Pagure.io",
+          "slug": "pagure-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pagure-io.mdx"
+        },
+        {
+          "name": "Paperspace",
+          "slug": "paperspace",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\paperspace.mdx"
+        },
+        {
+          "name": "Parseur",
+          "slug": "parseur",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\parseur.mdx"
+        },
+        {
+          "name": "Parsio.io",
+          "slug": "parsio-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\parsio-io.mdx"
+        },
+        {
+          "name": "Paste.sh",
+          "slug": "paste-sh",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\paste-sh.mdx"
+        },
+        {
+          "name": "Pastefy",
+          "slug": "pastefy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pastefy.mdx"
+        },
+        {
+          "name": "Pendulums",
+          "slug": "pendulums",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pendulums.mdx"
+        },
+        {
+          "name": "Phare.io",
+          "slug": "phare-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\phare-io.mdx"
+        },
+        {
+          "name": "Pijul.com",
+          "slug": "pijul-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pijul-com.mdx"
+        },
+        {
+          "name": "Pipedream",
+          "slug": "pipedream",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pipedream.mdx"
+        },
+        {
+          "name": "Pixela",
+          "slug": "pixela",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pixela.mdx"
+        },
+        {
+          "name": "Ploi.io",
+          "slug": "ploi-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ploi-io.mdx"
+        },
+        {
+          "name": "POEditor",
+          "slug": "poeditor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\poeditor.mdx"
+        },
+        {
+          "name": "Posthook",
+          "slug": "posthook",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\posthook.mdx"
+        },
+        {
+          "name": "PostOffice",
+          "slug": "postoffice",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\postoffice.mdx"
+        },
+        {
+          "name": "PrefectCloud",
+          "slug": "prefectcloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\prefectcloud.mdx"
+        },
+        {
+          "name": "Preset Cloud",
+          "slug": "preset-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\preset-cloud.mdx"
+        },
+        {
+          "name": "Prismic",
+          "slug": "prismic",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\prismic.mdx"
+        },
+        {
+          "name": "Private Cloud Threat Intelligence",
+          "slug": "private-cloud-threat-intelligence",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\private-cloud-threat-intelligence.mdx"
+        },
+        {
+          "name": "Projectlocker.com",
+          "slug": "projectlocker-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\projectlocker-com.mdx"
+        },
+        {
+          "name": "Protectumus",
+          "slug": "protectumus",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\protectumus.mdx"
+        },
+        {
+          "name": "Proton Pass",
+          "slug": "proton-pass",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\proton-pass.mdx"
+        },
+        {
+          "name": "Pullflow",
+          "slug": "pullflow",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pullflow.mdx"
+        },
+        {
+          "name": "Pulsetic",
+          "slug": "pulsetic",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pulsetic.mdx"
+        },
+        {
+          "name": "PyUp.io",
+          "slug": "pyup-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pyup-io.mdx"
+        },
+        {
+          "name": "RDS",
+          "slug": "rds",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\rds.mdx"
+        },
+        {
+          "name": "Reducto",
+          "slug": "reducto",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\reducto.mdx"
+        },
+        {
+          "name": "Repsy.io",
+          "slug": "repsy-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\repsy-io.mdx"
+        },
+        {
+          "name": "Reviewable.io",
+          "slug": "reviewable-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\reviewable-io.mdx"
+        },
+        {
+          "name": "RightFeature",
+          "slug": "rightfeature",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\rightfeature.mdx"
+        },
+        {
+          "name": "ROBOHASH",
+          "slug": "robohash",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\robohash.mdx"
+        },
+        {
+          "name": "Rollgate",
+          "slug": "rollgate",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\rollgate.mdx"
+        },
+        {
+          "name": "Roundsphere",
+          "slug": "roundsphere",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\roundsphere.mdx"
+        },
+        {
+          "name": "Runcloud.io",
+          "slug": "runcloud-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\runcloud-io.mdx"
+        },
+        {
+          "name": "RunMyJob",
+          "slug": "runmyjob",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\runmyjob.mdx"
+        },
+        {
+          "name": "Ruttl.com",
+          "slug": "ruttl-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ruttl-com.mdx"
+        },
+        {
+          "name": "Scaledrone.com",
+          "slug": "scaledrone-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\scaledrone-com.mdx"
+        },
+        {
+          "name": "Scalr",
+          "slug": "scalr",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\scalr.mdx"
+        },
+        {
+          "name": "Scraper's Proxy",
+          "slug": "scraper-s-proxy",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\scraper-s-proxy.mdx"
+        },
+        {
+          "name": "Seafile.com",
+          "slug": "seafile-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\seafile-com.mdx"
+        },
+        {
+          "name": "SemanticDiff.com",
+          "slug": "semanticdiff-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\semanticdiff-com.mdx"
+        },
+        {
+          "name": "Serveravatar.com",
+          "slug": "serveravatar-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\serveravatar-com.mdx"
+        },
+        {
+          "name": "Servervana",
+          "slug": "servervana",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\servervana.mdx"
+        },
+        {
+          "name": "Sheet.co",
+          "slug": "sheet-co",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sheet-co.mdx"
+        },
+        {
+          "name": "Sheetson",
+          "slug": "sheetson",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sheetson.mdx"
+        },
+        {
+          "name": "Sheetwith",
+          "slug": "sheetwith",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sheetwith.mdx"
+        },
+        {
+          "name": "Shields.io",
+          "slug": "shields-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\shields-io.mdx"
+        },
+        {
+          "name": "Shipfox",
+          "slug": "shipfox",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\shipfox.mdx"
+        },
+        {
+          "name": "Simplescraper",
+          "slug": "simplescraper",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\simplescraper.mdx"
+        },
+        {
+          "name": "SmartParse",
+          "slug": "smartparse",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\smartparse.mdx"
+        },
+        {
+          "name": "Socket",
+          "slug": "socket",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\socket.mdx"
+        },
+        {
+          "name": "Sofodata",
+          "slug": "sofodata",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sofodata.mdx"
+        },
+        {
+          "name": "Solo",
+          "slug": "solo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\solo.mdx"
+        },
+        {
+          "name": "Sonarcloud.io",
+          "slug": "sonarcloud-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sonarcloud-io.mdx"
+        },
+        {
+          "name": "SOOS",
+          "slug": "soos",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\soos.mdx"
+        },
+        {
+          "name": "SSLabs.com",
+          "slug": "sslabs-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sslabs-com.mdx"
+        },
+        {
+          "name": "Stathat.com",
+          "slug": "stathat-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\stathat-com.mdx"
+        },
+        {
+          "name": "Statsig",
+          "slug": "statsig",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\statsig.mdx"
+        },
+        {
+          "name": "Stickies",
+          "slug": "stickies",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\stickies.mdx"
+        },
+        {
+          "name": "StreamBackdrops",
+          "slug": "streambackdrops",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\streambackdrops.mdx"
+        },
+        {
+          "name": "Sucuri SiteCheck",
+          "slug": "sucuri-sitecheck",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sucuri-sitecheck.mdx"
+        },
+        {
+          "name": "Supabase",
+          "slug": "supabase",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supabase.mdx"
+        },
+        {
+          "name": "Supermaven",
+          "slug": "supermaven",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supermaven.mdx"
+        },
+        {
+          "name": "Supportivekoala",
+          "slug": "supportivekoala",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supportivekoala.mdx"
+        },
+        {
+          "name": "Svix",
+          "slug": "svix",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\svix.mdx"
+        },
+        {
+          "name": "Synadia / NATS",
+          "slug": "synadia-nats",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\synadia-nats.mdx"
+        },
+        {
+          "name": "TemplateFox",
+          "slug": "templatefox",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\templatefox.mdx"
+        },
+        {
+          "name": "Temptr",
+          "slug": "temptr",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\temptr.mdx"
+        },
+        {
+          "name": "Terramate",
+          "slug": "terramate",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\terramate.mdx"
+        },
+        {
+          "name": "Tesults.com",
+          "slug": "tesults-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tesults-com.mdx"
+        },
+        {
+          "name": "Texterify",
+          "slug": "texterify",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\texterify.mdx"
+        },
+        {
+          "name": "TimeCamp",
+          "slug": "timecamp",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\timecamp.mdx"
+        },
+        {
+          "name": "Timeouteo",
+          "slug": "timeouteo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\timeouteo.mdx"
+        },
+        {
+          "name": "TinyMCE",
+          "slug": "tinymce",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tinymce.mdx"
+        },
+        {
+          "name": "Toggled.dev",
+          "slug": "toggled-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\toggled-dev.mdx"
+        },
+        {
+          "name": "Tolgee",
+          "slug": "tolgee",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tolgee.mdx"
+        },
+        {
+          "name": "Transfernow",
+          "slug": "transfernow",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\transfernow.mdx"
+        },
+        {
+          "name": "Transifex.com",
+          "slug": "transifex-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\transifex-com.mdx"
+        },
+        {
+          "name": "Treblle",
+          "slug": "treblle",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\treblle.mdx"
+        },
+        {
+          "name": "TRTC / Tencent RTC",
+          "slug": "trtc-tencent-rtc",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\trtc-tencent-rtc.mdx"
+        },
+        {
+          "name": "Tugboat",
+          "slug": "tugboat",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tugboat.mdx"
+        },
+        {
+          "name": "Turso",
+          "slug": "turso",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\turso.mdx"
+        },
+        {
+          "name": "Tuta",
+          "slug": "tuta",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\tuta.mdx"
+        },
+        {
+          "name": "Upstash",
+          "slug": "upstash",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\upstash.mdx"
+        },
+        {
+          "name": "Userforge.com",
+          "slug": "userforge-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\userforge-com.mdx"
+        },
+        {
+          "name": "Vaadin",
+          "slug": "vaadin",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\vaadin.mdx"
+        },
+        {
+          "name": "Verifalia",
+          "slug": "verifalia",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\verifalia.mdx"
+        },
+        {
+          "name": "Wachete",
+          "slug": "wachete",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\wachete.mdx"
+        },
+        {
+          "name": "Websitepulse.com",
+          "slug": "websitepulse-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\websitepulse-com.mdx"
+        },
+        {
+          "name": "Webvizio",
+          "slug": "webvizio",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\webvizio.mdx"
+        },
+        {
+          "name": "What Is My IP",
+          "slug": "what-is-my-ip",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\what-is-my-ip.mdx"
+        },
+        {
+          "name": "What The Diff",
+          "slug": "what-the-diff",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\what-the-diff.mdx"
+        },
+        {
+          "name": "Windmill.dev",
+          "slug": "windmill-dev",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\windmill-dev.mdx"
+        },
+        {
+          "name": "Wormhol.org",
+          "slug": "wormhol-org",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\wormhol-org.mdx"
+        },
+        {
+          "name": "Wormhole",
+          "slug": "wormhole",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\wormhole.mdx"
+        },
+        {
+          "name": "Wraps",
+          "slug": "wraps",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\wraps.mdx"
+        },
+        {
+          "name": "Wufoo",
+          "slug": "wufoo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\wufoo.mdx"
+        },
+        {
+          "name": "Xcloud.host",
+          "slug": "xcloud-host",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\xcloud-host.mdx"
+        },
+        {
+          "name": "Xitoring.com",
+          "slug": "xitoring-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\xitoring-com.mdx"
+        },
+        {
+          "name": "Zenable",
+          "slug": "zenable",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zenable.mdx"
+        },
+        {
+          "name": "Zoho Assist",
+          "slug": "zoho-assist",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-assist.mdx"
+        },
+        {
+          "name": "Zoho Bookings",
+          "slug": "zoho-bookings",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-bookings.mdx"
+        },
+        {
+          "name": "Zoho Catalyst",
+          "slug": "zoho-catalyst",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-catalyst.mdx"
+        },
+        {
+          "name": "Zoho Checkout",
+          "slug": "zoho-checkout",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-checkout.mdx"
+        },
+        {
+          "name": "Zoho Connect",
+          "slug": "zoho-connect",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-connect.mdx"
+        },
+        {
+          "name": "Zoho Desk",
+          "slug": "zoho-desk",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-desk.mdx"
+        },
+        {
+          "name": "Zoho Notebook",
+          "slug": "zoho-notebook",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-notebook.mdx"
+        },
+        {
+          "name": "Zoho Projects",
+          "slug": "zoho-projects",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-projects.mdx"
+        },
+        {
+          "name": "Zoho Sign",
+          "slug": "zoho-sign",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-sign.mdx"
+        },
+        {
+          "name": "Zoho Sprints",
+          "slug": "zoho-sprints",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-sprints.mdx"
+        },
+        {
+          "name": "Zoho Subscriptions",
+          "slug": "zoho-subscriptions",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-subscriptions.mdx"
+        },
+        {
+          "name": "Zoho Surveys",
+          "slug": "zoho-surveys",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zoho-surveys.mdx"
+        },
+        {
+          "name": "Zuplo",
+          "slug": "zuplo",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zuplo.mdx"
+        }
+      ],
+      "missing": [
+        {
+          "name": "OVH.ie",
+          "slug": "ovh-ie"
+        }
+      ]
+    },
+    {
+      "batch": "messaging.md",
+      "total": 18,
+      "added": [
+        {
+          "name": "Ably",
+          "slug": "ably",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ably.mdx"
+        },
+        {
+          "name": "Azure Notification Hubs",
+          "slug": "azure-notification-hubs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-notification-hubs.mdx"
+        },
+        {
+          "name": "Azure Service Bus",
+          "slug": "azure-service-bus",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-service-bus.mdx"
+        },
+        {
+          "name": "Azure SignalR Service",
+          "slug": "azure-signalr-service",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-signalr-service.mdx"
+        },
+        {
+          "name": "Azure Web PubSub",
+          "slug": "azure-web-pubsub",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-web-pubsub.mdx"
+        },
+        {
+          "name": "DeepLearning.AI Short Courses",
+          "slug": "deeplearning-ai-short-courses",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\deeplearning-ai-short-courses.mdx"
+        },
+        {
+          "name": "Pub/Sub",
+          "slug": "pub-sub",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pub-sub.mdx"
+        },
+        {
+          "name": "Pubnub.com",
+          "slug": "pubnub-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pubnub-com.mdx"
+        },
+        {
+          "name": "Pusher",
+          "slug": "pusher",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pusher.mdx"
+        },
+        {
+          "name": "SES",
+          "slug": "ses",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ses.mdx"
+        },
+        {
+          "name": "SNS",
+          "slug": "sns",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sns.mdx"
+        },
+        {
+          "name": "SQS",
+          "slug": "sqs",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sqs.mdx"
+        },
+        {
+          "name": "SSR Checker",
+          "slug": "ssr-checker",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\ssr-checker.mdx"
+        },
+        {
+          "name": "Upstash Kafka",
+          "slug": "upstash-kafka",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\upstash-kafka.mdx"
+        },
+        {
+          "name": "UseWebhook.com",
+          "slug": "usewebhook-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\usewebhook-com.mdx"
+        },
+        {
+          "name": "Webhook-test.com",
+          "slug": "webhook-test-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\webhook-test-com.mdx"
+        },
+        {
+          "name": "Webhook.site",
+          "slug": "webhook-site",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\webhook-site.mdx"
+        },
+        {
+          "name": "Weights & Biases",
+          "slug": "weights-biases",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\weights-biases.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "observability.md",
+      "total": 37,
+      "added": [
+        {
+          "name": "Azure AI Metrics Advisor",
+          "slug": "azure-ai-metrics-advisor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-ai-metrics-advisor.mdx"
+        },
+        {
+          "name": "Azure Data Catalog",
+          "slug": "azure-data-catalog",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-data-catalog.mdx"
+        },
+        {
+          "name": "Azure Logic Apps",
+          "slug": "azure-logic-apps",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-logic-apps.mdx"
+        },
+        {
+          "name": "Azure Monitor",
+          "slug": "azure-monitor",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-monitor.mdx"
+        },
+        {
+          "name": "Better Stack Uptime",
+          "slug": "better-stack-uptime",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\better-stack-uptime.mdx"
+        },
+        {
+          "name": "Bugsnag",
+          "slug": "bugsnag",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bugsnag.mdx"
+        },
+        {
+          "name": "Checkly",
+          "slug": "checkly",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\checkly.mdx"
+        },
+        {
+          "name": "Datadog",
+          "slug": "datadog",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\datadog.mdx"
+        },
+        {
+          "name": "GlitchTip",
+          "slug": "glitchtip",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\glitchtip.mdx"
+        },
+        {
+          "name": "Grafana Cloud",
+          "slug": "grafana-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\grafana-cloud.mdx"
+        },
+        {
+          "name": "Honeybadger.io",
+          "slug": "honeybadger-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\honeybadger-io.mdx"
+        },
+        {
+          "name": "HS Ping",
+          "slug": "hs-ping",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\hs-ping.mdx"
+        },
+        {
+          "name": "Incidenthub.cloud",
+          "slug": "incidenthub-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\incidenthub-cloud.mdx"
+        },
+        {
+          "name": "Logflare.app",
+          "slug": "logflare-app",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\logflare-app.mdx"
+        },
+        {
+          "name": "Logtail.com",
+          "slug": "logtail-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\logtail-com.mdx"
+        },
+        {
+          "name": "Logto",
+          "slug": "logto",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\logto.mdx"
+        },
+        {
+          "name": "Logzab.com",
+          "slug": "logzab-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\logzab-com.mdx"
+        },
+        {
+          "name": "ManageEngine Log360 Cloud",
+          "slug": "manageengine-log360-cloud",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\manageengine-log360-cloud.mdx"
+        },
+        {
+          "name": "MonitorMonk",
+          "slug": "monitormonk",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\monitormonk.mdx"
+        },
+        {
+          "name": "New Relic",
+          "slug": "new-relic",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\new-relic.mdx"
+        },
+        {
+          "name": "Pingbreak.com",
+          "slug": "pingbreak-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pingbreak-com.mdx"
+        },
+        {
+          "name": "Pingmeter.com",
+          "slug": "pingmeter-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pingmeter-com.mdx"
+        },
+        {
+          "name": "Pingpong.one",
+          "slug": "pingpong-one",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pingpong-one.mdx"
+        },
+        {
+          "name": "Pingram.io",
+          "slug": "pingram-io",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pingram-io.mdx"
+        },
+        {
+          "name": "Pocket Alert",
+          "slug": "pocket-alert",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\pocket-alert.mdx"
+        },
+        {
+          "name": "Project Gatekeeper",
+          "slug": "project-gatekeeper",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\project-gatekeeper.mdx"
+        },
+        {
+          "name": "ProxySentry",
+          "slug": "proxysentry",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\proxysentry.mdx"
+        },
+        {
+          "name": "Rollbar.com",
+          "slug": "rollbar-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\rollbar-com.mdx"
+        },
+        {
+          "name": "ScrapingAnt",
+          "slug": "scrapingant",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\scrapingant.mdx"
+        },
+        {
+          "name": "Sentry",
+          "slug": "sentry",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\sentry.mdx"
+        },
+        {
+          "name": "StatusCake.com",
+          "slug": "statuscake-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\statuscake-com.mdx"
+        },
+        {
+          "name": "StatusGator.com",
+          "slug": "statusgator-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\statusgator-com.mdx"
+        },
+        {
+          "name": "StatusPile",
+          "slug": "statuspile",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\statuspile.mdx"
+        },
+        {
+          "name": "UptimeObserver.com",
+          "slug": "uptimeobserver-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\uptimeobserver-com.mdx"
+        },
+        {
+          "name": "Uptimetoolbox.com",
+          "slug": "uptimetoolbox-com",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\uptimetoolbox-com.mdx"
+        },
+        {
+          "name": "WebScraping.AI",
+          "slug": "webscraping-ai",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\webscraping-ai.mdx"
+        },
+        {
+          "name": "Zenscrape",
+          "slug": "zenscrape",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\zenscrape.mdx"
+        }
+      ],
+      "missing": []
+    },
+    {
+      "batch": "storage.md",
+      "total": 12,
+      "added": [
+        {
+          "name": "Azure Archive Storage",
+          "slug": "azure-archive-storage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-archive-storage.mdx"
+        },
+        {
+          "name": "Azure Blob Storage",
+          "slug": "azure-blob-storage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-blob-storage.mdx"
+        },
+        {
+          "name": "Azure Disk Storage",
+          "slug": "azure-disk-storage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-disk-storage.mdx"
+        },
+        {
+          "name": "Azure File Storage",
+          "slug": "azure-file-storage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\azure-file-storage.mdx"
+        },
+        {
+          "name": "Backblaze B2",
+          "slug": "backblaze-b2",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\backblaze-b2.mdx"
+        },
+        {
+          "name": "Bitbucket",
+          "slug": "bitbucket",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\bitbucket.mdx"
+        },
+        {
+          "name": "Cloud Storage",
+          "slug": "cloud-storage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloud-storage.mdx"
+        },
+        {
+          "name": "Cloudflare R2",
+          "slug": "cloudflare-r2",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\cloudflare-r2.mdx"
+        },
+        {
+          "name": "Glacier",
+          "slug": "glacier",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\glacier.mdx"
+        },
+        {
+          "name": "Oracle Object Storage",
+          "slug": "oracle-object-storage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\oracle-object-storage.mdx"
+        },
+        {
+          "name": "S3",
+          "slug": "s3",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\s3.mdx"
+        },
+        {
+          "name": "Supabase Storage",
+          "slug": "supabase-storage",
+          "path": "C:\\Users\\juliu\\source\\repos\\FreeTierWiki\\content\\services\\supabase-storage.mdx"
+        }
+      ],
+      "missing": []
+    }
+  ]
+}

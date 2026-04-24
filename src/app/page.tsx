@@ -26,7 +26,7 @@ export default async function HomePage() {
     <div className="space-y-12">
       <section className="rounded-2xl border bg-gradient-to-br from-card via-card to-muted p-8 sm:p-10">
         <div className="max-w-3xl space-y-4">
-          <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">FreeTierAtlas v2</p>
+          <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">FreeTierWiki</p>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Choose free tiers with real constraints, not wishful thinking.
           </h1>

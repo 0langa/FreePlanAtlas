@@ -1,4 +1,4 @@
-name = "free-tier-atlas"
+name = "freetierwiki"
 compatibility_date = "2026-04-22"
 
 # Enables `wrangler pages dev` / `wrangler pages deploy` to auto-detect the build output.
