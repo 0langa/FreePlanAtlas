@@ -1,0 +1,2058 @@
+diff --git a/src/components/explorer/explorer-page-client.tsx b/src/components/explorer/explorer-page-client.tsx
+index 8b849cd..398c4ec 100644
+--- a/src/components/explorer/explorer-page-client.tsx
++++ b/src/components/explorer/explorer-page-client.tsx
+@@ -38,14 +38,11 @@ export function ExplorerPageClient({
+   const sortMode = searchParams.get("sort") ?? "best-overall";
+ 
+   return (
+-    <div className="flex flex-col gap-6">
+-      <header className="space-y-3">
+-        <h1 className="text-3xl font-semibold tracking-tight">Universal Explorer</h1>
+-        <p className="max-w-3xl text-muted-foreground">
+-          Filter and compare free-tier options across providers, categories, and implementation patterns.
+-        </p>
+-        <p className="text-sm text-muted-foreground">
+-          {providerRegistry.length} providers · {domainRegistry.length} categories
++    <div className="flex flex-col gap-5">
++      <header>
++        <h1 className="text-2xl font-semibold tracking-tight">Explorer</h1>
++        <p className="text-sm text-muted-foreground mt-0.5">
++          {providerRegistry.length} providers · {domainRegistry.length} categories · {data.length} entries
+         </p>
+       </header>
+ 
+diff --git a/src/components/explorer/explorer-table.tsx b/src/components/explorer/explorer-table.tsx
+index ee969ea..ed477e4 100644
+--- a/src/components/explorer/explorer-table.tsx
++++ b/src/components/explorer/explorer-table.tsx
+@@ -31,6 +31,7 @@ import {
+   SelectContent,
+   SelectItem,
+   SelectTrigger,
++  SelectValue,
+ } from "@/components/ui/select";
+ import {
+   Card,
+@@ -85,18 +86,48 @@ type ExplorerTableProps = {
+   initialSortMode: string;
+ };
+ 
++/* ── risk colour helpers ── */
++function riskColor(risk: string) {
++  switch (risk) {
++    case "none": return "text-emerald-400 bg-emerald-400/10 border-emerald-400/20";
++    case "low": return "text-blue-400 bg-blue-400/10 border-blue-400/20";
++    case "medium": return "text-amber-400 bg-amber-400/10 border-amber-400/20";
++    case "high": return "text-red-400 bg-red-400/10 border-red-400/20";
++    default: return "text-muted-foreground bg-muted border-border";
++  }
++}
++
++function readinessColor(readiness: string) {
++  switch (readiness) {
++    case "production-ready": return "text-emerald-400 bg-emerald-400/10 border-emerald-400/20";
++    case "production-light": return "text-blue-400 bg-blue-400/10 border-blue-400/20";
++    case "side-project": return "text-amber-400 bg-amber-400/10 border-amber-400/20";
++    case "prototype": return "text-muted-foreground bg-muted border-border";
++    default: return "text-muted-foreground bg-muted border-border";
++  }
++}
++
++function difficultyColor(difficulty: string) {
++  switch (difficulty) {
++    case "beginner": return "text-emerald-400";
++    case "intermediate": return "text-amber-400";
++    case "advanced": return "text-red-400";
++    default: return "text-muted-foreground";
++  }
++}
++
+ const columns: ColumnDef<AtlasEntry>[] = [
+   {
+     accessorKey: "title",
+-    header: "Title",
++    header: "Service",
+     cell: ({ row }) => {
+       const entry = row.original;
+       return (
+-        <div className="space-y-1">
+-          <Link href={entry.url} className="font-medium hover:underline">
++        <div className="space-y-0.5 min-w-[200px]">
++          <Link href={entry.url} className="font-medium hover:underline text-foreground">
+             {entry.title}
+           </Link>
+-          <p className="line-clamp-2 text-xs text-muted-foreground">{entry.description}</p>
++          <p className="line-clamp-1 text-xs text-muted-foreground">{entry.description}</p>
+         </div>
+       );
+     },
+@@ -104,22 +135,25 @@ const columns: ColumnDef<AtlasEntry>[] = [
+   {
+     accessorKey: "provider",
+     header: "Provider",
++    cell: ({ row }) => (
++      <span className="text-sm text-muted-foreground whitespace-nowrap">{row.original.provider}</span>
++    ),
+   },
+   {
+     accessorKey: "kind",
+     header: "Type",
+-    cell: ({ row }) => KIND_LABELS[row.original.kind as ContentKind],
++    cell: ({ row }) => (
++      <Badge variant="outline" className="text-[11px] font-medium h-5 px-1.5">
++        {KIND_LABELS[row.original.kind as ContentKind]}
++      </Badge>
++    ),
+   },
+   {
+     accessorKey: "domain",
+     header: "Category",
+-    cell: ({ row }) => DOMAIN_LABELS[row.original.domain],
+-  },
+-  {
+-    accessorKey: "pricingModel",
+-    header: "Pricing",
+-    cell: ({ row }) =>
+-      PRICING_MODEL_LABELS[row.original.pricingModel as keyof typeof PRICING_MODEL_LABELS],
++    cell: ({ row }) => (
++      <span className="text-sm text-muted-foreground whitespace-nowrap">{DOMAIN_LABELS[row.original.domain]}</span>
++    ),
+   },
+   {
+     accessorKey: "freeTierDetails.freeTierType",
+@@ -131,45 +165,50 @@ const columns: ColumnDef<AtlasEntry>[] = [
+   },
+   {
+     accessorKey: "freeTierDetails.overageRisk",
+-    header: "Overage Risk",
+-    cell: ({ row }) =>
+-      OVERAGE_RISK_LABELS[
+-        (row.original.freeTierDetails.overageRisk ?? "low") as keyof typeof OVERAGE_RISK_LABELS
+-      ],
++    header: "Risk",
++    cell: ({ row }) => {
++      const risk = row.original.freeTierDetails.overageRisk ?? "low";
++      return (
++        <Badge variant="outline" className={`text-[11px] h-5 px-1.5 font-medium ${riskColor(risk)}`}>
++          {OVERAGE_RISK_LABELS[risk as keyof typeof OVERAGE_RISK_LABELS]}
++        </Badge>
++      );
++    },
++  },
++  {
++    accessorKey: "productionReadiness",
++    header: "Readiness",
++    cell: ({ row }) => {
++      const readiness = row.original.productionReadiness;
++      return (
++        <Badge variant="outline" className={`text-[11px] h-5 px-1.5 font-medium ${readinessColor(readiness)}`}>
++          {PRODUCTION_READINESS_LABELS[readiness as keyof typeof PRODUCTION_READINESS_LABELS]}
++        </Badge>
++      );
++    },
+   },
+   {
+     accessorKey: "difficulty",
+-    header: "Difficulty",
++    header: "Level",
+     cell: ({ row }) => (
+-      <span className="inline-block min-w-[7.5rem] overflow-hidden text-ellipsis whitespace-nowrap capitalize">
++      <span className={`text-sm capitalize whitespace-nowrap ${difficultyColor(row.original.difficulty)}`}>
+         {row.original.difficulty}
+       </span>
+     ),
+   },
+-  {
+-    accessorKey: "productionReadiness",
+-    header: "Readiness",
+-    cell: ({ row }) =>
+-      PRODUCTION_READINESS_LABELS[row.original.productionReadiness as keyof typeof PRODUCTION_READINESS_LABELS],
+-  },
+-  {
+-    accessorKey: "usefulnessScore",
+-    header: "Usefulness",
+-  },
+-  {
+-    accessorKey: "popularityScore",
+-    header: "Popularity",
+-  },
+   {
+     accessorKey: "tags",
+     header: "Tags",
+     cell: ({ row }) => (
+-      <div className="flex flex-wrap gap-1">
++      <div className="flex flex-wrap gap-1 max-w-[180px]">
+         {row.original.tags.slice(0, 3).map((tag: string) => (
+-          <Badge key={tag} variant="secondary" className="text-xs">
++          <span key={tag} className="text-[11px] text-muted-foreground bg-muted rounded px-1.5 py-0.5">
+             {tag}
+-          </Badge>
++          </span>
+         ))}
++        {row.original.tags.length > 3 && (
++          <span className="text-[11px] text-muted-foreground">+{row.original.tags.length - 3}</span>
++        )}
+       </div>
+     ),
+   },
+@@ -180,58 +219,24 @@ const SORT_LABELS: Record<string, string> = {
+   "lowest-risk": "Lowest billing risk",
+   "easiest-start": "Easiest to start",
+   "no-card": "Best no-card options",
+-  "production-ready": "Best for production-light",
++  "production-ready": "Best for production",
+ };
+ 
+ const DEFAULT_DESKTOP_COLUMNS: VisibilityState = {
+-  pricingModel: false,
+-  usefulnessScore: false,
+-  popularityScore: false,
++  provider: false,
+ };
+ 
+-const COLUMN_STORAGE_KEY = "freetierwiki.explorer.columns";
+-const TAG_STORAGE_KEY = "freetierwiki.explorer.selected-tags";
+-
+-function formatSelectLabel({
+-  label,
+-  value,
+-  total,
+-  valueLabel,
+-}: {
+-  label: string;
+-  value: string;
+-  total: number;
+-  valueLabel?: string;
+-}) {
+-  if (value === "all") {
+-    return `${label} (all ${total})`;
+-  }
+-
+-  return `${label}: ${valueLabel ?? value} (1/${total})`;
+-}
++const COLUMN_STORAGE_KEY = "freetierwiki.explorer.columns.v2";
++const TAG_STORAGE_KEY = "freetierwiki.explorer.selected-tags.v2";
+ 
+ function matchesQuery(entry: AtlasEntry, query: string): boolean {
+-  if (!query.trim()) {
+-    return true;
+-  }
+-
++  if (!query.trim()) return true;
+   const haystack = [
+-    entry.title,
+-    entry.description,
+-    entry.provider,
+-    entry.category,
+-    entry.domain,
+-    entry.productionReadiness,
+-    ...entry.tags,
+-    ...entry.useCases,
+-    ...entry.bestFor,
+-    ...entry.avoidIf,
+-    ...entry.subtypes,
+-    ...entry.audiences,
+-  ]
+-    .join(" ")
+-    .toLowerCase();
+-
++    entry.title, entry.description, entry.provider, entry.category,
++    entry.domain, entry.productionReadiness, ...entry.tags,
++    ...entry.useCases, ...entry.bestFor, ...entry.avoidIf,
++    ...entry.subtypes, ...entry.audiences,
++  ].join(" ").toLowerCase();
+   return haystack.includes(query.toLowerCase());
+ }
+ 
+@@ -249,57 +254,23 @@ type FilterState = {
+ };
+ 
+ function matchesFilters(entry: AtlasEntry, filters: FilterState): boolean {
+-  const {
+-    query,
+-    provider,
+-    tags,
+-    kind,
+-    domain,
+-    freeTierType,
+-    overageRisk,
+-    productionReadiness,
+-    difficulty,
+-    requiresCard,
+-  } = filters;
+-
+-  if (provider !== "all" && entry.provider !== provider) {
+-    return false;
+-  }
+-  if (kind !== "all" && entry.kind !== kind) {
+-    return false;
+-  }
+-  if (domain !== "all" && entry.domain !== domain) {
+-    return false;
+-  }
+-  if (freeTierType !== "all" && (entry.freeTierDetails.freeTierType ?? "always-free") !== freeTierType) {
+-    return false;
+-  }
+-  if (overageRisk !== "all" && (entry.freeTierDetails.overageRisk ?? "low") !== overageRisk) {
+-    return false;
+-  }
+-  if (productionReadiness !== "all" && entry.productionReadiness !== productionReadiness) {
+-    return false;
+-  }
+-  if (difficulty !== "all" && entry.difficulty !== difficulty) {
+-    return false;
+-  }
++  const { query, provider, tags, kind, domain, freeTierType, overageRisk, productionReadiness, difficulty, requiresCard } = filters;
++  if (provider !== "all" && entry.provider !== provider) return false;
++  if (kind !== "all" && entry.kind !== kind) return false;
++  if (domain !== "all" && entry.domain !== domain) return false;
++  if (freeTierType !== "all" && (entry.freeTierDetails.freeTierType ?? "always-free") !== freeTierType) return false;
++  if (overageRisk !== "all" && (entry.freeTierDetails.overageRisk ?? "low") !== overageRisk) return false;
++  if (productionReadiness !== "all" && entry.productionReadiness !== productionReadiness) return false;
++  if (difficulty !== "all" && entry.difficulty !== difficulty) return false;
+   if (requiresCard !== "all") {
+     const expected = requiresCard === "yes";
+-    if ((entry.freeTierDetails.requiresCard ?? false) !== expected) {
+-      return false;
+-    }
++    if ((entry.freeTierDetails.requiresCard ?? false) !== expected) return false;
+   }
+-  if (tags.length > 0 && !tags.every((selected) => entry.tags.includes(selected))) {
+-    return false;
+-  }
+-
++  if (tags.length > 0 && !tags.every((selected) => entry.tags.includes(selected))) return false;
+   return matchesQuery(entry, query);
+ }
+ 
+-function buildCounts<T extends string>(
+-  entries: AtlasEntry[],
+-  getValue: (entry: AtlasEntry) => T,
+-): Map<T, number> {
++function buildCounts<T extends string>(entries: AtlasEntry[], getValue: (entry: AtlasEntry) => T): Map<T, number> {
+   const counts = new Map<T, number>();
+   for (const entry of entries) {
+     const value = getValue(entry);
+@@ -309,48 +280,16 @@ function buildCounts<T extends string>(
+ }
+ 
+ export function ExplorerTable({
+-  data,
+-  providerOptions,
+-  domainOptions,
+-  freeTierTypeOptions,
+-  overageRiskOptions,
+-  productionReadinessOptions,
+-  tagOptions,
+-  initialQuery,
+-  initialProvider,
+-  initialTag,
+-  initialKind,
+-  initialDomain,
+-  initialFreeTierType,
+-  initialOverageRisk,
+-  initialProductionReadiness,
+-  initialDifficulty,
+-  initialRequiresCard,
+-  initialSortMode,
++  data, providerOptions, domainOptions, freeTierTypeOptions, overageRiskOptions,
++  productionReadinessOptions, tagOptions, initialQuery, initialProvider, initialTag,
++  initialKind, initialDomain, initialFreeTierType, initialOverageRisk,
++  initialProductionReadiness, initialDifficulty, initialRequiresCard, initialSortMode,
+ }: ExplorerTableProps) {
+   const {
+-    query,
+-    provider,
+-    kind,
+-    domain,
+-    freeTierType,
+-    overageRisk,
+-    productionReadiness,
+-    difficulty,
+-    requiresCard,
+-    sortMode,
+-    setQuery,
+-    setProvider,
+-    setTag,
+-    setKind,
+-    setDomain,
+-    setFreeTierType,
+-    setOverageRisk,
+-    setProductionReadiness,
+-    setDifficulty,
+-    setRequiresCard,
+-    setSortMode,
+-    initialize,
++    query, provider, kind, domain, freeTierType, overageRisk, productionReadiness,
++    difficulty, requiresCard, sortMode,
++    setQuery, setProvider, setTag, setKind, setDomain, setFreeTierType,
++    setOverageRisk, setProductionReadiness, setDifficulty, setRequiresCard, setSortMode, initialize,
+   } = useExplorerStore();
+ 
+   const [sorting, setSorting] = React.useState<SortingState>([]);
+@@ -360,282 +299,102 @@ export function ExplorerTable({
+   );
+   const [tagQuery, setTagQuery] = React.useState("");
+   const [showAdvancedFilters, setShowAdvancedFilters] = React.useState(false);
+-  const [showAllMatchingTags, setShowAllMatchingTags] = React.useState(false);
++  const [showAllTags, setShowAllTags] = React.useState(false);
+   const [expandedRows, setExpandedRows] = React.useState<Record<string, boolean>>({});
+ 
+-  const kindTotal = Object.keys(KIND_LABELS).length;
+-  const providerTotal = providerOptions.length;
+-  const domainTotal = domainOptions.length;
+-  const freeTierTypeTotal = freeTierTypeOptions.length;
+-  const overageRiskTotal = overageRiskOptions.length;
+-  const productionReadinessTotal = productionReadinessOptions.length;
+-  const difficultyTotal = 3;
+-  const requiresCardTotal = 2;
+-
+   React.useEffect(() => {
+     initialize({
+-      query: initialQuery,
+-      provider: initialProvider || "all",
+-      tag: "all",
+-      kind: initialKind || "all",
+-      domain: initialDomain || "all",
+-      freeTierType: initialFreeTierType || "all",
+-      overageRisk: initialOverageRisk || "all",
+-      productionReadiness: initialProductionReadiness || "all",
+-      difficulty: initialDifficulty || "all",
+-      requiresCard: initialRequiresCard || "all",
+-      sortMode: initialSortMode || "best-overall",
++      query: initialQuery, provider: initialProvider || "all", tag: "all",
++      kind: initialKind || "all", domain: initialDomain || "all",
++      freeTierType: initialFreeTierType || "all", overageRisk: initialOverageRisk || "all",
++      productionReadiness: initialProductionReadiness || "all", difficulty: initialDifficulty || "all",
++      requiresCard: initialRequiresCard || "all", sortMode: initialSortMode || "best-overall",
+     });
+-  }, [
+-    initialDifficulty,
+-    initialDomain,
+-    initialFreeTierType,
+-    initialKind,
+-    initialOverageRisk,
+-    initialProductionReadiness,
+-    initialProvider,
+-    initialQuery,
+-    initialRequiresCard,
+-    initialSortMode,
+-    initialize,
+-  ]);
++  }, [initialDifficulty, initialDomain, initialFreeTierType, initialKind, initialOverageRisk, initialProductionReadiness, initialProvider, initialQuery, initialRequiresCard, initialSortMode, initialize]);
+ 
+-  React.useEffect(() => {
+-    setSelectedTags(initialTag && initialTag !== "all" ? [initialTag] : []);
+-  }, [initialTag]);
++  React.useEffect(() => { setSelectedTags(initialTag && initialTag !== "all" ? [initialTag] : []); }, [initialTag]);
+ 
+   React.useEffect(() => {
+-    if (typeof window === "undefined") {
+-      return;
+-    }
+-
+-    if (initialTag && initialTag !== "all") {
+-      return;
+-    }
+-
++    if (typeof window === "undefined") return;
++    if (initialTag && initialTag !== "all") return;
+     const saved = window.localStorage.getItem(TAG_STORAGE_KEY);
+-    if (!saved) {
+-      return;
+-    }
+-
++    if (!saved) return;
+     try {
+       const parsed = JSON.parse(saved) as string[];
+-      if (Array.isArray(parsed)) {
+-        setSelectedTags(parsed.filter((value) => typeof value === "string"));
+-      }
+-    } catch {
+-      window.localStorage.removeItem(TAG_STORAGE_KEY);
+-    }
++      if (Array.isArray(parsed)) setSelectedTags(parsed.filter((v) => typeof v === "string"));
++    } catch { window.localStorage.removeItem(TAG_STORAGE_KEY); }
+   }, [initialTag]);
+ 
+   React.useEffect(() => {
+-    if (typeof window === "undefined") {
+-      return;
+-    }
+-
++    if (typeof window === "undefined") return;
+     const saved = window.localStorage.getItem(COLUMN_STORAGE_KEY);
+-    if (!saved) {
+-      return;
+-    }
+-
++    if (!saved) return;
+     try {
+       const parsed = JSON.parse(saved) as VisibilityState;
+-      setColumnVisibility({
+-        ...DEFAULT_DESKTOP_COLUMNS,
+-        ...parsed,
+-      });
+-    } catch {
+-      window.localStorage.removeItem(COLUMN_STORAGE_KEY);
+-    }
++      setColumnVisibility({ ...DEFAULT_DESKTOP_COLUMNS, ...parsed });
++    } catch { window.localStorage.removeItem(COLUMN_STORAGE_KEY); }
+   }, []);
+ 
+   React.useEffect(() => {
+-    if (typeof window === "undefined") {
+-      return;
+-    }
+-
++    if (typeof window === "undefined") return;
+     window.localStorage.setItem(COLUMN_STORAGE_KEY, JSON.stringify(columnVisibility));
+   }, [columnVisibility]);
+ 
+-  React.useEffect(() => {
+-    setShowAllMatchingTags(false);
+-  }, [tagQuery]);
++  React.useEffect(() => { setShowAllTags(false); }, [tagQuery]);
+ 
+-  React.useEffect(() => {
+-    setTag(selectedTags[0] ?? "all");
+-  }, [selectedTags, setTag]);
++  React.useEffect(() => { setTag(selectedTags[0] ?? "all"); }, [selectedTags, setTag]);
+ 
+   React.useEffect(() => {
+-    if (typeof window === "undefined") {
+-      return;
+-    }
+-
++    if (typeof window === "undefined") return;
+     window.localStorage.setItem(TAG_STORAGE_KEY, JSON.stringify(selectedTags));
+   }, [selectedTags]);
+ 
+-  const rankEntry = React.useCallback(
+-    (entry: AtlasEntry): number => {
+-      const usefulness = entry.usefulnessScore ?? 0;
+-      const popularity = entry.popularityScore ?? 0;
+-      const overage = entry.freeTierDetails.overageRisk ?? "low";
+-      const requires = entry.freeTierDetails.requiresCard ?? false;
+-      const readiness = entry.productionReadiness;
+-
+-      switch (sortMode) {
+-        case "lowest-risk":
+-          return (
+-            (overage === "none" ? 100 : overage === "low" ? 75 : overage === "medium" ? 40 : 10) +
+-            (requires ? 0 : 20)
+-          );
+-        case "easiest-start":
+-          return entry.difficulty === "beginner" ? 100 : entry.difficulty === "intermediate" ? 70 : 40;
+-        case "no-card":
+-          return requires ? 0 : 100;
+-        case "production-ready":
+-          return readiness === "production-ready" ? 100 : readiness === "production-light" ? 70 : 30;
+-        case "best-overall":
+-        default:
+-          return usefulness * 0.65 + popularity * 0.35;
+-      }
+-    },
+-    [sortMode],
+-  );
++  const rankEntry = React.useCallback((entry: AtlasEntry): number => {
++    const usefulness = entry.usefulnessScore ?? 0;
++    const popularity = entry.popularityScore ?? 0;
++    const overage = entry.freeTierDetails.overageRisk ?? "low";
++    const requires = entry.freeTierDetails.requiresCard ?? false;
++    const readiness = entry.productionReadiness;
++    switch (sortMode) {
++      case "lowest-risk":
++        return (overage === "none" ? 100 : overage === "low" ? 75 : overage === "medium" ? 40 : 10) + (requires ? 0 : 20);
++      case "easiest-start":
++        return entry.difficulty === "beginner" ? 100 : entry.difficulty === "intermediate" ? 70 : 40;
++      case "no-card":
++        return requires ? 0 : 100;
++      case "production-ready":
++        return readiness === "production-ready" ? 100 : readiness === "production-light" ? 70 : 30;
++      case "best-overall":
++      default:
++        return usefulness * 0.65 + popularity * 0.35;
++    }
++  }, [sortMode]);
+ 
+   const filteredData = React.useMemo(() => {
+-    const matched = data.filter((entry) => {
+-      return matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind,
+-        domain,
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness,
+-        difficulty,
+-        requiresCard,
+-      });
+-    });
+-
++    const matched = data.filter((entry) =>
++      matchesFilters(entry, { query, provider, tags: selectedTags, kind, domain, freeTierType, overageRisk, productionReadiness, difficulty, requiresCard }),
++    );
+     return matched.sort((a, b) => rankEntry(b) - rankEntry(a));
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    freeTierType,
+-    kind,
+-    overageRisk,
+-    productionReadiness,
+-    provider,
+-    query,
+-    rankEntry,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++  }, [data, difficulty, domain, freeTierType, kind, overageRisk, productionReadiness, provider, query, rankEntry, requiresCard, selectedTags]);
+ 
++  /* counts for filtered dropdowns */
+   const providerCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider: "all",
+-        tags: selectedTags,
+-        kind,
+-        domain,
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness,
+-        difficulty,
+-        requiresCard,
+-      }),
+-    );
+-    return buildCounts(countsData, (entry) => entry.provider);
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    freeTierType,
+-    kind,
+-    overageRisk,
+-    productionReadiness,
+-    query,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider: "all", tags: selectedTags, kind, domain, freeTierType, overageRisk, productionReadiness, difficulty, requiresCard }));
++    return buildCounts(countsData, (e) => e.provider);
++  }, [data, difficulty, domain, freeTierType, kind, overageRisk, productionReadiness, query, requiresCard, selectedTags]);
+ 
+   const kindCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind: "all",
+-        domain,
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness,
+-        difficulty,
+-        requiresCard,
+-      }),
+-    );
+-    return buildCounts(countsData, (entry) => entry.kind as ContentKind);
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    freeTierType,
+-    overageRisk,
+-    productionReadiness,
+-    provider,
+-    query,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: selectedTags, kind: "all", domain, freeTierType, overageRisk, productionReadiness, difficulty, requiresCard }));
++    return buildCounts(countsData, (e) => e.kind as ContentKind);
++  }, [data, difficulty, domain, freeTierType, overageRisk, productionReadiness, provider, query, requiresCard, selectedTags]);
+ 
+   const domainCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind,
+-        domain: "all",
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness,
+-        difficulty,
+-        requiresCard,
+-      }),
+-    );
+-    return buildCounts<string>(countsData, (entry) => entry.domain);
+-  }, [
+-    data,
+-    difficulty,
+-    freeTierType,
+-    kind,
+-    overageRisk,
+-    productionReadiness,
+-    provider,
+-    query,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: selectedTags, kind, domain: "all", freeTierType, overageRisk, productionReadiness, difficulty, requiresCard }));
++    return buildCounts<string>(countsData, (e) => e.domain);
++  }, [data, difficulty, freeTierType, kind, overageRisk, productionReadiness, provider, query, requiresCard, selectedTags]);
+ 
+   const tagCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: [],
+-        kind,
+-        domain,
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness,
+-        difficulty,
+-        requiresCard,
+-      }),
+-    );
+-
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: [], kind, domain, freeTierType, overageRisk, productionReadiness, difficulty, requiresCard }));
+     const counts = new Map<string, number>();
+     for (const entry of countsData) {
+       for (const entryTag of entry.tags) {
+@@ -643,901 +402,470 @@ export function ExplorerTable({
+       }
+     }
+     return counts;
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    freeTierType,
+-    kind,
+-    overageRisk,
+-    productionReadiness,
+-    provider,
+-    query,
+-    requiresCard,
+-  ]);
++  }, [data, difficulty, domain, freeTierType, kind, overageRisk, productionReadiness, provider, query, requiresCard]);
+ 
+   const freeTierTypeCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind,
+-        domain,
+-        freeTierType: "all",
+-        overageRisk,
+-        productionReadiness,
+-        difficulty,
+-        requiresCard,
+-      }),
+-    );
+-    return buildCounts(
+-      countsData,
+-      (entry) => (entry.freeTierDetails.freeTierType ?? "always-free") as string,
+-    );
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    kind,
+-    overageRisk,
+-    productionReadiness,
+-    provider,
+-    query,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: selectedTags, kind, domain, freeTierType: "all", overageRisk, productionReadiness, difficulty, requiresCard }));
++    return buildCounts(countsData, (e) => (e.freeTierDetails.freeTierType ?? "always-free") as string);
++  }, [data, difficulty, domain, kind, overageRisk, productionReadiness, provider, query, requiresCard, selectedTags]);
+ 
+   const overageRiskCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind,
+-        domain,
+-        freeTierType,
+-        overageRisk: "all",
+-        productionReadiness,
+-        difficulty,
+-        requiresCard,
+-      }),
+-    );
+-    return buildCounts(
+-      countsData,
+-      (entry) => (entry.freeTierDetails.overageRisk ?? "low") as string,
+-    );
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    freeTierType,
+-    kind,
+-    productionReadiness,
+-    provider,
+-    query,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: selectedTags, kind, domain, freeTierType, overageRisk: "all", productionReadiness, difficulty, requiresCard }));
++    return buildCounts(countsData, (e) => (e.freeTierDetails.overageRisk ?? "low") as string);
++  }, [data, difficulty, domain, freeTierType, kind, productionReadiness, provider, query, requiresCard, selectedTags]);
+ 
+   const productionReadinessCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind,
+-        domain,
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness: "all",
+-        difficulty,
+-        requiresCard,
+-      }),
+-    );
+-    return buildCounts(countsData, (entry) => entry.productionReadiness);
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    freeTierType,
+-    kind,
+-    overageRisk,
+-    provider,
+-    query,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: selectedTags, kind, domain, freeTierType, overageRisk, productionReadiness: "all", difficulty, requiresCard }));
++    return buildCounts(countsData, (e) => e.productionReadiness);
++  }, [data, difficulty, domain, freeTierType, kind, overageRisk, provider, query, requiresCard, selectedTags]);
+ 
+   const difficultyCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind,
+-        domain,
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness,
+-        difficulty: "all",
+-        requiresCard,
+-      }),
+-    );
+-    return buildCounts(countsData, (entry) => entry.difficulty as FilterDifficulty);
+-  }, [
+-    data,
+-    domain,
+-    freeTierType,
+-    kind,
+-    overageRisk,
+-    productionReadiness,
+-    provider,
+-    query,
+-    requiresCard,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: selectedTags, kind, domain, freeTierType, overageRisk, productionReadiness, difficulty: "all", requiresCard }));
++    return buildCounts(countsData, (e) => e.difficulty as FilterDifficulty);
++  }, [data, domain, freeTierType, kind, overageRisk, productionReadiness, provider, query, requiresCard, selectedTags]);
+ 
+   const requiresCardCounts = React.useMemo(() => {
+-    const countsData = data.filter((entry) =>
+-      matchesFilters(entry, {
+-        query,
+-        provider,
+-        tags: selectedTags,
+-        kind,
+-        domain,
+-        freeTierType,
+-        overageRisk,
+-        productionReadiness,
+-        difficulty,
+-        requiresCard: "all",
+-      }),
+-    );
+-    return buildCounts(countsData, (entry) => (entry.freeTierDetails.requiresCard ? "yes" : "no"));
+-  }, [
+-    data,
+-    difficulty,
+-    domain,
+-    freeTierType,
+-    kind,
+-    overageRisk,
+-    productionReadiness,
+-    provider,
+-    query,
+-    selectedTags,
+-  ]);
++    const countsData = data.filter((e) => matchesFilters(e, { query, provider, tags: selectedTags, kind, domain, freeTierType, overageRisk, productionReadiness, difficulty, requiresCard: "all" }));
++    return buildCounts(countsData, (e) => (e.freeTierDetails.requiresCard ? "yes" : "no"));
++  }, [data, difficulty, domain, freeTierType, kind, overageRisk, productionReadiness, provider, query, requiresCard, selectedTags]);
+ 
+   const visibleTagOptions = React.useMemo(() => {
+     const normalizedQuery = tagQuery.trim().toLowerCase();
+     const sorted = tagOptions
+       .filter((item) => (tagCounts.get(item.value) ?? 0) > 0)
+       .sort((a, b) => (tagCounts.get(b.value) ?? 0) - (tagCounts.get(a.value) ?? 0));
+-
+-    const matching = !normalizedQuery
+-      ? sorted
+-      : sorted.filter((item) => item.value.toLowerCase().includes(normalizedQuery));
+-
+-    return showAllMatchingTags ? matching : matching.slice(0, 12);
+-  }, [showAllMatchingTags, tagCounts, tagOptions, tagQuery]);
+-
+-  const featuredTagOptions = React.useMemo(
+-    () =>
+-      tagOptions
+-        .filter((item) => (tagCounts.get(item.value) ?? 0) > 0)
+-        .sort((a, b) => (tagCounts.get(b.value) ?? 0) - (tagCounts.get(a.value) ?? 0))
+-        .slice(0, 8),
+-    [tagCounts, tagOptions],
+-  );
++    const matching = !normalizedQuery ? sorted : sorted.filter((item) => item.value.toLowerCase().includes(normalizedQuery));
++    return showAllTags ? matching : matching.slice(0, 16);
++  }, [showAllTags, tagCounts, tagOptions, tagQuery]);
+ 
+   const toggleTag = React.useCallback((value: string) => {
+-    setSelectedTags((current) =>
+-      current.includes(value) ? current.filter((tagItem) => tagItem !== value) : [...current, value],
+-    );
++    setSelectedTags((current) => current.includes(value) ? current.filter((t) => t !== value) : [...current, value]);
+   }, []);
+ 
+   const resetAllFilters = React.useCallback(() => {
+-    setQuery("");
+-    setProvider("all");
+-    setSelectedTags([]);
+-    setKind("all");
+-    setDomain("all");
+-    setFreeTierType("all");
+-    setOverageRisk("all");
+-    setProductionReadiness("all");
+-    setDifficulty("all");
+-    setRequiresCard("all");
+-    setSortMode("best-overall");
+-    setTagQuery("");
+-  }, [
+-    setDifficulty,
+-    setDomain,
+-    setFreeTierType,
+-    setKind,
+-    setOverageRisk,
+-    setProductionReadiness,
+-    setProvider,
+-    setQuery,
+-    setRequiresCard,
+-    setSortMode,
+-  ]);
++    setQuery(""); setProvider("all"); setSelectedTags([]); setKind("all"); setDomain("all");
++    setFreeTierType("all"); setOverageRisk("all"); setProductionReadiness("all"); setDifficulty("all");
++    setRequiresCard("all"); setSortMode("best-overall"); setTagQuery("");
++  }, [setDifficulty, setDomain, setFreeTierType, setKind, setOverageRisk, setProductionReadiness, setProvider, setQuery, setRequiresCard, setSortMode]);
+ 
+   const activeFilterCount = [
+-    query.trim() ? 1 : 0,
+-    provider !== "all" ? 1 : 0,
+-    selectedTags.length > 0 ? 1 : 0,
+-    kind !== "all" ? 1 : 0,
+-    domain !== "all" ? 1 : 0,
+-    freeTierType !== "all" ? 1 : 0,
+-    overageRisk !== "all" ? 1 : 0,
+-    productionReadiness !== "all" ? 1 : 0,
+-    difficulty !== "all" ? 1 : 0,
+-    requiresCard !== "all" ? 1 : 0,
+-  ].reduce((sum, value) => sum + value, 0);
++    query.trim() ? 1 : 0, provider !== "all" ? 1 : 0, selectedTags.length > 0 ? 1 : 0,
++    kind !== "all" ? 1 : 0, domain !== "all" ? 1 : 0, freeTierType !== "all" ? 1 : 0,
++    overageRisk !== "all" ? 1 : 0, productionReadiness !== "all" ? 1 : 0,
++    difficulty !== "all" ? 1 : 0, requiresCard !== "all" ? 1 : 0,
++  ].reduce((sum, v) => sum + v, 0);
+ 
+   const hasCustomColumns = Object.entries(columnVisibility).some(
+     ([key, value]) => (DEFAULT_DESKTOP_COLUMNS[key] ?? true) !== value,
+   );
+ 
+   const toggleExpandedRow = React.useCallback((slug: string) => {
+-    setExpandedRows((current) => ({
+-      ...current,
+-      [slug]: !current[slug],
+-    }));
++    setExpandedRows((current) => ({ ...current, [slug]: !current[slug] }));
+   }, []);
+ 
+-  const resetColumns = React.useCallback(() => {
+-    setColumnVisibility(DEFAULT_DESKTOP_COLUMNS);
+-  }, []);
++  const resetColumns = React.useCallback(() => setColumnVisibility(DEFAULT_DESKTOP_COLUMNS), []);
+ 
+   const table = useReactTable({
+-    data: filteredData,
+-    columns,
+-    onSortingChange: setSorting,
+-    onColumnVisibilityChange: setColumnVisibility,
+-    getCoreRowModel: getCoreRowModel(),
+-    getSortedRowModel: getSortedRowModel(),
+-    getFilteredRowModel: getFilteredRowModel(),
+-    state: {
+-      sorting,
+-      columnVisibility,
+-    },
++    data: filteredData, columns, onSortingChange: setSorting, onColumnVisibilityChange: setColumnVisibility,
++    getCoreRowModel: getCoreRowModel(), getSortedRowModel: getSortedRowModel(), getFilteredRowModel: getFilteredRowModel(),
++    state: { sorting, columnVisibility },
+   });
+ 
++  /* ── active filter chips ── */
++  const activeFilters = React.useMemo(() => {
++    const filters: Array<{ label: string; key: string; onRemove: () => void }> = [];
++    if (query.trim()) filters.push({ label: `Search: "${query}"`, key: "query", onRemove: () => setQuery("") });
++    if (kind !== "all") filters.push({ label: `Type: ${KIND_LABELS[kind as ContentKind]}`, key: "kind", onRemove: () => setKind("all") });
++    if (provider !== "all") filters.push({ label: `Provider: ${provider}`, key: "provider", onRemove: () => setProvider("all") });
++    if (domain !== "all") filters.push({ label: `Category: ${DOMAIN_LABELS[domain as keyof typeof DOMAIN_LABELS]}`, key: "domain", onRemove: () => setDomain("all") });
++    if (freeTierType !== "all") filters.push({ label: `Free Tier: ${FREE_TIER_TYPE_LABELS[freeTierType as keyof typeof FREE_TIER_TYPE_LABELS]}`, key: "freeTierType", onRemove: () => setFreeTierType("all") });
++    if (overageRisk !== "all") filters.push({ label: `Risk: ${OVERAGE_RISK_LABELS[overageRisk as keyof typeof OVERAGE_RISK_LABELS]}`, key: "overageRisk", onRemove: () => setOverageRisk("all") });
++    if (productionReadiness !== "all") filters.push({ label: `Readiness: ${PRODUCTION_READINESS_LABELS[productionReadiness as keyof typeof PRODUCTION_READINESS_LABELS]}`, key: "productionReadiness", onRemove: () => setProductionReadiness("all") });
++    if (difficulty !== "all") filters.push({ label: `Level: ${difficulty}`, key: "difficulty", onRemove: () => setDifficulty("all") });
++    if (requiresCard !== "all") filters.push({ label: requiresCard === "yes" ? "Requires card" : "No card", key: "requiresCard", onRemove: () => setRequiresCard("all") });
++    return filters;
++  }, [query, kind, provider, domain, freeTierType, overageRisk, productionReadiness, difficulty, requiresCard, setQuery, setKind, setProvider, setDomain, setFreeTierType, setOverageRisk, setProductionReadiness, setDifficulty, setRequiresCard]);
++
+   return (
+     <div className="space-y-4">
+-      <div className="rounded-xl border bg-card p-4 shadow-sm">
+-        <div className="flex flex-col gap-4">
+-          <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+-            <div className="space-y-1">
+-              <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+-                <Search className="size-4 text-muted-foreground" />
+-                Search and refine
+-              </div>
+-              <p className="text-sm text-muted-foreground">
+-                Start with broad filters, then narrow by pricing, readiness, or tags.
+-              </p>
+-            </div>
+-            <div className="flex flex-wrap items-center gap-2">
+-              <Badge variant="outline" className="h-6 px-2 text-xs font-medium">
+-                {filteredData.length} matches
+-              </Badge>
+-              <Badge variant="secondary" className="h-6 px-2 text-xs font-medium">
+-                {activeFilterCount} active filters
+-              </Badge>
+-              <Button variant="ghost" size="sm" onClick={resetAllFilters} disabled={activeFilterCount === 0}>
+-                Reset all
++      {/* ── Top Filter Bar ── */}
++      <div className="flex flex-col gap-3">
++        <div className="flex flex-wrap items-center gap-2">
++          <div className="relative flex-1 min-w-[200px] max-w-md">
++            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
++            <Input
++              placeholder="Search services, tools, resources..."
++              value={query}
++              onChange={(e) => setQuery(e.target.value)}
++              className="pl-9 h-9 text-sm"
++            />
++          </div>
++          <Select value={kind} onValueChange={(v) => setKind(v ?? "all")}>
++            <SelectTrigger className="h-9 text-xs w-auto min-w-[110px]">
++              <SelectValue placeholder="All Types" />
++            </SelectTrigger>
++            <SelectContent>
++              <SelectItem value="all">All Types</SelectItem>
++              {Object.entries(KIND_LABELS).filter(([v]) => (kindCounts.get(v as ContentKind) ?? 0) > 0).map(([v, label]) => (
++                <SelectItem key={v} value={v}>{label} ({kindCounts.get(v as ContentKind) ?? 0})</SelectItem>
++              ))}
++            </SelectContent>
++          </Select>
++          <Select value={provider} onValueChange={(v) => setProvider(v ?? "all")}>
++            <SelectTrigger className="h-9 text-xs w-auto min-w-[130px]">
++              <SelectValue placeholder="All Providers" />
++            </SelectTrigger>
++            <SelectContent>
++              <SelectItem value="all">All Providers</SelectItem>
++              {providerOptions.filter((item) => (providerCounts.get(item.value) ?? 0) > 0).map((item) => (
++                <SelectItem key={item.value} value={item.value}>{item.value} ({providerCounts.get(item.value) ?? 0})</SelectItem>
++              ))}
++            </SelectContent>
++          </Select>
++          <Select value={domain} onValueChange={(v) => setDomain(v ?? "all")}>
++            <SelectTrigger className="h-9 text-xs w-auto min-w-[130px]">
++              <SelectValue placeholder="All Categories" />
++            </SelectTrigger>
++            <SelectContent>
++              <SelectItem value="all">All Categories</SelectItem>
++              {domainOptions.filter((item) => (domainCounts.get(item.value as string) ?? 0) > 0).map((item) => (
++                <SelectItem key={item.value} value={item.value}>{DOMAIN_LABELS[item.value as keyof typeof DOMAIN_LABELS]} ({domainCounts.get(item.value as string) ?? 0})</SelectItem>
++              ))}
++            </SelectContent>
++          </Select>
++          <Button
++            variant={showAdvancedFilters ? "secondary" : "outline"}
++            size="sm"
++            className="h-9 text-xs gap-1.5"
++            onClick={() => setShowAdvancedFilters((c) => !c)}
++          >
++            <SlidersHorizontal className="size-3.5" />
++            Filters
++            {activeFilterCount > 0 && (
++              <span className="ml-0.5 rounded-full bg-primary text-primary-foreground text-[10px] w-4 h-4 flex items-center justify-center">
++                {activeFilterCount}
++              </span>
++            )}
++          </Button>
++          <div className="flex items-center gap-2 ml-auto">
++            <Select value={sortMode} onValueChange={(v) => setSortMode(v ?? "best-overall")}>
++              <SelectTrigger className="h-9 text-xs w-auto min-w-[140px]">
++                <SelectValue />
++              </SelectTrigger>
++              <SelectContent>
++                {Object.entries(SORT_LABELS).map(([value, label]) => (
++                  <SelectItem key={value} value={value}>{label}</SelectItem>
++                ))}
++              </SelectContent>
++            </Select>
++            <DropdownMenu>
++              <DropdownMenuTrigger render={<Button variant="outline" size="sm" className="h-9 text-xs">Columns</Button>} />
++              <DropdownMenuContent align="end" className="w-44">
++                <DropdownMenuGroup>
++                  <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
++                  <DropdownMenuSeparator />
++                  {table.getAllColumns().filter((c) => c.getCanHide()).map((column) => {
++                    const headerValue = column.columnDef.header;
++                    const label = typeof headerValue === "string" ? headerValue : column.id;
++                    return (
++                      <DropdownMenuCheckboxItem key={column.id} className="capitalize" checked={column.getIsVisible()} onCheckedChange={(value) => column.toggleVisibility(!!value)}>
++                        {label}
++                      </DropdownMenuCheckboxItem>
++                    );
++                  })}
++                </DropdownMenuGroup>
++              </DropdownMenuContent>
++            </DropdownMenu>
++            {activeFilterCount > 0 && (
++              <Button variant="ghost" size="sm" className="h-9 text-xs" onClick={resetAllFilters}>
++                Reset
+               </Button>
+-            </div>
++            )}
+           </div>
++        </div>
+ 
+-          <div className="grid gap-4 xl:grid-cols-[minmax(0,1.65fr)_minmax(320px,0.95fr)]">
+-            <div className="space-y-4">
+-              <div className="rounded-xl border border-border/70 bg-background/70 p-4">
+-                <div className="mb-3 space-y-1">
+-                  <h3 className="text-sm font-semibold text-foreground">Browse essentials</h3>
+-                  <p className="text-xs text-muted-foreground">
+-                    Use the main controls people expect first: search, type, provider, and category.
+-                  </p>
+-                </div>
+-                <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+-                  <Input
+-                    placeholder="Search title, tags, provider..."
+-                    value={query}
+-                    onChange={(event) => setQuery(event.target.value)}
+-                    className="md:col-span-2 xl:col-span-2"
+-                  />
+-                  <Select value={kind} onValueChange={(value) => setKind(value ?? "all")}>
+-                    <SelectTrigger>
+-                      <span className="truncate text-sm">
+-                        {formatSelectLabel({
+-                          label: "Types",
+-                          value: kind,
+-                          total: kindTotal,
+-                          valueLabel: KIND_LABELS[kind as ContentKind],
+-                        })}
+-                      </span>
+-                    </SelectTrigger>
+-                    <SelectContent>
+-                      <SelectItem value="all">All types</SelectItem>
+-                      {Object.entries(KIND_LABELS)
+-                        .filter(([value]) => (kindCounts.get(value as ContentKind) ?? 0) > 0)
+-                        .map(([value, label]) => (
+-                          <SelectItem key={value} value={value}>
+-                            {label} ({kindCounts.get(value as ContentKind) ?? 0})
+-                          </SelectItem>
+-                        ))}
+-                    </SelectContent>
+-                  </Select>
+-                  <Select value={provider} onValueChange={(value) => setProvider(value ?? "all")}>
+-                    <SelectTrigger>
+-                      <span className="truncate text-sm">
+-                        {formatSelectLabel({
+-                          label: "Providers",
+-                          value: provider,
+-                          total: providerTotal,
+-                          valueLabel: provider === "all" ? undefined : provider,
+-                        })}
+-                      </span>
+-                    </SelectTrigger>
+-                    <SelectContent>
+-                      <SelectItem value="all">All providers</SelectItem>
+-                      {providerOptions
+-                        .filter((item) => (providerCounts.get(item.value) ?? 0) > 0)
+-                        .map((item) => (
+-                          <SelectItem key={item.value} value={item.value}>
+-                            {item.value} ({providerCounts.get(item.value) ?? 0})
+-                          </SelectItem>
+-                        ))}
+-                    </SelectContent>
+-                  </Select>
+-                  <Select value={domain} onValueChange={(value) => setDomain(value ?? "all")}>
+-                    <SelectTrigger>
+-                      <span className="truncate text-sm">
+-                        {formatSelectLabel({
+-                          label: "Categories",
+-                          value: domain,
+-                          total: domainTotal,
+-                          valueLabel: DOMAIN_LABELS[domain as keyof typeof DOMAIN_LABELS],
+-                        })}
+-                      </span>
+-                    </SelectTrigger>
+-                    <SelectContent>
+-                      <SelectItem value="all">All categories</SelectItem>
+-                      {domainOptions
+-                        .filter((item) => (domainCounts.get(item.value as string) ?? 0) > 0)
+-                        .map((item) => (
+-                          <SelectItem key={item.value} value={item.value}>
+-                            {DOMAIN_LABELS[item.value as keyof typeof DOMAIN_LABELS]} ({
+-                              domainCounts.get(item.value as string) ?? 0
+-                            })
+-                          </SelectItem>
+-                        ))}
+-                    </SelectContent>
+-                  </Select>
+-                </div>
+-              </div>
+-
+-              <div className="rounded-xl border border-border/70 bg-background/70 p-4">
+-                <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+-                  <div className="space-y-1">
+-                    <h3 className="text-sm font-semibold text-foreground">Advanced filters</h3>
+-                    <p className="text-xs text-muted-foreground">
+-                      Narrow by billing risk, readiness, and setup effort when needed.
+-                    </p>
+-                  </div>
+-                  <Button
+-                    variant="outline"
+-                    size="sm"
+-                    onClick={() => setShowAdvancedFilters((current) => !current)}
+-                  >
+-                    <SlidersHorizontal className="size-3.5" />
+-                    {showAdvancedFilters ? "Hide advanced" : "Show advanced"}
+-                    <ChevronDown className={`size-3.5 transition-transform ${showAdvancedFilters ? "rotate-180" : ""}`} />
+-                  </Button>
+-                </div>
+-
+-                {showAdvancedFilters ? (
+-                  <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+-                    <Select value={freeTierType} onValueChange={(value) => setFreeTierType(value ?? "all")}>
+-                      <SelectTrigger>
+-                        <span className="truncate text-sm">
+-                          {formatSelectLabel({
+-                            label: "Free tier",
+-                            value: freeTierType,
+-                            total: freeTierTypeTotal,
+-                            valueLabel:
+-                              FREE_TIER_TYPE_LABELS[freeTierType as keyof typeof FREE_TIER_TYPE_LABELS],
+-                          })}
+-                        </span>
+-                      </SelectTrigger>
+-                      <SelectContent>
+-                        <SelectItem value="all">All types</SelectItem>
+-                        {freeTierTypeOptions
+-                          .filter((item) => (freeTierTypeCounts.get(item.value) ?? 0) > 0)
+-                          .map((item) => (
+-                            <SelectItem key={item.value} value={item.value}>
+-                              {FREE_TIER_TYPE_LABELS[item.value as keyof typeof FREE_TIER_TYPE_LABELS]} ({
+-                                freeTierTypeCounts.get(item.value) ?? 0
+-                              })
+-                            </SelectItem>
+-                          ))}
+-                      </SelectContent>
+-                    </Select>
+-                    <Select value={overageRisk} onValueChange={(value) => setOverageRisk(value ?? "all")}>
+-                      <SelectTrigger>
+-                        <span className="truncate text-sm">
+-                          {formatSelectLabel({
+-                            label: "Overage risk",
+-                            value: overageRisk,
+-                            total: overageRiskTotal,
+-                            valueLabel: OVERAGE_RISK_LABELS[overageRisk as keyof typeof OVERAGE_RISK_LABELS],
+-                          })}
+-                        </span>
+-                      </SelectTrigger>
+-                      <SelectContent>
+-                        <SelectItem value="all">All risk levels</SelectItem>
+-                        {overageRiskOptions
+-                          .filter((item) => (overageRiskCounts.get(item.value) ?? 0) > 0)
+-                          .map((item) => (
+-                            <SelectItem key={item.value} value={item.value}>
+-                              {OVERAGE_RISK_LABELS[item.value as keyof typeof OVERAGE_RISK_LABELS]} ({
+-                                overageRiskCounts.get(item.value) ?? 0
+-                              })
+-                            </SelectItem>
+-                          ))}
+-                      </SelectContent>
+-                    </Select>
+-                    <Select
+-                      value={productionReadiness}
+-                      onValueChange={(value) => setProductionReadiness(value ?? "all")}
+-                    >
+-                      <SelectTrigger>
+-                        <span className="truncate text-sm">
+-                          {formatSelectLabel({
+-                            label: "Readiness",
+-                            value: productionReadiness,
+-                            total: productionReadinessTotal,
+-                            valueLabel:
+-                              PRODUCTION_READINESS_LABELS[
+-                                productionReadiness as keyof typeof PRODUCTION_READINESS_LABELS
+-                              ],
+-                          })}
+-                        </span>
+-                      </SelectTrigger>
+-                      <SelectContent>
+-                        <SelectItem value="all">All readiness levels</SelectItem>
+-                        {(productionReadinessOptions as Array<RegistryItem & { value: ProductionReadiness }>)
+-                          .filter((item) => (productionReadinessCounts.get(item.value) ?? 0) > 0)
+-                          .map((item) => (
+-                            <SelectItem key={item.value} value={item.value}>
+-                              {PRODUCTION_READINESS_LABELS[
+-                                item.value as keyof typeof PRODUCTION_READINESS_LABELS
+-                              ]} ({productionReadinessCounts.get(item.value) ?? 0})
+-                            </SelectItem>
+-                          ))}
+-                      </SelectContent>
+-                    </Select>
+-                    <Select value={difficulty} onValueChange={(value) => setDifficulty(value ?? "all")}>
+-                      <SelectTrigger>
+-                        <span className="truncate text-sm">
+-                          {formatSelectLabel({
+-                            label: "Difficulty",
+-                            value: difficulty,
+-                            total: difficultyTotal,
+-                            valueLabel: difficulty === "all" ? undefined : difficulty,
+-                          })}
+-                        </span>
+-                      </SelectTrigger>
+-                      <SelectContent>
+-                        <SelectItem value="all">All difficulty</SelectItem>
+-                        {(["beginner", "intermediate", "advanced"] as FilterDifficulty[])
+-                          .filter((level) => (difficultyCounts.get(level) ?? 0) > 0)
+-                          .map((level) => (
+-                            <SelectItem key={level} value={level}>
+-                              {level.charAt(0).toUpperCase() + level.slice(1)} ({difficultyCounts.get(level) ?? 0})
+-                            </SelectItem>
+-                          ))}
+-                      </SelectContent>
+-                    </Select>
+-                    <Select value={requiresCard} onValueChange={(value) => setRequiresCard(value ?? "all")}>
+-                      <SelectTrigger>
+-                        <span className="truncate text-sm">
+-                          {formatSelectLabel({
+-                            label: "Card",
+-                            value: requiresCard,
+-                            total: requiresCardTotal,
+-                            valueLabel:
+-                              requiresCard === "yes"
+-                                ? "Requires card"
+-                                : requiresCard === "no"
+-                                  ? "No card"
+-                                  : undefined,
+-                          })}
+-                        </span>
+-                      </SelectTrigger>
+-                      <SelectContent>
+-                        <SelectItem value="all">All card requirements</SelectItem>
+-                        {(requiresCardCounts.get("yes") ?? 0) > 0 && (
+-                          <SelectItem value="yes">
+-                            Requires card ({requiresCardCounts.get("yes") ?? 0})
+-                          </SelectItem>
+-                        )}
+-                        {(requiresCardCounts.get("no") ?? 0) > 0 && (
+-                          <SelectItem value="no">
+-                            No card required ({requiresCardCounts.get("no") ?? 0})
+-                          </SelectItem>
+-                        )}
+-                      </SelectContent>
+-                    </Select>
+-                  </div>
+-                ) : (
+-                  <div className="rounded-lg border border-dashed border-border/70 bg-muted/20 px-3 py-4 text-sm text-muted-foreground">
+-                    Advanced filters are tucked away until needed to keep the main search flow simple.
+-                  </div>
+-                )}
+-              </div>
++        {/* ── Advanced Filters (collapsible) ── */}
++        {showAdvancedFilters && (
++          <div className="flex flex-wrap items-center gap-2 pt-1 pb-1 border-t border-dashed border-border/50">
++            <Select value={freeTierType} onValueChange={(v) => setFreeTierType(v ?? "all")}>
++              <SelectTrigger className="h-8 text-xs w-auto min-w-[120px]">
++                <SelectValue placeholder="Free Tier" />
++              </SelectTrigger>
++              <SelectContent>
++                <SelectItem value="all">Any Free Tier</SelectItem>
++                {freeTierTypeOptions.filter((item) => (freeTierTypeCounts.get(item.value) ?? 0) > 0).map((item) => (
++                  <SelectItem key={item.value} value={item.value}>{FREE_TIER_TYPE_LABELS[item.value as keyof typeof FREE_TIER_TYPE_LABELS]} ({freeTierTypeCounts.get(item.value) ?? 0})</SelectItem>
++                ))}
++              </SelectContent>
++            </Select>
++            <Select value={overageRisk} onValueChange={(v) => setOverageRisk(v ?? "all")}>
++              <SelectTrigger className="h-8 text-xs w-auto min-w-[110px]">
++                <SelectValue placeholder="Risk" />
++              </SelectTrigger>
++              <SelectContent>
++                <SelectItem value="all">Any Risk</SelectItem>
++                {overageRiskOptions.filter((item) => (overageRiskCounts.get(item.value) ?? 0) > 0).map((item) => (
++                  <SelectItem key={item.value} value={item.value}>{OVERAGE_RISK_LABELS[item.value as keyof typeof OVERAGE_RISK_LABELS]} ({overageRiskCounts.get(item.value) ?? 0})</SelectItem>
++                ))}
++              </SelectContent>
++            </Select>
++            <Select value={productionReadiness} onValueChange={(v) => setProductionReadiness(v ?? "all")}>
++              <SelectTrigger className="h-8 text-xs w-auto min-w-[110px]">
++                <SelectValue placeholder="Readiness" />
++              </SelectTrigger>
++              <SelectContent>
++                <SelectItem value="all">Any Readiness</SelectItem>
++                {(productionReadinessOptions as Array<RegistryItem & { value: ProductionReadiness }>).filter((item) => (productionReadinessCounts.get(item.value) ?? 0) > 0).map((item) => (
++                  <SelectItem key={item.value} value={item.value}>{PRODUCTION_READINESS_LABELS[item.value]} ({productionReadinessCounts.get(item.value) ?? 0})</SelectItem>
++                ))}
++              </SelectContent>
++            </Select>
++            <Select value={difficulty} onValueChange={(v) => setDifficulty(v ?? "all")}>
++              <SelectTrigger className="h-8 text-xs w-auto min-w-[110px]">
++                <SelectValue placeholder="Level" />
++              </SelectTrigger>
++              <SelectContent>
++                <SelectItem value="all">Any Level</SelectItem>
++                {(["beginner", "intermediate", "advanced"] as FilterDifficulty[]).filter((level) => (difficultyCounts.get(level) ?? 0) > 0).map((level) => (
++                  <SelectItem key={level} value={level}>{level.charAt(0).toUpperCase() + level.slice(1)} ({difficultyCounts.get(level) ?? 0})</SelectItem>
++                ))}
++              </SelectContent>
++            </Select>
++            <Select value={requiresCard} onValueChange={(v) => setRequiresCard(v ?? "all")}>
++              <SelectTrigger className="h-8 text-xs w-auto min-w-[120px]">
++                <SelectValue placeholder="Card" />
++              </SelectTrigger>
++              <SelectContent>
++                <SelectItem value="all">Any Card Requirement</SelectItem>
++                {(requiresCardCounts.get("yes") ?? 0) > 0 && <SelectItem value="yes">Requires Card ({requiresCardCounts.get("yes")})</SelectItem>}
++                {(requiresCardCounts.get("no") ?? 0) > 0 && <SelectItem value="no">No Card ({requiresCardCounts.get("no")})</SelectItem>}
++              </SelectContent>
++            </Select>
++          </div>
++        )}
++
++        {/* ── Active filter chips ── */}
++        {activeFilters.length > 0 && (
++          <div className="flex flex-wrap items-center gap-1.5">
++            {activeFilters.map((filter) => (
++              <Badge key={filter.key} variant="secondary" className="h-6 gap-1 pr-1 text-xs font-normal">
++                {filter.label}
++                <button type="button" onClick={filter.onRemove} className="rounded-full p-0.5 hover:bg-background/70">
++                  <X className="size-3" />
++                </button>
++              </Badge>
++            ))}
++            <button onClick={resetAllFilters} className="text-xs text-muted-foreground hover:text-foreground ml-1 transition-colors">
++              Clear all
++            </button>
++          </div>
++        )}
++
++        {/* ── Tag bar ── */}
++        <div className="space-y-2">
++          <div className="flex flex-wrap gap-1.5">
++            {visibleTagOptions.map((item) => {
++              const isActive = selectedTags.includes(item.value);
++              return (
++                <button
++                  key={item.value}
++                  onClick={() => toggleTag(item.value)}
++                  className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs transition-colors ${
++                    isActive
++                      ? "bg-primary text-primary-foreground border-primary"
++                      : "border-border bg-background text-muted-foreground hover:text-foreground hover:border-muted-foreground/30"
++                  }`}
++                >
++                  {item.value}
++                  <span className="text-[10px] opacity-60">{tagCounts.get(item.value) ?? 0}</span>
++                </button>
++              );
++            })}
++            {!showAllTags && tagOptions.length > 16 && (
++              <button
++                onClick={() => setShowAllTags(true)}
++                className="inline-flex items-center rounded-md border border-border px-2 py-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
++              >
++                +{tagOptions.filter((item) => (tagCounts.get(item.value) ?? 0) > 0).length - 16} more
++              </button>
++            )}
++          </div>
++          {selectedTags.length > 0 && (
++            <div className="flex flex-wrap items-center gap-1.5">
++              <span className="text-[11px] text-muted-foreground mr-1">Selected:</span>
++              {selectedTags.map((tag) => (
++                <Badge key={tag} variant="secondary" className="h-5 gap-1 pr-1 text-[11px]">
++                  {tag}
++                  <button type="button" onClick={() => toggleTag(tag)} className="rounded-full p-0.5 hover:bg-background/70">
++                    <X className="size-2.5" />
++                  </button>
++                </Badge>
++              ))}
+             </div>
++          )}
++        </div>
++      </div>
+ 
+-            <div className="rounded-xl border border-border/70 bg-background/70 p-4">
+-              <div className="space-y-1">
+-                <h3 className="text-sm font-semibold text-foreground">Tag discovery</h3>
+-                <p className="text-xs text-muted-foreground">
+-                  Pick one or more tags from a single control. Selected tags are easy to review and remove.
+-                </p>
+-              </div>
+-
+-              <div className="mt-3 space-y-3">
+-                <Input
+-                  placeholder="Search tags..."
+-                  value={tagQuery}
+-                  onChange={(event) => setTagQuery(event.target.value)}
+-                />
++      {/* ── Match count ── */}
++      <div className="flex items-center justify-between text-xs text-muted-foreground">
++        <span>{filteredData.length} results</span>
++        {hasCustomColumns && (
++          <button onClick={resetColumns} className="hover:text-foreground transition-colors">
++            Reset columns
++          </button>
++        )}
++      </div>
+ 
+-                <div className="space-y-2">
+-                  <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+-                    Popular tags
+-                  </p>
+-                  <div className="flex flex-wrap gap-2">
+-                    {featuredTagOptions.map((item) => {
+-                      const isActive = selectedTags.includes(item.value);
+-                      return (
+-                        <Button
+-                          key={item.value}
+-                          variant={isActive ? "secondary" : "outline"}
+-                          size="sm"
+-                          onClick={() => toggleTag(item.value)}
+-                        >
+-                          #{item.value}
+-                          <span className="text-[11px] text-muted-foreground">{tagCounts.get(item.value) ?? 0}</span>
++      {/* ── Desktop Table ── */}
++      <div className="hidden overflow-hidden rounded-lg border lg:block">
++        <Table>
++          <TableHeader>
++            {table.getHeaderGroups().map((headerGroup) => (
++              <TableRow key={headerGroup.id} className="hover:bg-transparent">
++                {headerGroup.headers.map((header) => (
++                  <TableHead key={header.id} className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
++                    {header.isPlaceholder ? null : (
++                      <button type="button" className="w-full text-left" onClick={header.column.getToggleSortingHandler()}>
++                        {flexRender(header.column.columnDef.header, header.getContext())}
++                      </button>
++                    )}
++                  </TableHead>
++                ))}
++                <TableHead className="w-[80px] text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground" />
++              </TableRow>
++            ))}
++          </TableHeader>
++          <TableBody>
++            {table.getRowModel().rows.length ? (
++              table.getRowModel().rows.map((row) => {
++                const entry = row.original;
++                const isExpanded = expandedRows[entry.slug] ?? false;
++                return (
++                  <React.Fragment key={row.id}>
++                    <TableRow className="group">
++                      {row.getVisibleCells().map((cell) => (
++                        <TableCell key={cell.id} className="text-sm">{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
++                      ))}
++                      <TableCell className="w-[80px]">
++                        <Button variant="ghost" size="sm" className="h-7 text-xs" onClick={() => toggleExpandedRow(entry.slug)}>
++                          {isExpanded ? <ChevronDown className="size-3.5" /> : <ChevronRight className="size-3.5" />}
+                         </Button>
+-                      );
+-                    })}
+-                  </div>
+-                </div>
+-
+-                <div className="space-y-2">
+-                  <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+-                    Matching tags
+-                  </p>
+-                  <div className="max-h-48 space-y-2 overflow-y-auto rounded-lg border border-border/70 bg-muted/10 p-2">
+-                    {visibleTagOptions.length > 0 ? (
+-                      visibleTagOptions.map((item) => {
+-                        const isActive = selectedTags.includes(item.value);
+-                        return (
+-                          <button
+-                            key={item.value}
+-                            type="button"
+-                            onClick={() => toggleTag(item.value)}
+-                            className={`flex w-full items-center justify-between rounded-md px-2 py-2 text-left text-sm transition-colors ${
+-                              isActive
+-                                ? "bg-secondary text-secondary-foreground"
+-                                : "hover:bg-accent hover:text-foreground"
+-                            }`}
+-                          >
+-                            <span>#{item.value}</span>
+-                            <span className="text-xs text-muted-foreground">{tagCounts.get(item.value) ?? 0}</span>
+-                          </button>
+-                        );
+-                      })
+-                    ) : (
+-                      <p className="px-2 py-4 text-sm text-muted-foreground">No matching tags.</p>
++                      </TableCell>
++                    </TableRow>
++                    {isExpanded && (
++                      <TableRow className="hover:bg-transparent">
++                        <TableCell colSpan={row.getVisibleCells().length + 1} className="bg-muted/30 border-t-0">
++                          <ExpandedRow entry={entry} />
++                        </TableCell>
++                      </TableRow>
+                     )}
+-                  </div>
+-                  {tagOptions.length > 12 ? (
+-                    <Button
+-                      variant="ghost"
+-                      size="sm"
+-                      onClick={() => setShowAllMatchingTags((current) => !current)}
+-                    >
+-                      {showAllMatchingTags ? "Show fewer tags" : "Show more matching tags"}
+-                    </Button>
+-                  ) : null}
+-                </div>
++                  </React.Fragment>
++                );
++              })
++            ) : (
++              <TableRow>
++                <TableCell colSpan={columns.length + 1} className="h-24 text-center text-muted-foreground text-sm">
++                  No results match the active filters.
++                </TableCell>
++              </TableRow>
++            )}
++          </TableBody>
++        </Table>
++      </div>
+ 
+-                <div className="space-y-2 rounded-lg border border-border/70 bg-muted/10 p-3">
+-                  <div className="flex items-center justify-between gap-3">
+-                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+-                      Selected tags
+-                    </p>
+-                    <p className="text-xs text-muted-foreground">
+-                      {selectedTags.length === 0 ? "No tag filters" : `${selectedTags.length} selected`}
+-                    </p>
+-                  </div>
+-                  <div className="flex flex-wrap gap-2">
+-                    {selectedTags.length > 0 ? (
+-                      selectedTags.map((selectedTag) => (
+-                        <Badge key={selectedTag} variant="secondary" className="h-7 gap-1.5 px-2 text-xs">
+-                          #{selectedTag}
+-                          <button
+-                            type="button"
+-                            aria-label={`Remove ${selectedTag}`}
+-                            onClick={() => toggleTag(selectedTag)}
+-                            className="rounded-full p-0.5 hover:bg-background/70"
+-                          >
+-                            <X className="size-3" />
+-                          </button>
+-                        </Badge>
+-                      ))
+-                    ) : (
+-                      <p className="text-sm text-muted-foreground">
+-                        Add tags to focus the results without duplicating filters.
+-                      </p>
+-                    )}
+-                  </div>
+-                </div>
+-              </div>
+-            </div>
++      {/* ── Mobile Cards ── */}
++      <div className="grid gap-3 lg:hidden">
++        {filteredData.length > 0 ? (
++          filteredData.map((entry) => <MobileCard key={entry.slug} entry={entry} />)
++        ) : (
++          <div className="rounded-lg border border-dashed p-8 text-center text-sm text-muted-foreground">
++            No results match the active filters.
+           </div>
++        )}
++      </div>
++    </div>
++  );
++}
+ 
+-          <div className="flex flex-col gap-3 rounded-xl border border-border/70 bg-background/70 p-4 lg:flex-row lg:items-center lg:justify-between">
+-            <div className="space-y-1">
+-              <h3 className="text-sm font-semibold text-foreground">Results display</h3>
+-              <p className="text-xs text-muted-foreground">
+-                Keep the most important information visible first. Extra details stay available without dominating the layout.
+-              </p>
+-            </div>
+-            <div className="flex flex-wrap items-center gap-2">
+-              <Select value={sortMode} onValueChange={(value) => setSortMode(value ?? "best-overall")}>
+-                <SelectTrigger>
+-                  <span className="truncate text-sm">Ranking: {SORT_LABELS[sortMode] ?? "Best overall"}</span>
+-                </SelectTrigger>
+-                <SelectContent>
+-                  <SelectItem value="best-overall">Best overall</SelectItem>
+-                  <SelectItem value="lowest-risk">Lowest billing risk</SelectItem>
+-                  <SelectItem value="easiest-start">Easiest to start</SelectItem>
+-                  <SelectItem value="no-card">Best no-card options</SelectItem>
+-                  <SelectItem value="production-ready">Best for production-light</SelectItem>
+-                </SelectContent>
+-              </Select>
+-              <DropdownMenu>
+-                <DropdownMenuTrigger
+-                  render={
+-                    <Button variant="outline" size="sm">
+-                      Columns
+-                    </Button>
+-                  }
+-                />
+-                <DropdownMenuContent align="end" className="w-44">
+-                  <DropdownMenuGroup>
+-                    <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
+-                    <DropdownMenuSeparator />
+-                    {table
+-                      .getAllColumns()
+-                      .filter((column) => column.getCanHide())
+-                      .map((column) => {
+-                        const headerValue = column.columnDef.header;
+-                        const label = typeof headerValue === "string" ? headerValue : column.id;
+-
+-                        return (
+-                          <DropdownMenuCheckboxItem
+-                            key={column.id}
+-                            className="capitalize"
+-                            checked={column.getIsVisible()}
+-                            onCheckedChange={(value) => column.toggleVisibility(!!value)}
+-                          >
+-                            {label}
+-                          </DropdownMenuCheckboxItem>
+-                        );
+-                      })}
+-                  </DropdownMenuGroup>
+-                </DropdownMenuContent>
+-              </DropdownMenu>
+-              <Button variant="ghost" size="sm" onClick={resetColumns} disabled={!hasCustomColumns}>
+-                Reset columns
+-              </Button>
+-            </div>
+-          </div>
++/* ── Expanded row detail ── */
++function ExpandedRow({ entry }: { entry: AtlasEntry }) {
++  return (
++    <div className="grid gap-4 py-3 md:grid-cols-3 xl:grid-cols-5">
++      <DetailField label="Pricing Model" value={PRICING_MODEL_LABELS[entry.pricingModel as keyof typeof PRICING_MODEL_LABELS]} />
++      <DetailField label="Usefulness" value={`${entry.usefulnessScore} / 100`} />
++      <DetailField label="Popularity" value={`${entry.popularityScore} / 100`} />
++      <DetailField label="Card Required" value={entry.freeTierDetails.requiresCard ? "Yes" : "No"} />
++      <DetailField label="Free Tier Type" value={FREE_TIER_TYPE_LABELS[(entry.freeTierDetails.freeTierType ?? "always-free") as keyof typeof FREE_TIER_TYPE_LABELS]} />
++      <div className="md:col-span-3 xl:col-span-5">
++        <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">All Tags</p>
++        <div className="flex flex-wrap gap-1.5">
++          {entry.tags.map((tag) => (
++            <span key={tag} className="text-xs bg-muted rounded px-2 py-0.5 text-muted-foreground">{tag}</span>
++          ))}
+         </div>
+       </div>
++    </div>
++  );
++}
+ 
+-      <div className="space-y-4">
+-        <div className="hidden overflow-hidden rounded-xl border lg:block">
+-          <Table>
+-            <TableHeader>
+-              {table.getHeaderGroups().map((headerGroup) => (
+-                <TableRow key={headerGroup.id}>
+-                  {headerGroup.headers.map((header) => (
+-                    <TableHead key={header.id}>
+-                      {header.isPlaceholder ? null : (
+-                        <button
+-                          type="button"
+-                          className="w-full text-left"
+-                          onClick={header.column.getToggleSortingHandler()}
+-                        >
+-                          {flexRender(header.column.columnDef.header, header.getContext())}
+-                        </button>
+-                      )}
+-                    </TableHead>
+-                  ))}
+-                  <TableHead className="w-[120px] text-right">Details</TableHead>
+-                </TableRow>
+-              ))}
+-            </TableHeader>
+-            <TableBody>
+-              {table.getRowModel().rows.length ? (
+-                table.getRowModel().rows.map((row) => {
+-                  const entry = row.original;
+-                  const isExpanded = expandedRows[entry.slug] ?? false;
++function DetailField({ label, value }: { label: string; value: string }) {
++  return (
++    <div>
++      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">{label}</p>
++      <p className="mt-1 text-sm text-foreground">{value}</p>
++    </div>
++  );
++}
+ 
+-                  return (
+-                    <React.Fragment key={row.id}>
+-                      <TableRow>
+-                        {row.getVisibleCells().map((cell) => (
+-                          <TableCell key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
+-                        ))}
+-                        <TableCell className="w-[120px]">
+-                          <Button variant="ghost" size="sm" onClick={() => toggleExpandedRow(entry.slug)}>
+-                            {isExpanded ? "Less" : "Details"}
+-                            {isExpanded ? <ChevronDown className="size-3.5" /> : <ChevronRight className="size-3.5" />}
+-                          </Button>
+-                        </TableCell>
+-                      </TableRow>
+-                      {isExpanded ? (
+-                        <TableRow>
+-                          <TableCell colSpan={row.getVisibleCells().length + 1} className="bg-muted/20">
+-                            <div className="grid gap-3 py-2 md:grid-cols-2 xl:grid-cols-4">
+-                              <div>
+-                                <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                                  Pricing model
+-                                </p>
+-                                <p className="mt-1 text-sm text-foreground">
+-                                  {PRICING_MODEL_LABELS[
+-                                    entry.pricingModel as keyof typeof PRICING_MODEL_LABELS
+-                                  ]}
+-                                </p>
+-                              </div>
+-                              <div>
+-                                <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                                  Usefulness / Popularity
+-                                </p>
+-                                <p className="mt-1 text-sm text-foreground">
+-                                  {entry.usefulnessScore} / {entry.popularityScore}
+-                                </p>
+-                              </div>
+-                              <div>
+-                                <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                                  Card required
+-                                </p>
+-                                <p className="mt-1 text-sm text-foreground">
+-                                  {entry.freeTierDetails.requiresCard ? "Yes" : "No"}
+-                                </p>
+-                              </div>
+-                              <div>
+-                                <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                                  Tags
+-                                </p>
+-                                <div className="mt-1 flex flex-wrap gap-1.5">
+-                                  {entry.tags.map((entryTag) => (
+-                                    <Badge key={entryTag} variant="secondary" className="h-6 px-2 text-xs">
+-                                      #{entryTag}
+-                                    </Badge>
+-                                  ))}
+-                                </div>
+-                              </div>
+-                            </div>
+-                          </TableCell>
+-                        </TableRow>
+-                      ) : null}
+-                    </React.Fragment>
+-                  );
+-                })
+-              ) : (
+-                <TableRow>
+-                  <TableCell colSpan={columns.length + 1} className="h-24 text-center text-muted-foreground">
+-                    No results with the active filters.
+-                  </TableCell>
+-                </TableRow>
+-              )}
+-            </TableBody>
+-          </Table>
++/* ── Mobile card ── */
++function MobileCard({ entry }: { entry: AtlasEntry }) {
++  return (
++    <Card className="border-border/60 shadow-sm">
++      <CardHeader className="space-y-2 pb-3">
++        <div className="flex items-start justify-between gap-2">
++          <div>
++            <CardTitle className="text-base">
++              <Link href={entry.url} className="hover:underline">{entry.title}</Link>
++            </CardTitle>
++            <CardDescription className="text-xs mt-0.5">{entry.description}</CardDescription>
++          </div>
++          <Badge variant="outline" className="text-[11px] h-5 px-1.5 shrink-0">{KIND_LABELS[entry.kind as ContentKind]}</Badge>
+         </div>
+-
+-        <div className="grid gap-3 lg:hidden">
+-          {filteredData.length > 0 ? (
+-            filteredData.map((entry) => (
+-              <Card key={entry.slug} className="border-border/80 shadow-sm">
+-                <CardHeader className="space-y-3">
+-                  <div className="flex flex-wrap items-start justify-between gap-3">
+-                    <div className="space-y-1">
+-                      <CardTitle className="text-base">
+-                        <Link href={entry.url} className="hover:underline">
+-                          {entry.title}
+-                        </Link>
+-                      </CardTitle>
+-                      <CardDescription className="text-sm">{entry.description}</CardDescription>
+-                    </div>
+-                    <Badge variant="outline" className="h-6 px-2 text-xs">
+-                      {KIND_LABELS[entry.kind as ContentKind]}
+-                    </Badge>
+-                  </div>
+-
+-                  <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+-                    <span className="rounded-full bg-muted px-2 py-1">{entry.provider}</span>
+-                    <span className="rounded-full bg-muted px-2 py-1">{DOMAIN_LABELS[entry.domain]}</span>
+-                    <span className="rounded-full bg-muted px-2 py-1">
+-                      {FREE_TIER_TYPE_LABELS[
+-                        (entry.freeTierDetails.freeTierType ?? "always-free") as keyof typeof FREE_TIER_TYPE_LABELS
+-                      ]}
+-                    </span>
+-                  </div>
+-                </CardHeader>
+-                <CardContent className="space-y-3">
+-                  <div className="grid gap-2 sm:grid-cols-2">
+-                    <div className="rounded-lg border border-border/70 bg-muted/10 p-3">
+-                      <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                        Billing risk
+-                      </p>
+-                      <p className="mt-1 text-sm font-medium text-foreground">
+-                        {OVERAGE_RISK_LABELS[
+-                          (entry.freeTierDetails.overageRisk ?? "low") as keyof typeof OVERAGE_RISK_LABELS
+-                        ]}
+-                      </p>
+-                    </div>
+-                    <div className="rounded-lg border border-border/70 bg-muted/10 p-3">
+-                      <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                        Readiness
+-                      </p>
+-                      <p className="mt-1 text-sm font-medium text-foreground">
+-                        {
+-                          PRODUCTION_READINESS_LABELS[
+-                            entry.productionReadiness as keyof typeof PRODUCTION_READINESS_LABELS
+-                          ]
+-                        }
+-                      </p>
+-                    </div>
+-                    <div className="rounded-lg border border-border/70 bg-muted/10 p-3">
+-                      <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                        Difficulty
+-                      </p>
+-                      <p className="mt-1 text-sm font-medium capitalize text-foreground">{entry.difficulty}</p>
+-                    </div>
+-                    <div className="rounded-lg border border-border/70 bg-muted/10 p-3">
+-                      <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+-                        Card required
+-                      </p>
+-                      <p className="mt-1 text-sm font-medium text-foreground">
+-                        {entry.freeTierDetails.requiresCard ? "Yes" : "No"}
+-                      </p>
+-                    </div>
+-                  </div>
+-
+-                  <div className="flex flex-wrap gap-1.5">
+-                    {entry.tags.slice(0, 6).map((entryTag) => (
+-                      <Badge key={entryTag} variant="secondary" className="h-6 px-2 text-xs">
+-                        #{entryTag}
+-                      </Badge>
+-                    ))}
+-                  </div>
+-                </CardContent>
+-              </Card>
+-            ))
+-          ) : (
+-            <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+-              No results with the active filters.
+-            </div>
+-          )}
++        <div className="flex flex-wrap gap-1.5 text-[11px] text-muted-foreground">
++          <span className="bg-muted rounded px-1.5 py-0.5">{entry.provider}</span>
++          <span className="bg-muted rounded px-1.5 py-0.5">{DOMAIN_LABELS[entry.domain]}</span>
++          <span className="bg-muted rounded px-1.5 py-0.5">{FREE_TIER_TYPE_LABELS[(entry.freeTierDetails.freeTierType ?? "always-free") as keyof typeof FREE_TIER_TYPE_LABELS]}</span>
+         </div>
+-      </div>
+-    </div>
++      </CardHeader>
++      <CardContent className="space-y-2 pt-0">
++        <div className="grid grid-cols-2 gap-2">
++          <div className="rounded-md border border-border/50 bg-muted/20 p-2">
++            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Billing Risk</p>
++            <Badge variant="outline" className={`mt-1 text-[11px] h-5 px-1.5 ${riskColor(entry.freeTierDetails.overageRisk ?? "low")}`}>
++              {OVERAGE_RISK_LABELS[(entry.freeTierDetails.overageRisk ?? "low") as keyof typeof OVERAGE_RISK_LABELS]}
++            </Badge>
++          </div>
++          <div className="rounded-md border border-border/50 bg-muted/20 p-2">
++            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Readiness</p>
++            <Badge variant="outline" className={`mt-1 text-[11px] h-5 px-1.5 ${readinessColor(entry.productionReadiness)}`}>
++              {PRODUCTION_READINESS_LABELS[entry.productionReadiness as keyof typeof PRODUCTION_READINESS_LABELS]}
++            </Badge>
++          </div>
++          <div className="rounded-md border border-border/50 bg-muted/20 p-2">
++            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Difficulty</p>
++            <p className={`mt-1 text-sm capitalize ${difficultyColor(entry.difficulty)}`}>{entry.difficulty}</p>
++          </div>
++          <div className="rounded-md border border-border/50 bg-muted/20 p-2">
++            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Card Required</p>
++            <p className="mt-1 text-sm">{entry.freeTierDetails.requiresCard ? "Yes" : "No"}</p>
++          </div>
++        </div>
++        <div className="flex flex-wrap gap-1">
++          {entry.tags.slice(0, 8).map((tag) => (
++            <span key={tag} className="text-[11px] bg-muted rounded px-1.5 py-0.5 text-muted-foreground">{tag}</span>
++          ))}
++        </div>
++      </CardContent>
++    </Card>
+   );
+ }
+diff --git a/src/components/providers/app-providers.tsx b/src/components/providers/app-providers.tsx
+index b51f838..4892a66 100644
+--- a/src/components/providers/app-providers.tsx
++++ b/src/components/providers/app-providers.tsx
+@@ -8,7 +8,7 @@ type AppProvidersProps = {
+ 
+ export function AppProviders({ children }: AppProvidersProps) {
+   return (
+-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
++    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+       {children}
+     </ThemeProvider>
+   );
