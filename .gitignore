@@ -55,3 +55,6 @@ yarn-error.log*
 
 # Development-only assets
 /development/
+
+# stray generated patch files
+/*.patch

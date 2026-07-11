@@ -23,7 +23,7 @@ index 8b849cd..398c4ec 100644
        </header>
  
 diff --git a/src/components/explorer/explorer-table.tsx b/src/components/explorer/explorer-table.tsx
-index ee969ea..ed477e4 100644
+index ee969ea..8fca26b 100644
 --- a/src/components/explorer/explorer-table.tsx
 +++ b/src/components/explorer/explorer-table.tsx
 @@ -31,6 +31,7 @@ import {
@@ -34,7 +34,7 @@ index ee969ea..ed477e4 100644
  } from "@/components/ui/select";
  import {
    Card,
-@@ -85,18 +86,48 @@ type ExplorerTableProps = {
+@@ -85,18 +86,50 @@ type ExplorerTableProps = {
    initialSortMode: string;
  };
  
@@ -73,34 +73,38 @@ index ee969ea..ed477e4 100644
      accessorKey: "title",
 -    header: "Title",
 +    header: "Service",
++    size: 260,
++    minSize: 180,
      cell: ({ row }) => {
        const entry = row.original;
        return (
 -        <div className="space-y-1">
 -          <Link href={entry.url} className="font-medium hover:underline">
-+        <div className="space-y-0.5 min-w-[200px]">
-+          <Link href={entry.url} className="font-medium hover:underline text-foreground">
++        <div className="max-w-[260px]">
++          <Link href={entry.url} className="font-medium hover:underline text-foreground text-sm truncate block">
              {entry.title}
            </Link>
 -          <p className="line-clamp-2 text-xs text-muted-foreground">{entry.description}</p>
-+          <p className="line-clamp-1 text-xs text-muted-foreground">{entry.description}</p>
++          <p className="truncate text-[11px] text-muted-foreground">{entry.description}</p>
          </div>
        );
      },
-@@ -104,22 +135,25 @@ const columns: ColumnDef<AtlasEntry>[] = [
+@@ -104,72 +137,88 @@ const columns: ColumnDef<AtlasEntry>[] = [
    {
      accessorKey: "provider",
      header: "Provider",
++    size: 100,
 +    cell: ({ row }) => (
-+      <span className="text-sm text-muted-foreground whitespace-nowrap">{row.original.provider}</span>
++      <span className="text-xs text-muted-foreground whitespace-nowrap">{row.original.provider}</span>
 +    ),
    },
    {
      accessorKey: "kind",
      header: "Type",
 -    cell: ({ row }) => KIND_LABELS[row.original.kind as ContentKind],
++    size: 70,
 +    cell: ({ row }) => (
-+      <Badge variant="outline" className="text-[11px] font-medium h-5 px-1.5">
++      <Badge variant="outline" className="text-[10px] font-medium h-4 px-1">
 +        {KIND_LABELS[row.original.kind as ContentKind]}
 +      </Badge>
 +    ),
@@ -115,13 +119,22 @@ index ee969ea..ed477e4 100644
 -    header: "Pricing",
 -    cell: ({ row }) =>
 -      PRICING_MODEL_LABELS[row.original.pricingModel as keyof typeof PRICING_MODEL_LABELS],
++    size: 90,
 +    cell: ({ row }) => (
-+      <span className="text-sm text-muted-foreground whitespace-nowrap">{DOMAIN_LABELS[row.original.domain]}</span>
++      <span className="text-xs text-muted-foreground whitespace-nowrap">{DOMAIN_LABELS[row.original.domain]}</span>
 +    ),
    },
    {
      accessorKey: "freeTierDetails.freeTierType",
-@@ -131,45 +165,50 @@ const columns: ColumnDef<AtlasEntry>[] = [
+     header: "Free Tier",
++    size: 85,
+     cell: ({ row }) =>
+-      FREE_TIER_TYPE_LABELS[
+-        (row.original.freeTierDetails.freeTierType ?? "always-free") as keyof typeof FREE_TIER_TYPE_LABELS
+-      ],
++      <span className="text-xs whitespace-nowrap">
++        {FREE_TIER_TYPE_LABELS[(row.original.freeTierDetails.freeTierType ?? "always-free") as keyof typeof FREE_TIER_TYPE_LABELS]}
++      </span>,
    },
    {
      accessorKey: "freeTierDetails.overageRisk",
@@ -131,10 +144,11 @@ index ee969ea..ed477e4 100644
 -        (row.original.freeTierDetails.overageRisk ?? "low") as keyof typeof OVERAGE_RISK_LABELS
 -      ],
 +    header: "Risk",
++    size: 60,
 +    cell: ({ row }) => {
 +      const risk = row.original.freeTierDetails.overageRisk ?? "low";
 +      return (
-+        <Badge variant="outline" className={`text-[11px] h-5 px-1.5 font-medium ${riskColor(risk)}`}>
++        <Badge variant="outline" className={`text-[10px] h-4 px-1 font-medium ${riskColor(risk)}`}>
 +          {OVERAGE_RISK_LABELS[risk as keyof typeof OVERAGE_RISK_LABELS]}
 +        </Badge>
 +      );
@@ -142,11 +156,12 @@ index ee969ea..ed477e4 100644
 +  },
 +  {
 +    accessorKey: "productionReadiness",
-+    header: "Readiness",
++    header: "Ready",
++    size: 80,
 +    cell: ({ row }) => {
 +      const readiness = row.original.productionReadiness;
 +      return (
-+        <Badge variant="outline" className={`text-[11px] h-5 px-1.5 font-medium ${readinessColor(readiness)}`}>
++        <Badge variant="outline" className={`text-[10px] h-4 px-1 font-medium ${readinessColor(readiness)}`}>
 +          {PRODUCTION_READINESS_LABELS[readiness as keyof typeof PRODUCTION_READINESS_LABELS]}
 +        </Badge>
 +      );
@@ -155,10 +170,11 @@ index ee969ea..ed477e4 100644
    {
      accessorKey: "difficulty",
 -    header: "Difficulty",
-+    header: "Level",
++    header: "Lvl",
++    size: 55,
      cell: ({ row }) => (
 -      <span className="inline-block min-w-[7.5rem] overflow-hidden text-ellipsis whitespace-nowrap capitalize">
-+      <span className={`text-sm capitalize whitespace-nowrap ${difficultyColor(row.original.difficulty)}`}>
++      <span className={`text-xs capitalize whitespace-nowrap ${difficultyColor(row.original.difficulty)}`}>
          {row.original.difficulty}
        </span>
      ),
@@ -180,23 +196,25 @@ index ee969ea..ed477e4 100644
    {
      accessorKey: "tags",
      header: "Tags",
++    size: 120,
      cell: ({ row }) => (
 -      <div className="flex flex-wrap gap-1">
-+      <div className="flex flex-wrap gap-1 max-w-[180px]">
-         {row.original.tags.slice(0, 3).map((tag: string) => (
+-        {row.original.tags.slice(0, 3).map((tag: string) => (
 -          <Badge key={tag} variant="secondary" className="text-xs">
-+          <span key={tag} className="text-[11px] text-muted-foreground bg-muted rounded px-1.5 py-0.5">
++      <div className="flex flex-wrap gap-1 max-w-[120px]">
++        {row.original.tags.slice(0, 2).map((tag: string) => (
++          <span key={tag} className="text-[10px] text-muted-foreground bg-muted rounded px-1 py-0.5">
              {tag}
 -          </Badge>
 +          </span>
          ))}
-+        {row.original.tags.length > 3 && (
-+          <span className="text-[11px] text-muted-foreground">+{row.original.tags.length - 3}</span>
++        {row.original.tags.length > 2 && (
++          <span className="text-[10px] text-muted-foreground">+{row.original.tags.length - 2}</span>
 +        )}
        </div>
      ),
    },
-@@ -180,58 +219,24 @@ const SORT_LABELS: Record<string, string> = {
+@@ -180,58 +229,26 @@ const SORT_LABELS: Record<string, string> = {
    "lowest-risk": "Lowest billing risk",
    "easiest-start": "Easiest to start",
    "no-card": "Best no-card options",
@@ -209,6 +227,8 @@ index ee969ea..ed477e4 100644
 -  usefulnessScore: false,
 -  popularityScore: false,
 +  provider: false,
++  tags: false,
++  "freeTierDetails.freeTierType": false,
  };
  
 -const COLUMN_STORAGE_KEY = "freetierwiki.explorer.columns";
@@ -265,7 +285,7 @@ index ee969ea..ed477e4 100644
    return haystack.includes(query.toLowerCase());
  }
  
-@@ -249,57 +254,23 @@ type FilterState = {
+@@ -249,57 +266,23 @@ type FilterState = {
  };
  
  function matchesFilters(entry: AtlasEntry, filters: FilterState): boolean {
@@ -334,7 +354,7 @@ index ee969ea..ed477e4 100644
    const counts = new Map<T, number>();
    for (const entry of entries) {
      const value = getValue(entry);
-@@ -309,48 +280,16 @@ function buildCounts<T extends string>(
+@@ -309,48 +292,16 @@ function buildCounts<T extends string>(
  }
  
  export function ExplorerTable({
@@ -391,7 +411,7 @@ index ee969ea..ed477e4 100644
    } = useExplorerStore();
  
    const [sorting, setSorting] = React.useState<SortingState>([]);
-@@ -360,282 +299,102 @@ export function ExplorerTable({
+@@ -360,282 +311,102 @@ export function ExplorerTable({
    );
    const [tagQuery, setTagQuery] = React.useState("");
    const [showAdvancedFilters, setShowAdvancedFilters] = React.useState(false);
@@ -730,7 +750,7 @@ index ee969ea..ed477e4 100644
      const counts = new Map<string, number>();
      for (const entry of countsData) {
        for (const entryTag of entry.tags) {
-@@ -643,901 +402,470 @@ export function ExplorerTable({
+@@ -643,901 +414,476 @@ export function ExplorerTable({
        }
      }
      return counts;
@@ -1572,21 +1592,25 @@ index ee969ea..ed477e4 100644
 -                          #{item.value}
 -                          <span className="text-[11px] text-muted-foreground">{tagCounts.get(item.value) ?? 0}</span>
 +      {/* ── Desktop Table ── */}
-+      <div className="hidden overflow-hidden rounded-lg border lg:block">
-+        <Table>
++      <div className="hidden overflow-x-auto rounded-lg border lg:block">
++        <Table className="min-w-full table-fixed">
 +          <TableHeader>
 +            {table.getHeaderGroups().map((headerGroup) => (
 +              <TableRow key={headerGroup.id} className="hover:bg-transparent">
 +                {headerGroup.headers.map((header) => (
-+                  <TableHead key={header.id} className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
++                  <TableHead
++                    key={header.id}
++                    className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground overflow-hidden"
++                    style={{ width: header.getSize() }}
++                  >
 +                    {header.isPlaceholder ? null : (
-+                      <button type="button" className="w-full text-left" onClick={header.column.getToggleSortingHandler()}>
++                      <button type="button" className="w-full text-left truncate" onClick={header.column.getToggleSortingHandler()}>
 +                        {flexRender(header.column.columnDef.header, header.getContext())}
 +                      </button>
 +                    )}
 +                  </TableHead>
 +                ))}
-+                <TableHead className="w-[80px] text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground" />
++                <TableHead className="w-[40px] text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground" />
 +              </TableRow>
 +            ))}
 +          </TableHeader>
@@ -1599,10 +1623,12 @@ index ee969ea..ed477e4 100644
 +                  <React.Fragment key={row.id}>
 +                    <TableRow className="group">
 +                      {row.getVisibleCells().map((cell) => (
-+                        <TableCell key={cell.id} className="text-sm">{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
++                        <TableCell key={cell.id} className="text-xs overflow-hidden" style={{ width: cell.column.getSize() }}>
++                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
++                        </TableCell>
 +                      ))}
-+                      <TableCell className="w-[80px]">
-+                        <Button variant="ghost" size="sm" className="h-7 text-xs" onClick={() => toggleExpandedRow(entry.slug)}>
++                      <TableCell className="w-[40px]">
++                        <Button variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => toggleExpandedRow(entry.slug)}>
 +                          {isExpanded ? <ChevronDown className="size-3.5" /> : <ChevronRight className="size-3.5" />}
                          </Button>
 -                      );
